@@ -30,24 +30,26 @@ Smoother, Faster, and Easier to Use
 
 Thanks to feedback and testing by PostgreSQL users with high-volume production databases, the project has been able to improve many aspects of performance and usability in this release.  Replication, aggregation, indexing, sorting, and stored procedures have all been made more efficient, and PostgreSQL now makes better use of resources with recent Linux kernels.  Administration overhead for large tables and complex workloads was also reduced, especially through improvements to VACUUM.
 
-Links
+Ссылки
 -----
 
-* Downloads:
+* Страница загрузки:
   https://www.postgresql.org/downloads
-* Press Kit:
+* Материалы для прессы:
   https://www.postgresql.org/about/press/presskit96
-* Release Notes:
+* Информация об изменениях:
   https://www.postgresql.org/docs/current/static/release-9-6.html
-* What's New in 9.6:
+* Обзор новых возможностей версии 9.6:
   https://wiki.postgresql.org/wiki/NewIn96
 
 Contact
 -------
 
-YOUR CONTACT INFORMATION HERE
+Николай Самохвалов
+ru@postgresql.org
++7-905-783-9804
 
 About PostgreSQL
 ----------------
 
-PostgreSQL is the most advanced open source database system, with a global community of thousands of users and contributors and dozens of companies and organizations.  The PostgreSQL Project builds on over 30 years of engineering, starting at the University of California, Berkeley, and has an unmatched pace of development today. PostgreSQL's mature feature set not only matches top proprietary database systems, but exceeds them in advanced database features, extensibility, security and stability.  Learn more about PostgreSQL and participate in our community at: https://www.postgresql.org.
+PostgreSQL является ведущей СУБД с открытыми исходными текстами с глобальным сообществом из тысяч пользователей и разработчиков, объединяющим множество компаний и организаций. Проект PostgreSQL создаётся на основе более чем 25-летнего опыта проектирования и разработки, начавшейся в Калифорнийском университете Беркли, и в настоящее время разрабатывается беспрецедентными темпами. Продуманный набор возможностей PostgreSQL не только не уступает ведущим коммерческим СУБД, но и зачастую превосходит их развитой функциональностью, расширяемостью, безопасностью и стабильностью. Вы можете получить дополнительную информацию о PostgreSQL и присоединиться к нашему сообществу по адресу http://www.postgresql.org.
