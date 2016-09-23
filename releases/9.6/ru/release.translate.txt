@@ -7,12 +7,12 @@
 
 "Я мигрировал всю нашу платформу для изучения геномов — все 25 миллиардов строк из MySQL — в единственную базу данных на Postgres, воспользовавшись такими преимуществами, как сжатие строк с типом данных JSONB, а также отличными режимами индексирования GIN, BRIN и B-tree. С появлением версии 9.6 я планирую хорошую отдачу от параллелизации запросов, получив ещё большее масштабирование для запросов на довольно больших таблицах," — говорит Майк Софен (Mike Sofen), главный архитектор компании Synthetic Genomics.
 
-Scale Out with Synchronous Replication and postgres_fdw
+Горизонтальное масштабирование средствами синхронной репликации и модуля postgres_fdw 
 -------------------------------------------------------
 
-Two new options have been added to PostgreSQL's synchronous replication feature which allow it to be used to maintain consistent reads across database clusters.  First, it now allows configuring groups of synchronous replicas.  Second, the "remote_apply" mode creates a more consistent view of data across multiple nodes.  These features support using built-in replication to maintain a set of "identical" nodes for load-balancing read workloads.
+Две новые опции были добавлены в механизм синхронной репликации PostgreSQL, то позволяет теперь обеспечивать согласованность операций чтения на масштабе всего кластера баз данных. Во-первых, теперь стало возможность конфигурировать группы реплик, работающих с синхронной репликацией. Во-вторых, режим "remote_apply" позволяет получить согласованное представление данных на масштабе нескольких узлов. Всё это работает на основе встроенного механизма репликации и предназначено для получения массива «идентичных» узлов серверов баз данных для балансироваки нагрузки, содержащей операции чтения.
 
-The PostgreSQL-to-PostgreSQL data federation driver, postgres_fdw, has new capabilities to execute work on remote servers.  By "pushing down" sorts, joins, and batch data updates, users can distribute workload across multiple PostgreSQL servers.  These features should soon be added to other FDW drivers.
+Драйвер интеграции данных «из PostgreSQL в PostgreSQL» — модуль postgres_fdw – получил новые возможности для осуществления операция на удалённых серверах. За счёт «проталкивания» ("pushing down") операций сортировки, соединений и групповых обновлений пользователи теперь могут распределять нагрузку между несколькими серверами PostgreSQL. В ближайшем будущем планируется добавление подобные улучшений и в других FDW-драйверах.
 
 "With the capabilities of remote JOIN, UPDATE and DELETE, Foreign Data
 Wrappers are now a complete solution for sharing data between other
