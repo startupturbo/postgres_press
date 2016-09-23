@@ -5,7 +5,7 @@
 
 В версии 9.6 добавлена поддержка параллелизации некоторых операций, что позволяет утилизировать несколько или все доступные ядра сервера для того, чтобы как можно скорее сформировать ответ на запрос. Данный релиз содержит возможности параллелизации последовательного чтения (таблиц), операция соединения и агрегирования. В зависимости от конкретной ситуации и доступности ядер, паралеллизм позволяет достигать вплоть до 32-кратного ускорения запросов класса Big Data.
 
-"I migrated our entire genomics data platform - all 25 billion legacy MySQL rows of it - to a single Postgres database, leveraging the row compression abilities of the JSONB datatype, and the excellent GIN, BRIN, and B-tree indexing modes. Now with version 9.6, I expect to harness the parallel query functionality to allow even greater scalability for queries against our rather large tables," said Mike Sofen, Chief Database Architect, Synthetic Genomics.
+"Я мигрировал всю нашу платформу для изучения геномов — все 25 миллиардов строк из MySQL — в единственную базу данных на Postgres, воспользовавшись такими преимуществами, как сжатие строк с типом данных JSONB, а также отличными режимами индексирования GIN, BRIN и B-tree. С появлением версии 9.6 я планирую хорошую отдачу от параллелизации запросов, получив ещё большее масштабирование для запросов на довольно больших таблицах," — говорит Майк Софен (Mike Sofen), главный архитектор компании Synthetic Genomics.
 
 Scale Out with Synchronous Replication and postgres_fdw
 -------------------------------------------------------
