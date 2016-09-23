@@ -1,0 +1,88 @@
+PostgreSQL 8.0 Basýn Bülteni
+
+19 Ocak 2005 - PostgreSQL Global Development Group nesne-iliþkisel veritabaný yönetim sistemi 
+olan PostgreSQL'in, kendisini dünyanýn en geliþmiþ açýk kaynak kodlu veritabaný sunucusu yapan 
+8.0 sürümünü duyurdu. Bu sürüm ile birlikte, daha önceden çok pahalý ve özel mülkiyetteki 
+veritabaný sistemlerinde olan özellikleri içermektedir ve bu sürümde PostgreSQL'in gerek 
+kullanýcýlar, gerekse yazýlým satýcýlarý tarafýndan daha fazla benimsenmesi hedeflenmektedir.
+
+Ölçeklenebilirlik, yeni özellikler ve baþarým konusundaki belirgin geliþmelerin yaný sýra, 
+PostgreSQL 8.0 açýk kaynak kodlu yazýlýmlarýn geliþim hýzýný da göstermektedir. Aralarýnda Red 
+Hat, Fujitsu, Afilias, Software Research Associates, Inc., 2nd Quadrant ve Command Prompt 
+Inc., gibi firmalarla beraber dünyanýn dört bir yanýndan yüzlerce bireysel geliþtirici, 
+PostgreSQL 8.0'a daha önceki sürümlerden çok daha fazla katký vermiþlerdir.
+
+Fujitsu'nun Yazýlým Grubu'ndaki Açýk Kaynak Kodlu Veritabaný'ýn yöneticisi olan Takayuki 
+Nakazawa, "Bu kurumsal özellikler PostgreSQL'in çok daha fazla kullanýcýsý olmasýný 
+saðlayacaktýr" dedi ve ekledi: " Fujitsu PostgreSQL'e sponsor olmaktan ve çalýþmalarýný 
+PostgreSQL topluluðu ile paylaþmaktan dolayý gururludur. PostgreSQL'i lider Veritabaný Yönetim 
+Sistemi yapmakta kararlýyýz."
+
+Yeni özellikler:
+
+    * Doðal Windows Desteði: PostgreSQL artýk Windows sistemlerde doðal olarak çalýþýyor ve 
+bir emülasyona gereksinim duymuyor. Bu özellik PostgreSQL'e eski sürümlere göre çok geliþmiþ 
+bir baþarým (performans) artýþý ve þirket kullanýcýlarý, baðýmsýz yazýlým geliþtiricileri ve 
+bireysel Windows geliþtiricileri için özel mülkiyetteki veritabaný sistemleri ile 
+yarýþabilecek bir alternatif olma özelliðini kazandýrmýþtýr.
+    * Savepoint: Bu SQL standardý olan özellik, veritabanlarýndaki transactionlarýn hepsinin 
+birden iptal edilmesi yerine belirli bölümlerinin geri alýnabilmesine olanak saðlar. Bu 
+özellik, hata kurtarma ile birlikte karmaþýk transactionlara gereksinim duyan iþ uygulamasý 
+geliþtiricileri için çok yararlýdýr.
+    * Point in Time Recovery: Bu özellik otomatik ve sürekli devam eden arþivlenmiþ 
+transaction kayýt dosyalarýndan tam veri kurtarmaya izin verir. Böylece verilerin çok önemli 
+olduðu ortamlarda saatlik ya da günlük yedek alýnmasýna göre çok daha uzun soluklu bir 
+alternatif saðlanmýþtýr.
+    * Tablespace: Tablespace'ler büyük tablo ve indexlerin ayrý ayrý disk/disk bölümü ya da 
+disk kümelerine yerleþmelerine izin verir. Bu da sorgu baþarýmýný arttýrdýðý gibi çok GB/TB 
+veri tutan veri ambarý yöneticilerini rahatlatacaktýr.
+    * Geliþtirilmiþ bellek yönetimi ve I/O kontrolü: Disk ve bellek kullanýmý Adaptive 
+Replacement Cache algoritmasý, arkaplan yazýcýsý (background writer) ve yeni vacumm geciktirme 
+özellikleri kullanýlarak en uygun hale getirilmiþtir. Bu yeni özellik sayesinde sistem yükü 
+önceden tahmin edilebilir olacaktýr ve en yoðun kullaným zamanlarýnda daha da istikrarlý bir 
+baþarým saðlanacaktýr.
+
+Hyperic LLC'nin þef mimarý olan Javier Soltero, "PostgreSQL 8.0 bize HQ izleme ürünü için 
+gereksinim duyduðumuz süreklilik ve üretim imkanýný sunmaktadýr. PostgreSQL 8.0'ýn Windows 
+üzerinde doðal olarak çalýþmasý, PostgreSQL'i ürünümüz ile paketleyebilmemize imkan veriyor. 
+Ayrýca, kanýtlanmýþ ölçeklenebilirliði ile baþarýmýndan faydalanabileceðimiz ve de ticari 
+sýnýrlamalardan uzak olarak daðýtýmýmýzýn içine ücretsiz olarak yerleþtirmemize izin veren 
+lisansý ile de tüm özelliklerinden tam olarak yararlanmamýza olanak vereceði anlamýna 
+geliyor."
+
+Bu sürüm ile birlikte gelen diðer birçok özelliðin yaný sýra, PostgreSQL'in özellikleri, geçen 
+yýl içinde seçimsel bileþenler ve ek özelliklerin ivmelenmiþ geliþtirilme hýzý ile çok 
+artmýþtýr. Slony-I replikasyon aracý ve pgPool baðlantý pooling/brokering yazýlýmý þu anda 
+yüksek-bulunurluk gerektiren bir çok sunucuda halihazýrda kullanýlmaktadýr. PL/Java, PL/PHP, 
+Pl/Perl, Npgsql ve PgSQLClient gibi çeþitli stored procedure dilleri eklenmiþ ya da büyük 
+oranda geliþtirilmiþtir. .NET data providerlarý birçok yeni Windows kullanýcýsýný desteklemek 
+için geliþtirilmiþtir.
+
+PostgreSQL 8.0'da gelen yeni özelliklerin tam listesi ve tanýmlarý için lütfen basýn sayfamýzý 
+ziyaret ediniz.
+
+PostgreSQL hakkýnda: PostgreSQL, yüzlerce geliþtiricinin California'daki Berkeley 
+Üniversitesi'nde baþlayan ve 20 yýla yakýn bir süredir devam eden  ortak bir çalýþmanýn 
+ürünüdür. Transactionlar, fonksiyonlar, triggerlar (tetikleyici) ve subquery gibi enterprise 
+seviyedeki özellikleri çok uzun zamandan beri PostgreSQL'in içinde bulunmaktadýr. PostgreSQL 
+bugün bir çok kamu kurumu ve özel kurum tarafýndan kullanýlmaktadýr. PostgreSQL, kaynak 
+kodun ticari ve ticari olmayan uygulamalar için kullanýmýna ve daðýtýmýna ücretsiz olarak 
+izin verek BSD lisansý ile daðýtýlmaktadýr.
+
+PostgreSQL hakkýnda daha fazla bilgi bulmak ya da PostgreSQL'i indirmek için lütfen:
+http://www5.tr.PostgreSQL.org
+
+adresini ya da ana sayfamýz olan
+
+http://www.postgresql.org/
+
+adresini ziyaret ediniz.
+
+Daha fazla bilgi için lütfen bizimle baðlantý kurun:
+
+Devrim GÜNDÜZ
+PostgreSQL Türkiye
+0.533.735.6202 - 0.312.428.1900
+devrim at PostgreSQL.org
+
+Fujitsu ve Hyperic LLC hakkýnda daha fazla bilgi için lütfen basýn sayfamýzý ziyaret ediniz.

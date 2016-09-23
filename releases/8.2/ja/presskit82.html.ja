@@ -1,0 +1,335 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.2 Press Kit
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.2 プレスキット</h1>
+
+<h2>目次</h2>
+
+<p>
+ &nbsp; <a href="#original_release">プレスリリース</a><br />
+ &nbsp; <a href="#additional_features">追加機能に関する情報</a><br />
+ &nbsp; <a href="#download">ダインロード先</a><br />
+ &nbsp;	<a href="#docs">文書</a><br />
+ &nbsp; <a href="#license">ライセンス</a><br />
+ &nbsp; <a href="#contact">問い合わせ先</a><br />
+ &nbsp; <a href="#quoted_companies">引用した企業の情報</a><br />
+ &nbsp; <a href="#companies">法人サポート</a><br />
+ &nbsp; <a href="#additional_software">追加ソフトウェア</a><br />
+ &nbsp; <a href="#translations">英語版</a><br />
+</p>
+
+<a name="original_release"></a><h2>プレスリリース</h2>
+<p><b>2006年12月5日ワシントンDC(LISAコンファレンス)</b>
+本日、PostgreSQLグローバル開発グループは、PostgreSQLオブジェクト指向リレーショナルデータベース管理システムのバージョン8.2のリリースを発表します。
+この14番目の公式リリースでは、商用ユーザから要求のあった機能追加、熟成、性能向上がなされ、エンタープライズデータベースシステムの先端として十分比較できるものとなっています。
+バージョン8.2はPostgreSQLへの移行をより一層進めるものと確信しています。
+</p>
+
+
+<p>
+PostgreSQLコアチームメンバの一人EnterpriseDBデータベースアーキテクトのBruce Momjianはこう述べています。
+「本リリースはほとんどすべてのデータベースコマンドや機能を含んでいます。
+コミュニティで要求があった、拡張構文、互換性、インタフェースが追加されています。
+これにより、初心者のデータベース管理者にとって、PostgreSQLの高度な機能を完全にかつ簡単に使用できるようになりました。」
+</p>
+
+<p>
+Unisys副社長、オープンソースソリューションシステムおよび技術ジェネラルマネージャのAli Shadmanはこう述べています。
+「Unisysでは、大規模マルチユーザシステムにおけるPostgreSQLのスケーラビリティと性能が非常に改良されたことがわかり喜んでいます。
+この新しく公開されたバージョン8.2では、データベース管理システムのエンタープライズ向け機能へのPostgreSQLの熟成が進められています。」
+</p>
+
+<p>
+データベース管理および開発がより簡単になるよう、以下のツールや機能が含まれています。
+</p>
+
+
+<p>
+<b>性能向上:</b> 
+バージョン8.2ではハイエンドなOLTP（オンライントランザクション処理）システム試験においておよそ20％性能が向上しました。
+データウェアハウス処理でも十分な性能を得ることができます。
+メモリ上およびディスク上のソート処理の高速化、マルチプロセッサのスケーラビリティの向上、分割されたデータ問い合わせの向上、大量ロード処理の向上、外部結合の大きな高速化に関する変更が含まれます。
+</p>
+
+<p>
+<b>ウォームスタンバイデータベース:</b>
+（バージョン8.0で導入された）ポイントインタイムリカバリ機能の拡張を通じて、管理者はより簡単にデータベースクラスタのフェイルオーバー用複製を作成できるようになりました。
+</p>
+
+
+<p>
+<b>インデックス構築のオンライン化:</b>
+アプリケーションがデータベース書き込み中であってもインデックスを構築できるようになりました。
+停止時間なしに性能のチューニングを行うことができます。
+</p>
+
+
+<p>
+<b>SQL 2003 の機能:</b>
+標準に準拠しているとしてよく知られているPostgreSQLですが、さらにANSI SQL 2003仕様で追加されたより多くの構文を追加しました。
+統計処理集約、複数行のVALUE文、UPDATE RETURNING、複数列集約などが追加されました。
+</p>
+
+
+<p>また、他の主要データベースシステムで提供される前に、PostgreSQL 8.2で提供される先端的なデータベース機能を以下に示します。</p>
+
+<p>
+<b>汎用転置インデックス:</b>
+汎用転置インデックス(GIN)は
+半構造化テキストや完全なテキストデータのインデックス作成において
+よりスケーラビリティが高くかつプログラム可能な方式をサポートします。
+</p>
+
+<p>
+<b>DTrace:</b>
+PostgreSQLはSolaris DTraceや一般的な監視フレームワークを通してその他の高度な追跡ツール向けの手法を組み込みました。
+</p>
+
+
+<p>
+OmniTIコンピュータコンサルティング会長のTheo Schlossnagleはこう述べています。
+「データウェアハウス処理では、10億行のテーブル、テラバイト級のデータを扱います。
+ですので、オンラインインデックス構築やホットスタンバイ機能は非常に重要です。
+また、PostgreSQLがDtraceの第一級市民となったことを喜んでいます。
+つまり、これにより通常のシステム解析にかかる労力がデータベース特有のデータと強調できるようになり、その結果、非常に多くの有用な結果が導かれることになるでしょう。」
+</p>
+
+
+<p>
+8.2には、PostgreSQLのデータベース管理者をより生産的にする、多くの機能や改良が行われました。
+詳細についてはプレスキットを参照してください。
+PostgreSQLを<a href="/download">ダウンロードページ</a>からダウンロードしてください。
+</p>
+
+
+<p>
+<b>PostgreSQLについて:</b>
+PostgreSQLはカリフォルニア大学バークレイ校から始まり、21年間の開発、数百人の開発者による成果です。
+トランザクション、関数、トリガ、副問い合わせなどエンタープライズレベルの機能セットを長期間サポートした結果、今日では、多様な企業や政府機関で使用されています。
+PostgreSQLは、商用、非商用アプリケーションを問わず、無料で使用、配布可能なBSDライセンスの下で配布されています。
+</p>
+
+
+<a name="additional_features"></a><h2>本リリースにおける更なる機能</h2>
+
+バージョン8.2では、プレスリリースで紹介した主要機能の他に200以上の新機能や改良が多くの開発者によりなされました。
+一部を以下に示します。
+
+<ul>
+<li>
+アドバイサリロック: 
+アドバイサリロックにより、PostgreSQLの高速なロック機構を使用してアプリケーションレベルのデータベースオブジェクト制御を行うことができます。
+</li>
+<li>
+pg_dumpの選択性:
+pg_dumpの選択性により、トランザクション的な制約性を持った、リレーションの一部を正規表現で選択してダンプすることができます。
+</li>
+
+<li>
+プリペアードステートメント:
+プリペアードステートメント用の管理用インタフェースを新しく提供します。また、プリペアードステートメントの性能を向上しました。
+</li>
+
+<li>
+ISN/ISBN:
+システム目録やリテールシステム向けISN製品指示子をサポートするデータ型を含むモジュールが最新の国際標準をサポートするように改良しました。
+</li>
+
+<li>
+暗号: データベース内部の暗号をサポートするpgcryptoモジュールが最新のアルゴリズムで更新されました。
+</li>
+
+<li>
+SQLの改良:
+新しい構文、UPDATE RETURNING、DROP IF EXISTS、ON COMMITや所有権、権限を設定するための新しいコマンドなどがあります。
+これにより、コマンドライン上でのデータベースオブジェクトの取り扱いが簡単になります。
+</li>
+
+<li>
+PSQL バッチ選択：
+PSQLバッチ選択により、一度にすべてではなく、バッチ的にコンソールに行を返すことができるようになりました。
+</li>
+<li>
+ECPGのリファクタリング:
+PostgreSQL C言語組み込みインタフェースを多く書き直しました。また、新しいインタフェースを追加しました。
+</li>
+
+<li>
+TSearch2の大規模な改良:
+UTF-8サポート、シソーラス、問い合わせ書き換えのサポート、GINインデックス作成。
+</li>
+
+<li>
+PL/Python:
+名前付きパラメータおよびセットを返す関数をサポートするようになりました。
+</li>
+
+</ul>
+<p>
+PostgreSQLの拡張可能なアーキテクチャにより、手続き言語の追加、外部システムとのインタフェース、新しいインデックス型、リプリケーション、高度なツールなどの拡張を行う多くのコミュニティがあり、<a href="http://www.pgfoundry.org">公式PostgreSQLコミュニティプロジェクトサイト</a>にてホスティングされています。
+8.2のリリースサイクルではコミュニティプロジェクトでも、以下に示すような多くの進展がありました。
+</p>
+
+<ul>
+<li>
+完全分離: Google Summer of Codeのおかげで、PostgreSQLはこの急進的な結合アルゴリズムを実装した最初のデータベースシステムになりました。
+</li>
+
+<li>
+PGPoolII: 日本政府の資金援助の下、PGPoolに新しい負荷分散および分割機能が追加されました。
+</li>
+
+<li>
+PL/Java: 2つのJava手続き言語の1つが完全な製品レベルの状態になりました。データベース内部から完全にJavaを使用することができます。
+</li>
+
+</ul>
+
+<p>
+<a href="/docs/current/static/release.html">リリースノート</a>では、8.2のより多くの改良について紹介しています。
+
+</p>
+
+<a name="download"></a><h2>ダウンロード先</h2>
+
+<ul>
+<li><a href="/ftp/latest/">FTPミラー先の一覧</a></li>
+<li><a href="/download/bittorrent">Bittorrent</a></li>
+<li><a href="/ftp/binary/v8.2.0/win32/">Windowsインストーラ</a> (Bittorrent経由でも可能です)</li>
+<li><a href="/ftp/binary/v8.2.0/">Linux、Mac OS/X、Solarisなどその他のバイナリ</a></li>
+<li><a href="/projects/pgsql/">SourceForge</a> (Windowsインストーラを含みます。)</li>
+</ul>
+
+<a name="docs"></a><h2>文書</h2>
+
+<ul>
+<li><a href="/docs">公式文書</a></li>
+<li><a href="/docs/techdocs">TechDocs</a></li>
+<li><a href="/about/press/faq">Frequently Asked Questions</a></li>
+</ul>
+
+<a name="license"></a><h2>ライセンス</h2>
+<p>
+PostgreSQLは<a href="/about/license">BSD ライセンス</a>を使用しています。
+このライセンスでは、ライセンスを受けるソースコードがそのコピーライトとライセンス情報を含有することのみを要求します。
+この<a href="http://www.opensource.org/licenses/bsd-license.php">OSI認証ライセンス</a>は、柔軟かつビジネスに利用しやすいため広く評価されています。
+このため、商用アプリケーションや私有アプリケーションにおけるPostgreSQLの使用は制限されていません。
+複数企業のサポートとソースコードの公的所有もありますが、このBSDライセンスにより、料金・ベンダ独占化・ライセンス条項の変更などの心配をすることなく製品への組み込み用データベースを求めるベンダにPostgreSQLは非常に人気があります。
+
+</p>
+
+<a name="contact" /><h2>問合せ先</h2>
+
+<p><a href="www.postgresql.jp">日本Postgresqlユーザ会</a></p>
+<p><a href="http://www.postgresql.org">PostgreSQL ホームページ(英語)</a></p>
+
+<p>問い合わせ先:<br />
+日本PostgreSQLユーザ会<br />
+東京<br />
++81-3-5951-1214<br />
+<a href="mailto:jpug-staff@postgresql.jp">jpug-staff@postgresql.jp</a></p>
+
+
+<p>
+日本以外の問い合わせ先については <a href="/about/press/contact">問い合わせ先一覧(国際版)</a>を参照してください。
+</p>
+
+
+<a name="quoted_companies"></a><h2>引用した企業とその全文</h2>
+<p>
+Unisys副社長、オープンソースソリューションシステムおよび技術ジェネラルマネージャのAli Shadmanはこう述べています。
+「Unisysでは、大規模マルチユーザシステムにおけるPostgreSQLのスケーラビリティと性能が非常に改良されたことがわかり喜んでいます。
+この新しく公開されたバージョン8.2では、データベース管理システムのエンタープライズ向け機能へのPostgreSQLの熟成が進められています。
+PostgreSQLは、選りすぐりのオープンソース技術を使用したJava EEベースのトランザクション処理向けのUnisysのオープンかつセキュアな統合ソリューション「OASIS」のキーとなる要素です。
+Unisysは、PostgreSQLをよりエンタープライズ向けに導くコミュニティを応援し続けるつもりです。」
+</p>
+<p>
+<b>Unisysについて:</b>
+<a href="http://www.unisys.com/">Unisys</a>は世界的な技術サービス、ソリューションを行う企業です。
+私達のコンサルタントは、顧客のビジネスを安全に達成するために相談、システム統合、アウトソーシング、基盤技術、サーバ技術をUnisysの専門家に依頼しています。
+私達は、顧客の業務に可視性を加えることで、より安全な組織化を行います。
+Unisys 3D  Visible Enterpriseにより、顧客の決定の影響、投資、機会、危険性を可視化します。
+本リリースに関する問い合わせは<a href="mailto:brian.daly@unisys.com">Brian Daly</a>までお願いします。(英語のみ)</p>
+
+<p>
+OmniTIコンピュータコンサルティング会長のTheo Schlossnagleはこう述べています。
+「私達はSolaris10上でPostgreSQLを使用したミッションクリティカルなシステムを多く管理しています。
+データウェアハウス処理では、10億行のテーブル、テラバイト級のデータを扱います。
+ですので、オンラインインデックス構築やホットスタンバイ機能は非常に重要です。
+また、PostgreSQLがDtraceの第一級市民となったことを喜んでいます。
+つまり、これにより通常のシステム解析にかかる労力がデータベース特有のデータと協調できるようになり、その結果、非常に多くの有用な結果が導かれることになるでしょう。」
+</p>
+
+<p>
+<b>OmniTIについて:</b>
+<a href="http://omniti.com/home">OmniTI</a>は、Columbia, Marylandで設立された、インターネット技術に関するコンサルティング企業です。
+インターネット宛先の名士録のように読み取れる顧客リストから、OmniTIが今日の大規模Webアプリケーションを見据えた、スケーラビリティ、性能、セキュリティ問題にもっとも挑戦している企業となりつつあることを自ら示しています。
+問い合わせ先は877-887-3031またはinfo@omniti.comです(英語のみ)。
+</p>
+
+
+<a name="companies" /><h2>法人サポート</h2>
+
+
+<p>PostgreSQLは、スポンサー企業による多くサポートを受けています。これらスポンサー企業はホスティングリソースの提供や金銭的なサポートを行います。
+大規模、長期のスポンサーの一覧は<a href="/about/sponsors">開発スポンサーページ</a>にあります。</p>
+
+
+<p>また、個別のコンサルティングから多国企業まで、<a href="/support/professional_support">PostgreSQLサポートを提供する企業</a>という大規模なコミュニティもあります。</p>
+
+
+<a href="/about/donate">寄付</a>は喜んで受け付けます。
+
+<a name="additional_software" /><h2>リンク</h2>
+
+<p>
+PostgreSQLの主プロジェクトは、100以上のサブプロジェクトから促進されています。
+これらサブプロジェクトは、レプリケーション、移行、互換性、相互運用性、設計、グラフィカル管理ツールなど製品レベルのソリューションを提供します。
+</p>
+
+<h3>関連するプロジェクト</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>ドライバ</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://pgfoundry.org/projects/npgsql">.Net</a></li>
+<li><a href="http://search.cpan.org/~dbdpg/DBD-Pg/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<h3>先進機能に関するパッケージ</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Geographic Information Server (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Full Text Search (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Business Intelligence/Data Warehousing (Bizgres)</a></li>
+</ul>
+
+<h3>グラフィカルユーザインタフェース</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin3</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="/docs/techdocs.54">List of other
+GUIs</a></li>
+</ul>
+
+<h3>レプリケーション</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>
+
+<a name="translations" /><h2>公式な本書の翻訳</h2>
+
+<p><a href="/about/press/presskit82.html.en">8.2 PressKit</a></p>

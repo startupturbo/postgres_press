@@ -1,0 +1,36 @@
+10 SEPTEMBER 2012: The PostgreSQL Global Development Group announces PostgreSQL 9.2, the latest release of the leader in open source databases. Since the beta release was announced in May, developers and vendors have praised it as a leap forward in performance, scalability and flexibility.  Users are expected to switch to this version in record numbers.
+
+"PostgreSQL 9.2 will ship with native JSON support, covering indexes, replication and performance improvements, and many more features. We are eagerly awaiting this release and will make it available in Early Access as soon as it’s released by the PostgreSQL community," said Ines Sombra, Lead Data Engineer, Engine Yard.
+
+Links
+
+- Downloads, including packages and installers: http://www.postgresql.org/downloads
+- Release Notes: http://www.postgresql.org/docs/9.2/static/release-9-2.html
+- Documentation: http://www.postgresql.org/downloads
+- What's New in 9.2: http://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.2
+- Press Kit: http://www.postgresql.org/about/press/presskit92
+
+Improved Performance and Scalability
+
+With the addition of linear scalability to 64 cores, index-only scans and reductions in CPU power consumption, PostgreSQL 9.2 has significantly improved scalability and developer flexibility for the most demanding workloads.  Organizations like the U.S. Federal Aviation Administration and Heroku.com run applications on PostgreSQL, and HP has adopted it for their remote support software and to power their HP-UX/Itanium solutions.
+
+Improvements in vertical scalability increase PostgreSQL's ability to efficiently utilize hardware resources on larger servers. Advances in lock management, write efficiency, index-only access and other low-level operations allow the database engine to handle even larger-volume workloads.
+
+Numerically, this means:
+- Up to 350,000 read queries per second (more than 4X faster)
+- Index-only scans for data warehousing queries (2–20X faster)
+- Up to 14,000 data writes per second (5X faster)
+
+Also, the addition of cascading replication enables users to run even larger stacks of horizontally scaled servers under PostgreSQL 9.2.
+
+"NewsBlur, a social news reader, relies on Postgres for storing millions of sites and subscriptions. Solid and reliable for years," said Samuel Clay, founder of newsblur.com. "We're consistently on the bleeding edge (9.1 now, moving to 9.2 soon for the cascading replication alone) and it's been a pleasure since 8.4."
+
+Flexible Developer Support
+
+The flexibility of PostgreSQL is reflected in the diversity of organisations that have adopted it. For example NASA, the Chicago Mercantile Exchange and Instagram all rely on it to perform mission-critical applications.  Version 9.2 extends this flexibility even further by including support for Range Types and JSON, allowing developers to use PostgreSQL in completely new ways.
+
+Range Types allow developers to create better calendaring, scientific, and financial applications. No other major SQL database supports this feature, which enables intelligent handling of blocks of time and numbers.
+
+With PostgreSQL 9.2, query results can be returned as JSON data types. Combined with the new PL/V8 Javascript and PL/Coffee database programming extensions, and the optional HStore key-value store, users can now utilize PostgreSQL like a "NoSQL" document database, while retaining PostgreSQL's reliability, flexibility and performance.
+
+"Native JSON support in PostgreSQL provides an efficient mechanism for creating and storing documents for web APIs.  We use front-end libraries like jQuery to request tabular and tree-structured data; and the new features make it convenient and provide performance advantages in retrieving that data as JSON, " said Taras Mitran, Senior Architect, IVC Inc.

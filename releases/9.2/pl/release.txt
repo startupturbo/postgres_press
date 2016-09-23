@@ -1,0 +1,37 @@
+10 września 2012: The PostgreSQL Global Development Group ogłosiła wydanie wersji 9.2 bazy PostgreSQL, lidera wśród baz danych open source. Od momentu ogłoszenia wersji beta w maju, deweloperzy mogą pochwalić sie dużym wzrostem wydajności, skalowalności i elastyczności. Oczekujemy, że rekordowa liczba użytkowników zacznie używać tej wersji.
+
+„PostgreSQL 9.2 będzie zawierał obsługę formatu JSON, indeksy pokrywające (covering index), replikację, lepszą wydajność i wiele innych cech. Niecierpliwie czekamy na tę wersję i będzie ona dostępna w usłudze Early Access, gdy tylko zostanie wydana” powiedział Ines Sombra, Lead Data Engineer, EngineYard.
+
+Lepsza wydajność i skalowalność.
+
+Ulepszenia w skalowalności zwiększają możliwości lepszego wykorzystania sprzętu przez PostgreSQL na większych serwerach. Lepsze zarządzanie blokadami, wydajniejsze zapisy, index-only scan oraz wydajniejsze niskopoziomowe operacje pozwalają bazie PostgreSQL na obsługę znacznie większych obciążeń. Liczbowo wygląda to następująco:
+
+* Do 350 000 odczytów na sekundę (ponad 4 razy szybciej)
+* Index-only scan dla zapytań hurtowni danych (2 — 20 razy szybciej)
+* Do 14 000 zapisów danych na sekundę (5 razy szybciej)
+* Do 30% mniejsze obciążenie procesorów
+
+Dodatkowo możliwość kaskadowej replikacji pozwala użytkownikom używać jeszcze większej liczby horyzontalnie skalowanych serwerów działających z użyciem PostgreSQL 9.2.
+
+„Czytnik wiadomości NewsBlur wykorzystuje bazę PostgreSQL do przechowywania informacji o milionach stron i subskrypcji. Trwała i niezawodna przez lata” powiedział Samuel Clay, założyciej NewsBlur.com. „Z przyjemnością nieustannie używamy najnowszej wersji bazy, począwszy od 8.2 (aktualnie jest to 9.1, ale, chociażby dla kaskadowej replikacji, niedługo przenosimy się na 9.2).”
+
+Elastyczne wsparcie programisty.
+
+Elastyczność bazy PostgreSQL dobrze widać w różnorodności organizacji, które jej używają. NASA, FAA, Chicago Mercantile Exchange i Instagram polegają na niej w swoich głównych aplikacjach związanych z działalnością. Wersja 9.2 jeszcze bardziej zwiększa elastyczność oferując obsługę typów zakresowych i formatu JSON, co pozwala programistom używać bazy PostgreSQL na całkiem nowe sposoby.
+
+Typy zakresowe (Range Type) pozwalają programistom tworzyć lepsze aplikacje finansowe, naukowe i kalendarzowe. Żadna z pozostałych głównych baz SQL nie ma tej cechy, która pozwala na inteligentną obsługę przedziałów czasowych i liczbowych.
+
+PostgreSQL w wersji 9.2 pozwala na otrzymywanie wyników zapytań bezpośrednio w formacie JSON. Łącząc to z nowymi rozszerzeniami języków proceduralnych PL/v8 Javascript i PL/Coffee oraz opcjonalnym rozszerzeniem HStore (pozwala na przechowywanie danych typu klucz - wartość) można użyć PostgreSQLa jako bazę „NoSQL“ do przechowywania dokumentów, z jej jednoczesną niezawodnością, elastycznością i wydajnością. 
+
+„Obsługa JSONa przez PostgreSQLa jest wydajnym mechanizmem do tworzenia i przechowywania dokumentów dla API systemów internetowych. Używamy bibliotek takich jak jQuery do obsługi danych tabelowych i drzewiastych. Nowe funkcje bazy pozwalają otrzymywać dane w formacie JSON w wygodny i wydajny sposób” powiedział Taras Mitran, Senior Architect, IVC Inc.
+
+- Informacje prasowe: http://www.postgresql.org/about/press/presskit92/pl
+- Informacje o wydaniu: http://www.postgresql.org/documentation/current/static/release-9-2
+- Pliki do ściągnięcia: http://www.postgresql.org/downloads
+
+W celu uzyskania dodatkowych informacji proszę kontaktować się z:
+SZYMON GUZ
+PL@POSTGRESQL.ORG
+
+O PostgreSQL: PostgreSQL jest czołowym systemem baz danych o otwartym kodzie, ze społecznością liczoną w tysiącach użytkowników i współtwórców, włączając w to wiele firm i organizacji. Rozwój bazy PostgreSQL rozpoczął się na Uniwersytecie w Berkeley w Kaliforni ponad dwadzieścia pięć lat temu i, w dużym tempie, jest nadal kontynuowany. Dojrzałe cechy PostgreSQLa nie tylko stawiają go na równi z głównymi bazami danych o zamkniętym kodzie, ale przewyższają je zaawansowanymi funkcjami bazy danych, możliwościami rozszerzania, bezpieczeństwem i stabilnością. Więcej o projekcie PostgreSQL, a także dołączeniu do społeczności, można znaleźć pod adresem: http://www.postgresql.org.
+

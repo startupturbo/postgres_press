@@ -1,0 +1,167 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.3 Press Kit
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.3プレスキット</h1>
+
+<h2>Contents</h2>
+
+<p>
+ &nbsp; <a href="#original_release">リリース原文</a><br />
+ &nbsp; <a href="#additional_features">機能一覧</a><br />
+ &nbsp; <a href="#download">ダウンロード</a><br />
+ &nbsp; <a href="#docs">文書</a><br />
+ &nbsp; <a href="#license">ライセンス</a><br />
+ &nbsp; <a href="#contact">問い合わせ先</a><br />
+ &nbsp; <a href="#quoted_companies">引用した企業について</a><br />
+ &nbsp; <a href="#companies">法人サポート</a><br />
+ &nbsp; <a href="#additional_software">リンク</a><br />
+</p>
+
+<a name="original_release"></a><h2>リリース原文</h2>
+
+<p><b>2008年2月4日、New York、NY:</b>
+PostgreSQLグローバル開発グループは本日、高性能オブジェクト指向データベース管理システムのバージョン8.3のリリースを発表しました。
+このリリースには、18カ国、数10名のPostgreSQL貢献者による280以上のパッチによって、アプリケーション設計者、データベース管理者、ユーザ向けにPostgreSQLを一層強化する史上最多の新機能ならびに多くの機能向上が含まれています。。
+</p><p>
+Sun Microsystems、ソフトウェア部門のExecutive Vice PresidentであるRich Greenは次のように述べています。
+「オープンソースのPostgreSQLデータベースの継続的な発展は、金銭的なコストを抑え、性能向上、開発効率向上を行うことができる非商用データベースの導入という選択肢をユーザに提供します。PostgreSQL 8.3は印象的な新リリースであり、世界中のお客様に検討をお勧めします。」
+</p><p>
+バージョン8.3は以前のバージョンと比べ、性能の持続性が向上しています。ピーク時であってもなくても、1年を通してすべてのトランザクションで最近のベンチマークで示されたと同じ高性能をユーザが頼ったとしても保証します。
+主な性能上の改良点を以下に示します。
+</p><ul>
+<li>ヒープオンリータプル(HOT)。これは頻繁に更新されるタプルにおける管理上のオーバーヘッドの3/4を取り除きます。</li>
+<li>分散チェックポイント。応答時間に対するチェックポイントの影響を軽減します。</li>
+<li>バックグランドライタの自動セルフチューニング</li>
+</ul><p>
+またこうした変更はトランザクション処理スループットを大きく、作業量によりますが5%から30%、向上させます。
+</p><p>
+PostgreSQLコアチームメンバであるBruce Momjianは次のように述べています。
+</p><p>
+「PostgreSQLはより賢くなりました。PostgreSQLはオープンソースデータベースで初めて同期スキャンを実装しました。これはデータマイニングでのI/Oを大きく減らします。
+WindowsチームはVisual C++でPostgreSQLをコンパイルできるようにし、これによりWindowsでの安定性および性能が向上し、また、Windows貢献者がプロジェクトに参加しやすくなりました。
+新しいロギングオプションを追加し、サーバの監視を簡単にするために統計情報コレクタのオーバーヘッドを減少させました。」
+</p><p>
+もちろん、アプリケーション開発者向けに多くの新機能を提供しないPostgreSQLのリリースは適切なものではありません。これらの新機能を以下に示します。
+</p><ul>
+<li>XMLエキスポートを含むANSI標準のSQL/XMLサポート</li>
+<li>テキスト検索。先進的な全文検索ツールTSearch2をコア配布内に吸収し、優れた管理手法と新しい辞書と言語を付与しました</li>
+<li>GSSAPIおよびSSPI認証サポート</li>
+<li>UUID、ENUM、複合型の配列といった新規データ型</li>
+</ul><p>
+ソーシャルネットワークサイトMyYearbook.comのCTOであるGavin Royは次のように述べています。
+「私達のPostgreSQLサーバでは1秒間に18,000以上の問い合わせを300GBのユーザデータに対して処理しています。またこれらの数値は毎月増加しています。
+HOT、共有バッファスキャンの改良、統合されたテキスト検索インデックスに非常に興奮しています。
+事前のテストでは、8.3がデータベースの負荷プロファイルを改善し、応答時間が短縮されることが示されました。
+私達はリリースされることを心待ちしています。」
+</p><p>
+多くの新しい中核機能の他に、複数の新しいオプションコンポーネントが熟成し、8.3のリリースのタイミングでバージョン1.0としてリリースされます。
+これらには、SNMPサポート、PL/Proxy、pgPool-II、Bucardoなどによる水平スケーラビリティ用の選択肢、ストアドプロシージャ用のグラフィカルデバッガ、pgBouncerというスケーラブルな接続プールが含まれます。
+これらが既存の多くのアクセサリの中に追加されました。
+</p><p>
+8.3には、PostgreSQLをより強力なデータベースプラットフォームとする、多くの追加機能や改良があります。
+詳しくはプレスキットを参照してください。
+</p><p>
+<a href="http://www.postgresql.org/download">ダウンロードページ</a>からPostgreSQLをダウンロードすることができます。
+</p><p>
+PostgreSQLについて: PostgreSQLはカリフォルニア大学バークレイ校から始まり、21年間の開発、数百人の開発者による成果です。トランザクションなどエンタープライズレベルの機能とスケーラビリティを長期間サポートした結果、今日では、多様な企業や政府機関で使用されています。 
+PostgreSQLは、商用、非商用アプリケーションを問わず、無料で使用、配布可能なBSDライセンスの下で配布されています。
+詳しくは<a href="http://www.postgresql.org">ホームページ</a>をご覧ください。
+</p>
+
+<h2>リリースノートの拡張</h2>
+
+<a name="additional_features"></a><h2>機能一覧</h2>
+<p>
+バージョン8.3では空前の数の新機能がありますので、別のページを作成してこれらをまとめました。
+<ul>
+<li><a href="/about/press/features83">全機能一覧</a></li>
+<li><a href="/about/featurematrix">機能マトリックス(英語のみ)</a></li>
+<li><a href="/docs/8.3/static/release-8-3.html">リリースノート</a></li>
+</ul>
+<a name="download"></a><h2>ダウンロード</h2>
+<ul>
+<li><a href="/ftp/source/v8.3">ソースコード</a></li>
+<li><a href="/ftp/binary/v8.3">バイナリ</a>。Windows用、Red Hat Linux用、Solaris用が存在します。</li>
+<li><a href="http://www.pgfoundry.org">オプションコンポーネント</a></li>
+</ul>
+
+<a name="docs"></a><h2>文書</h2>
+
+HTML文書およびマニュアルページはPostgreSQLでインストールされますが、拡張可能かつ対話式の<a href="/docs/8.3/interactive">online documentation</a>で閲覧、検索、コメント付を自由に行ってください。
+
+<a name="license"></a><h2>ライセンス</h2>
+<p>
+PostgreSQLは<a href="/about/licence">BSDライセンス</a>を使用しています。
+このライセンスでは、ライセンスを受けるソースコードがそのコピーライトとライセンス情報を含有することのみを要求します。
+この<a href="http://www.opensource.org/licenses/bsd-license.php">OSI認証ライセンス</a>は、柔軟かつビジネスに利用しやすいため広く評価されています。
+このため、商用アプリケーションや私有アプリケーションにおけるPostgreSQLの使用は制限されていません。
+複数企業のサポートとソースコードの公的所有と相俟って、このBSDライセンスにより、料金・ベンダ独占化・ライセンス条項の変更などの心配をすることなく製品への組み込み用データベースを求めるベンダにPostgreSQLは非常に人気があります。
+</p>
+
+<a name="contact"></a><h2>問い合わせ先</h2>
+
+<p>
+<a href="http://www.postgresql.jp">日本PostgreSQLユーザ会</a></p>
+
+<p>問い合わせ先:<p>
+日本PostgreSQLユーザ会<br />
+東京<br />
++81-3-5951-1214<br />
+<a href="mailto:jpug-staff@postgresql.jp">jpug-staff@postgresql.jp</a></p>
+
+<p>日本以外の問い合わせ先については <a href="/about/press/contact">問い合わせ先一覧(国際版)</a>を参照してください。</p>
+
+<a name="quoted_companies"></a><h2>引用した企業について</h2>
+<p>
+Sun Microsystems、ソフトウェア部門のExecutive Vice PresidentであるRich Greenは次のように述べています。
+「オープンソースのPostgreSQLデータベースの継続的な発展は、金銭的なコストを抑え、性能向上、開発効率向上を行うことができる非商用データベースの導入という選択肢をユーザに提供します。
+Sunは、Dell、HP、IBM製のハードウェアなど、すべてのx64およびSPARCサーバで稼働するOpenSolarisにPostgreSQLの成功をコミットし、各種教育およびPostgreSQLの導入を計画している顧客向けのサポート提供を行います。
+PostgreSQL 8.3は印象的な新リリースであり、世界中のお客様に検討をお勧めします。」
+
+</p><p>
+<b>Sun Microsystems連絡先</b>: Terri Molini, 01-408-404-4976, terri.molini@sun.com（英語のみ）
+</p><p>
+ソーシャルネットワークサイトMyYearbook.comのCTOであるGavin Royは次のように述べています。
+「私達のPostgreSQLサーバでは1秒間に18,000以上の問い合わせを300GBのユーザデータに対して処理しています。またこれらの数値は毎月増加しています。
+HOT、共有バッファスキャンの改良、統合されたテキスト検索インデックスに非常に興奮しています。
+事前のテストでは、8.3がデータベースの負荷プロファイルを改善し、応答時間が短縮されることが示されました。
+私達はリリースされることを心待ちしています。」
+</p><p>
+<b>MyYearbook.comについて</b>: myYearbook.comは、U.S.にあるインターネット上の10代向けの大規模メディアプロパティの1つです。
+過去5か月における、ページビューとメンバの増加率は500パーセントを誇り、myYearbookは単一の高校から470万メンバにまで成長しました。
+そして現在は2か月毎に100万の新規メンバが増加しています。
+連絡先はpress@myyearbook.com（英語のみ）です。
+</p>
+
+<a name="companies"></a><h2>法人サポート</h2>
+
+<p>PostgreSQLは、企業による多くサポートを受けています。これらスポンサー企業は開発者の後援、ホスティングリソースの提供や金銭的なサポートを行います。大規模、長期のスポンサーの一覧は<a href="/about/sponsors">開発スポンサーページ</a>にあります。</p>
+
+<p>また、個別のコンサルティングから多国企業まで、<a href="/support/professional_support">PostgreSQLサポートを提供する企業</a>という大規模なコミュニティもあります。
+</p>
+
+<a href="/about/donate">寄付</a>は喜んで受け付けます。
+
+<a name="additional_software"></a><h2>リンク</h2>
+<p>
+PostgreSQLの主プロジェクトは、100以上のサブプロジェクトから促進されています。これらサブプロジェクトは、レプリケーション、移行、互換性、相互運用性、設計、グラフィカル管理ツールなど製品レベルのソリューションを提供します。
+ほとんどのオプションコンポーネントは<a href="http://www.pgfoundry.org">pgFoundry</a>または<a href="/download">ダウンロードページ</a>に目録があります。
+以下に本リリースノートで述べたものに関するリンクを示します。
+</p>
+<h3>開発ツール</h3>
+<ul>
+<li><a href="http://pgsnmpd.projects.postgresql.org/">pgSNMP</a></li>
+<li><a href="http://pgfoundry.org/projects/edb-debugger/">PL/pgSQLデバッガ</a></li>
+</ul>
+
+<h3>レプリケーションおよび水平スケーリング</h3>
+
+<ul>
+<li><a href="http://bucardo.org/">Bucardo</a></li>
+<li><a href="https://developer.skype.com/SkypeGarage/DbProjects/SkyTools">Skytools</a>。<a href="https://developer.skype.com/SkypeGarage/DbProjects/PlProxy">PL/Proxy</a>および<a href="https://developer.skype.com/SkypeGarage/DbProjects/PgBouncer">pgBouncer</a>を含みます。</li>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+<li><a href="http://www.postgresql.at/english/pr_cybercluster_e.html">CyberCluster</a></li>
+</ul>

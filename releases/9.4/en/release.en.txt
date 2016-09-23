@@ -1,0 +1,48 @@
+PostgreSQL 9.4 Increases Flexibility, Scalability and Performance
+==================================================================
+
+18 DECEMBER 2014: The PostgreSQL Global Development Group announces the release of PostgreSQL 9.4, the latest version of the world's leading open source database system.  This release adds many new features which enhance PostgreSQL's flexibility, scalability and performance for many different types of database users, including improvements to JSON support, replication and index performance.
+
+Flexibility
+-----------
+
+With the new JSONB data type for PostgreSQL, users no longer have to choose between relational and non-relational data stores: they can have both at the same time.  JSONB supports fast lookups and simple expression search queries using Generalized Inverted Indexes (GIN).  Multiple new support functions enable users to extract and manipulate JSON data, with a performance which matches or surpasses the most popular document databases.  With JSONB, table data can be easily integrated with document data for a fully integrated database environment.
+
+"JSONB brings PostgreSQL to the JavaScript development community by allowing JSON data to be stored and queried natively. Node.js and other server-side JavaScript frameworks can benefit from the safety and robustness of PostgreSQL, while still storing data in the schema-less format that they prefer," said Matt Soldo, Product Manager, Heroku Postgres.
+
+Scalability
+-----------
+
+In 9.4, Logical Decoding supplies a new API for reading, filtering and manipulating the PostgreSQL replication stream.  This interface is the foundation for new replication tools, such as Bi-Directional Replication, which supports the creation of multi-master PostgreSQL clusters.  Other improvements in the replication system, such as replication slots and time-delayed replicas, improve management and utility of replica servers.
+
+"The main reason behind our immediate adoption of PostgreSQL 9.4 in production is the new Logical Decoding feature," said Marco Favale, Cartographic Production Manager of Navionics. "The ability to write custom and flexible output plugins will allow us to transparently collect changes on selected tables and replicate changes where we like, by removing heavier - and more complex to manage - trigger based
+replication solutions."
+
+"Zalando relies on the stability and performance of hundreds of PostgreSQL database servers to continuously serve millions of customers all around Europe," said Valentine Gogichashvili, Team Lead Database Operations at Zalando Technologies.  "We are excited to run time-delayed standby servers which work out of the box, and will evaluate the new bi-directional replication tools as soon as they are released."
+
+Performance
+-----------
+
+Version 9.4 also introduces multiple performance improvements which will allow users to get even more out of each PostgreSQL server.  These include:
+
+* Improvements to GIN indexes, making them up to 50% smaller and up to 3X faster.
+* Concurrently updatable Materialized Views for faster, more up-to-date reporting.
+* Rapidly reload the database cache on restart using pg_prewarm.
+* Faster parallel writing to the PostgreSQL transaction log.
+* Support for Linux Huge Pages for servers with large memory.
+
+"We will definitely benefit from concurrent refresh of materialised views, delayed standby servers (which will make our disaster recovery even more robust) as well as the usual performance improvements every new release carries on," added Marco Favale.
+
+Links
+-----
+
+* Downloads: http://www.postgresql.org/downloads
+* Press Kit: http://www.postgresql.org/about/press/presskit94
+* Release Notes: http://www.postgresql.org/documentation/current/static/release-9-4
+* What's New in 9.4: https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.4
+
+About PostgreSQL
+----------------
+
+PostgreSQL is the leading open source database system, with a global community of thousands of users and contributors and dozens of companies and organizations.  The PostgreSQL Project builds on over 25 years of engineering, starting at the University of California, Berkeley, and has an unmatched pace of development today. PostgreSQL's mature feature set not only matches top proprietary database systems, but exceeds them in advanced database features, extensibility, security and stability.  Learn more about PostgreSQL and participate in our community at: http://www.postgresql.org.
+

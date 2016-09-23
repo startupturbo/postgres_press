@@ -1,0 +1,258 @@
+<!-- BEGIN page_title_block -->
+Kit de Imprensa do PostgreSQL 8.2
+<!-- END page_title_block -->
+
+<h1>Kit de Imprensa do PostgreSQL 8.2</h1>
+
+<h2>Índice</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Texto Original das Notas de Lançamento</a><br />
+ &nbsp; <a href="#additional_features">Recursos Adicionais</a><br />
+ &nbsp; <a href="#download">Onde Baixar</a><br />
+ &nbsp;	<a href="#docs">Documentação</a><br />
+ &nbsp; <a href="#license">Licença</a><br />
+ &nbsp; <a href="#contact">Contatos</a><br />
+ &nbsp; <a href="#companies">Suporte Corporativo</a><br />
+ &nbsp; <a href="#additional_software">Software Adicional</a><br />
+ &nbsp; <a href="#translations">Traduções</a><br />
+</p>
+
+<a name="original_release"></a><h2>Texto Original das Notas de Lançamento</h2>
+<p><b>5 de Dezembro de 2006:</b> O Grupo Global de Desenvolvimento
+do PostgreSQL anuncia hoje o lançamento da versão 8.2 do sistema gerenciador
+de bancos de dados objeto-relacional PostgreSQL. A décima quarta versão
+adiciona recursos, maturidade e a performance necessários aos usuários corporativos,
+além de incluir gerenciabilidade comparável aos SGBDs comerciais líderes de mercado.
+A versão 8.2 deve incentivar ainda mais migrações para o PostgreSQL.</p>
+
+<p>"Essa versão toca em praticamente todos os comandos e utilitário do banco de dados",
+disse o membro do grupo central de desenvolvedores e arquiteto de
+bancos de dados da EnterpriseDB Bruce Momjian.
+"Adiciona sintaxes expandidas, compatíveis com os padrões, interfaces
+solicitadas pela comunidade de usuários, facilitando o uso de todos os
+recursos avançados do PostgreSQL por novos DBAs".</p>
+
+<p>"A Unisys está impressionada com as melhorias significativas na escalabilidade
+e performance do PostgreSQL em sistemas multi-processados de grande escala",
+declara Ali Shadman, vice presidente e gerente de soluções de código aberto
+da Unisys. "A versão 8.2, recentemente lançada, continua com o amadurecimento do PostgreSQL em um sistema de gerenciamento de banco de dados apto a adoção corporativa".</p>
+<p>
+Novas ferramentas e recursos que facilitam o gerenciamento e desenvolvimento com o banco de dados incluem:</p>
+
+<p><b>Melhorias na performance:</b> a versão 8.2 aumenta em aproximadamente 20%
+a performance geral em sistemas OLTP (processamento online de transações) de grande porte.
+Os usuários podem ganhar ainda mais em eficiência nos sistemas de data warehousing.
+As mudanças incluem ordenamento mais rápido em memória e em disco, melhor aproveitamento de múltiplos processadores, melhor planejamento de consultas com dados particionados, cargas mais velozes de grandes blocos de dados e um grande ganho de performance em junções externas.</p>
+
+<p><b>Bancos de Dados para Recuperação Imediata:</b>através de uma extensão do recurso
+de Recuperação de Ponto no Tempo (disponível a partir da 8.0), administradores podem facilmente criar cópia tolerante a falha de seu agrupamento de banco de dados.</p>
+
+<p><b>Criação de índices online:</b> agora a criação de índices pode ocorrer enquanto
+aplicações gravam dados nas mesmas tabelas, permitindo ajustes de performance sem tempo de espera.</p>
+
+<p><b>Características do SQL 2003:</b>  o PostgreSQL, famoso por seguir padrões,
+adicionou diversas sintaxes para recursos introduzidos na especificação do ANSI SQL 2003, incluindo:
+funções de agregações estatísticas, cláusula VALUE com multiplas linhas, UPDATE RETURNING e agregação com múltiplas colunas.</p>
+
+Recursos avençados, disponibilizados no PostgreSQL 8.2 antes de qualquer outro banco de dados incluem:
+
+<p><b>Índices Invertidos Genéricos (GIN):</b>  suporta um método mais extensível e programável de indexar dados semi-estruturados e documentos.</p>
+
+<p><b>DTrace:</b>  o PostgreSQL foi preparado para o Solaris DTrace e outras ferramentas avançadas de rastreamento através do Framework Genérico de Monitoramento.</p>
+
+<p>"Com data warehouse hospedando tabelas com bilhões de linhas e muitos terabytes de dados, a criação de índices online e as cópias para recuperação imediata são cruciais", disse Theo Schlossnagle, diretor da OmniTI Computer Consulting. "Nós também estamos empolgados com o fato do PostgreSQL ter implementado o DTrace.
+Isso significa que o nosso monitoramento do sistema agora pode incorporar dados específicos sobre o banco de dados levando a resultados muito mais significativos".</p>
+
+<p>Existem muitos outros recursos e melhorias na 8.2 que tornarão os DBAs de PostgreSQL mais produtivos. Veja o kit de imprensa para detalhes.
+Baixe o PostgreSQL da nossa página de downloads: <a href="http://www.postgresql.org/download">http://www.postgresql.org/download</a></p>
+
+<p><b>Sobre o PostgreSQL:</b> O PostgreSQL é o trabalho coletivo de centenas de desenvolvedores, construído em vinte anos de desenvolvimento que se iniciou na Universidade de Berkeley, na Califórnia. Com seu suporte maduro a um conjunto de recursos de nível corporativo como transações, funções, gatilhos e subconsultas, o PostgreSQL é utilizado por várias empresas e agências do governo. O PostgreSQL é distribuído sob a licença BSD, que permite o uso e distribuição sem custos para uso em 
+aplicações comerciais ou não-comerciais.
+</p>
+
+<a name="additional_features"></a><h2>Recursos Adicionais Nessa Versão</h2>
+Além das características listadas nas notas de lançamento, existem
+mais de 200 novos recursos e melhorias desenvolvidas por dezenas de
+desenvolvedores para a versão 8.2. Entre elas estão:
+<ul>
+<li>Bloqueios Prudentes: permitem controle de objetos a nível de aplicação usando
+o rápido sistema de bloqueios do PostgreSQL.</li>
+<li>pg_dump Seletivo: permite fazer cópias de segurança transacionalmente consistentes de conjuntos de relações, selecionando as inclusões/exclusões usando expressões regulares.</li>
+<li>Consultas Preparadas: novas interfaces administrativas e melhorias de performance para as consultas preparadas.</li>
+<li>ISN/ISBN: esse módulo, contendo tipos de dados para suporte a códigos de produto ISN para sistemas de inventários e vendas, foi atualizado para trabalhar com os padrões internacionais mais atuais.</li>
+<li>Criptografia: o módulo pgcrypto, que oferece suporte a criptografia dentro do banco de dados, foi atualizado com os algoritmos mais recentes.</li>
+<li>Melhorias na linguagem SQL: nova sintaxe introduzida, incluindo UPDATE RETURNING, DROP IF EXISTS, ON COMMIT e novos comandos para manipular dono e permissões, que facilitam o gerenciamento dos objetos do banco de dados na linha de comando.</li>
+<li>Seleção em Lotes no PSQL: suporta o retorno de registros ao console em lotes ao invés de todos de uma vez só.</li>
+<li>ECPG Reescrito: a interface do PostgreSQL incorporada à linguagem C foi extensivamente reescrita e novas interfaces foram adicionadas.</li>
+<li>Melhorias no TSearch2: suporte a UTF-8, thesaurus, suporte a reescrita de consulta e indexação GIN.</li>
+<li>PL/Python: agora suporta parâmetros por nome e funções que retornam conjunto de registros.</li>
+</ul>
+<p>A arquitetura extensível do PostgreSQL tem levado a uma grande quantidade de
+extensões desde linguagens procedurais, interfaces para 
+sistemas externos, novos tipos de índices, replicação e ferramentas 
+de alta disponibilidade que estão hospedadas em <a href="http://www.pgfoundry.org">o sítio oficial de projetos da comunidade PostgreSQL.</a>
+Projetos da comunidade tem feito significantes avanços para
+versão 8.2, incluindo:</p>
+<ul>
+<li>Disjunções Completas: obrigado ao Google Summer of Code, o PostgreSQL é o primeiro sistema de banco de dados a ter uma implementação desse novo algoritmo de junção radical.</li>
+<li>PGPoolII: PGPool, patrocinado pelo Governo Japonês, adicionou novos recursos de balanceamento de carga e particionamento.</li>
+<li>PL/Java: uma das nossas linguagens procedurais Java alcançou um status de produção pleno, permitindo uma utilização completa do Java dentro do banco de dados.</li>
+</ul>
+
+<p>
+Você pode ler sobre várias outras melhorias no 8.2 nas
+<a href="/docs/current/static/release.html">Notas de
+Lançamento.</a>
+</p>
+
+<a name="download"></a><h2>Onde Baixar</h2>
+
+<ul>
+<li><a href="/ftp/latest/">Lista de Espelhos FTP</a></li>
+<li><a href="/download/bittorrent">Bittorrent</a></li>
+<li><a href="/ftp/binary/v8.2.0/win32/">Instalador Windows</a> (também disponível em Bittorrent)</li>
+<li><a href="/ftp/binary/v8.2.0/">Outros Binários,
+incluindo Linux, Mac OSX e Solaris</a></li>
+<li><a href="/projects/pgsql/">SourceForge</a> (incluindo Instalador Windows)</li>
+</ul>
+
+<a name="docs"></a><h2>Documentação</h2>
+
+<ul>
+<li><a href="/docs">Documentação Oficial</a></li>
+<li><a href="/docs/techdocs">TechDocs</a></li>
+<li><a href="/about/press/faq">Perguntas Freqüentes</a></li>
+</ul>
+
+<a name="license"></a><h2>Licença</h2>
+<p>
+O PostgreSQL usa <a href="/about/licence">licença BSD</a>,
+que requer apenas que o código licenciado mantenha suas informações de
+direitos autorais e licença. Essa licença é 
+<a href="http://www.opensource.org/licenses/bsd-license.php">aprovada pela OSI</a> 
+é amplamente reconhecida como sendo flexível e compatível com produtos comerciais, pois não restringe o uso do PostgreSQL
+em aplicações proprietárias. Unindo isso com
+o suporte de várias empresas e a disponibilidade pública do código,
+a licença BSD faz o PostgreSQL muito popular entre empresas procurando um banco de dados embarcado
+nos seus produtos sem medo de taxas, dependência de fornecedor ou mudanças nos termos da licença.
+</p>
+
+<a name="contact"></a><h2>Contatos</h2>
+
+<p><a href="http://www.postgresql.org.br">Página nacional do PostgreSQL</a></p>
+<p><a href="http://www.postgresql.org">Página internacional do PostgreSQL (em Inlgês)</a></p>
+
+<p>Dúvidas:<br />
+Diogo Biazus<br />
+Porto Alegre<br />
++55 51 91410130<br />
+<a href="mailto:br@postgresql.org">br@postgresql.org</a></p>
+
+<p>Para contatos em outras regiões, veja <a
+href="/about/press/contact">nossa lista de contatos internacionais.</a></p>
+
+<a name="quoted_companies"></a><h2>Texto completo das citações de empresas utilizadas</h2>
+<p>"A Unisys está impressionada com as melhorias significativas na escalabilidade
+e performance do PostgreSQL em sistemas multi-processados de grande escala",
+declara Ali Shadman, vice presidente e gerente de soluções de código aberto
+da Unisys. "A versão 8.2, recentemente lançada, continua com o amadurecimento do PostgreSQL em um sistema de gerenciamento de banco de dados apto a adoção corporativa.
+O PostgreSQL é um componente chave para a Solução Aberta e Segura da Unisys -- OASIS --
+para processamento de transações JAVA EE utilizando algumas tecnologias de código aberto selecionadas.
+A Unisys pretende continuar auxiliando ativamente a comunidade a levar o
+PostgreSQL mais a frente dentro das corporações."</p>
+
+<p><b>Sobre a Unisys:</b> A <a href="http://www.unisys.com/">Unisys</a> 
+é uma empresa global de serviços e soluções em tecnologia.
+Nossos consultores aplicam o expertise da empresa em consultoria,
+integração de sistemas, outsourcing, infraestrutura,
+e tecnologia de servidores para ajudar nossos clientes a alcançar
+alotos níveis de segurança em suas operações.
+Nós construimos organizações mais seguras criando visibilidade nas operações
+de negócios dos nossos clientes.
+Alavancando o Unisys 3D Visible Enterprise, 
+nós tornamos visíveis os impactos de suas decisões - antes de investimentos,
+opurtunidades e riscos.
+
+<a href="mailto:brian.daly@unisys.com">Contact Brian Daly</a> para perguntas sobre essa versão: 215-986-2214 (somente em inglês)</p>
+
+<p>"Nós gerenciamos muitos sistemas PostgreSQL de missão crítica sobre Solaris 10.
+Com sistemas de data warehouse hospedando tabelas com bilhões de linhas e vários terabytes
+de dados, a construção de índices online e os bancos para recuperação imediata
+são cruciais," diz Theo Schlossnagle, diretor da OmniTI consultoria.
+"Nós também estamos empolgados com o fato de que o PostgreSQL agora tem pleno suporte à tecnologia DTrace.
+Isso significa que nossos esforços regulares para monitoramento de sistemas pode agora
+incorporar informações específicas sobre os bacos de dados, levando a resultados muito mais significativos."</p>
+
+<p><b>Sobre a OmniTI:</b> <a href="http://omniti.com/home">OmniTI</a>
+é uma empresa de consultoria em tecnologias para Internet localizada em Columbia, Maryland.  
+Com uma lista de clientes que parece com uma lista dos mais populares destinos na Internet,
+a OmniTI se mostrou como uma empresa capacitada para os problemas mais desafiadores de
+performance, escalabilidade e segurança que as grandes aplicações web enfrentam hoje.
+Contate 877-887-3031 ou info@omniti.com (somente em inglês).</p>
+
+<a name="companies"></a><h2>Suporte Corporativo</h2>
+
+O PostgreSQL tem suporte de várias empresas, que patrocinam desenvolvedores,
+fornecem hospedagem, e dão suporte financeiro.
+Os maiores patrocinadores estão listados em nossa <a href="/about/sponsors">página de patrocinadores.</a>
+
+Também existe uma grande comunidade de
+ <a
+href="/support/professional_support">empresas oferecendo suporte técnico ao
+PostgreSQL</a>, de consultores individuais a empresas multinacionais.
+
+<a href="/about/donate">Doações</a> também são aceitas.
+
+<a name="additional_software"></a><h2>Links</h2>
+<p>
+O projeto principal do PostgreSQL é melhorado por mais de 100 subprojetos
+ativos que incluem soluções de qualidade para replicação, 
+migração, compatibilidade, interoperabilidade e ferramentas gráficas de administração e projeto.
+</p>
+
+<h3>Projetos Relacionados</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>Drivers</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://pgfoundry.org/projects/npgsql">.Net</a></li>
+<li><a href="http://search.cpan.org/~dbdpg/DBD-Pg/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<h3>Pacotes de Recursos Avançados</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Servidor de Informações Geográficas (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Busca Textual (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Inteligência de Negócios/Data Warehousing (Bizgres)</a></li>
+</ul>
+
+<h3>Interfaces Gráficas</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin3</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="/docs/techdocs.54">Lista de outras GUIs</a></li>
+</ul>
+
+<h3>Replicação</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>
+
+<a name="translations"></a><h2>Versão Oficial em Inglês desse Documento</h2>
+
+<p><a href="/about/press/presskit82.html.en">Kit de Imprensa 8.2</a></p>
+

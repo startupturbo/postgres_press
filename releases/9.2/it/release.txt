@@ -1,0 +1,39 @@
+10 SETTEMBRE 2012: Il PostgreSQL Global Development Group annuncia l'uscita di PostgreSQL 9.2, l'ultima versione del leader dei database open source. A partire dall'annuncio della versione beta nel maggio scorso, gli sviluppatori e le aziende hanno elogiato il salto in avanti in termini di prestazioni, scalabilità e flessibilità. Sono attesi numeri record per quanto riguarda l'adozione di questa versione.
+
+"PostgreSQL 9.2 introdurrà il supporto nativo per JSON, indici covering, miglioramenti per la replica e le performance, oltre a molte altre novità. Ne stiamo aspettando con trepidazione l'uscita, in modo da poterlo rendere disponibile all'interno di Early Access non appena verrà rilasciato dalla comunità di PostgreSQL", afferma Ines Sombra, "Lead Data Engineer" presso EngineYard.
+
+Prestazioni e Scalabilità superiori
+
+La migliore scalabilità verticale aumenta la capacità di PostgreSQL di sfruttare al massimo le risorse hardware su server di fascia alta. I passi in avanti compiuti verso una migliore gestione della concorrenza, una maggiore efficienza delle scritture, un diretto accesso ai dati contenuti negli indici ("index-only scan") e altre operazioni a basso livello permettono a PostgreSQL di gestire carichi di lavoro sempre maggiori. Tradotto in termini numerici:
+
+* fino a 350.000 query di lettura al secondo (oltre 4 volte più veloce);
+* "index-only scan" per query nel campo del data warehousing e della business intelligence (da 2 a 20 volte più veloce);
+* fino a 14.000 scritture di dati al secondo (5 volte più veloce);
+* fino al 30% di riduzione del consumo di CPU.
+
+Inoltre, l'aggiunta della replica in cascata permette agli utenti di implementare cluster ad elevata scalabilità orizzontale con un numero maggiore di server PostgreSQL 9.2.
+
+"NewsBlur, lettore di notizie in ambito di social networking, fa affidamento a Postgres per memorizzare milioni di siti e sottoscrizioni. Da diversi anni si dimostra solido ed affidabile.", afferma Samuel Clay, fondatore di newsblur.com. "Per i nostri sistemi utilizziamo sempre la versione più recente (adesso abbiamo la 9.1, e presto passeremo alla 9.2 anche solo per via della replica in cascata), così come abbiamo fatto con soddisfazione già dalla versione 8.4."
+
+Flessibilità per gli sviluppatori
+
+La flessibilità di PostgreSQL si riflette nella diversità delle organizzazioni che lo hanno adottato. Ad esempio, la NASA, l'agenzia federale per l'aviazione civile degli Stati Uniti (FAA), la borsa merci di Chicago (CME) e Instagram fanno tutti affidamento su PostgreSQL per le loro applicazioni mission-critical. La versione 9.2 aumenta ulteriormente la flessibilità grazie all'introduzione del supporto per i tipi intervallo (range) e per JSON, consentendo agli sviluppatori di utilizzare PostgreSQL in modi totalmente nuovi.
+
+I tipi intervallo permettono agli sviluppatori di creare applicazioni migliori in ambito scientifico, finanziario e organizzativo (e.g. calendari). Nessun altro database SQL fra i maggiori del settore supporta questa funzionalità, la quale permette una gestione intelligente di periodi temporali e di intervalli numerici.
+
+Con PostgreSQL 9.2, i risultati delle query possono essere restituiti come dati di tipo JSON. Insieme a PL/v8 Javascript e PL/Coffee, due nuove estensioni per la programmazione all'interno del database, e all'estensione HStore, un dizionario chiave-valore, gli utenti possono utilizzare PostgreSQL come un database di documenti "NoSQL", senza rinunciare all'affidabilità, alla flessibilità e alle prestazioni di Postgres.
+
+"Il supporto nativo di JSON direttamente all'interno di PostgreSQL fornisce un meccanismo efficiente per la creazione e la memorizzazione di documenti tramite API web. Utilizziamo librerie front-end come jQuery per richiedere dati in formato tabulare e con struttura ad albero; le nuove funzionalità rendono più conveniente il recupero di questi dati direttamente in formato JSON, con un guadagno in termini di prestazioni", dichiara Taras Mitran, "Senior Architect" presso IVC Inc.
+
+* Press Kit: http://www.postgresql.org/about/press/presskit92
+* Note di rilascio: http://www.postgresql.org/documentation/current/static/release-9-2
+* Download: http://www.postgresql.org/downloads
+
+Per ulteriori informazioni, contattare:
+GABRIELE BARTOLINI
+Ufficio: +39 0574 870600
+Mobile: +39 338 1566217
+it@postgresql.org
+http://www.itpug.org/
+
+Su PostgreSQL: PostgreSQL è il leader dei sistemi di gestione di database open source, con una comunità internazionale costituita da migliaia di utenti e sviluppatori nonché decine di aziende ed enti provenienti da tutte le parti del mondo. Il progetto PostgreSQL vanta 25 anni di attività di ingegneria del software, cominciata al campus di Berkeley dell'Università di California e oggi può vantare un ritmo di sviluppo senza uguali. La gamma di funzionalità mature messe a disposizione da PostgreSQL non soltanto è in grado di competere con quelle offerte da sistemi di database proprietari, ma le migliora in termini  di funzionalità avanzate, estensibilità, sicurezza e stabilità. Scopri maggiori informazioni su PostgreSQL e partecipa attivamente alla nostra comunità su http://www.postgresql.org e, per l'Italia, http://www.itpug.org.

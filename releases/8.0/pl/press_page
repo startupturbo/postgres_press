@@ -1,0 +1,78 @@
+Inne nowo¶ci w tej wersji
+
+Poza rozwi±zaniami podanymi powy¿ej, wprowadzono wiele innych rozwi±zañ i poprawek które bêd± bardzo interesuj±ce dla aktualnych u¿ytkowników PostgreSQL-a.
+
+Funkcje:  PostgreSQL pozwala teraz na wygodne wprowadzanie funkcji dziêki cytowaniu za pomoc± znaków dolara, pozwalaj±c tym samym na unikniêcie problemów zwi±zanych z zagnie¿d¿onymi znakami cytowania.  Ponadto dziêki punktom powrotu (Savepoints), funkcje PL/pgSQL korzystaj±c z mechanizmu EXCEPTION maj± ograniczon± mo¿liwo¶æ obs³ugi b³êdów.
+
+Projektowanie bazy danych:  Administratorzy bazy danych mog± teraz zmieniaæ typ danych w kolumnach za pomoc± ALTER TABLE.  Deklaracja kolumn ze z³o¿onymi typami danych jest teraz obs³ugiwana zgodnie ze standardem SQL.  Wszelkie obiekty bazy danych pozwalaj± na wykonanie CHANGE OWNER.
+
+Import/Eksport danych:  Polecenie COPY obs³uguje teraz bardzo popularny format pliku z warto¶ciami oddzielonymi przecinkami (CSV), czyni±c tym samym import i eksport pomiêdzy innymi programami ³atwiejszym.
+
+Ulepszenia optymalizatora:  Planer zapytañ wykorzystuje teraz indeksy kompatybilnych typów danych, znacznie zmniejszaj±c potrzebê wymuszania sta³ym warto¶ciom konkretnych typów danych.  Ta wersja zawiera równie¿ ulepszenia w wykorzystaniu indeksów, lepsz± optymizacjê wyra¿eñ typu OR, poprawione pobieranie próbek dla ANALYZE, szybsze TRUNCATE i ulepszone generowanie przygotowanych planów zapytañ, jak równie¿ wiele pomniejszych poprawek zbyt licznych by je tu wymieniaæ.
+
+Logowanie:  Administratorzy mog± ustawiæ automatyczn± rotacjê logów PostgreSQL-a za pomoc± parametrów w pliku postgresql.conf.  Logowanie PostgreSQL-a ma równie¿ znacznie elastyczniejsz± konfiguracjê ni¿ wcze¶niej, w³±czaj±c w to mo¿liwo¶æ ustawienia przez administratora prefiksów linii, logowanie konkretnych typów poleceñ SQL oraz logowanie zerwañ po³±czenia.
+
+Kopia bezpieczeñstwa:  Narzêdzie do sporz±dzania kopii zapasowych pg_dump zosta³o w znacznej mierze przepisane.  Ta wersja dodaje nowe mo¿liwo¶ci, takie jak czas rozpoczêcia i zatrzymania, równocze¶nie eliminuj±c poprzednie problemy zwi±zane z uprawnieniami i zale¿no¶ciami w plikach kopii zapasowych.
+
+Oczywi¶cie jest jeszcze wiele innych zmian i ulepszeñ.  Pe³na lista znajduje siê w <a href="">Release Notes</a>.
+
+Pe³ne teksty cytatów.
+
+&bdquo;Fujitsu jest bardzo zadowolone z nowych rozwi±zañ w PostgreSQL-u 8.0. Jeste¶my pewni i¿ te przemys³owe rozwi±zania przyci±gn± wielk± liczbê nowych u¿ytkowników PostgreSQL-a.&rdquo;, powiedzia³ pan Takayuki Nakazawa, dyrektor oddzia³u Daz Danych OSS w Grupie Software'owej Fujitsu. &bdquo;Fujitsu jest dumna z sponsorowania ulepszeñ w PostgreSQL-u jak równie¿ ze swojej wspó³pracy z spo³eczno¶ci± PostgreSQL-a.  Chcemy pomóc sprawiæ by PostgreSQL-a sta³ siê wiod±cym Systemem Zarz±dzania Baz± Danych.&rdquo;
+
+Javier Soltero, g³ówny architekt w Hyperic LLC, powiedzia³ &bdquo;PostgreSQL 8.0 daje nam wysoki stopieñ wspó³bie¿no¶ci i przepustowo¶ci, wymagany przez nasz system monitoruj±cy HQ.  Nasz zespó³ porównywa³ wieloplatformowe komercyjne i open source'owe bazy danych i nie uda³o siê znale¼æ takiej, która odpowiada³aby naszym wymaganiom.  Fakt i¿ PostgreSQL natywnie wspiera Windows oznacza, ¿e mo¿emy do³±czaæ PostgreSQL-a do naszego produktu i czerpaæ korzy¶ci z udowodnionej skalowalno¶ci i wydajno¶ci PostgreSQL-a, jak równie¿ z jego licencji, która pozwala na do³±czenie go do naszej dystrybucji bez komercyjnych zobowi±zañ wzglêdem innych. Grupa PostgreSQL posiada zas³u¿on± reputacjê za jako¶æ, która by³a dla nas oczywista od pierwszej, wypróbowanej przez nas publicznej wersji beta 8.0&rdquo;
+
+Sk±d ¶ci±gn±æ wersjê 8.0:
+	Lista mirrorów FTP
+	Bittorrent
+	Instalator wersji dla Windows (dostêpny równie¿ przez Bittorrenta)
+	SourceForge (w³±cznie z instalatorem wersji dla Windows)
+
+Kontakt dla uzyskania dalszych informacji: 
+	W jêzyku polskim:
+		Dawid Kuroczko
+		+48-603-776391
+		dk@postgresql.org
+
+	Lub po angielsku:
+		Josh Berkus
+		PostgreSQL Project
+		+1-415-752-2500
+		josh@postgresql.org
+
+Linki do innych zasobów PostgreSQL:
+
+Dokumentacja:
+	Oficjalna dokumentacja
+	TechDocs
+	General Bits
+
+Sterowniki:
+	JDBC
+	ODBC
+	.Net
+
+Interfejsy graficzne (GUI):
+	pgAdminIII
+	phpPgAdmin
+	pgAccess
+	Lista innych GUI
+
+Replikacja:
+	Slony-I
+	pgReplicator
+	eRServer
+
+Projekty pokrewne:
+	pgFoundry
+	GBorg
+
+Informacje na temat cytowanych przedsiêbiorstw
+
+O Fujitsu: Fujitsu to wiod±cy dostawca ukierunkowanych na u¿ytkownika rozwi±zañ IT i komunikacyjnych na rynku miêdzynarodowym. Technologie wyznaczaj±ce nowe kierunki, wysoce niezawodne platformy obliczeniowe i komunikacyjne oraz rozsiane po ¶wiecie zespo³y ekspertów systemowych i specjalistów od us³ug plasuj± Fujitsu w unikalnej pozycji do dostarczania spójnych rozwi±zañ, które otwieraj± nieskoñczone mo¿liwo¶ci dla zaspokojenia potrzeb klientów. Fujitsu Limited (TSE:6702), maj±ca g³ówn± siedzibê w Tokio, zg³osi³a skonsolidowany przychód 4700 miliardów jenów (45 miliardów dolarów) za rok podatkowy koñcz±cy siê 31 marca 2004.  Ogólne informacje o Fujitsu dostêpne s± pod adresem: http://www.fujitsu.com. Szczegó³y inicjatywy Fujitsu Supported PostgreSQL (FSP) w³±czaj±c w to dokumentacjê dostêpne s± na: http://fastware.com.au//postgresql.html. Zapytania prosimy kierowaæ do Liama O'Duihira, Fujitsu Australia Software Technology, <liamod@fast.fujitsu.com.au>, telefon +61-2-9452-9068 (tylko w jêzyku angielskim)
+
+O Hyperic: Hyperic LLC jest twórc± technologii zorientowanym na rozwi±zania do zarz±dzania komercyjnymi i Open Source'owymi systemami IT. Jej flagowy produkt HQ ma na celu dostarczenie alternatywy dla kosztownych, nieaktualnych systemów zarz±dzania oferuj±c otwart±, skalowaln±, opart± o WWW platformê która daje kompleksowe wsparcie dla wszystkich technologii u¿ywanych dzi¶ w IT. Aby uzyskaæ dalsze informacje, proszê kontaktowaæ siê z press@hyperic.net (w jêzyku angielskim b±d¼ hiszpañskim)
+
+
+
+

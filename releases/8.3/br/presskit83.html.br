@@ -1,0 +1,179 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.3 Press Kit
+<!-- END page_title_block -->
+
+<h1>Kit de Imprensa do PostgreSQL</h1>
+
+<h2>Conteúdo</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Texto Original do Comunicado à Imprensa</a><br />
+ &nbsp; <a href="#additional_features">Lista de Funcionalidades</a><br />
+ &nbsp; <a href="#download">Aonde Baixar (Download)</a><br />
+ &nbsp; <a href="#docs">Documentação</a><br />
+ &nbsp; <a href="#license">Licença</a><br />
+ &nbsp; <a href="#contact">Contatos</a><br />
+ &nbsp; <a href="#quoted_companies">Informações de Empresas Citadas</a><br />
+ &nbsp; <a href="#companies">Suporte Corporativo</a><br />
+ &nbsp; <a href="#additional_software">Software Adicional</a><br />
+ &nbsp; <a href="#translations">Traduções</a><br />
+</p>
+
+<a name="original_release"></a><h2>Texto Original do Comunicado à Imprensa</h2>
+
+<p><b>4 de Fevereiro de 2008, Nova York, NY:</b>  O Grupo de Desenvolvimento Global do PostgreSQL anuncia hoje o lançamento da versão 8.3 do sistema objeto-relacional de gerenciamento de bancos de dados de alto desempenho. Esse lançamento inclui um número recorde de funcionalidades novas e melhoradas que melhorarão em muito o PostgreSQL para projetistas de aplicações, administradores de bancos de dados, e usuários, com mais de 280 melhorias provenientes de dezenas de contribuidores do PostgreSQL de 18 países.
+</p><p>
+"A evolução continuada do banco de dados de código aberto PostgreSQL dá aos usuários a opção de utilizar um banco de dados não proprietário, permitindo-lhes economizar dinheiro, melhorar desempenho e aumentar produtividade. O PostgreSQL 8.3 é um lançamento impressionante e nós encorajamos clientes ao redor do mundo a explorá-lo," disse Rich Green, vice presidente executivo de software da Sun Microsystems.
+</p><p>
+A versão 8.3 provê desempenho mais consistente do que versões antigas, assegurando que cada usuário pode depender do mesmo alto desempenho demonstrado em benchmarks recentes para todas as transações, em horário de pico ou não, sete dias por semana, 52 semanas por ano. As maiores melhorias de desempenho incluem:
+</p><ul>
+<li>Tupla Unicamente de Pilha (Heap Only Tuples (HOT)), que elimina até 3/4 do custo de manutenção de tabelas atualizadas freqüentemente</li>
+<li>Pontos de Controle Espalhados e Afinação (tuning) automática do Escritor de Segundo Plano, que reduz o impacto de de pontos de controle sobre o tempo de resposta</li>
+<li>Opção de Commit Assíncrono torna o tempo de resposta mais rápido em algumas transações</li>
+</ul><p>
+Essas mudanças também aceleram significativamente o processamento de transações, entre 5% e 30%, dependendo da carga.
+</p><p>
+"O PostgreSQL ficou mais inteligente," disse Bruce Momjiam, membro do Time Central do PostgreSQL.
+</p><p>
+O PostgreSQL é o primeiro banco de dados de código aberto a implementar Buscas Sincronizadas, que em muito reduzem a E/S para operações de mineração de dados. O time do Windows implementou a compilação do PostgreSQL sob o compilador Visual C++, melhorando a estabilidade e desempenho naquela plataforma, assim como a acessibilidade de contribuidores em Windows ao projeto. Novas opções de logging foram adicionadas e a sobrecarga do coletor de estatísticas foram diminuídos para tornar mais fácil o monitoramento de servidores.
+</p><p>
+E, claro, não seria um lançamento do PostgreSQL sem muitas novas funcionalidades para desenvolvedores de aplicações, incluindo:
+</p><ul>
+<li>Suporte ao padrão ANSI SQL/SML, incluindo exportação em XML</li>
+<li>Busca Textual: nossa ferramenta avançada de busca textual, TSearch2, foi incorporada à distribuição central com administração melhor e novos dicionários e linguagens</li>
+<li>Suporte a autenticação por GSSAPI e SSPI</li>
+<li>Novos tipos de dados: UUID, ENUM e matrizes de tipos compostos</li>
+<li>GSSAPI and SSPI authentication support</li>
+
+</ul><p>
+"Nós processamos mais de 18.000 consultas por segundo em mais de 300 GB de dados de usuários nos nossos servidores PostgreSQL, e esses números aumentam todo mês," disse Gavin Roy, CTO do site de rede social MyYearbook.com. "Estamos muito animados sobre HOT, melhorias em buscas compartilhadas de buffers e indexação tsearch integrada. Testes preliminares mostram que o 8.3 melhorará o perfil da carga no banco de dados ao memo tempo que os tempos de resposta diminuem. Estamos ansiosos."
+</p><p>
+Além das muitas funcionalidades novas, vários componentes opcionais amadureceram e lançaram versões 1.0 durante o ciclo da versão 8.3. Entre eles estão suporte a SNMP, opções para escalabilidade horizontal tais como PL/Proxy, pgPool-II e Bucardo, um depurador gráfico para procedimentos armazenados, e um gerenciador de conexões escalonável chamado pgBouncer. Esses componentes adicionam-se ao rico conjunto de acessórios já disponíveis.
+</p><p>
+Há dezenas de funcionalidades e melhorias adicionais na versão 8.3 que tornarão o PostgreSQL uma plataforma de bancos de dados mais poderosa. Vide o kit de imprensa para detalhes.
+</p><p>
+O PostgreSQL pode ser baixado da nossa <a href="http://www.postgresql.org/download">página de downloads</a>.
+</p><p>
+Sobre o PostgreSQL: PostgreSQL é o trabalho coletivo de centenas de desenvolvedores, trabalhando sob vinte-um anos de desenvolvimento que começou na Universidade da Califórnia, Berkeley. Com seu suporte de longa data a funcionalidades de nível corporativo de bancos de dados transacionais e escalabilidade, o PostgreSQL está sendo utilizado por muitas das empresas e agências de governo mais exigentes. O PostgreSQL é distribuído sob a licença BSD, que permite uso e distribuição sem ônus para aplicações comerciais e não-comerciais. Saiba mais visitando  <a href="http://www.postgresql.org/">nossa página</a>.
+</p>
+
+<h2>Lançamento Extendido</h2>
+
+<a name="additional_features"></a><h2>Lista de Funcionalidades</h2>
+<p>
+A versão 8.3 tem um número de novas funcionalidades sem precedentes. Nós criamos páginas adicionais para catalogá-las:
+</p>
+<ul>
+<li><a href="/about/press/features83">Lista de funcionalidades completa</a></li>
+<li><a href="/about/featurematrix">Matriz de funcionalidades (apenas em Inglês)</a></li>
+<li><a href="/docs/8.3/static/release-8-3.html">Notas de Lançamento</a></li>
+</ul>
+<a name="download"></a><h2>Downloads</h2>
+<ul>
+<li><a href="/ftp/source/v8.3">Código Fonte</a></li>
+<li><a href="/ftp/binary/v8.3">Binários</a>, incluindo Windows, Red Hat Linux e Solaris</li>
+<li><a href="http://www.pgfoundry.org">Componentes Adicionais</a></li>
+</ul>
+
+<a name="docs"></a><h2>Documentação</h2>
+
+Documentação em HTML e páginas de manuais são instalados com o PostgreSQL, mas fique à vontade para navegar, pesquisar e comentar na nossa extensiva <a href="/docs/8.3/interactive">documentação interativa online</a>.
+
+<a name="license"></a><h2>Licença</h2>
+<p>
+O PostgreSQL usa a <a href="/about/licence">licença BSD</a>, que apenas requer que o código fonte sob licença mantenha o seu direito de cópia e a informação da licença. Essa <a href="http://www.opensource.org/licenses/bsd-license.php">licença certificada pela OSI</a> é amplamente vista como flexível e amigável a empresas, já que ela nao restringe o uso do PostgreSQL com aplicações comerciais e proprietárias. Juntamente com suporte de várias empresas e propriedade pública do código, a licença BSD torna o PostgreSQL muito popular entre empresas que querem embutir o banco de dados nos seus próprios produtos sem temor de taxas, enclausuramento a uma empresa, ou mudanças nos termos da licença.
+</p>
+
+<a name="contact"></a><h2>Contato</h2>
+
+<p><a href="http://www.postgresql.org.br/">Página nacional do PostgreSQL</a></p>
+<p><a href="http://www.postgresql.org/">Página internacional do PostgreSQL (em Inlgês)</a></p>
+
+<p>Dúvidas:<br />
+Roberto Mello<br />
+Skype: rlbmello<br />
++1-801-636-4531<br />
+<a href="mailto:br@postgresql.org">br@postgresql.org</a></p>
+
+<p>Para contatos em regiões específicas, vide <a href="/about/press/contact">nossa lista de contatos internacionais.</a></p>
+
+<a name="quoted_companies"></a><h2>Informação das Empresas Citadas</h2>
+<p>
+"A evolução continuada do banco de dados de código aberto PostgreSQL dá aos usuários a opção de utilizar um banco de dados não proprietário, permitindo-lhes economizar dinheiro, melhorar desempenho e aumentar produtividade. A Sun está comprometida com o sucesso do PostgreSQL em OpenSolaris - rodando em todos os nossos servidores x64 e Sun SPARC, assim como em hardware Dell, HP e IBM - e nós oferecemos uma variedade de ofertas de educação e suporte para clientes buscando utilizar o PostgreSQL. O PostgreSQL 8.3 é um lançamento impressionante e nós encorajamos clientes ao redor do mundo a explorá-lo," disse Rich Green, Vice Presidente Executivo de Software da Sun Microsystems.
+</p><p>
+<b>Contacte a Sun Microsystems</b>: Terri Molini, 01-408-404-4976, terri.molini@sun.com
+</p><p>
+"Nós processamos mais de 18.000 consultas por segundo em mais de 300 GB de dados de usuários nos nossos servidores PostgreSQL, e esses números aumentam todo mês," disse Gavin Roy, CTO do site de rede social MyYearbook.com. "Estamos muito animados sobre HOT, melhorias em buscas compartilhadas de buffers e indexação tsearch integrada. Testes preliminares mostram que o 8.3 melhorará o perfil da carga no banco de dados ao mesmo tempo que os tempos de resposta diminuem. Estamos ansiosos."
+</p><p>
+<b>Sobre MyYearbook.com</b>: myYearbook.com é uma das maiores propriedades de mídia focalizada em adolescentes na Internet nos Estados Unidos da América. Mostrando crescimento de 500 por cento em vistas de páginas e membros nos últimos cinco meses, myYearBook cresceu de uma única escola de ensino médio para mais de 4,7 milhões de membros, e está adicionando um milhão de membros novos a cada dois meses. Favor contactar press@myyearbook.com.
+</p>
+
+<a name="companies"></a><h2>Suporte Corporativo</h2>
+
+<p>O PostgreSQL tem suporte de várias empresas, que patrocinam desenvolvedores, provêm recursos de hospedagem, e nos dão suporte financeiro. Os maiores patrocinadores de longo prazo estão listados na nossa <a href="/about/sponsors">página de patrocínio de desenvolvimento.</a></p>
+
+<p>Também temos uma grande comunidade de <a href="/support/professional_support">empresas oferecendo suporte ao PostgreSQL</a>, desde consultores individuais até empresas multinacionais.</p>
+
+<a href="/about/donate">Doações</a> são gentilmente aceitas.
+
+<a name="additional_software"></a><h2>Links</h2>
+<p>
+O projeto PostgreSQL principal é melhorado por mais de 100 sub-projetos ativos que provêm soluções de qualidade de produção para replicação, migração, compatibilidade, interoperabilidade, e ferramentas de design e administração. A maior parte dos componentes adicionais estão indexados no <a href="http://www.pgfoundry.org">pgFoundry</a> ou nossa <a href="/download">página de downloads.</a> Aqui estão os links para os projetos mencionados no lançamento:
+</p>
+<h3>Ferramentas para Desenvolvedores</h3>
+<ul>
+<li><a href="http://pgsnmpd.projects.postgresql.org/">pgSNMP</a></li>
+<li><a href="http://pgfoundry.org/projects/edb-debugger/">Depurador PL/pgSQL</a></li>
+</ul>
+
+<h3>Replicação e Escalonamento Horizontal</h3>
+
+<ul>
+<li><a href="http://bucardo.org/">Bucardo</a></li>
+<li><a href="https://developer.skype.com/SkypeGarage/DbProjects/SkyTools">Skytools</a>, incluindo <a href="https://developer.skype.com/SkypeGarage/DbProjects/PlProxy">PL/Proxy</a> e <a href="https://developer.skype.com/SkypeGarage/DbProjects/PgBouncer">pgBouncer</a></li>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+<li><a href="http://www.postgresql.at/english/pr_cybercluster_e.html">CyberCluster</a></li>
+</ul>
+
+<a name="translations"></a><h2>Traduções Oficiais deste Documento</h2>
+
+<ul>
+
+<li><a href="/about/press/presskit82.html.en">Versão Oficial em Inglês deste Documento</a></li>
+
+<li><a href="/about/press/presskit83.html.ar">Árabe</a></li>
+
+<li><a href="/about/press/presskit83.html.br">Portugês do Brasil</a></li>
+
+<li><a href="/about/press/presskit83.html.zh_CN">Chinês</a></li>
+
+<li><a href="/about/press/presskit83.html.nl">Holandês</a></li>
+
+<li><a href="/about/press/presskit83.html.fi">Finlandês</a></li>
+
+<li><a href="/about/press/presskit83.html.fr">Francês</a></li>
+
+<li><a href="/about/press/presskit83.html.de">Alemão</a></li>
+
+<li><a href="/about/press/presskit83.html.el">Grego</a></li>
+
+<li><a href="/about/press/presskit83.html.it">Italiano</a></li>
+
+<li><a href="/about/press/presskit83.html.ja">Japanês</a></li>
+
+<li><a href="/about/press/presskit83.html.pl">Polonês</a></li>
+
+<li><a href="/about/press/presskit83.html.ro">Romanês</a></li>
+
+<li><a href="/about/press/presskit83.html.ru">Russo</a></li>
+
+<li><a href="/about/press/presskit83.html.es">Espanhol</a></li>
+
+<li><a href="/about/press/presskit83.html.tr">Turco</a></li>
+
+</ul>
+
+
+<!-- Traduzido por Roberto Mello - robertomello @ gmail ponto com>

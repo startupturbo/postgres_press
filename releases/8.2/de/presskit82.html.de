@@ -1,0 +1,321 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.2 Pressemappe
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.2 Pressemappe</h1>
+
+<h2>Contents</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Die offizielle Presseerkl&auml;rung</a><br />
+ &nbsp; <a href="#additional_features">Zus&auml;tzliche Leistungsmerkmale</a><br />
+ &nbsp; <a href="#download">Download</a><br />
+ &nbsp; <a href="#docs">Dokumentation</a><br />
+ &nbsp; <a href="#license">Lizenz</a><br />
+ &nbsp; <a href="#contact">Kontakt</a><br />
+ &nbsp; <a href="#quoted_companies">Ungek&uuml;rzte Zitate von Unternehmen</a><br />
+ &nbsp; <a href="#companies">Kommerzieller Support</a><br />
+ &nbsp; <a href="#additional_software">Zus&auml;tzliche Software</a><br />
+ &nbsp; <a href="#translations">Englische Version</a><br />
+</p>
+
+<a name="original_release"></a><h2>Die offizielle Presseerkl&auml;rung</h2>
+<p><b>5. Dezember 2006, Washington D.C., USA (LISA Conference):</b> Die weltweite PostgreSQL-Entwicklergruppe gibt die  
+Ver&ouml;ffentlichung der Version 8.2 des objekt-relationalen Datenbank-Managementsystems PostgreSQL bekannt. 
+Mit neuen Leistungsmerkmalen und erheblichen Performanzsteigerungen erf&uuml;llt
+diese 14. Version Anforderungen von Unternehmensanwendern. PostgreSQL
+8.2 bietet eine verbesserte Bedienbarkeit, die einem Vergleich mit
+anderen f&uuml;hrenden Unternehmens-Datenbanksystemen standh&auml;lt. Die PostgreSQL
+Community geht davon aus, dass die Version 8.2 noch mehr Migrationen hin zu
+PostgreSQL initiieren wird.</p>
+
+<p>&quot;Diese Version wirkt sich auf fast alle Kommandos und M&ouml;glichkeiten der Datenbank aus.&quot;, 
+so Bruce Momjian, Mitglied im Kernteam von PostgreSQL und Datenbank-Architekt von 
+EnterpriseDB. &quot;Sie f&uuml;gt erweiterte, standard-konforme Syntax 
+und Schnittstellen hinzu, welche von unserer Community gefordert wurden. 
+Damit wird es besonders f&uuml;r neue Datenbank-Administratoren einfacher, 
+selbst die fortschrittlichen PostgreSQL-Funktionalit&auml;ten in vollem Umfang
+zu nutzen.&quot;</p>
+
+<p>&quot;Unisys nimmt erfreut zur Kenntnis, dass die Skalierbarkeit
+und Geschwindigkeit von PostgreSQL auf gro&szlig;en
+Multiprozessor-Systemen deutlich verbessert wurde.&quot;,
+&auml;u&szlig;ert sich Ali Shadman, Vizepr&auml;sident und Generaldirektor
+bei Unisys, zust&auml;ndig f&uuml;r Open-Source-L&ouml;sungen, 
+-Systeme und -Technologien. &quot;Die jetzt ver&ouml;ffentlichte Version
+setzt den Entwicklungsprozess fort, der PostgreSQL zu einem ausgereiften Datenbank-Managementsystem f&uuml;r den Unternehmenseinsatz gemacht hat.&quot;</p>
+
+<p>Neue Merkmale und Werkzeuge zur einfacheren Verwaltung und Entwicklung
+von Datenbanken sind unter anderem:</p>
+
+<p><b>Performanz-Steigerungen:</b> Version 8.2 steigert die 
+Verarbeitungsgeschwindigkeit insgesamt um ca. 20%
+bei Systemtests mit High-end OLTP (Online Transaction Processing).
+Noch st&auml;rker profitieren Anwender sogar beim Betrieb von Data-Warehouse-L&ouml;sungen. 
+Die Verbesserungen betreffen Sortiervorg&auml;nge, sowohl im
+Arbeitsspeicher als auch auf Festplatten wird schneller sortiert, bessere
+Multi-Prozessor-Skalierung, bessere Planung 
+von Abfragen auf partitionierten Tabellen, schnellere Bulk Loads und 
+erheblich beschleunigte Outer-Join-Abfragen.</p>
+
+<p><b>Warm-Standby Datenbanken:</b> Durch eine Erweiterung des in der
+Version 8.0 eingef&uuml;hrten &quot;Point in Time Recovery&quot;
+k&ouml;nnen Administratoren jetzt auf einfache Weise eine Kopie
+ihrer Datenbank-Cluster als Ausfallsicherung einrichten.</p>
+
+<p><b>Online Index Erstellung:</b> Tabellen k&ouml;nnen jetzt auch
+indiziert werden, w&auml;hrend Anwendungen in Datenbank-Tabellen schreiben, 
+was ein Datenbank-Tuning ohne Ausfallzeiten erm&ouml;glicht.</p>
+
+<p><b>SQL:2003 Funktionalit&auml;ten:</b> PostgreSQL, bekannt f&uuml;r seine Standard-Kompatibilit&auml;t, 
+wurde um Syntax f&uuml;r weitere Elemente der ANSI-Spezifikation SQL:2003
+erg&auml;nzt. Unter anderem: Aggregatfunktionen f&uuml;r statistische
+Auswertungen, VALUE-Zuweisungen f&uuml;r mehrere Zeilen zugleich, UPDATE RETURNING und Aggregate &uuml;ber mehreren Spalten.</p>
+
+<p>
+Fortgeschrittene Datenbank-Merkmale, die PostgreSQL 8.2 vor 
+allen anderen gro&szlig;en Datenbank-Systemen anbietet, sind u. a.:</p>
+
+<p><b>Generalisierte Invertierte Indizes:</b> bieten einen besser skalier-
+und programmierbaren Weg zur Indizierung semi-strukturierter und
+Volltext-Daten.</p>
+
+<p><b>DTrace:</b> PostgreSQL erhielt Schnittstellen f&uuml;r Solaris DTrace und 
+andere fortgeschrittene Werkzeuge zur Ablaufverfolgung mittels des generischen 
+Monitoring-Frameworks.</p>
+
+<p>&quot;Wir betreiben zahlreiche gesch&auml;ftskritische PostgreSQL-Systeme auf 
+Solaris 10. Bei Data-Warehouse-Instanzen mit Milliarden von Datenbank-Zeilen und 
+einem Datenvolumen von mehreren Terabytes sind Online-Index-Erstellung 
+und Hot-Standby-F&auml;higkeiten von gr&ouml;&szlig;ter Wichtigkeit.&quot; 
+erl&auml;utert Theo Schlossnagle, 
+Gesellschafter der OmniTI Computer Consulting. &quot;Wir sind begeistert, dass 
+PostgreSQL jetzt auch beim DTrace in der ersten Reihe steht. Dies bedeutet f&uuml;r uns, dass 
+unsere regul&auml;ren Systemanalysen jetzt auch datenbank-spezifische Informationen 
+einschlie&szlig;en und somit viel aussagekr&auml;ftigere Resultate liefern.&quot;</p>
+
+<p>Es gibt dar&uuml;ber hinaus in der Version 8.2 noch Dutzende neuer Merkmale 
+und Verbesserungen, die PostgreSQL-Administratoren noch produktiver machen. 
+In der Pressemappe sind diese n&auml;her beschrieben. PostgreSQL kann von 
+<a href="/download">unseren Download-Seiten</a> herunter geladen werden.</p>
+
+<p><b>&Uuml;ber PostgreSQL:</b> PostgreSQL ist das gemeinsame Werk von hunderten Software-Entwicklern und 
+baut auf eine 21-j&auml;hrige Entwicklung, welche an der University 
+of California in Berkeley begann. Aufgrund der langj&auml;hrigen 
+Unterst&uuml;tzung von umfangreichen Leistungsmerkmalen im 
+Enterprise-Bereich, unter anderem Transaktionen, Funktionen, Trigger und 
+Sub-Queries, wird PostgreSQL heute von vielen der anspruchsvollsten 
+Unternehmen und Beh&ouml;rden eingesetzt. PostgreSQL steht unter der 
+BSD-Lizenz, welche die Nutzung und Distribution ohne Lizenzgeb&uuml;hren 
+erlaubt, sowohl f&uuml;r kommerzielle als auch f&uuml;r nicht-kommerzielle 
+Anwendungen.
+</p>
+
+<a name="additional_features"></a><h2>Zus&auml;tzliche Leistungsmerkmale</h2>
+<p>Au&szlig;er den in der Presseerkl&auml;rung aufgef&uuml;hrten 
+Schwerpunkt-Verbesserungen enth&auml;lt diese Version &uuml;ber 200 neue 
+Merkmale und Erweiterungen, die von Dutzenden Entwicklern f&uuml;r 
+die Version 8.2 beigesteuert wurden. Darunter sind:</p>
+
+<ul>
+<li>Advisory Locks: erlaubt die Steuerung von Datenbank-Objekten auf der  Applikationsebene 
+mittels der schnellen Sperrmechanismen von PostgreSQL.</li>
+
+<li>Selektiver pg_dump: erm&ouml;glicht die Erzeugung von transaktions-konsistenten Dumps von Teilen der
+Datenbank. Ein- und Ausschluss k&ouml;nnen &uuml;ber regul&auml;re Ausdr&uuml;cke selektiert werden</li>
+
+<li>Prepared Statements: erhielten eine neue Administrationsschnittstelle und verbesserte Performanz.</li>
+
+<li>ISN/ISBN: dieses Modul mit Datentypen f&uuml;r ISN-Kennungen in Lager- und Warenwirtschaftssystemen unterst&uuml;tzt nun den aktuellsten Stand der entsprechenden internationalen Standards.</li>
+
+<li>Kryptographie: das pgcrypto-Modul, das Kryptographie innerhalb der Datenbank unterst&uuml;tzt, wurde auf die neuesten Algorithmen aktualisiert.</li>
+
+<li>SQL-Erweiterungen: neue Syntax wurde eingef&uuml;hrt, u. a. UPDATE RETURNING, DROP IF EXISTS, ON COMMIT. Es gibt neue Befehle f&uuml;r Eigentum und Zugriffsrechte, die das Verwalten von Datenbank-Objekten &uuml;ber die Kommandozeile vereinfachen.</li>
+
+<li>Gruppenweise Selektionen in PSQL: zus&auml;tzlich zu "alles auf einmal" k&ouml;nnen Abfrageergebnisse in der Konsole auch in Gruppen abgefragt und angezeigt werden,</li>
+
+<li>ECPG Refactor: die eingebaute C-Schnittstelle von PostgreSQL wurde rund-erneuert und um neue Schnittstellen erg&auml;nzt.</li>
+
+<li>Wesentliche TSearch2-Verbesserungen: Unterst&uuml;tzung von UTF-8, Thesaurus, Query-Rewriting und GIN-Indizierung.</li>
+<li>PL/Python: unterst&uuml;tzt jetzt auch Named Parameters und Funktionen, die Sets zur&uuml;ckgeben.</li>
+</ul>
+<p>PostgreSQL's erweiterbare Architektur hat zu einer riesigen Auswahl an Erweiterungen gef&uuml;hrt, einschlie&szlig;lich  zus&auml;tzlichen Prozedural-Sprachen, Schnittstellen zu externen Systemen, neuen Index-Typen, sowie Replikations- 
+und Hochverf&uuml;gbarkeits-Werkzeugen. Auf der <a href="http://www.pgfoundry.org">offiziellen PostgreSQL Community Project Site</a>
+finden sich Community-Projekte die deutliche Fortschritte im Versionszyklus 8.2 verzeichnen konnten, unter anderem:</p>
+<ul>
+<li>Full Disjunctions: dank des Google Summer of Code, ist PostgreSQL das erste Datenbank-System mit einer Implementation des radikal neuen Join-Algorithmus.</li>
+<li>PGPoolII: PGPool, finanziell gef&ouml;rdert von der japanischen Regierung, wurde um neue Load-Balancing- und Partitionierungs-M&ouml;glichkeiten erg&auml;nzt</li>
+<li>PL/Java: eine unserer beiden Java-Prozeduralsprachen hat volle Produktionsreife erlangt und erlaubt nun Java innerhalb der Datenbank voll auszunutzen.</li>
+</ul>
+
+<p>
+In den englisch-sprachigen <a href="/docs/current/static/release.html">Release
+Notes</a> sind Informationen zu Dutzenden weiteren Verbesserungen 
+der Version 8.2 enthalten.
+</p>
+
+<a name="download"></a><h2>Download</h2>
+
+<ul>
+<li><a href="/ftp/latest/">Liste der FTP-Spiegelserver</a></li>
+<li><a href="/download/bittorrent">Bittorrent</a></li>
+<li><a href="/ftp/binary/v8.2.0/win32/">Windows-Installer</a> (auch verf&uuml;gbar &uuml;ber Bittorrent)</li>
+<li><a href="/ftp/binary/v8.2.0/">Weitere Binaries,
+einschlie&szlig;lich Linux, Mac OSX und Solaris</a></li>
+<li><a href="/projects/pgsql/">SourceForge</a> (einschlie&szlig;lich
+Windows-Installer)</li>
+</ul>
+
+<a name="docs"></a><h2>Dokumentation</h2>
+
+<ul>
+<li><a href="/docs">Offizielle Dokumentation</a></li>
+<li><a href="/docs/techdocs">TechDocs</a></li>
+<li><a href="/about/press/faq">FAQ / H&auml;ufig gestellte Fragen</a></li>
+</ul>
+
+<a name="license"></a><h2>Lizenz</h2>
+<p>PostgreSQL ist unter der <a href="/about/licence">BSD-Lizenz</a> 
+ver&ouml;ffentlicht, die lediglich verlangt, dass die lizenzierten 
+Quelltexte die Informationen &uuml;ber das Urheberrecht und die Lizenz 
+beibehalten m&uuml;ssen. Diese <a href="http://www.opensource.org/licenses/bsd-license.php">OSI-zertifizierte
+ Lizenz</a> wird hoch gesch&auml;tzt, da sie flexibel, benutzer- und 
+gesch&auml;ftsfreundlich ist. Sie erlaubt die uneingeschr&auml;nkte Nutzung von 
+PostgreSQL in kommerziellen und urheberrechtlich gesch&uuml;tzten 
+Anwendungen. Der Quellcode, dessen Entwicklung von mehreren 
+Firmen gef&ouml;rdert wurde und der &ouml;ffentliches Eigentum ist, und 
+die BSD-Lizenz, machen PostgreSQL bei Anbietern sehr beliebt, die eine 
+Datenbank in ihre eigenen Produkte integrieren m&ouml;chten, ohne dass 
+Lizenzgeb&uuml;hren, Abh&auml;ngigkeiten von einem Hersteller oder 
+&Auml;nderungen der Lizenzbedingungen zu bef&uuml;rchten sind.
+</p>
+
+<a name="contact"></a><h2>Kontakt</h2>
+
+<p><a href="http://www.postgresql.de">PostgreSQL Deutsch</a></p>
+<p><a href="http://www.postgresql.org">PostgreSQL home page (English)</a></p>
+
+<p>Anfragen aus Deutschland und Deutsch-sprachiger Schweiz:<br />
+Cornelia Boenigk<br />
+72124 Pliezhausen<br />
++49 7127 80961<br />
+<a href="mailto:de@postgresql.org">de@postgresql.org</a></p>
+
+<p>Anfragen aus &Ouml;sterreich:<br />
+Ewald Geschwinde<br />
+Wien<br />
++436644527844<br />
+<a href="mailto:at@postgresql.org">at@postgresql.org</a></p>
+
+<p>Ansprechpartner in anderen Regionen finden Sie auf <a
+href="/about/press/contact">unserer internationalen Kontaktliste</a>.</p>
+
+<a name="quoted_companies"></a><h2>Ungek&uuml;rzte Zitate von Unternehmen</h2>
+<p>&quot;Unisys nimmt erfreut zur Kenntnis, dass die Skalierbarkeit
+und Geschwindigkeit von PostgreSQL auf gro&szlig;en
+Multiprozessor-Systemen deutlich verbessert wurde.&quot;,
+&auml;u&szlig;ert sich Ali Shadman, Vizepr&auml;sident und Generaldirektor
+bei Unisys, zust&auml;ndig f&uuml;r Open-Source-L&ouml;sungen, 
+-Systeme und -Technologien. &quot;Die jetzt ver&ouml;ffentlichte Version
+setzt den Entwicklungsprozess fort, der PostgreSQL zu einem ausgereiften 
+Datenbank-Managementsystem f&uuml;r den Unternehmenseinsatz gemacht hat. 
+PostgreSQL ist eine Schl&uuml;sselkomponente der Unisys Open and Secure
+Integrated Solution (OASIS)
+f&uuml;r Java-EE-basierte Transaktionsverarbeitung, in der
+ausgew&auml;hlte Open-Source-Technologien verwendet werden. 
+Unisys beabsichtigt weiterhin die Community aktiv dabei zu unterst&uuml;tzen, PostgreSQL in die Unternehmen zu tragen.&quot;</p>
+<p><b>&Uuml;ber Unisys:</b> <a href="http://www.unisys.com/">Unisys</a> ist ein weltweiter 
+Anbieter von IT-Dienstleistungen und -L&ouml;sungen. Unisys-Mitarbeiter nutzen 
+Expertise in den Bereichen Consulting, Systemintegration, Outsourcing, 
+Infrastruktur und Server-Technologie, um Kunden Secure Business Operations 
+zu erm&ouml;glichen. Unisys verhilft Kunden zu mehr Transparenz in ihrer Organisation 
+und sichert so besser ihre Gesch&auml;ftsabl&auml;ufe und Zukunftschancen. Dank der 
+Unisys-Methodologie 3D Visible Enterprise k&ouml;nnen diese Kunden die Auswirkungen 
+ihrer Entscheidungen erkennen, bevor sie Investitionen t&auml;tigen, Chancen ergreifen 
+und Risiken eingehen. Die Unisys-Zentrale befindet sich in Blue Bell, Pennsylvania, 
+in der N&auml;he von Philadelphia. Unisys-Niederlassungen gibt es unter anderem in Deutschland, &Ouml;sterreich und der Schweiz. Der Umsatz im Jahr 2005 betrug 5,76 Milliarden US-Dollar. 
+Unisys besch&auml;ftigt weltweit 36.000 Mitarbeiter. 
+<a href="mailto:brian.daly@unisys.com">Kontaktieren Sie Brian Daly</a> f&uuml;r Fragen zu dieser Pressemitteilung, Tel.: +1-215-986-2214 (nur Englisch). 
+Allgemeine Presse-Anfragen zu Unisys auf Deutsch k&ouml;nnen Sie richten an <a href="http://www.unisys.de/about__unisys/presse/pressekontakt.htm">Unisys&nbsp;Deutschland</a>, <a href="http://www.unisys.at/about__unisys/presse/pressekontakt.htm">Unisys&nbsp;&Ouml;sterreich</a> oder <a href="http://www.unisys.ch/about__unisys/news_a_events/media__contacts.htm">Unisys&nbsp;Schweiz</a>.</p>
+
+<p>&quot;Wir betreiben zahlreiche gesch&auml;ftskritische PostgreSQL-Systeme auf 
+Solaris 10. Bei Data-Warehouse-Instanzen mit Milliarden von Datenbank-Zeilen und 
+einem Datenvolumen von mehreren Terabytes sind Online-Index-Erstellung 
+und Hot-Standby-F&auml;higkeiten von gr&ouml;&szlig;ter Wichtigkeit.&quot; 
+erl&auml;utert Theo Schlossnagle, 
+Gesellschafter der OmniTI Computer Consulting. &quot;Wir sind begeistert, dass 
+PostgreSQL jetzt auch beim DTrace in der ersten Reihe steht. Dies bedeutet f&uuml;r uns, dass 
+unsere regul&auml;ren Systemanalysen jetzt auch datenbank-spezifische Informationen 
+einschlie&szlig;en und somit viel aussagekr&auml;ftigere Resultate liefern.&quot;</p>
+<p><b>&Uuml;ber OmniTI:</b> <a href="http://omniti.com/home">OmniTI</a>
+ ist ein in Columbia, Maryland ans&auml;ssiges US-Beratungsunternehmen f&uuml;r Internet-Technologien. 
+Die Kundenliste liest sich wie das "Who is who" der Internet-Branche. OmniTI hat sich 
+als Unternehmen der ersten Wahl erwiesen, sobald gro&szlig; ausgelegte Web-Applikationen 
+auf extreme Herausforderungen hinsichtlich Skalierbarkeit, Performanz und Sicherheitsproblemen 
+treffen. Sie erreichen OmniTI unter der Telefon-Nummer +1-877-887-3031 oder per E-Mail an info@omniti.com (nur Englisch).</p>
+
+<a name="companies"></a><h2>Kommerzieller Support</h2>
+
+<p>PostgreSQL genie&szlig;t die Unterst&uuml;tzung von zahllosen Unternehmen, 
+die Entwickler finanzieren, Hosting-Ressourcen bieten, und 
+das Projekt auch mit Finanzmitteln ausstatten. Die gr&ouml;&szlig;ten 
+Langzeit-Unterst&uuml;tzer sind auf der Seite 
+<a href="/about/sponsors">Development Sponsors</a> gelistet.</p>
+
+<p>Dar&uuml;berhinaus gibt es eine gro&szlig;e Community von Unternehmen, die 
+<a href="/support/professional_support">professionellen PostgreSQL-Support</a> 
+anbieten, von freiberuflichen Beratern bis zu multinationalen Konzernen.</p>
+
+<p><a href="/about/donate">Spenden</a> werden gerne angenommen.</p>
+
+<a name="additional_software"></a><h2>Links</h2>
+<p>
+Das Hauptprojekt von PostgreSQL wird durch mehr als 100 aktive Unterprojekte 
+erg&auml;nzt, welche produktionsreife L&ouml;sungen anbieten f&uuml;r Replikation, Migration, 
+Kompatibilit&auml;t, Interoperabilit&auml;t und Entwurf, sowie graphische Administrationswerkzeuge.
+</p>
+
+<h3>Verwandte Projekte</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>Treiber</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://pgfoundry.org/projects/npgsql">.Net</a></li>
+<li><a href="http://search.cpan.org/~dbdpg/DBD-Pg/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<h3>Erweiterungspakete</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Geografisches Informationssystem (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Volltextsuche (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Business Intelligence/Data Warehousing (Bizgres)</a></li>
+</ul>
+
+<h3>Grafische Benutzerschnittstellen</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin3</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="/docs/techdocs.54">Liste von weiteren GUIs</a></li>
+</ul>
+
+<h3>Replikation</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>
+
+<a name="translations"></a><h2>Offizielle englische Version dieses Dokuments</h2>
+
+<p><a href="/about/press/presskit82.html.en">8.2 PressKit</a></p>

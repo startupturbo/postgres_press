@@ -1,0 +1,19 @@
+PostgreSQL 8.3.3, 8.2.9 etc. Update Release
+
+Updates for all maintained versions of PostgreSQL are available today: 8.3.3, 8.2.9, 8.1.13, 8.0.17 and 7.4.21.  These releases fix more than two dozen minor issues reported and patched over the last few months.  All PostgreSQL users should plan to update at their earliest convenience. Users of UTF-8 databases on Windows and people in affected time zones, in particular, should upgrade as soon as possible.
+
+The issues fixed include a crash caused by encoding mismatch on Windows, possible crash when decompressing corrupted data, non-optimization of some parameterized queries, new time zone updates, SIGTERM-caused memory corruption, runaway LWLocks with GIN indexes, and several more.  Read the release notes to see if any of the issues affect you.
+
+As with other minor releases, users are not required to dump and reload their database in order to apply this update release; you may simply 
+upgrade the PostgreSQL binaries.  Users skipping more than one update may need to check the release notes for extra, post-update steps.  As previously announced, only versions 8.2.9 and 8.3.3 of the Windows binaries are being released, as we no longer support 8.0 and 8.1 on 
+Windows.
+
+Release Notes:
+        http://www.postgresql.org/docs/8.3/static/release.html
+Source Code
+        http://www.postgresql.org/ftp/source
+Binaries
+        http://www.postgresql.org/ftp/binary
+
+Please note: we "skipped" a minor release number due to an issue found with the 8.3.2 etc. release bundles, which were never announced but were available via FTP for a few days.  If for some reason you downloaded versions 8.3.2, 8.2.8, 8.1.12, 8.0.16 or 7.4.20, please replace them with the new update immediately.
+

@@ -1,0 +1,46 @@
+12 SEPTEMBER 2011: The PostgreSQL Global Development Group announces the release of PostgreSQL 9.1.  This latest version of the leading open source database offers innovative technology, unmatched extensibility, and new features such as synchronous replication, K-Nearest Neighbor indexing, and foreign data wrappers.  
+
+"PostgreSQL 9.1 provides some of the most advanced enterprise capabilities of any open source database, and is backed by a vibrant and innovative community with proven customer success.  PostgreSQL is well positioned for building and running applications in the cloud," said Charles Fan, Sr. VP R&D, VMware.
+
+Responding to Users
+
+Version 9.1 delivers several features which users have been requesting for years, removing roadblocks to deploying new or ported applications on PostgreSQL.  These include:
+
+* Synchronous Replication: enable high-availability with consistency across multiple servers
+* Per-Column Collations: support linguistically-correct sorting per database, table or column.
+* Unlogged Tables: greatly improves performance for ephemeral data
+
+"Heroku runs the largest PostgreSQL database-as-a-service in the world," said James Lindenbaum, Heroku co-founder. "The release of synchronous data replication with 9.1 provides our customers with innovative new ways of protecting mission-critical data, and validates PostgreSQL as one of the fastest-moving datastores available."
+
+Advancing the State of the Art
+
+Our community of contributors innovates with cutting-edge features.  Version 9.1 includes several which are new to the database industry, such as:
+
+* K-Nearest-Neighbor Indexing: index on "distance" for faster location and text-search queries
+* Serializable Snapshot Isolation: keeps concurrent transactions consistent without blocking, using "true serializability"
+* Writeable Common Table Expressions: execute complex multi-stage data updates in a single query
+* Security-Enhanced Postgres: deploy military-grade security and Mandatory Access Control
+
+"OpenERP has always relied on the enterprise-class features of PostgreSQL to provide a fast, reliable and scalable foundation for the Business Applications supporting our customers' operations every day. Data integrity in highly concurrent and transactional contexts is a critical topic for us, and we're very enthusiastic about the new Serializable Snapshot Isolation of PostgreSQL 9.1!"  said Olivier Dony, OpenERP Community Manager.
+
+Extending the Database Engine
+
+PostgreSQL's extensibility enables users to add new functionality to a running production database, and use them for tasks no other database system can perform.  Version 9.1 adds new extensibility tools, including:
+
+* Foreign Data Wrappers: attach and query other databases from PostgreSQL
+* Extensions: easily create, load, and manage new database features
+
+All of the above features, and more, are detailed on the What's New In 9.1 wiki page (http://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.1), as well as our release notes (http://www.postgresql.org/documentation/current/static/release-9-1).
+
+In PostgreSQL's 25th year of database development, our community continues to advance database technology with every annual release.  Download version 9.1 now and experience the most advanced open source database system in the world.
+
+* Press Kit: http://www.postgresql.org/about/press/presskit91
+* Release Notes: http://www.postgresql.org/documentation/current/static/release-9-1
+* Downloads: http://www.postgresql.org/downloads
+
+For more information please contact:
+Raymond O'Donnell
+ie@postgresql.org
+Cell: +353 (0)87 2241365 
+
+About PostgreSQL: PostgreSQL is the leading open source database system, with a global community of thousands of users and contributors and dozens of companies and organizations.  The PostgreSQL Project builds on 25 years of engineering, starting at the University of California, Berkeley, and has an unmatched pace of development today. PostgreSQL's mature feature set not only matches top proprietary database systems, but exceeds them in advanced database features, extensibility, security and stability.  Learn more about PostgreSQL and participate in our community at http://www.postgresql.org.

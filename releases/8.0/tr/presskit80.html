@@ -1,0 +1,199 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.0 Basın Bülteni
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.0 Basın Bülteni</h1>
+
+<p>19 Ocak 2005 - PostgreSQL Global Development Group nesne-ilişkisel veritabanı yönetim sistemi olan PostgreSQL'in, kendisini dünyanın en gelişmiş açık 
+kaynak kodlu veritabanı sunucusu yapan 8.0 sürümünü duyurdu.  Bu sürüm ile birlikte, daha 
+önceden çok pahalı ve özel mülkiyetteki veritabanı sistemlerinde olan özellikleri içermektedir 
+ve bu sürümde PostgreSQL'in gerek kullanıcılar, gerekse yazılım satıcıları tarafından daha fazla benimsenmesi hedeflenmektedir.</p>
+
+<p>Ölçeklenebilirlik, yeni özellikler ve başarım konusundaki belirgin gelişmelerin yanı sıra, PostgreSQL 8.0 açık kaynak kodlu yazılımların 
+gelişim hızını da göstermektedir. Aralarında Red Hat, Fujitsu, Afilias, Software Research Associates, Inc., 2nd Quadrant ve Command Prompt Inc., 
+gibi firmalarla beraber dünyanın dört bir yanından yüzlerce bireysel geliştirici, PostgreSQL 8.0'a daha önceki sürümlerden çok daha fazla katkı 
+vermişlerdir.</p>
+
+<p>Fujitsu'nun Yazılım Grubu'ndaki Açık Kaynak Kodlu Veritabanı'ın yöneticisi olan Takayuki Nakazawa, "Bu kurumsal özellikler PostgreSQL'in çok daha 
+fazla kullanıcısı olmasını sağlayacaktır" dedi ve ekledi: " Fujitsu PostgreSQL'e sponsor olmaktan ve çalışmalarını PostgreSQL topluluğu ile 
+paylaşmaktan dolayı gururludur. PostgreSQL'i lider Veritabanı Yönetim Sistemi yapmakta kararlıyız."</p>
+
+<p>Yeni özellikler:</p>
+
+<ul>
+<li><b>Doğal Windows Desteği</b>: PostgreSQL artık Windows sistemlerde doğal olarak çalışıyor ve bir emülasyona gereksinim duymuyor. Bu özellik 
+PostgreSQL'e eski sürümlere göre çok gelişmiş bir başarım (performans) artışı ve şirket kullanıcıları, bağımsız yazılım geliştiricileri ve bireysel 
+Windows geliştiricileri için özel mülkiyetteki veritabanı sistemleri ile yarışabilecek bir 
+alternatif olma özelliğini kazandırmıştır. </li>
+
+<li><b>Savepoint</b>: Bu SQL standardı olan özellik, veritabanlarındaki transactionların hepsinin birden iptal edilmesi yerine belirli bölümlerinin 
+geri alınabilmesine olanak sağlar. Bu özellik, hata kurtarma ile birlikte karmaşık transactionlara gereksinim duyan iş uygulaması geliştiricileri 
+için çok yararlıdır.</li>
+
+<li><b>Point in Time Recovery</b>: Bu özellik otomatik ve sürekli devam eden arşivlenmiş transaction kayıt dosyalarından tam veri kurtarmaya izin 
+verir. Böylece verilerin çok önemli olduğu ortamlarda saatlik ya da günlük yedek alınmasına göre çok daha uzun soluklu bir alternatif 
+sağlanmıştır.</li>
+
+<li><b>Tablespace</b>: Tablespace'ler büyük tablo ve indexlerin ayrı ayrı disk/disk bölümü ya da disk kümelerine yerleşmelerine izin verir. Bu da 
+sorgu başarımını arttırdığı gibi çok GB/TB veri tutan veri ambarı yöneticilerini rahatlatacaktır.</li>
+
+<li><b>Geliştirilmiş bellek yönetimi ve I/O kontrolü</b>: Disk ve bellek kullanımı Adaptive Replacement Cache algoritması, arkaplan yazıcısı 
+(background writer) ve yeni vacumm geciktirme özellikleri kullanılarak en uygun hale getirilmiştir.  Bu yeni özellik sayesinde sistem yükü önceden 
+tahmin edilebilir olacaktır ve en yoğun kullanım zamanlarında daha da istikrarlı bir başarım sağlanacaktır.</li>
+
+</ul>
+
+<p>Hyperic LLC'nin şef mimarı olan Javier Soltero,  "PostgreSQL 8.0 bize  HQ izleme ürünü için gereksinim duyduğumuz süreklilik ve üretim imkanını 
+sunmaktadır. PostgreSQL 8.0'ın Windows üzerinde doğal olarak çalışması, PostgreSQL'i ürünümüz ile paketleyebilmemize imkan veriyor. Ayrıca, 
+kanıtlanmış ölçeklenebilirliği ile başarımından faydalanabileceğimiz ve de ticari sınırlamalardan uzak olarak dağıtımımızın içine ücretsiz olarak 
+yerleştirmemize izin veren lisansı ile de tüm özelliklerinden tam olarak yararlanmamıza olanak vereceği anlamına geliyor."</p>
+
+<p>Bu sürüm ile birlikte gelen diğer birçok özelliğin yanı sıra, PostgreSQL'in özellikleri, geçen yıl içinde seçimsel bileşenler ve ek özelliklerin 
+ivmelenmiş geliştirilme hızı ile çok artmıştır. Slony-I replikasyon aracı ve pgPool bağlantı pooling/brokering yazılımı şu anda yüksek-bulunurluk 
+gerektiren bir çok sunucuda halihazırda kullanılmaktadır. PL/Java, PL/PHP, Pl/Perl, Npgsql ve PgSQLClient gibi çeşitli stored procedure dilleri 
+eklenmiş ya da büyük oranda geliştirilmiştir. .NET data providerları 
+birçok yeni Windows kullanıcısını desteklemek için geliştirilmiştir.</p>
+
+<p>PostgreSQL 8.0'da gelen yeni özelliklerin tam listesi ve tanımları 
+için lütfen <a href="http://www.PostgreSQL.org/about/press">basın sayfamızı</a> ziyaret ediniz.</p>
+
+<p><b>PostgreSQL hakkında</b>: PostgreSQL, yüzlerce geliştiricinin California'daki Berkeley Üniversitesi'nde başlayan ve 20 yıla yakın bir süredir 
+devam eden ortak bir çalışmanın ürünüdür. Transactionlar, fonksiyonlar, triggerlar (tetikleyici) ve subquery gibi enterprise seviyedeki özellikleri 
+çok uzun zamandan beri PostgreSQL'in içinde bulunmaktadır. PostgreSQL bugün bir çok kamu kurumu ve özel kurum tarafından kullanılmaktadır. 
+PostgreSQL, kaynak kodun ticari ve ticari olmayan uygulamalar için kullanımına ve dağıtımına ücretsiz olarak izin veren BSD lisansı ile 
+dağıtılmaktadır.</p>
+
+<p>PostgreSQL hakkında daha fazla bilgi bulmak ya da PostgreSQL'i indirmek için lütfen:</p>
+
+<a href="http://www.postgresql.org/">http://www5.tr.PostgreSQL.org </a></p>
+
+<p>adresini ya da ana sayfamız olan</p>
+
+<p><a href="http://www.postgresql.org/">http://www.postgresql.org/</a></p>
+
+<p>adresini ziyaret ediniz.</p>
+
+
+<h2>Bu sürümdeki diğer özellikler</h2>
+
+<p>Daha önce belirtilen yeni ana özelliklerin yanı sıra, mevcut PostgreSQL kullanıcılarının da ilgisini çekecek bazı yeni özellikler ve geliştirmeler 
+mevcuttur. </p>
+
+<ul>
+<li><b>Fonksiyonlar</b>: PostgreSQL fonksiyonları artık  here-docs-style dollar-quoting desteklemektedir. Bu özellik, kullanıcıların karmaşık ve 
+içiçe tırnaklardan kaçınmalarına yardımcı olmaktadır. Ayrıca, yeni Savepoint özelliğinin bir yararı olarak, PL/pgSQL fonksiyonları 
+<code>EXCEPTION</code> tümceciği kullanarak sınırlı exception-handling yeteneğine sahiptir.</li>
+
+<li><b>Veritabanı tasarımı</b>: Veritabanı yöneticileri artık <code>ALTER TABLE</code> kullanarak kolonların veri tiplerini değiştirebilmektedirler. 
+Karma (composite) veri tipleri ile kolonların belirtilmesi SQL standartları çerçevesinde desteklenmektedir. Tüm veritabanı nesneleri </code>CHANGE 
+OWNER</code> desteklemektedir.</li>
+
+<li><b>Veri aktarma</b>: <code>COPY</code> komutu artık çok yaygın olan CSV (Comma separated value) biçimini desteklemektedir. Bu da veri aktarma 
+işlemlerini daha kolay hale getirmektedir.</li>
+<li><b>Optimizer geliştirmesi</b>: Sorgu planlayıcısı ve çalıştırıcısı artık uyumlu veri tipleri için index kullanacaktır; böylece açıktan sabit 
+verilerin cast edilme gereksinimi çok büyük oranda azalacaktır. Bu sürüm aynı zamanda gelişmiş index kullanımı, OR tümceciklerinin daha iyi 
+optimizasyonu, <code>ANALYZE</code> için gelişmiş örnekleme, daha hızlı <code>TRUNCATE</code> ve prepared sorguların daha iyi oluşturulmasını ve 
+burada belirtilmeyecek bir çok küçük geliştirmeler ile birlikte gelmektedir.</li>
+
+<li><b>Kayıt (log) tutma</b>: Yöneticiler artık postgresql.conf dosyası içindeki bir ayar ile PostgreSQL kayıtlarının otomatik olarak rotasyonunu 
+sağlayabilirler. PostgreSQL kayıt tutulması daha önce olmadığı kadar yapılandırılabilir olmuştur: Yönetici tarafından biçimlendirilebilir satır 
+önekleri, belirli tipteki SQL ifadelerinin kaydedilmesi ve kesilen bağlantıların kaydedilmesi gibi.</li>
+<li><b>Yedekleme</b>:PostgreSQL'in taşınabilir yedekleme aracı pg_dump kapsamlı bir şekilde yeniden yazılmıştır. Bu sürüm başlama ve bitiş 
+zamanlarının ayarlanabilmesi ve yedek dosyalarındaki bağımlılık konularının çözülmesi gibi yeni yetenekleri de barındırmaktadır.</li>
+</ul>
+<p>Tabii ki, daha da fazla gelişme ve değişiklik bulunmaktadır. Tam liste için <a href="/docs/8.0/static/release.htm">sürüm notlarına</a> 
+gözatabilirsiniz.
+
+<h2>Alıntıların tam metni</h2>
+
+<p>"Fujitsu, PostgreSQL 8.0 ile gelen yeni özelliklerden çok memnun. Bu kurumsal özellikler PostgreSQL'in çok daha fazla kullanıcısı olmasını 
+sağlayacaktır" dedi ve ekledi: Fujitsu PostgreSQL'e sponsor olmaktan ve çalışmalarının PostgreSQL topluluğu ile paylaşmaktan dolayı gururludur. 
+PostgreSQL'i lider Veritabanı Yönetim Sistemi yapmakta kararlıyız."</p>
+
+<p>Hyperic LLC'nin şef mimarı olan Javier Soltero,  "PostgreSQL 8.0 bize  HQ izleme ürünü için gereksinim duyduğumuz süreklilik ve üretim imkanını 
+sunmaktadır. Takımımız çoklu-platformda çalışan özel mülkiyetteki veritabanı sistemlerini ve 
+açık kaynak kodlu Java veritabanlarını denedi hangisinin gereksinimlerimize yanıt 
+verebileceğini bulamadı. PostgreSQL 8.0'ın Windows üzerinde doğal olarak çalışması, PostgreSQL'i ürünümüz ile paketleyebilmemize imkan veriyor. 
+Ayrıca, kanıtlanmış ölçeklenebilirliği ile başarımından faydalanabileceğimiz ve de ticari sınırlamalardan uzak olarak dağıtımımızın içine ücretsiz 
+olarak yerleştirmemize izin veren lisansı ile de tüm özelliklerinden tam olarak yararlanmamıza olanak vereceği anlamına geliyor.PostgreSQL grubu 
+kalite konusunda, bizim için ilk 8.0 betasını gözden geçirdiğimizden beri ortada olan ve hakettiği bir üne sahip "</p>
+
+<h2>PostgreSQL 8.0'ın indirilebileceği adresler:</h2>
+
+<ul>
+<li><a href="http://www.PostgreSQL.org/download/mirrors-ftp">FTP Yansılarının Listesi</a></li>
+<li><a href="http://www.PostgreSQL.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://pgfoundry.org/projects/pginstaller/">Windows Kurulum Programı</a> (Bittorrent ile de indirilebilir)</li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (Windows Kurulum Programı dahil)</li>
+</ul>
+
+<h2>Daha fazla bilgi için lütfen bizimle bağlantı kurun</h2>
+	     <p>Devrim GÜNDÜZ<br />
+		PostgreSQL Türkiye<br />
+		0.533.735.6202 - 0.312.428.1900<br />
+		<a href="mailto:devrim@PostgreSQL.org">devrim at PostgreSQL.org</a></p>
+
+<p>...ya da İngilizce için:
+             <p>Josh Berkus<br />
+                PostgreSQL Project<br />
+		+1-415-752-2500<br />
+		<a href="mailto:press@postgresql.org">press at postgresql.org</a></p>
+
+<h2>Diğer PostgreSQL kaynaklarına bağlantı</h2>
+
+<h3>Belgeler</h3>
+
+<ul>
+<li><a href="/docs">Resmi belgeler</a></li>
+<li><a href="http://techdocs.postgresql.org">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li>
+</ul>
+
+<h3>Sürücüler</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/psqlodbc/projdisplay.php">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.NET</a></li>
+<li><a href="http://search.cpan.org/~rudy/DBD-Pg-1.32/Pg.pm">Perl DBI</a></li>
+</ul>
+
+<h3>Grafiksel Kullanıcı Arabirimleri</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdminIII</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">Diğer grafik arabirimlerin listesi</a></li>
+</ul>
+
+<h3>Replikasyon</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://www.erserver.com/">eRServer</a></li>
+</ul>
+
+<h3>İlgili Projeler</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h2>Alıntı yapılmış şirketler hakkında bilgi</h2>
+
+<p><b>Fujitsu Hakkında:</b>: Fujitsu, global pazarda iletişim ve bilişim sektöründe müşteri odaklı çözümler sunan lider bir firmadır.
+Bünyesindeki, pace-setting teknolojileri, yüksek güvenilirlikte bilgisayar ve iletişim platformları ile ayrıca dünya çapında ender
+rastlanan sistem ve sunucu uzmanı şirketler sayesinde, Fujitsu,  müşterilerininin başarısı için sonsuz sayıda kapsamlı çözümler
+sunmaktadır.Merkezi Tokyo'da bulunan Fujitsu Limited (TSE: 6702), 31 Mart 2004'te biten mali yıldaki konsolide karlarının 4.7 trilyon yen (~62 
+Milyar YTL).Fujitsu hakkındaki genel bilgiye, <a href="http://www.fujitsu.com">www.fujitsu.com</a> adresinden erişilebilir. White Paper tartışma 
+belgesi de içeren Fujitsu Supported PostgreSQL (FSP) hakkında daha fazla ayrıntıya <a href="http://fastware.com.au/postgresql.html">FASTWare</a> 
+sayfasından ulaşabilirsiniz. Lütfen direk sorularınızı Fujitsu Australia Software Technology'ye, <a href="mailto:liamod@fast.fujitsu.com.au">Liam 
+O'Duibhir'e</a> ve telefonla iletin (61-2) 9452 9068 (Sadece İngilizce)
+
+<p><b>Hyperic hakkında</b>: Hyperic, LLC açık kaynak kodlu ve ticari bilişim altyapısını yönetebilmek için çözümler sunmaya odaklanmış bir teknoloji 
+sağlayıcısıdır. Şirketin amiral gemisi ürünü olan HQ, bugün bilişim sektöründe kullanılan günü geçmiş yönetim frameworkleri için, açık ve bu 
+teknolojilere etraflı destek sağlayan ölçeklenebilir ve web tabanlı platformlar sunmaktadır. Daha fazla bilgi için, <a href="mailto:press at 
+hyperic.net">press at hyperic.net</a> adresi ile bağlantı kurabilirsiniz (İngilizce, İspanyolca)</p>

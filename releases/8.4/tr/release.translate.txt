@@ -1,0 +1,48 @@
+Konu: PostgreSQL 8.4 Duyuruldu
+
+E-posta gövdesi:
+
+29 Haziran 2009:  PostgreSQL Global Development Group, dünyanın en gelişmiş açık kaynak kodlu veritabanı sunucusu olan PostgreSQL'in 8.4 sürümünü duyurdu. Bu sürüm PostgreSQL yönetimini, sorgulamalarını 
+ve programlamasını öncekinden daha da kolaylaştırmıştır. 293 yeni ya da geliştirilmiş özellikleri ile 8.4 sürümü ile PostgreSQL'i sıradaki projenizde kullanmanız için daha da fazla neden var.
+
+PostgreSQL 8.4' deki en çok sayıdaki yeni özellik yeni ve geliştirilmiş yönetim ve gözlemleme araçları ve komutlarıdır. Her kullanıcı günlük çalışmalarında PostgreSQL'i daha kolay ve yönetebilecek 
+favori özelliklerini bulacaktır.
+
+ZooLoo.com'un CTO'su Jeffrey Webster, PostgreSQL'i yedi yıldan beri kullandıklarını ve kolon izinleri, veritabanı bazlı yerel seçimi ve GIN indexleri için parçalı eşleşmeler gibi 8.4 özelliklerini 
+şimdiden beklediklerini söyledi ve ekledi: "PostgreSQL veri bütünlüğünden feragat ettirmeden büyümemizi sağladı."
+
+En popüler geliştirmeler arasında şunlar vardır:
+
+    * Veritabanlarının Paralel Geriyüklemesi, yedeklerin geriyüklenmesini 8 kata kadar hızlandırır
+    * Kolon Bazlı İzinler ile hassas verinin daha iyi kontrol edilmesi mümkündür
+    * Veritabanı Bazlı Dil Karşılaştırması Desteği ile PostgreSQL'i çok dilli ortamlarda daha iyi kullanabilirsiniz
+    * Disk Üzerinde Güncelleme pg_migrator beta sürümü ile 8.3'den 8.4'e geçiş büyük zaman geçirmeden geçiş mümkündür
+    * Yeni Sorgu Gözlemleme Araçları veritabanı yöneticilerine sorgu etkinlikleri hakkında daha fazla bilgi verecektir
+
+8.4 sürümü veri analizini gelişmiş bir ANSI SQL2003 özelliği olan windowing functions, common table expressions ve recursive joins ile daha da kolaylaştırmıştır. Truviso kurucusu Sailesh Krishnamurthy 
+"Bu sorgu yapıları PostgreSQL'in SQL dialektiğini azımsanmayacak şekilde arttırıyor ve kullanıcıların tek bir sorguda daha ilginç ve önceden sorulması mümkün olmayan soruları sormasına izin veriyor" 
+dedi. Saklı yordamlara (stored procedure) eklenen öntanımlı parametreler ve variadic parametreler gibi özelliklerle veritabanı sunucusu programlaması daha basit ve özlü bir hale gelmiştir.
+
+Bu sürüm, Wisconsin Court Systems'den Kevin Grittner'ın da belirttiği gibi, uygulama başarımlarını da arttırıyor: "PostgreSQL her yeni ana sürümde başarımını arttırmaya devam ediyor. 8.4 sürümü 
+semi-joinler ve anti-joinler gibi çeşitli optimizasyonlar ekledi ve büyük sorgularımızın çalışma sürelerini dikkat çekici derecede düşürdü"
+
+Bu özellikler PostgreSQL 8.4'ün daha önceden olmadığı kadar fazla yeni kullanıcıya hizmet vereceğinin bir işaretidir. Bunlardan birisi de OpenStreetMap projesi. OpenStreetMap sistem yöneticisi Tom 
+Hughes bu konuda şunları söyledi: " OpenStreepMap API'ının yeni sürümünü planlarken sadece özellikleri için değil, aynı zamanda ölçeklenebilir bir dünya sınıfında veritabanı sunucusu aradığımız 
+kesinleşti. Çok fazla açık kaynak kodlu veritabanı olmasına rağmen PostgreSQL gözle görülür derecede önde olan seçimdi."
+
+Daha fazla bilgi için aşağıdaki bilgileri kullanabilirsiniz:
+ Devrim GÜNDÜZ
+ E-posta: devrim@PostgreSQL.org
+ Telefon: 0 532 633 9886
+
+* PostgreSQL 8.4'ü indirin: http://www.postgresql.org/download/
+
+* 8.4 ile gelen özelliklerin tam listesi (İngilizce): http://www.postgresql.org/about/press/features84
+
+* Sürüm notları (İngilizce): http://www.postgresql.org/docs/8.4/static/release.html
+
+* Genişletilmiş Basın Bülteni : http://www.postgresql.org/about/press/presskit84.html
+
+PostgreSQL hakkında: PostgreSQL yüzlerce geliştiricinin California'daki Berkeley Üniversitesinde başlatıp yirmi yılı aşkın süredir devam ettirdiği ortak bir çalışmanın ürünüdür. Uzun dönemli destek ve 
+kurumsal seviyedeki transaction veritabanı özellikleri ve ölçeklenebilirliği ile PostgreSQL bugün özel ve kamu projelerinde etkin olarak kullanılmaktadır. PostgreSQL ticari ve ticari olmayan 
+kullanımların ücretsiz olarak yapılmasına imkan veren BSD listensı ile dağıtılmaktadır. Daha fazla bilgi için ana sayfamızı ziyaret edebilirsiniz: http://www.PostgreSQL.org

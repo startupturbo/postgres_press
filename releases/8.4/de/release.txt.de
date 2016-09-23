@@ -1,0 +1,40 @@
+Subject: PostgreSQL 8.4 veröffentlicht
+
+Email Body:
+
+29. Juni 2009: Die PostgreSQL Global Development Group hat Version 8.4 veröffentlicht und setzt damit die kontinuierliche Entwicklung der fortschrittlichsten Open Source Datenbank der Welt fort. Dieses Release enthält eine Fülle an Verbesserungen um die Administration, Anfragen und das Programmieren von PostgreSQL-Datenbanken noch einfacher als zuvor zu gestalten. Mit 293 neuen oder verbesserten Features in Version 8.4 gibt es noch mehr Gründe, PostgreSQL für Ihr nächstes Projekt zu wählen.
+
+Die zahlreichsten Änderungen in PostgreSQL 8.4 sind neue oder verbesserte Administrations- und Monitoringwerkzeuge und Befehle. Jeder Benutzer hat seine eigenen favorisierten Features die die tägliche Arbeit mit PostgreSQL vereinfachen und die Produktivität erhöhen.
+
+"Wir nutzen PostgreSQL nun seit sieben Jahren und wir sind sehr gespannt auf die vielen Features in 8.4, vor allem spaltenbasierte Zugriffsrechte, Locales per Datenbank, partielle Vergleiche für GIN-Indexe und benutzerdefinierte Exceptions," sagt Jeffrey Webster, CTO bei ZooLoo.com. "PostgreSQL hat es uns erlaubt, zu wachsen ohne die Datensicherheit zu opfern."
+
+Zu den am meisten erwarteten Funktionen gehören:
+
+ * Paralleles Wiederherstellen, bis zu 8x schnellere Wiederherstellung eines Backups
+ * Spaltenbasierte Berechtigungen, die es ermöglichen den Zugriff auf sensible Daten besser zu regulieren
+ * Datenbankbezogene Kollationen, somit ist eine Verwendung in mehrsprachigen Umgebungen wesentlich einfacher möglich
+ * In-Place Upgrades mit pg_migrator - als Beta verfügbar - ermöglichen es, Updates von 8.3 zu 8.4 durchzuführen und die Downtime möglichst klein zu halten
+ * Neue Überwachungsmöglichkeiten, die einen genaueren Einblick in die Aktivität von PostgreSQL ermöglichen
+ 
+Version 8.4 vereinfacht die Datenanalyse durch die Unterstützung von mehr ANSI SQL2003 Funktionen. Dazu zählen unter anderem "Windowing-Functions", "Common-Table-Expressions" und rekursive Queries.
+"Diese Abfragemöglichkeiten erhöhen die Ausdruckskraft von PostgreSQLs SQL-Dialekt: Der Benutzer kann nun im Gegensatz zu früheren Versionen interessante Abfragen an die Datenbank zu einer Abfrage zusammenfassen,", erklärt Sailesh Krishnamurthy, Gründer von Truviso.
+Zu den Weiterentwicklungen bei gespeicherten Prozeduren (Stored Procedures) gehören Standardwerte für Funktionsparameter und Funktionen die eine unterschiedliche Anzahl an Parametern (variadic functions) entgegennehmen.
+
+Die neue Version bringt auch Geschwindigkeitsverbesserungen mit, meint Kevin Grittner, Datenbank Administrator für "Wisconsin Courts System" und beschreibt dies so: "PostgreSQL verbessert nach wie vor in jedem großen Versionsschritt die Geschwindigkeit. Version 8.4 enthält Verbesserungen für Semi-Joins und Anti-Joins, die eine erhebliche Verkürzung der Laufzeit bei unseren anspruchsvollsten Abfragen bewirken."
+
+Für PostgreSQL bedeuten diese Funktionen, dass es für mehr Leute die Datenbank der Wahl wird, wie für das OpenStreetMap-Projekt. "Als wir die neue Version der OpenStreetMap-API planten wurde uns klar, dass wir eine Datenbank brauchen, die nicht nur die richtigen Funktionen bietet sondern auch in der Größenordnung wie wir sie brauchen noch gut funktioniert. Obwohl es viele Open Source Datenbanken gibt, war PostgreSQL die erste Wahl." sagt Tom Hughes, OpenStreetMap System Administrator.
+
+Kontakt für weitere Informationen:
+  Andreas Scherbaum
+  mailto:de@postgresql.org
+  +49 391 5596779
+
+* Download PostgreSQL 8.4: http://www.postgresql.org/download/
+
+* Komplette Liste aller 8.4 Features (auf Englisch): http://www.postgresql.org/about/press/features84
+
+* Release Notes (auf Englisch): http://www.postgresql.org/docs/8.4/static/release.html
+
+* Erweiterte Pressemitteilung: http://www.postgresql.org/about/press/presskit84.html
+
+Über PostgreSQL: PostgreSQL ist das gemeinsame Werk von hunderten Software-Entwicklern und basiert auf einer über 20-jährigen Entwicklung, welche an der University of California in Berkeley begann. Aufgrund der langjährigen Unterstützung von umfangreichen Leistungsmerkmalen und Skalierbarkeit im Enterprise-Bereich, wird PostgreSQL heute von vielen der anspruchsvollsten Unternehmen und Behörden eingesetzt. PostgreSQL steht unter der BSD-Lizenz, welche die Nutzung und Distribution ohne Lizenzgebühren erlaubt, sowohl für kommerzielle als auch für nicht-kommerzielle Anwendungen. Mehr dazu auf unserer Homepage.

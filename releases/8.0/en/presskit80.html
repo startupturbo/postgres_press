@@ -1,0 +1,155 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.0 Press Kit
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.0 Press Kit</h1>
+
+<p>NY, NY: January 19, 2005 - The PostgreSQL Global Development group has released version 8.0 of the PostgreSQL object-relational database management system, building on its position as the most advanced open source database in the world. This release includes features previously only available in the most expensive proprietary database systems, and is expected to substantially increase the adoption of PostgreSQL by both users and software vendors.</p>
+
+<p>In addition to significant improvements in scalability, features, and performance, PostgreSQL 8.0 demonstrates the unparalleled development speed of open source. More than a dozen companies, including Red Hat, Fujitsu, Afilias, Software Research Associates, Inc., 2nd Quadrant, and Command Prompt Inc., as well as hundreds of individual developers, contributed to add more major features to 8.0 than have been seen in any previous version.</p>
+
+<p>"We are confident that these enterprise features will attract a great number of new PostgreSQL users.", said Mr. Takayuki Nakazawa, Director of Fujitsu's OSS Database in Software Group. "Fujitsu is proud of its sponsorship of contributions to PostgreSQL and of its work with the PostgreSQL community. We are committed to helping make PostgreSQL the leading Database Management System."</p>
+
+<p>New features include:</p>
+
+<ul>
+<li><b>Native Windows Support</b>: PostgreSQL now works natively with Windows systems and does not need an emulation layer. This provides dramatically improved performance over previous versions, and offers a compelling alternative to proprietary database software for independent software vendors, corporate users, and individual Windows developers.</li>
+<li><b>Savepoints</b>: This SQL-standard feature allows specific parts of a database transaction to be rolled back without aborting the entire operation. This benefits business application developers who require complex transactions with error recovery.</li>
+<li><b>Point in Time Recovery</b>: This feature allows full data restoration from the automatic and continuously archived transaction logs. It provides a long-sought alternative to hourly or daily backups for data-critical services on PostgreSQL.</li>
+<li><b>Tablespaces</b>: Crucial to the administrators of multi-gigabyte data warehousing systems, tablespaces allow the placement of large tables and indexes on their own individual disks or arrays, improving query performance.</li>
+<li><b>Improved Memory and I/O</b>: Disk and memory usage have been optimized through the use of the Adaptive Replacement Cache algorithm, the new background writer, and the new vacuum delay feature. This will result in more predictable loads and substantially more consistent performance during peak usage times.</li>
+</ul>
+
+<p>Javier Soltero, Chief Architect at Hyperic LLC, said, "PostgreSQL 8.0 gives us the high degree of concurrency and throughput required by our HQ monitoring product. Having PostgreSQL 8.0 supported natively on Windows means we can now bundle PostgreSQL in our product and benefit from the proven scalability and performance of PostgreSQL, as well as its license, which allows us to include it in our distribution free of commercial obligations."</p>
+
+<p>In addition to the many features bundled with the release, PostgreSQL has
+been enhanced by accelerated development of add-ons and optional components
+over the last year. The Slony-I replication tool and the pgPool connection
+pooling/brokering utility are both already being used for high-availability
+server pools. Several stored procedure languages have been added or greatly
+expanded, including PL/Java, PL/J, PL/PHP and PL/Perl, while the Npgsql and PGsqlClient .NET data providers have been enhanced to support the many new Windows users.</p>
+
+<p><b>About PostgreSQL</b>: PostgreSQL is the collective work of hundreds of developers, building on almost twenty years of development which started at the University of California at Berkeley. With its long-time support of an enterprise level feature set including transactions, functions, triggers, and subqueries, PostgreSQL is being used by many of today's most demanding businesses and government agencies. PostgreSQL is distributed under a BSD license, which allows use and distribution without fees for both commercial and non-commercial applications.</p>
+
+<p>To find out more about PostgreSQL or to download it, please visit the <a href="http://www.postgresql.org/">Postgresql.org home page</a>.</p>
+
+<h2>Additional Features in This Version</h2>
+
+<p>As well as the major features named above, there are numerous other new features and improvements which will be of great interest to existing PostgreSQL users.</p>
+
+<ul>
+<li><b>Functions</b>: PostgreSQL functions now support here-docs-style dollar-quoting allowing users to avoid messy nested quotes.  Further, as a benefit of the new Savepoints, PL/pgSQL functions now have limited exception-handling ability using the <code>EXCEPTION</code> clause.</li>
+<li><b>Database Design</b>: Database administrators can now change columns in-place to other data types using <code>ALTER TABLE</code>. Declaration of columns with composite data types is now supported according to the SQL standard.  All database objects now support <code>CHANGE OWNER</code>.</li>
+<li><b>Data Import/Export</b>: The <code>COPY</code> command now supports the very common comma separated value (CSV) file format, making imports and exports to other software easier.</li>
+<li><b>Optimizer Improvements</b>: The query planner and executor will now make use of indexes for compatible data types, greatly reducing the need to explicitly cast constant values. This version also includes improved index usage, better optimization of OR clauses, improved sampling for <code>ANALYZE</code>, faster <code>TRUNCATE</code>, and better generation of prepared query plans, as well as many minor improvements too numerous to mention.</li>
+<li><b>Logging</b>: Administrators may now set up automated rotation of the PostgreSQL log through the postgresql.conf file. PostgreSQL logging is also much more configurable than before, including administrator-formatted line prefixes, logging specific types of SQL statements, and logging disconnections.</li>
+<li><b>Backup</b>: PostgreSQL's portable backup utility, pg_dump, has been extensively rewritten. This version adds some new capabilities, such as start and stop times, while eliminating the remaining permissions and dependency issues in the backup files.</li>
+</ul>
+
+<p>Of course, there are many other changes and improvements.  See the <a href="/docs/8.0/static/release.htm">Release Notes</a> for the complete list.</p>
+
+<h2>Complete Text Of Quotes</h2>
+
+<p>"Fujitsu is very pleased with the new features in PostgreSQL 8.0. We are confident that these enterprise features will attract a great number of new PostgreSQL users.", said Mr. Takayuki Nakazawa, Director of Fujitsu's OSS Database in Software Group. "Fujitsu is proud of its sponsorship of contributions to PostgreSQL and of its work with the PostgreSQL community. We are committed to helping make PostgreSQL the leading Database Management System."</p>
+
+<p>Javier Soltero, Chief Architect at Hyperic LLC, said, "PostgreSQL 8.0 gives us the high degree of concurrency and throughput required by our HQ monitoring product. Our team evaluated multi-platform commercial and open source Java databases and were unable to find one which met our needs. Having PostgreSQL 8.0 supported natively on Windows means we can now bundle PostgreSQL in our product and benefit from the proven scalability and performance of PostgreSQL, as well as its license, which allows us to include it in our distribution free of commercial obligations. The PostgreSQL group has a well deserved reputation for quality which has been evident to us since the very first public 8.0 beta we reviewed."</p>
+
+<h2>Where to Download 8.0</h2>
+
+<ul>
+<li><a href="/download/mirrors-ftp">List of FTP Mirrors</a></li>
+<li><a href="/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://pgfoundry.org/projects/pginstaller/">Windows Installer</a> (also available via Bittorrent)</li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (including Windows installer)</li>
+</ul>
+
+<h2>Contact For More Information</h2>
+	<p>General Inquiries:<br />
+		Josh Berkus<br />
+		PostgreSQL Project<br />
+		+1-415-752-2500<br />
+		<a href="mailto:press@postgresql.org">press at postgresql.org</a></p>
+	<p>For contacts in specific regions, see <a href="/about/press/contact">our international contact list.</a></p>
+
+<h2>Links To Other PostgreSQL Resources</h2>
+
+<h3>Documentation</h3>
+
+<ul>
+<li><a href="/docs">Official Documentation</a></li>
+<li><a href="http://techdocs.postgresql.org">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li>
+</ul>
+
+<h3>Drivers</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/psqlodbc/projdisplay.php">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+<li><a href="http://search.cpan.org/~rudy/DBD-Pg-1.32/Pg.pm">Perl DBI</a></li>
+</ul>
+
+<h3>Graphical User Interfaces</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdminIII</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">List of other GUIs</a></li>
+</ul>
+
+<h3>Replication</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://www.erserver.com/">eRServer</a></li>
+</ul>
+
+<h3>Related Projects</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h2>Information About Quoted Companies</h2>
+
+<p><b>About Fujitsu</b>: Fujitsu is a leading provider of customer-focused IT and communications solutions for the global marketplace. Pace-setting technologies, highly reliable computing and communications platforms, and a worldwide corps of systems and services experts uniquely position Fujitsu to deliver comprehensive solutions that open up infinite possibilities for its customers' success. Headquartered in Tokyo, Fujitsu Limited (TSE: 6702) reported consolidated revenues of 4.7 trillion yen (US$45 billion) for the fiscal year ended March 31, 2004. General information on Fujitsu is available at <a href="http://www.fujitsu.com">fujitsu.com</a>. Details of the Fujitsu Supported PostgreSQL (FSP) initiative, including a White Paper discussion document, are available at: <a href="http://fastware.com.au/postgresql.html">FASTWare</a>. Please direct enquiries to <a href="mailto:liamod@fast.fujitsu.com.au">Liam O'Duibhir</a>, Fujitsu Australia Software Technology, phone (61-2) 9452 9068 (English only)</p>
+
+<p><b>About Hyperic</b>: Hyperic, LLC is a technology provider focused on delivering solutions for managing Open Source and commercial IT Infrastructure. Its flagship HQ product is aimed at providing an alternative to costly, outdated management frameworks by delivering an open, scalable, web-based platform which provides comprehensive support for all the technologies used in IT today. For more information, contact <a href="mailto:press at hyperic.net">press at hyperic.net</a> (English, Spanish)</p>
+
+<h2>Official Translations of This Document</h2>
+
+<ul>
+<li><a href="/about/press/presskit80.html.br">Brazillian Portuguese</a></li>
+
+<li><a href="/about/press/presskit80.html.fi">Finnish</a></li>
+
+<li><a href="/about/press/presskit80.html.fr">French</a></li>
+
+<li><a href="/about/press/presskit80.html.de">German</a></li>
+
+<li><a href="/about/press/presskit80.html.el">Greek</a></li>
+
+<li><a href="/about/press/presskit80.html.hu">Hungarian</a></li>
+
+<li><a href="/about/press/presskit80.html.it">Italian</a></li>
+
+<li><a href="http://www.postgresql.jp/ug/press-release/2005-01.html">Japanese</a></li>
+
+<li><a href="/about/press/presskit80.html.pl">Polish</a></li>
+
+<li><a href="/about/press/presskit80.html.ro">Romanian</a></li>
+
+<li><a href="/about/press/presskit80.html.ru">Russian</a></li>
+
+<li><a href="/about/press/presskit80.html.si">Slovenian</a></li>
+
+<li><a href="/about/press/presskit80.html.es">Spanish</a></li>
+
+<li><a href="/about/press/presskit80.html.se">Swedish</a></li>
+
+<li><a href="/about/press/presskit80.html.tr">Turkish</a></li>
+</ul>

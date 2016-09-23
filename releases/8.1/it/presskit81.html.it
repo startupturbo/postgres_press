@@ -1,0 +1,297 @@
+<!-- BEGIN page_title_block --> 
+PostgreSQL 8.1 Press Kit
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.1 Press Kit</h1>
+
+<h2>Contenuti</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Testo originale delle note di rilascio</a><br />
+ &nbsp; <a href="#additional_features">Caratteristiche aggiuntive</a><br />
+ &nbsp; <a href="#quoted_companies">Informazioni sulle compagnie citate</a><br />
+ &nbsp; <a href="#download">Dove scaricarlo</a><br />
+ &nbsp;	<a href="#docs">Documentazione</a><br />
+ &nbsp; <a href="#license">Licenza</a><br />
+ &nbsp; <a href="#contact">Contatti</a><br />
+ &nbsp; <a href="#companies">Supporto allo sviluppo</a><br />
+ &nbsp; <a href="#additional_software">Software aggiuntivo</a><br />
+</p>
+
+<a name="original_release"></a><h2>Note di rilascio originali</h2>
+<p>
+8 Novembre 2005, Francoforte, Germania (OpenDBCon):  Il Gruppo di Sviluppo
+Globale di PostgreSQL &egrave; orgoglioso di annunciare il rilascio di PostgreSQL 8.1,
+che rafforza ulteriormente il primato di PostgreSQL come il pi&ugrave; avanzato
+sistema di gestione di database open source. Concepita, realizzata
+e testata da una comunit&agrave; ampia e fiorente e supportata da un crescente
+numero di sponsor commerciali e compagnie del terziario, la versione 8.1
+allargher&agrave; ulteriormente il raggio di azione di PostgreSQL nello sviluppo
+di applicazioni. La nuova versione include migliorie nelle performance e
+caratteristiche avanzate di SQL che permetteranno il supporto a data
+warehouse pi&ugrave; grandi, il processo di un maggior volume di transazioni
+e software commerciale distribuito sempre pi&ugrave; complesso.
+</p><p>
+Queste caratteristiche faranno s&igrave; che continui la tendenza ad adottare
+PostgreSQL iniziata con la versione precedente. La versione 8.0 &egrave; stata
+scaricata circa un milione di volte nei primi sette mesi, in raffronto a
+circa 300.000 download in un periodo simile per la versione 7.4.
+</p><p>
+"Gli utenti di database stanno pensando che il progetto proceda velocemente"
+afferma Lance Obermeyer, Direttore di Produzione alla Pervasive Software,
+uno degli sponsor commerciali di PostgreSQL. "Dato il crescente interesse
+verso le infrastrutture software a sorgente aperto, ci aspettiamo che
+PostgreSQL raccolga sempre pi&ugrave; consensi."
+</p>
+<h3>Nuove caratteristiche avanzate del database</h3>
+<p>
+<b>Ruoli:</b> PostgreSQL ora supporta i ruoli, che semplificano la gestione di
+grandi gruppi di utenti con complessi intrecci di diritti sui database.
+</p><p>
+<b>Parametri IN/OUT:</b> le funzioni di PostgreSQL adesso supportano parametri
+di tipo IN, OUT e INOUT, il che migliora notevolmente il supporto per
+la business logic di applicazioni J2EE e .NET.
+</p><p>
+<b>Commit a due fasi (Two-phase commit, 2PC):</b> richiesta da tempo per
+applicazioni distribuite su WAN e per data center eterogenei,
+questa caratteristica rende possibili le transazioni ACID tra
+server separati da grandi distanze.
+</p>
+<h3>Migliorie nelle prestazioni</h3>
+<p>
+<b>Miglioramento nelle prestazioni di sistemi multiprocessore:</b> il
+gestore dei buffer della 8.1 &egrave; stato migliorato per scalare
+in maniera quasi lineare all'aumentare dei processori, il che
+porta ad un aumento significativo delle prestazioni in sistemi
+con CPU a 8 vie, 16 vie, dual core e multicore.
+</p><p>
+<b>Bitmap scan:</b> gli indici vengono convertiti in mappe di bit in
+memoria quando appropriato, il che si traduce in un aumento
+di velocit&agrave; fino a venti volte superiore durante le ricerche
+tramite indice su query complesse che coinvolgono tabelle molto
+popolate. Questo semplifica anche la gestione del database,
+riducendo di fatto la necessit&agrave; per indici su pi&ugrave; colonne.
+</p><p>
+<b>Partizionamento delle tabelle:</b> il query planner adesso &egrave; in grado
+di evitare la scansione completa su intere sezioni di una tabella molto
+popolata utilizzando una tecnica conosciuta come Esclusione delle
+Restrizioni (Constraint Exclusion). Simile al Partizionamento delle
+Tabelle che si ritrova su altri database, questa caratteristica
+migliora tanto le prestazioni quanto la gestione dei dati su tabelle
+delle dimensioni di pi&ugrave; gigabyte.
+</p><p>
+<b>Lock condiviso sulle righe:</b> il "lock pi&ugrave; fine di quello sulla riga"
+di PostgreSQL adesso supporta livelli di concorrenza ancora pi&ugrave;
+elevati con l'aggiunta di lock sulle righe condivisi per le chiavi
+esterne. I lock condivisi miglioreranno le prestazioni per gli
+inserimenti e gli aggiornamenti per molte applicazioni on-line
+ad alto volume transazionale.
+</p><p>
+"Il quadro generale delle prestazioni di PostgreSQL mostra un
+notevole aumento delle prestazioni sui nostri server di produzione
+basati su biprocessori Opteron", afferma Merlin Moncure,
+amministratore di database presso la Reliable Computer Solutions.
+"Pi&ugrave; in dettaglio, noto una riduzione del 20% circa per
+il tempo di esecuzione di query semplici, pi&ugrave; un 20% di
+riduzione del carico della CPU, per un miglioramento notevole
+del 20-40% sul carico generale delle macchine."
+</p><p>
+Ci sono pi&ugrave; di 120 migliorie, alcune delle quali sono dettagliate
+nel <a href="/docs/8.1/static/release.html">nostro comunicato stampa per la 8.1.</a> 
+</p>
+<h3>Su PostgreSQL</h3>
+<p>
+PostgreSQL &egrave; il risultato del lavoro di squadra di centinaia di
+sviluppatori, basato su un processo di sviluppo ventennale iniziato
+all'Universit&agrave; della California a Berkeley. Grazie al suo
+supporto ad un insieme di caratteristiche pensato per le imprese che
+comprende transazioni, funzioni, trigger e sottoquery, PostgreSQL
+oggi viene usato dalle imprese commerciali pi&ugrave; esigenti e dagli
+uffici pubblici. PostgreSQL &egrave; distribuito con una licenza BSD, che
+ne permette un uso e una distribuzione liberi da compensi, per
+applicazioni commerciali e non.
+</p>
+
+<a name="additional_features"></a><h2>Caratteristiche aggiunte in questa versione</h2>
+Oltre alle caratteristiche principali elencate nelle Note di Rilascio,
+ci sono pi&ugrave; di 120 nuove caratteristiche e migliorie fornite
+da quasi 200 sviluppatori nella versione 8.1. Tra queste:
+<ul>
+<li><b>GiST:</b> Il meccanismo agganciabile generalizzato di
+indicizzazione ad alberi di PostgreSQL (GiST) &egrave; stato
+migliorato per supportare il livello di prestazioni relative
+alla concorrenza, al recupero e all'aggiornamento che
+precedentemente si poteva ottenere unicamente mediante gli
+indici B-Tree. GiST &egrave; la spina dorsale per l'indicizzazione
+del testo (TSearch2), geospaziale (GIS) e tramite strutture ad
+albero. Con questa miglioria, tipi di dato complessi potranno
+operare molto bene anche sulle applicazioni a disponibilit&agrave;
+continua.</li>
+<li><b>Riscrittura della COPY:</b> la COPY &egrave; stata riscritta
+per permettere un caricamento in massa di dati fino al 30% pi&ugrave;
+veloce. Assieme alle migliorie al caricamento di dati in formato CSV,
+questo rende l'inserimento di basi di dati molto ampie dentro 
+PostgreSQL pi&ugrave; veloce che mai.</li>
+<li><b>Memoria condivisa a 64-bit:</b> il gestore dei buffer di
+memoria &egrave; stato migliorato per poter utilizzare fino a
+due terabye di RAM sulle piattaforme a 64 bit, preparando PostgreSQL
+ai server del futuro che saranno dotati di notevoli quantit&agrave;
+di memoria.</li>
+<li><b>Autovacuum integrato:</b> il demone di manutenzione di
+PostgreSQL &egrave; stato migliorato ed integrato nel programma
+server principale, rendendo PostgreSQL pi&ugrave; semplice da
+configurare ed amministrare.</li>
+<li><b>Funzioni di aggregazione pi&ugrave; veloci:</b> le
+funzioni di aggregazione sono state migliorate per rendere
+le interrogazioni di resoconto pi&ugrave; veloci. Gli
+sviluppatori di PostgreSQL hanno sia riscritto i processi
+di gestione della memoria per le funzioni di aggregazione
+che aggiunto ottimizzazioni per le indicizzazioni di MIN() e MAX().</li>
+<li><b>Funzioni di amministrazione:</b> nuove funzioni sono
+state aggiunte per ottenere informazioni sullo stato del server
+e per espletare compiti di base dell'Amministratore dalla
+linea di comando PSQL.</li>
+<li><b>Funzioni di compatibilit&agrave;:</b> le funzioni
+lastval(), greatest() and least() sono state aggiunte per
+rendere pi&ugrave; semplice la trascodifica di applicazioni
+per MySQL e Oracle.</li>
+</ul>
+<p>
+Potete trovare maggiori informazioni sulle dozzine di
+ulteriori migliorie nella 8.1 nelle
+<a href="/docs/current/static/release.html">Note di rilascio</a>.
+</p>
+
+<a name="quoted_companies"></a><h2>Informazioni sulle compagnie citate</h2>
+
+<p>
+<b>Pervasive Software</b> (NASDQ: PVSW) fornisce software per
+l'infrastruttura che aiuta le compagnie a liberare il potenziale
+insito nei loro dati. Per pi&ugrave; di due decadi Pervasive ha fornito
+progetti di grande valore e le migliori combinazioni di prestazioni,
+affidabilit&agrave; e connettivit&agrave;. Decine di migliaia di clienti
+in praticamente tutti i rami dell'industria, in pi&ugrave; di 150 paesi nel mondo,
+si affidano a Pervasive per aministrare, integrare, analizzare e mettere
+in sicurezza i loro dati pi&ugrave; critici. Per ulteriori informazioni
+consultate <a href="http://www.pervasive.com/company">le nostre pagine web</a>.
+</p>
+<p>
+<b>Reliable Computer Solutions</b> fornisce software per la pianificazione
+delle risorse industriali e servizi di consulenza per industrie
+manufatturiere. Siamo specializzati in soluzioni IT complete per
+veicoli a scopo ricreativo ed edilizia industriale. Il nostro
+prodotto di punta, ESP, muove pi&ugrave; di un miliardo di dollari
+del settore manufatturiero negli Stati Uniti. Per ulteriori informazioni,
+contattate Merlin Moncure (solo in inglese): merlin.moncure@rcsonline.com,
+telefono: (01) 269-483-1234 x304.
+</p>
+
+<a name="download"></a><h2>Dove scaricarlo</h2>
+
+<ul>
+<li><a href="http://www.postgresql.org/ftp/latest/">Lista di Mirror FTP</a></li>
+<li><a href="http://www.postgresql.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/win32/">Windows
+Installer</a> (disponibile anche via Bittorrent)</li>
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/">Altri eseguibili,
+inclusi quelli per Linux, Mac OSX e Solaris</a></li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (comprende il
+Windows installer)</li>
+</ul>
+
+<a name="docs"></a><h2>Documentazione</h2>
+
+<ul>
+<li><a href="/docs/current/static/">Documentazione ufficiale</a></li>
+<li><a href="http://techdocs.postgresql.org">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li>
+</ul>
+
+<a name="license"></a><h2>Licenza</h2>
+<p>
+PostgreSQL adotta la <a href="/about/licence">licenza BSD</a>,
+che richiede unicamente che il codice concesso in licenza mantenga
+le informazioni sul copyright e le condizioni di licenza. Questa forma di
+<a href="http://www.opensource.org/licenses/bsd-license.php">licenza certificata dall'OSI</a>
+&egrave; ritenuta flessibile ed amichevole verso le imprese, giacch&egrave; non
+impedisce l'utilizzo di PostgreSQL in applicazioni commerciali o proprietarie.
+Con il supporto fornito da compagnie esterne e la propriet&agrave; pubblica
+del codice la licenza BSD rende PostgreSQL molto popolare tra i fornitori
+che vogliono incorporare un database nei loro prodotti senza timore di
+balzelli, lock-in o cambi improvvisi nei termini di licenza.
+</p>
+
+<a name="contact"></a><h2>Contatti</h2>
+
+<p><a href="http://www.postgresql.org">English-language home page</a></p>
+
+<p>Domande:<br />
+Stefano Reksten<br />
+PostgreSQL Regional Contact<br />
++39-347-4745979<br />
+<a href="mailto:it@postgresql.org">it@postgresql.org</a></p>
+
+<p>Per contatti in altri stati leggete la nostra <a
+href="/about/press/contact">lista di contatti internazionali</a>.</p>
+
+<a name="companies"></a><h2>Supporto allo sviluppo</h2>
+
+PostgreSQL ha l'appoggio di numerose compagnie, che patrocinano
+gli sviluppatori, forniscono soluzioni di hosting e ci
+forniscono supporto finanziario. Gli sponsor pi&ugrave;
+importanti sono elencati nella nostra
+<a href="/about/sponsors">pagina di supporto allo sviluppo</a>.
+
+C'&egrave; anche un vasto insieme di
+<a href="/support/professional_support">compagnie che offrono supporto a
+PostgreSQL</a>, da consulenti individuali a compagnie multinazionali.
+
+<a name="additional_software"></a><h2>Software aggiuntivo</h2>
+<p>
+Il progetto principale di PostgreSQL &egrave; arricchito da pi&ugrave; di
+100 sottoprogetti che forniscono soluzioni di replicazione,
+migrazione, compatibilit&agrave;, interoperabilit&agrave;, design
+e strumenti grafici per l'amministrazione.
+</p>
+
+<h3>Progetti correlati</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>Driver</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+<li><a href="http://search.cpan.org/~rudy/DBD-Pg-1.32/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<h3>Pacchetti per funzionalit&agrave; avanzate</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Geographic Information Server (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Full Text Search (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Business Intelligence/Data Warehousing (Bizgres)</a></li>
+</ul>
+
+<h3>Interfacce grafiche</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin III</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">Una lista di altre GUI</a></li>
+</ul>
+
+<h3>Replicazione</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>

@@ -1,0 +1,115 @@
+8 de noviembre, 2005, Frankfurt, Alemania (OpenDBCon): El Grupo de
+Desarrollo Global de PostgreSQL se complace en anunciar la liberación de
+PostgreSQL 8.1, extendiendo el liderazgo de PostgreSQL como el sistema de
+manejo de bases de datos de código abierto más avanzado.  Diseñada,
+construida y probada por una numerosa y próspera comunidad, y respaldado
+por un creciente número de auspiciadores corporativos y compañías de soporte,
+la versión 8.1 ampliará los alcances de desarrollo de aplicaciones en
+PostgreSQL.  La nueva versión incluye mejoras de rendimiento y características
+de SQL avanzado, que soportarán almacenes de datos más grandes, procesamiento
+transaccional de mayor volumen, y software empresarial distribuido más
+complejo.
+
+Estas prestaciones continuarán la tendencia de adopción establecida por
+la versión anterior.  La versión 8.0 fue descargada más de un millón de veces
+durante sus primeros siete meses, notablemente más que las 300.000 descargas
+registradas en un período similar para la versión anterior.
+
+"El proyecto claramente se está acelerando en las mentes de los usuarios de
+bases de datos", dice Lance Obermeyer, Director de Productos en Pervasive
+Software, uno de los auspiciadores empresariales de PostgreSQL.  "Dado el
+creciente interés en software infraestructural de código fuente abierto,
+podemos esperar que PostgreSQL adquiera aún más ímpetu."
+
+Nuevas Características Avanzadas
+--------------------------------
+
+Roles: PostgreSQL ahora soporta roles de bases de datos, los que simplifican
+el manejo de grandes cantidades de usuarios con esquemas complejos de
+privilegios superpuestos.
+
+Parametros de entrada/salida (IN/OUT): Las funciones ahora soportan parámetros
+de entrada (IN), salida (OUT) y entrada/salida (INOUT), lo cual mejora
+sustancialmente el soporte de lógica compleja y aplicaciones J2EE y .NET.
+
+Compromiso en Dos Fases (Two-Phase Commit, 2PC): esta característica,
+muy necesaria para aplicaciones WAN y centros de cómputo heterogéneos, permite
+transacciones conformes con ACID a través de servidores distribuidos.
+
+Mejoras de Rendimiento
+----------------------
+
+Rendimiento Multiprocesador (SMP) mejorado: el gestor de memoria ha sido
+mejorado para 8.1, de manera que escala casi lineamente con el número de
+procesadores.  Esto conlleva mejoras significativas de rendimiento en
+sistemas de 8 vías, 16 vías, dual-core y multi-core.
+
+Recorridos de Mapas de Bits: los índices son convertidos a mapas de bits en
+memoria cuando es apropiado, otorgando hasta veinte veces más rendimiento en
+consultas complejas para tablas muy grandes.  Esto también ayuda a simplificar
+la administración de bases de datos reduciendo significativamente la necesidad
+de índices multicolumna.
+
+Particionamiento de Tablas: El optimizador de consultas es capaz de evitar
+recorrer secciones completas de tablas grandes, a través de una técnica
+conocida como Exclusión por Restricciones.  Similar a las características de
+Particionado de Tablas de otros sistemas gestores de datos, esta característica
+mejora tanto el rendimiento como la gestión de datos para tablas de varios
+gigabytes.
+
+Bloqueos Compartidos de Registros: El modelo de bloqueos "mejor que a nivel
+de registro" de PostgreSQL ahora soporta niveles de concurrencia aún
+mayores, a través de la adición de candados compartidos a nivel de registro
+para llaves foráneas.  Estos candados compartidos mejorarán el rendimiento
+de inserción y actualización para muchas aplicaciones OLTP de gran
+concurrencia.
+
+"PostgreSQL 8.1 ofrece una mejora de rendimiento enorme, a todos los
+niveles, en nuestros servidores Opteron de doble procesador", según Merlin
+Moncure, Administrador de Bases de Datos para Reliable Computer Solutions.
+"Más específicamente, estamos viendo alrededor de un 20% de reducción en los
+tiempos de ejecución de consultas simples, y una reducción adicional de un
+20% en el nivel de carga de CPU, para una reducción total de carga del
+servidor de entre 20 y 40%".
+
+Hay más de 120 otras mejoras, algunas de las cuales se encuentran detalladas
+en nuestro kit de prensa, el cual se encuentra en
+http://www.postgresql.org/about/press/presskit81.html.es
+
+Christian Kuroki
+PostgreSQL Regional Contact, Argentina
++54-11-5004-3227
+ar@postgresql.org
+http://www.dbas.com.ar/
+
+Diogo de Oliveira Biazus
+PostgreSQL Regional Contact, Brasil
++51-91410130
+br@postgresql.org
+http://www.postgresql.org.br/
+
+Álvaro Herrera
+PostgreSQL Regional Contact, Chile
++56-63-210164
+alvherre@postgresql.org
+
+César Villanueva
+PostgreSQL Regional Contact, Venezuela
++58-416-6153429
+ve@postgresql.org
+
+Para contactos en otras regiones, vea nuestra lista internacional de
+contactos en
+http://www.postgresql.org/about/press/contact
+
+Acerca de PostgreSQL
+--------------------
+
+PostgreSQL es el trabajo colectivo de cientos de desarrolladores, basándose
+en veinte años de desarrollo que empezaron en la Universidad de California
+en Berkeley.  Con su soporte de larga data de un conjunto de características
+de nivel empresarial, el cual incluye transacciones, funciones, triggers y
+subconsultas, PostgreSQL está siendo usado por muchas de las más exigentes
+empresas y agencias de gobierno.  PostgreSQL se distribuye bajo licencia
+BSD, la cual permite el uso y distribución sin costo tanto para aplicaciones
+comerciales como no comerciales.

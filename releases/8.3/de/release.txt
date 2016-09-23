@@ -1,0 +1,50 @@
+## New York, NY, 4. Februar 2008: Die PostgreSQL Global Development Group gab heute die Freigabe der Version 8.3 des leistungsstarken, objektrelationalen Datenbankmanagementsystems PostgreSQL bekannt. Diese Version enthält mit ihren über 280 Patches von Dutzenden Entwicklern aus mehr als 18 Ländern eine nie dagewesene Anzahl neuer und verbesserter Fähigkeiten. Damit erweitert PostgreSQL die Möglichkeiten für Anwendungsentwickler, Datenbankadministratoren und Benutzer.
+
+"Die kontinuierliche Weiterentwicklung der quelloffenen Datenbank PostgreSQL gibt den Anwendern die Möglichkeit, eine nicht-proprietäre Datenbank zu nutzen, dadurch Geld einzusparen, die Leistung zu verbessern und die Produktivität zu steigern. PostgreSQL 8.3 ist eine bemerkenswerte neue Version und wir ermutigen alle unsere Kunden auf der ganzen Welt, diese Datenbank unter die Lupe zu nehmen", sagt Rich Green, Vizepräsident Software von Sun Microsystems.
+
+PostgreSQL 8.3 bietet ein beständigeres Leistungsverhalten als die Vorgängerversionen. Dies stellt sicher, dass sich jeder einzelne Benutzer für alle seine Transaktionen auf denselben hohen Durchsatz verlassen kann, wie in den neuesten Benchmarks demonstriert wurde. Dabei spielt es keine Rolle, ob er in Zeiten einer Spitzenbelastung zugreift oder nicht, und zwar an 7 Tagen in der Woche und 52 Wochen im Jahr. Die wichtigsten Leistungsverbesserungen umfassen:
+
+* Heap Only Tuples (HOT), wodurch bis zu 3/4 des Verwaltungsaufwandes in häufig aktualisierten Tabellen überflüssig wird
+* Verteilte Checkpoints, wodurch die Auswirkung von Checkpoints auf die Antwortzeiten verringert wird
+* Automatische Selbstjustierung des Background-Writers
+* Asynchrone Commits einzelner Transaktionen führen zu wesentlich kürzeren Antwortzeitens.
+
+Diese Änderungen beschleunigen auch den Durchsatz bei der Transaktionsverarbeitung wesentlich, je nach Auslastung zwischen 5% und 30%.
+
+"PostgreSQL ist einfach pfiffiger geworden", meint Bruce Momjian, Mitglied im Core-Team von PostgreSQL.
+
+PostgreSQL ist das erste Open-Source Datenbanksystem, das synchronisierte Lesevorgänge implementiert, mit deren Hilfe die Schreib-Lese-Zugriffe bei Data-Mining-Anwendungen enorm verringert werden können.
+Das Windows-Team ermöglichte, dass PostgreSQL nun mit Visual C++ kompiliert wird, was die Stabilität und Leistung von PostgreSQL auf Windows-Systemen erhöht und zudem das Projekt für alle diejenigen, die zum Projekt beitragen, besser zugänglich macht.
+Neue Möglichkeiten zum Protokollieren wurden geschaffen und der Overhead des Statistik-Kollektors wurde reduziert, damit Nutzer Ihre Server einfacher beobachten können.
+
+Selbstverständlich wäre dies keine ordentliche neue PostgreSQL-Version, wenn sie den Anwendungsentwicklern nicht eine Vielzahl neuer Leistungsmerkmale anbieten würde. Darunter sind:
+
+* Unterstützung von SQL/XML gemäß dem ANSI-Standard, einschließlich XML-Export
+* Volltextsuche: Tsearch2, unsere hochentwickelte Volltextsuche wurde mit verbesserter Verwaltung und neuen Wörterbüchern und Sprachen in den PostgreSQL-Kern integriert
+* Unterstützung von GSSAPI und SSPI zur Authentifizierung
+* Neue Datentypen: UUIDs, ENUMs und Arrays aus zusammengesetzten Datentypen
+
+"Wir führen auf unseren PostgreSQL-Servern pro Sekunde mehr als 18.000 Abfragen auf über 300 GB Daten aus und diese Anzahl steigt von Monat zu Monat", berichtet Gavin Roy, Technischer Direktor von myYearbook.com, einem sozialen Netzwerk-Portal. "Wir sind ganz begeistert über HOT, die Verbesserungen beim Auslesen der gemeinsamen Pufferspeicher und dem integrierten Volltextindex mit Tsearch2. Unsere vorläufigen Tests zeigen, dass PostgreSQL 8.3 das Lastverhalten unserer Systeme verbessert und gleichzeitig die Antwortzeiten verkürzt. Wir freuen uns wirklich darauf."
+
+Zusätzlich zu den vielen neuen Fähigkeiten im PostgreSQL-Kern gibt es einige neue optionale Komponenten, die während des Freigabezyklus gereift sind und ihre 1.0-Versionen veröffentlichten. Darunter die SNMP-Unterstützung, die Möglichkeit, Datenbanken mit PL/Proxy horizontal zu verteilen, pgPool2, Bucardo, ein grafischer Debugger für benutzerdefinierte Funktionen und pgBouncer, ein anpassbarer Verbindungspool. Sie ergänzen das bereits reichhaltige Angebot an Zusatzprogrammen.
+
+Dutzende von zusätzlichen Eigenschaften und Verbesserungen in der Version 8.3 machen PostgreSQL zu einer noch mächtigeren Datenbankplattform. Details hierzu gibt es in der Pressemappe unter:
+http://www.postgresql.org/about/press/presskit83
+
+Das Programm steht auf der PostgreSQL Download-Seite zur Verfügung:
+http://www.postgresql.org/download
+
+
+Anfragen aus Deutschland und Deutsch-sprachiger Schweiz:
+Cornelia Boenigk
+72124 Pliezhausen
++49 7127 80961
+de@postgresql.org
+
+Anfragen aus Österreich:
+Ewald Geschwinde
+Wien
++436644527844
+at@postgresql.org
+
+Über PostgreSQL: PostgreSQL ist das gemeinsame Werk von hunderten Software-Entwicklern und baut auf eine 21-jährige Entwicklung, welche an der University of California in Berkeley begann. Aufgrund der langjährigen Unterstützung von umfangreichen Leistungsmerkmalen im Enterprise-Bereich, unter anderem Transaktionen, Funktionen, Trigger und Sub-Queries, wird PostgreSQL heute von vielen der anspruchsvollsten Unternehmen und Behörden eingesetzt. PostgreSQL steht unter der BSD-Lizenz, welche die Nutzung und Distribution ohne Lizenzgebühren erlaubt, sowohl für kommerzielle als auch für nicht-kommerzielle Anwendungen. Mehr dazu auf unserer Homepage: http://www.postgresql.org

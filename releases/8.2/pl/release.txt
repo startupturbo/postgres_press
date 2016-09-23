@@ -1,0 +1,74 @@
+5 GRUDNIA 2006, Waszyngton, USA (konferencja LISA): PostgreSQL Global
+Development Group og³osi³a dzi¶ wydanie wersji 8.2 obiektowo-relacyjnego
+systemu zarz±dzania bazami danych PostgreSQL. To czternaste publiczne
+wydanie dodaje nowe cechy, dojrza³o¶æ i wydajno¶æ wymagan± przez u¿ytkowników
+biznesowych, dostarczaj±c zarz±dzalno¶æ porównywaln± z wiod±cymi
+przemys³owymi systemami baz danych.  Wersja 8.2 powinna przynie¶æ
+dalsze migracje w kierunku PostgreSQL-a.
+
+"To wydanie dotyka prawie ka¿dej komendy i elementu bazy danych",
+powiedzia³ Bruce Momjian, cz³onek core team'u oraz architekt baz danych
+w EnterpriseDB. "Dodaje rozszerzon±, kompatybiln± sk³adniê oraz interfejsy
+które by³y zg³aszane przez nasz± spo³eczno¶æ, u³atwiaj±c nowym administratorom
+baz danych w pe³ni wykorzystaæ wszystkie zaawansowane cechy PostgreSQL-a".
+
+"Unisys z zadowoleniem zauwa¿a znacz±ce ulepszenia w skalowalno¶ci
+i wydajno¶ci PostgreSQL-a na wielkich wieloprocesorowych
+systemach" stwierdzi³ Ali Shadman, wiceprezydent i g³ówny mened¿er
+Open Source Solutions, Systems and Technlogoy, Unisys. "W³a¶nie wypuszczona
+wersja 8.2 kontynuuje dojrzewanie PostgreSWL-a do systemu zarz±dzania
+bazami danych gotowego do zastosowañ przemys³owych".
+
+Nowe narzêdzia i cechy u³atwiaj±ce zarz±dzanie i rozwijanie baz danych to miêdzy innymi:
+
+Ulepszenia wydajno¶ci: wersja 8.2 poprawi³a wydajno¶æ ¶rednio o oko³o 20%
+w zaawansowanych testach systemów OLTP (przetwarzania transakcji online).
+U¿ytkownicy mog± zyskaæ nawet wiêcej w wydajno¶ci systemów hurtowni danych.
+Zmiany to miêdzy innymi szybsze sortowanie w pamiêci oraz na dysku,
+lepsza skalowalno¶æ w ¶rodowiskach wieloprocesorowych, lepsze planowanie
+zapytañ na spartycjonowanych danych, szybsze hurtowe ³adowania i znacznie
+przyspieszenie z³±czeñ typu "outer join".
+
+Gor±cy standby (Warm Standby): dziêki rozszerzeniu naszego Przywracania
+do punktu w czasie (Point in Time Recovery; wprowadzonym w wersji 8.0),
+administratorzy mog± z ³atwo¶ci± stworzyæ awaryjn± kopiê ca³ego Waszego
+klastra bazy danych.
+
+Budowanie indeksów online: indeksy mo¿na teraz budowaæ podczas gdy aplilkacje
+zapisuj± dane do tabel bazy, pozwalaj±c na strojenie wydajno¶ciowe bez
+przerw serwisowych.
+
+Cechy SQL:2003: PostgreSQL, dobrze znany ze swej zgodno¶ci ze standardami,
+doda³ sk³adniê dla kolejnych elementów wprowadzonych w specyfikacji
+ANSI SQL:2003, w³±czaj±c w to: agregaty statystyczne, wielowierszowa
+sk³adnia VALUE, UPDATE RETURNING oraz agregaty wielokolumnowa.
+
+Zaawansowane cechy baz danych oferowane w PostgreSQL 8.2 przed jakimkolwiek
+powa¿nym systemem baz danych to:
+
+Uogólnione odwrócone indeksy (Generalized Inverted Indexes): pozwalaj± na
+lepiej skalowaln± i programowaln± metodê indeksowania semistrukturalnych
+i pe³notekstowych danych.
+
+DTrace: PostgreSQL zosta³ równie¿ wyposa¿ony w mechanizm dla Solaris DTrace 
+oraz innych zaawansowanych narzêdzi ¶ledz±cych -- uogólniony szkielet
+monitorowania (Generic Monitoring Framework).
+
+"Wraz z instancjami hurtowni danych zawieraj±cych tabele o miliardach wierszy
+oraz wiele terabajtów danych, budowanie indeksów online oraz gor±cy
+standby s± niezbêdne", powiedzia³ Theo Schlossnagle,
+przewodnicz±cy w OmniTI Computer Consulting. "Bardzo nas cieszy, ¿e
+PostgreSQL jest teraz obywatelem DTrace pierwszej klasy. Oznacza to,
+¿e nasze regularnie wykonywane analizy systemów mog± teraz
+zawieraæ w sobie specyficzne dla bazy danych dane pozwalaj±c uzyskaæ
+znacznie wiêcej mówi±ce rezultaty."
+
+S± jeszcze dziesi±ki innych dodatkowych cech i poprawek w 8.2, które
+spowoduj± ¿e administratorzy baz danych lepiej bêd± wykorzystywaæ PostgreSQL-a.
+Wiêcej przeczytasz w informacjach dla prasy (http://www.postgresql.org/about/press/presskit82.html.pl).
+¦ci±gnij PostgreSQL-a z naszej strony: http://www.postgresql.org/download
+
+O POSTGRESQL: PostgreSQL to kolektywna praca setek programistów, opieraj±ca siê na dwudziestu jeden latach rozwoju, maj±ce
+go swoje pocz±tki na Uniwersytecie Kalifornii w Berkeley (UCB). Wraz z d³ugo wspieranymi rozwi±zaniami na poziomie przemys³owym w³±czaj±c w to transakcje, funkcje, triggery i podzapytania, PostgreSQL u¿ywany jest dzi¶ przez wiele najbardziej wymagaj
+±cych biznesowych i rz±dowych agencji. PostgreSQL jest rozpowszechniany na licencji BSD, która pozwala na u¿ywanie i dystrybu
+cjê bez op³at zarówno dla komercyjnych i niekomercyjnych zastosowañ.

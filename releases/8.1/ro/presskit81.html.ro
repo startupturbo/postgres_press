@@ -1,0 +1,307 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.1 - Comunicat de Presa
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.1 - Comunicat de Pres&#259;</h1>
+
+<h2>Con&#355;inut</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Comunicatul de Pres&#259;</a><br />
+ &nbsp; <a href="#additional_features">Alte Facilit&#259;&#355;i</a><br />
+ &nbsp; <a href="#quoted_companies">Companii Citate</a><br />
+ &nbsp; <a href="#download">Download</a><br />
+ &nbsp;	<a href="#docs">Documenta&#355;ie</a><br />
+ &nbsp; <a href="#license">Licen&#355;a</a><br />
+ &nbsp; <a href="#contact">Date de Contact</a><br />
+ &nbsp; <a href="#companies">Support Comercial</a><br />
+ &nbsp; <a href="#additional_software">Software Adi&#355;ional</a><br />
+</p>
+
+<a name="original_release"></a><h2>Comunicatul de Pres&#259;</h2>
+<p>
+08 Noiembrie 2005, Frankfurt, Germania (OpenDBCon):  PostgreSQL Global Development
+Group anun&#355;&#259; lansarea PostgreSQL 8.1, consolid&#226;ndu-&#351;i 
+pozi&#355;ia de cea mai avansat&#259; baz&#259; de date open-source din 
+lume. Conceput&#259;, realizat&#259; &#351;i testat&#259; de c&#259;tre o 
+comunitate mare &#351;i &#238;n continu&#259; dezvoltare sprijinit&#259; de 
+tot mai multe companii prin sponsoriz&#259;ri &#351;i suport, versiunea 8.1 
+va extinde aria de r&#259;sp&#226;ndire a aplica&#355;iilor bazate pe 
+PostgreSQL. Noua versiune include &#238;mbun&#259;t&#259;&#355;iri ale 
+performantelor &#351;i facilit&#259;&#355;i SQL avansate care vor permite
+realizarea de data warehouses mai mari, procesari de mare volum &#351;i
+construirea de aplica&#355;ii complexe de nivel enterprise.
+</p><p>
+Aceste facilit&#259;&#355;i vor men&#355;ine tendin&#355;a de cre&#351;tere 
+a gradului de utilizare a PostgreSQL, tendin&#355;&#259; remarcat&#259; 
+&#238;n cazul versiunii anterioare. Versiunea 8.0 a fost descarcat&#259; de 
+un milion de ori &#238;n primele &#351;apte luni, &#238;n compara&#355;ie cu 
+cele 300,000 descarc&#259;ri ale versiunii anterioare &#238;ntr-un 
+interval de timp similar.
+</p><p>
+"Proiectul &#238;n mod clar se bucur&#259; de o din ce &#238;n ce mai mare 
+recunoa&#351;tere din partea utilizatorilor de baze de date," a spus Lance 
+Obermeyer, Director de Produc&#355;ie la Pervasive Software, unul dintre 
+sponsorii PostgreSQL. "Dat fiind interesul cresc&#226;nd pentru infrastructura
+software de tip open source, ne a&#351;tept&#259;m ca PostgreSQL s&#259; se 
+dezvolte din ce &#238;n ce mai mult."
+</p>
+<h3>Noi Facilit&#259;&#355;i Avansate</h3>
+<p>
+<b>Roles:</b> PostgreSQL suport&#259; acum role-uri. Acestea simplific&#259;
+ gestionarea unui numar mare de utilizatori &#351;i a drepturilor de acces 
+ care le revin.
+</p><p>
+<b>Parametri IN/OUT Parameters:</b> func&#355;iile PostgreSQL suport&#259; 
+acum parametri de tip IN, OUT &#351;i INOUT, ceea ce u&#351;ureaz&#259; 
+dezvoltarea aplica&#355;iilor complexe cum ar fi cele de tip J2EE 
+&#351;i .NET .
+</p><p>
+<b>Two-Phase Commit (2PC):</b> asigur&#259; tranzac&#355;ii conforme ACID 
+&#238;ntre servere diferite.  Aceast&#259; facilitate a fost mult timp ceruta, 
+fiind necesar&#259; mai ales pentru aplica&#355;iile de tip WAN &#351;i 
+pentru centrele eterogene de date care folosesc PostgreSQL.
+</p>
+<h3>Performan&#355;e &#206;mbun&#259;t&#259;&#355;ite</h3>
+<p>
+<b>Imbun&#259;t&#259;&#355;irea performan&#355;elor pentru platformele 
+multiprocesor (SMP):</b> scalabilitatea buffer 
+manager-ului a fost &#238;mbun&#259;t&#259;&#355;it&#259; de a&#351;a
+natur&#259; &#238;nc&#226;t performan&#355;ele cresc aproape liniar odat&#259;
+ cu cre&#351;terea num&#259;rului de procesoare. C&#226;&#351;tigul de 
+ performan&#355;&#259; este semnificativ &#238;n cazul serverelor 8-way, 
+ 16-way, dual-core sau multi-core.
+</p><p>
+<b>Bitmap Scan:</b> indec&#351;ii sunt converti&#355;i dinamic, c&#226;nd 
+este cazul, &#238;n bitmap-uri stocate &#238;n memorie - ceea ce poate 
+rapidiza de p&#226;n&#259; la dou&#259;zeci de ori reg&#259;sirea datelor 
+folosind indec&#351;ii &#238;n cazul cererilor complexe pe tabele foarte
+ mari. De asemenea este simplificat&#259; gestionarea datelor deoarece este 
+ redus&#259; necesitatea cre&#259;rii de indec&#351;i multi-coloan&#259;.
+</p><p>
+<b>Table Partitioning:</b> planner-ul este acum capabil s&#259; evite 
+parcurgerea a sec&#355;iuni &#238;ntregi ale tabelelor mari folosind o 
+tehnic&#259; denumit&#259; Constraint Exclusion. Aceast&#259; facilitate 
+&#238;mbun&#259;t&#259;&#355;e&#351;te performan&#355;ele &#351;i 
+posibilit&#259;&#355;ile de gestionare a datelor &#238;n cazul tabelelor 
+de mari dimensiuni, similar cu ceea ce ofer&#259; &#351;i alte sisteme 
+de gestiune a bazelor de date.
+</p><p>
+<b>Shared Row Locking:</b> &#238;n ceea ce prive&#351;te posibilit&#259;&#355;ile de locking
+PostgreSQL suport&#259; acum locking-ul de tip shared row asupra cheilor
+externe, &#238;n condi&#355;ii de acces concurent la date.  Astfel este
+&#238;mbun&#259;t&#259;&#355;it&#259; viteza de insert &#351;i update &#238;n 
+cazul multor aplica&#355;ii OLTP de mare volum de date.
+</p><p>
+"PostgreSQL 8.1 ofera o &#238;mbun&#259;t&#259;&#355;ire semnificativ&#259; a performan&#355;elor
+pe serverele noastre de produc&#355;ie cu dou&#259; procesoare Opteron,"
+a declarat Merlin Moncure, administrator de baze de date la
+Reliable Computer Solutions. "Mai exact, este vorba despre o reducere
+a timpului de execu&#355;ie de aproximativ 20% pentru query-urile simple &#351;i
+de o reducere cu 20% a gradului de &#238;nc&#259;rcare a procesorului, ceea ce
+&#238;mbun&#259;t&#259;&#355;e&#351;te performan&#355;ele serverului cu 20-40% ."
+</p><p>
+Noua versiune aduce mai mult de 120 alte &#238;mbun&#259;t&#259;&#355;iri, 
+o parte dintre acestea fiind detaliate aici.
+</p>
+<h3>Despre PostgreSQL</h3>
+<p>
+PostgreSQL este rezultatul muncii colective a sute de dezvoltatori,
+vreme de aproximativ dou&#259;zeci de ani, av&#226;ndu-&#351;i originea la University of
+California din Berkeley. Datorit&#259; faptului c&#259; suport&#259; de mult timp un set
+de facilit&#259;&#355;i de nivel enterprise incluz&#226;nd tranzac&#355;ii, func&#355;ii stocate,
+triggere &#351;i subcereri, PostgreSQL este utilizat de numeroase companii &#351;i
+agen&#355;ii guvernamentale cu cerin&#355;e &#238;nalte. PostgreSQL este distribuit sub
+licen&#355;a BSD, ceea ce permite utilizarea &#351;i distribuirea sa gratuit&#259; at&#226;t
+pentru aplica&#355;ii comericale c&#226;t &#351;i necomerciale.
+</p>
+
+<a name="additional_features"></a><h2>Alte Facilit&#259;&#355;i</h2>
+Pe l&#226;ng&#259; noile facilit&#259;&#355;i majore prezentate &#238;n
+comunicatul de pres&#259;, versiunea 8.1 con&#355;ine peste 120 noi 
+facilit&#259;&#355;i &#351;i &#238;mbun&#259;t&#259;&#355;iri la care 
+au contribuit aproximativ 200 de dezvoltatori. C&#226;teva noi
+facilit&#259;&#355;i sunt: 
+<ul>
+<li><b>GiST:</b> Mecanismul de indexare Generalised Search Tree (GiST) a
+fost &#238;mbun&#259;t&#259;&#355;it astfel &#238;nc&#226;t s&#259;
+asigure concuren&#355;&#259; &#351;i vitez&#259; mare 
+la update - caracteristici disponibile p&#226;n&#259; acum doar &#238;n
+cazul indec&#351;ilor de tip B-Tree. GiST este baza pe care sunt
+realizate indexarea full-text (TSearch2), facilit&#259;&#355;ile 
+geospa&#355;iale (GIS) &#351;i indexarea de tip tree-structure. 
+Datorit&#259; acestei &#238;mbun&#259;t&#259;&#355;iri, tipurile
+de date complexe vor putea fi prelucrate &#238;n codi&#355;ii excelente
+de performan&#355;&#259; chiar &#351;i &#238;n cazul aplica&#355;iilor
+de mare volum.</li>
+<li><b>Refactorizarea comenzii COPY:</b> COPY a fost refactorizat astfel
+&#238;nc&#226;t &#238;nc&#259;rcarea &#238;n mas&#259; a datelor a devenit
+cu p&#226;n&#259; la 30% mai rapid&#259;. &#206;mpreun&#259; cu
+&#238;mbun&#259;t&#259;&#355;irile referitoare la &#238;nc&#259;rcarea
+de date &#238;n format CSV, aceasta face ca &#238;nc&#259;rcarea
+bazelor de date mari &#238;n PostgreSQL s&#259; fie mai rapid&#259; 
+ca niciodat&#259;.</li>
+<li><b>Shared Memory pe 64 bi&#355;i:</b> buffer manager-ul poate acum
+s&#259; utilizeze p&#226;n&#259; la doi terabytes de RAM pe platformele
+pe 64 bi&#355;i, preg&#259;tind PostgreSQL pentru viitoarele servere
+cu mult&#259; memorie.</li>
+<li><b>Autovacuum Integrat:</b> daemon-ul de mentenan&#355;&#259; a 
+bazei de date a fost extins &#351;i integrat &#238;n serverul PostgreSQL,
+punerea &#238;n func&#355;iune &#351;i administrarea unui
+server PostgreSQL devenind drept urmare mai simple.</li>
+<li><b>Func&#355;ii Agregat mai Rapide:</b> func&#355;iile agregat au 
+fost optimizate pentru ca ob&#355;inerea de rapoarte s&#259; fie mai
+rapid&#259;. Dezvoltatorii PostgreSQL au rescris partea de gestionare a
+memoriei pentru agregate &#351;i au ad&#259;ugat optimiz&#259;ri 
+pentru MIN() &#351;i MAX().</li>
+<li><b>Func&#355;ii pentru Adminstrare:</b> au fost ad&#259;ugate noi
+func&#355;ii cu ajutorul c&#259;rora se pot culege informa&#355;ii 
+despre server &#351;i se pot efectua diverse sarcini de administrare
+direct din linia de comand&#259; a PSQL.</li>
+<li><b>Func&#355;ii pentru Compatibilitate:</b> au fost ad&#259;ugate 
+func&#355;iile lastval(), greatest() &#351;i least() , ceea ce u&#351;ureaz&#259;
+portarea aplica&#355;iilor dinspre MySQL &#351;i Oracle.</li>
+</ul>
+<p>
+Pute&#355;i afla mai multe despre celelalte nout&#259;&#355;i aduse de
+versiunea 8.1 citind <a href="/docs/current/static/release.html">Release
+Notes.</a>
+</p>
+
+<a name="quoted_companies"></a><h2>Companii Citate</h2>
+
+<p>
+<b>Pervasive Software</b> (NASDQ: PVSW) ofer&#259; produse software
+care ajut&#259; companiile s&#259; valorifice datele acumulate &#238;n
+timp.
+Timp de peste dou&#259;zeci de ani, Pervasive a asigurat solu&#355;iilor
+oferite o combina&#355;ie unic&#259; de performan&#355;&#259;, fiabilitate, 
+func&#355;ionalitate &#351;i conectivitate. 
+Zeci de mii de beneficiari din practic toate domeniile de activitate,
+din peste 150 de &#355;&#259;ri, se bazeaz&#259; pe Pervasive pentru 
+gestionarea, integrarea, analizarea &#351;i securizarea datelor. Pentru 
+mai multe informa&#355;ii consulta&#355;i 
+<a href="http://www.pervasive.com/company">pagina noastr&#259; web</a>.
+</p>
+<p>
+<b>Reliable Computer Solutions</b> ofer&#259; software de tip ERP &#351;i 
+servicii de consultan&#355;&#259;.  Compania este specializat&#259; &#238;n
+solu&#355;ii IT complete pentru industria de mobile homes &#351;i case
+prefabricate.  Produsul principal, ESP, este utilizat 
+&#238;n gestionarea unui num&#259;r mare de afaceri &#238;nsum&#259;nd peste 
+un miliard de dolari &#238;n Statele Unite. Pentru mai multe informa&#355;ii 
+&#238;l pute&#355;i contacta pe Merlin Moncure (numai &#238;n engliez&#259;): 
+merlin.moncure@rcsonline.com, telefon: (01) 269-483-1234 x304.
+</p>
+
+<a name="download"></a><h2>Download</h2>
+
+<ul>
+<li><a href="http://www.postgresql.org/ftp/latest/">Lista mirror-urilor FTP</a></li>
+<li><a href="http://www.postgresql.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/win32/">Installer-ul pentru Windows</a> (disponibil &#351;i prin Bittorrent)</li>
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/">Alte binare,
+inclusiv pentru Linux, Mac OSX &#351;i Solaris</a></li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (inclusiv
+installer-ul pentru Windows)</li>
+</ul>
+
+<a name="docs"></a><h2>Documenta&#355;ie</h2>
+
+<ul>
+<li><a href="/docs/current/static/">Documenta&#355;ia Oficial&#259;</a></li>
+<li><a href="http://techdocs.postgresql.org">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li>
+</ul>
+
+<a name="license"></a><h2>Licen&#355;a</h2>
+<p>
+PostgreSQL utilizeaz&#259; <a href="/about/licence">licen&#355;a BSD</a>,
+care necesit&#259; doar ca codul surs&#259; licen&#355;iat s&#259; p&#259;streze
+informa&#355;iile de copyright &#351;i de licen&#355;iere. Aceast&#259; 
+<a href="http://www.opensource.org/licenses/bsd-license.php">licen&#355;&#259; certificat&#259; OSI
+</a> este unanim considerat&#259; ca fiind flexibil&#259; &#351;i avantajoas&#259;
+din punctul de vedere al companiilor, deoarece nu restric&#355;ioneaz&#259;
+utilizarea PostgreSQL &#238;n combina&#355;ie cu aplica&#355;iile comerciale sau
+proprietare. Datorit&#259; licen&#355;ei BSD, suportului tehnic oferit de c&#259;tre numeroase
+companii &#351;i a faptului c&#259; codul face parte din proprietatea public&#259;,
+PostgreSQL este foarte popular printre produc&#259;torii care doresc s&#259; 
+&#238;nglobeze un motor de baze de date &#238;n cadrul propriilor produse
+software, deoarece nu au a se teme de tarife, de dependen&#355;a de un alt
+produc&#259;tor sau de eventuale modific&#259;ri a termenilor licen&#355;ierii. 
+</p>
+
+<a name="contact"></a><h2>Date de Contact</h2>
+
+<p><a href="http://www.postgresql.org">Site-ul web al PostgreSQL</a></p>
+
+<p>Pentru mai multe informa&#355;ii pute&#355;i contacta:<br />
+Adrian Maier<br />
+PostgreSQL Regional Contact<br />
++40-723-002-097<br />
+<a href="mailto:ro@postgresql.org">ro@postgresql.org</a></p>
+
+<p>Pute&#355;i g&#259;si persoanele de contact pentru alte regiuni geografice <a
+href="/about/press/contact">aici.</a></p>
+
+<a name="companies"></a><h2>Suport Comercial</h2>
+
+PostgreSQL beneficiaz&#259; de sprijinul a numeroase companii care
+sponsorizeaz&#259; dezvoltatorii, asigur&#259; resurse de g&#259;zduire
+&#351;i ofer&#259; suport financiar. Cei mai importan&#355;i dintre 
+sponsori sunt lista&#355;i <a href="/about/sponsors">aici</a> .
+
+Exist&#259; de asemenea o larg&#259; comunitate de <a
+href="/support/professional_support">companii care ofer&#259;
+suport tehnic pentru PostgreSQL </a>, de la consultan&#355;i
+individuali la companii multina&#355;ionale.
+
+<a name="additional_software"></a><h2>Link-uri</h2>
+<p>
+Pe l&#226;ng&#259; proiectul principal PostgreSQL mai exist&#259; peste 100 de
+sub-proiecte active care ofer&#259; diferite func&#355;ionalit&#259;&#355;i 
+adi&#355;ionale cum ar fi replicare, migrare, compatibiliate, interoperabilitate,
+unelte de proiectare &#351;i de administrare.
+</p>
+
+<h3>Proiecte legate de PostgreSQL</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>Drivere</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+<li><a href="http://search.cpan.org/~rudy/DBD-Pg-1.32/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<h3>Facilit&#259;&#355;i Avansate</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Geographic Information Server (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Full Text Search (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Business Intelligence/Data Warehousing (Bizgres)</a></li>
+</ul>
+
+<h3>Interfe&#355;e Grafice (GUI)</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin III</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">Alte interfe&#355;e grafice</a></li>
+</ul>
+
+<h3>Replicare</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>

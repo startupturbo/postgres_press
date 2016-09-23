@@ -1,0 +1,58 @@
+PostgreSQL 9.5: UPSERT, Row Level Security, and Big Data
+========================================================
+
+7. Januar 2016: Die PostgreSQL Global Development Group kündigt die Veröffentlichung von PostgreSQL 9.5 an. Diese Version fügt UPSERT Fähigkeiten, Row Level Security und verschiedene Big Data Features hinzu, welche die Nutzerbasis der weltweit führenden Datenbank verbreitern werden. Mit diesen neuen Fähigkeiten wird PostgreSQL die beste Wahl für viel mehr Anwendungen für Startups, große Unternehmen und Behörden sein.
+
+Annie Prévot, CIO von CNAF, dem französischen Kindergeldbüro, sagt: "Die CNAF stellt Leistungen für 11 Millionen Personen bereit und verteilt 73 Milliarden Euro jedes Jahr, durch über 26 verschiedene Sozialleistungssysteme. Diese Dienstleistungen sind essentiell für die Bevölkerung und stützen sich auf ein Informationssystem welches absolut effizient und verfügbar sein muss. Das DNAF informationssystem basiert zufriedenstellend auf der PostgreSQL Datenbank."
+
+UPSERT
+------
+
+Eines der von Anwendungsentwicklern am häufigsten gewünschten Features, "UPSERT" ist eine Abkürzung für "INSERT, ON CONFLICT UPDATE" und erlaubt die Gleichbehandlung neu hinzugefügter und existierender Datensätze. Es vereinfacht die Entwicklung von mobilen und Webanwendungen durch korrekte Behandlung von Konflikten bei simultanen Änderungen an Datensätzen. UPSERT beseitigt eine der letzten wesentlichen Hürden für eine Migration typischer MySQL-basierter Anwendungen auf PostgreSQL.
+
+Die in den letzten zwei Jahren durch den Heroku-Programmierer Peter Geoghegan entwickelte Implementation von UPSERT ist dabei deutlich flexibler als die anderer relationaler Datenbanken. Die neue ON CONFLICT Erweiterung erlaubt das Ignorieren neuer Daten ebenso wie das Aktualisieren anderer Spalten oder Tabellen und erlaubt damit das Abbilden komplexer ETL (Extract, Transform, Load) Abläufe für das Laden großer Datenmengen. Natürlich ist es (so wie alle Postgres Features) absolut ACID konform und selbstverständlich kompatibel mit allen anderen PostgreSQL Features wie logischer Replikation.
+
+Row Level Security
+------------------
+
+PostgreSQL erweitert auch weiterhin die Möglichkeiten im Bereich Datenbanksicherheit durch das neue Feature Row Level Security ("RLS"). RLS implementiert Zugriffskontrolle auf Zeilen- und Spaltenebene, voll integriert mit label-basierten Sicherheitslösungen wie SELinux. PostgreSQL gilt schon jetzt als "im Auslieferungszustand sicherste Datenbank". RLS festigt diese Position als erste Wahl für Applikationen mit hohen Anforderungen an die Datensicherheit, z.B. PCI-Compliance, die Europäische Datenschutzrichtlinie und Datenschutzstandards im Gesundheitswesen.
+
+RLS ist der krönende Abschluss zahlreicher neuer Sicherheits-Features, die in den letzten fünf Jahren durch unermüdliches Arbeiten von u.a. KaiGai Kohei (NEC), Stephen Frost (Crunchy Data) und Dean Rasheed zu PostgreSQL hinzugefügt wurden. Es ermöglicht Datenbankadministratoren, Sicherheits-"Policies" zu erstellen, die klar regeln, welche Benutzer welche Zeilen einer Tabelle einsehen oder aktualisieren dürfen. Solchermaßen umgesetzte Sicherheitsregeln sind immun gegen SQL-Injection- und andere Sicherleitslöcher auf Applikationsebene.
+
+Big Data Features
+-----------------
+
+PostgreSQL 9.5 enthält viele Verbesserungen für große Datenbanken und zur Integration mit anderen "Big Data" Systemen. Diese Features sorgen dafür, dass PostgreSQL weiterhin eine wichtige Rolle im rapide wachsenden "Big Data"-Markt haben wird. Unter anderem bringt PostgreSQL 9.5 diese neuen Möglichkeiten:
+
+BRIN Index: Dieser neue Index-Typ ermöglicht es, sehr kleine, aber trotzdem effektive Indexe auf sehr große, "natürlich" geordnete Datenbestände anzulegen. So können zum Beispiel Tabellen mit Milliarden von Log-Datensätzen mit nur 5% des Zeit- und Platzbedarfs (im Vergleich zu BTree) indexiert werden.
+
+Schnellere Sortierung: PostgreSQL sortiert durch die Nutzung einer "abbreviated keys" genannten Technik Text- und NUMERIC-Daten schneller. Dies beschleunigt einige Abfragen um den Faktor zwei bis zwölf, und die Erstellung von Indexen kann bis zu zwanzigfach beschleunigt werden.
+
+CUBE, ROLLUP und GROUPING SETS: Diese neuen Standard-SQL-Klauseln erlauben es Benutzern, über mehrere Ebenen gleichzeitig aufzusummieren, was bisher mehrere Durchläufe erforderte. "CUBE" erlaubt auch eine wesentlich engere Integration von PostgreSQL mit existierenden Online Analytic Processing (OLAP) Reporting Werkzeugen wie Tableau.
+
+Foreign Data Wrappers (FDWs): FDWs erlaubten schon bisher die Nutzung von PostgreSQL als vorgeschaltete Abfrageinstanz zu "Big Data"-Systemen wie Hadoop und Cassandra. Version 9.5 fügt "IMPORT FOREIGN SCHEMA" und "JOIN pushdowns" hinzu, was das Abfragen externer Datenquellen sowohl leicher und angenehmer als auch effizienter macht.
+
+TABLESAMPLE: Diese SQL-Klausel ermöglicht es, mit geringem Aufwand repräsentative Stichproben großer Datenbestände ohne aufwändiges Sortieren zu erstellen.
+
+Boyan Botev, Lead Database Administrator, Premier, Inc.:
+"Der neue BRIN-Index in PostgreSQL 9.5 ist ein mächtiges neues Feature, das es PostgreSQL erlaubt, Datenmengen zu verwalten und zu indexieren, die so in der Vergangenheit nicht mehr praktikabel oder gar unmöglich waren. Er ermöglicht Skalierbarkeit und Performance weit oberhalb dessen, was bisher als für relationale Datenbanken als sinnvoll erachtet wurde, und macht PostgreSQL zu einer perfekten Lösung für Big Data Analytics." 
+
+Links
+-----
+
+* Downloads: http://www.postgresql.org/downloads
+* Pressemappe: http://www.postgresql.org/about/press/presskit95
+* Release Notes: http://www.postgresql.org/docs/current/static/release-9-5.html
+* Was ist neu in 9.5: https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.5
+
+Kontakt
+-------
+
+PostgreSQL Press Team
+press@postgresql.org
+Phone: +1 (347) 674-7759
+
+Über PostgreSQL
+---------------
+
+PostgreSQL ist das führende Datenbanksystem, mit einer weltweiten Community bestehend aus Tausenden von Nutzern und Mitwirkenden sowie Dutzenden von Firmen und Organisationen. Das PostgreSQL Projekt baut auf über 25 Jahre Erfahrung auf, beginnend an der University of California, Berkeley, und hat heute eine nicht zu vergleichende Performance bei der Entwicklung. PostgreSQL's ausgereiftes Feature Set ist nicht nur mit den führenden proprietären Datenbanksystemen vergleichbar, sondern übertrifft diese in erweiterten Datenbankfunktionen, Erweiterbarkeit, Sicherheit und Stabilität. Lerne mehr über PostgreSQL und nimm an unserer Community teil, unter: http://www.postgresql.org.

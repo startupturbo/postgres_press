@@ -1,0 +1,30 @@
+﻿NY, NY: 19 Januari 2004 - PostgreSQL Global Developent Group har släppt version 8.0 av objekt-relationsdatabasservern PostgreSQL, som bygger vidare på världens mest avancerade öppen källkodsdatabas. Den nya versionen innehåller funktioner som tidigare endast fanns i de dyraste proprietära databassystemen, vilket gör att användningen av PostgreSQL förväntas öka både bland användare och bland mjukvaruutvecklare.
+
+Förutom signifikanta förbättringar inom skalbarhet, funktioner och prestanda visar PostgreSQL 8.0 en oöverträffad utvecklingshastighet för öppen källkod. Mer än ett dussin företag, inklusive Red Hat, Fujitsu, Afilias, Software Research Associates, Inc., 2nd Quadrant och Command Prompt Inc. liksom hundratals individuella utvecklare bidrog med fler viktiga funktioner i version 8.0 än i någon tidigare version.
+
+"Vi är säkra på att dessa funktioner kommer att locka ett stort antal nya PostgreSQL-användare", sade Hr. Takayuki Nakazawa, Chef för Fujitus OSS Database in Software Group. "Fujitsu är stolta över att ha sponsrat av bidrag till PostgreSQL och över sitt arbete inom PostgreSQL-gemenskapen. Vi lägger stor vikt vid att hjälpa PostgreSQL att bli den ledande databashanteraren."
+
+Nya funktioner är bland annat:
+
+Äkta Windows-stöd: PostgreSQL fungerar nu direkt på Windows-system och behöver inget emuleringslager. Det innebär markant ökad prestanda jämfört med tidigare versioner och utgör ett intressant alternativ till proprietära databasmotorer för oberoende programutvecklare, företagsanvändare och individuella Windows-utvecklare.
+
+Savepoints: Denna standard-SQL-funktionalitet tillåter att man rullar tillbaka delar av en transaktion utan att man behöver starta om hela transaktionen. Detta underlättar för applikationsutvecklare som behöver komplexa transaktioner med felhantering.
+
+Point in Time Recovery: Denna funktion möjliggör fullt återskapande av data från en automatisk och kontinuerligt arkiverande transaktionslogg. Detta är ett mycket efterlängtat alternativ till att ta säkerhetskopior varje dag eller timme och blir till stor hjälp för datakritiska tjänster i PostgreSQL.
+
+Tabellutrymmen: Tabellutrymmen gör det möjligt att placera stora tabeller och index på individuella diskar eller arrayer för ökad prestanda, något som är mycket viktigt för användare av stora system för datalagring.
+
+Förbättrad minneshantering och I/O: Disk och minnesanvändning har optimerats genom användning av algoritmen Adaptive Replacement Cache, den nya bakgrundsskrivaren och den nya vacuum-delay funktionen. Detta resulterar i mer förutsägbara lastnivåer och betydligt stabilare prestanda under hög last.
+
+Javier Soltero, Chefsarkitekt på Hyperic LLC säger: "PostgreSQL 8.0 ger oss den höga nivå av parallellism och prestanda som krävs för vår övervakningsprodukt. Att PostgreSQL 8.0 nu fungerar direkt på Windows innebär att vi nu kan inkludera PostgreSQL i vår produkt och dra nytta av den beprövade skalbarheten och prestandan i PostgreSQL samt av licensen som ger oss möjlighet att inkludera den i vår distribution utan kommersiella skyldigheter."
+
+Utöver de många nya funktionerna har PostgreSQL förbättrats genom ständigt ökad utveckling av tillbehör och valfria komponenter under det senaste året. Replikeringsverktyget Slony-I och uppkopplingshanteraren pgPool används redan idag för att åstadkomma server-pooler för hög tillgänglighet. Flera språk för lagrade procedurer har lagts till eller utvecklats, inklusive PL/Java, PL/PHP och PL/Perl. Databasdrivrutinerna Npgsql och PGsqlClient för .Net har utökats med bättre stöd för de många nya Windowsanvändarna.
+
+För en fullständig lista och beskrivningar av de många nya funktionerna i version 8.0, se PostgreSQLs press-sida.
+
+Om PostgreSQL: PostgreSQL är det gemensamma resultatet av hundratals utvecklares arbete och bygger på nästan tjugo års utveckling sedan starten vid University of California at Berkeley. Med det stöd som sedan lång tid funnits för viktiga funktioner såsom transaktioner, funktioner, trigger-funktioner, subfrågor används PostgreSQL av många av dagens mest krävande företag och myndigheter. PostgreSQL distribueras under BSD-licensen vilket tillåter alla distributionstyper utan avgifter både för kommersiella och icke-kommersiella applikationer.
+
+För mer information om PostgreSQL eller för att ladda hem den senaste versionen, gå till:
+	http://www.postgresql.org (på engelska)
+
+För information om Fujitsu och Hyperic LLC, gå till PostgreSQLs press-sida.

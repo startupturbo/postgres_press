@@ -1,0 +1,107 @@
+Rilasciato PostgreSQL 9.3
+=========================
+
+9 SETTEMBRE 2013: Il PostgreSQL Global Development Group annuncia il rilascio di
+PostgreSQL 9.3, l'ultima versione del principale sistema open source di
+database relazionali. Questa versione migliora l'affidabilità e la disponibilità
+di PostgreSQL, nonché la capacità di integrazione con altri database.
+Alcuni utenti hanno già osservato che, grazie alla versione 9.3, possono costruire
+applicazioni che prima sarebbero state impossibili.
+
+"PostgreSQL 9.3 mette a disposizione funzionalità che posso utilizzare da subito
+nello sviluppo di applicazioni: miglior supporto JSON, indicizzazione di
+espressioni regolari e più facile gestione di database federati grazie al foreign
+data wrapper di Postgres. Mi chiedo come io possa aver fatto finora senza Postgres 9.3!",
+afferma Jonathan S. Katz, CTO di VenueBook.
+
+Scrittura di dati esterni
+-------------------------
+
+PostgreSQL 9.3 aggiunge la capacità di scrittura ai Foreign Data Wrapper, permettendo
+lo scambio di dati bi-direzionale fra sistemi. I complessi sistemi informativi odierni
+coinvolgono più database e fonti di dati semi-strutturati: PostgreSQL ne favorisce
+l'integrazione all'interno di un singolo stack, in modo coerente. Il progetto ha
+anche rilasciato l'estensione postgres_fdw, un driver ad elevate prestazioni
+per federazioni di database PostgreSQL in modalità lettura/scrittura.
+
+"I foreign data wrapper in scrittura ci consentono di integrare e provare diverse
+alternative di backend, permettendoci di individuare in modo veloce necessità differenti
+e prototipizzare in modo intelligente", spiega Lee Holloway, Co-fondatore e Lead Engineer
+presso CloudFlare. "È emozionante poter concepire e mettere in piedi nuovi data store
+(compresi quelli sperimentali che abbiamo scritto con Go) e poi osservarli
+mentre leggono, scrivono e perfino interagiscono fra di sé".
+
+Maggiore affidabilità e disponibilità
+-------------------------------------
+
+"Postgres è sempre stato la mia scelta preferita per la sua nota stabilità, la sua robustezza,
+la sua forte coerenza, la sua sicurezza, le transazioni ACID e la conformità con lo
+standard SQL", dice Pascal Bouchareine, direttore Ricerca e Sviluppo presso Gandi.net.
+"Non vedo l'ora di approfondire la funzionalità di fast failover aggiunta nella
+9.3".
+
+Questo nuovo rilascio comprende funzionalità che migliorano ed estendono ulteriormente
+le già note proprietà di affidabilità e disponibilità di PostgreSQL.
+
+* Checksum per le pagine di dati: aiuta gli amministratori a rilevare i casi
+  di corruzione di dati derivati da dischi malfunzionanti o hardware difettoso
+* Fast Failover: consente di rendere attivo uno dei server in replica in un tempo
+  inferiore al secondo, garantendo una disponibilità di tipo "carrier-grade"
+* Streaming-Only Remastering: una più facile e veloce riconfigurazione delle repliche
+  in cascata in seguito a un failover, tramite il protocollo di streaming replication
+
+Funzionalità per sviluppatori
+-----------------------------
+
+Come ogni altro rilascio annuale, PostgreSQL 9.3 include molte funzionalità
+in grado di rendere più semplice, più flessibile e più divertente lavorare
+con Postgres, sia per sviluppatori di applicazioni, che per amministratori
+di sistema e analisti. Fra le principali funzionalità introdotte, si citano:
+
+* Metodi di generazione e di accesso per dati di tipo JSON
+* Viste aggiornabili
+* pg_dump parallelo per velocizzare backup di database di grandi dimensioni
+* Supporto per LATERAL JOIN
+
+Inoltre, la funzionalità "User-Defined Background Worker" consente agli sviluppatori
+di scrivere task manager, gestori di richieste, processori paralleli, strumenti per
+la gestione di code e altre utilità che permettono a PostgreSQL di coordinare
+il lavoro. Un esempio di ciò è Mongres, un background worker che accetta query
+per MongoDB, le interpreta e le passa a PostgreSQL.
+
+Contatti
+--------
+
+GABRIELE BARTOLINI
+it@postgresql.org
+Ufficio: +39 0574 870600
+Mobile: +39 338 1566217
+Prato, PO, Italia
+http://www.itpug.org/
+
+
+Link
+-----
+
+* Download:
+  http://www.postgresql.org/downloads
+* Press Kit:
+  http://www.postgresql.org/about/press/presskit93
+* Note di rilascio:
+  http://www.postgresql.org/docs/9.3/static/release-9-3.html
+* What's New in 9.3 (in inglese):
+  https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.3
+
+Su PostgreSQL
+-------------
+
+PostgreSQL è il principale sistema di gestione di database open source, con una comunità
+internazionale costituita da migliaia di utenti e sviluppatori nonché decine di aziende
+ed enti provenienti da tutte le parti del mondo. Il progetto PostgreSQL si porta dietro
+oltre 25 anni di attività di ingegneria del software, a partire dal campus di Berkeley
+dell'Università di California, ed oggi può vantare un ritmo di sviluppo senza uguali.
+La gamma di funzionalità mature messe a disposizione da PostgreSQL non soltanto
+è in grado di competere con quelle offerte da sistemi di database proprietari,
+ma le migliora in termini  di funzionalità avanzate, estensibilità, sicurezza
+e stabilità. Scopri maggiori informazioni su PostgreSQL e partecipa attivamente
+alla nostra comunità su http://www.postgresql.org e, per l'Italia, http://www.itpug.org.

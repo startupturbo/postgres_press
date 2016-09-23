@@ -1,0 +1,78 @@
+Új lehetõségek a jelenlegi verzióban
+
+A fenti nagyobb változtatásokon túl számos olyan újdonság kapott helyet a verzióban, amelyek nagy érdeklõdésre tarthatnak számot a PostgreSQL felhasználók körében.
+
+Funkciók: A PostgreSQL funkciók most támogatnak egy új idézõjel használatot amivel elkerülhetõ a régi nehézkes idézõjelezés. Továbbá a Savepoint-ok mellett a PL/pgSQL funkciók támogatják az EXCEPTION blokkokat is, amellyel korlátozott kivételkezelési képességet adnak.
+
+Adatbázis tervezés: Az adatbázis adminisztrátorok mostantól helyben megváltoztathatják az oszlopok adattípusát ALTER TABLE kifejezéssel. Az SQL szabványnak megfelelõ kompozit adattípusok is támogatottak. Továbbá minden adatbázis objektumra értelmezhetÕ CHANGE OWNER.
+
+Adat import/export: A COPY parancs mostantol támogatja az elterjedt CSV adatformátumot, könnyebé téve más szoftverek felé az adatok importálását és exportálását.
+
+Optimalizaló fejlesztések: A lekérdezés optimalizáló és végrehajtó mostantól használni fogja a kompatibilis adattípusokra készített indexeket, amivel nagyban csökken az explicit tipuskényszerítések száma konstans értékeken. Az új verzió fejleszt az index használaton is, jobb optimalizációt nyújt az OR mûveletekhez, fejleszt az ANALYZE parancs mintavételén, a TRUNCATE is gyorsabb és jobban generálódnak a lekérdezések tervei (prepared statement) valamint rengeteg apróbb fejlesztés.
+
+Logolás: Az adminisztrátorok mostantól automatikus log állomány rotációt állíthatnak be a postgresql.conf-ban. A log formátum is sokkal konfigurálhatóbb mint ezelött, ide tartozik a beállíthato sor-prefix, adott típusú SQL kifejezések logolása és kapcsolat bontások logolása.
+
+Biztonsági mentés: A PostgreSQL portolható biztonsági mentõ segédprogramja, a pg_dump alapos átíráson esett át. Az új verzió lényegesen csökkenti a verziók közötti adatmentések lehetséges problémáinak számát.
+
+Természetesen számos más változtatást és fejlesztést tartalmaz az új verzió. Teljes lista a <a href="">Release Notes</a>ban található.
+
+Teljes idézetek
+
+"A Fujitsu nagyon elégedett a PostgreSQL 8.0 újdonságaival. Biztosak vagyunk abban, hogy sok új PostgreSQL felhasználónak fog tetszeni." - mondta Takayuki Nakazawa, a Fujitsu OSS Adatbázis szoftvercsoportjának igazgatója. "A Fujitsu büszke arra hogy a PostgreSQL támogató szerepére és munkájára a PostgreSQL közösségben. Segítünk a PostgreSQLt a vezetõ adatbázis rendszerré fejleszteni."
+
+Javier Soltero, a Hyperic vezetõ szoftvertervezõje: "A PostgreSQL 8.0 adja azt a magas átviteli sebességet, amelyre cégünk HQ monitorozó termékének szüksége van. A csapatunk értékelte több többplatformos kereskedelmi és nyílt forráskódú adatbázist, és nem talátunk olyat ami megfelelt volna igényeinknek. A PostgreSQL 8.0 nativ Windows támogatásával most a PostgreSQL-t a saját termékünkkel együtt adhatjuk annak skálázhatóságával és teljesítményével. A PostgreSQL liszensze mindezt  lehetõvé teszi kereskedelmi kötöttségek nélkül. A PostgreSQL csapat elkötelezett a minõség iránt, ami egyértelmû volt számunkra mióta az elsõ 8.0 bétát megvizsgáltuk."
+
+A 8.0 verzió letöltése:
+	FTP tükörszerverek listája
+	Bittorrent
+	Windows telepítõ (Bittorrent-en is)
+	SourceForge (A Windows telepítõ is elérhetõ)
+
+További információért:
+	Magyarul:
+		Hornyák László
+		+36-(70)-368-3901
+		hu@postgresql.org
+
+
+	Angolul:
+		Josh Berkus
+		PostgreSQL Project
+		+1-415-752-2500
+		josh@postgresql.org
+
+PostgreSQL információk:
+
+Dokumentáció:
+	Hivatalos dokumentáció
+	Technikai dokumentációk (angol)
+	General Bits (angol)
+
+Csatoló programok:
+	JDBC
+	ODBC
+	.Net
+
+Grafikus felhasználói felületek:
+	pgAdminIII
+	phpPgAdmin
+	pgAccess
+	Egyéb grafikus felületek
+
+Replikáció:
+	Slony-I
+	pgReplicator
+	eRServer
+
+Kapcsolódó projectek:
+	pgFoundry
+	GBorg
+
+Inbformáció az idézett cégekr¿l:
+
+A Fujitsu-ról: A Fujitsu a ügyfélorientált IT és telekommunikációs megoldások vezetõ szolgáltatója a nemzetközi piacon. Magas megbízhatóságú számítási és kommunikációs rendszereivel és világméretû szolgltató és szakértõ hálózatával a Fujitsu olyan megoldásokat szálít, amelyek végtelen lehetõségeket nyitnak.
+
+
+A Hyperic-r¿l: A Hyperic a kereskedelmi és a nyilt forráskódú rendszerek irányítására fókuszál. Vezet¿ terméke alternatíva a költséges és elavult rendszerekre, amely nyílt, skálázható, web-alapú platform az IT iparban használt minden technológia támogatásával.
+További információért: press@hyperic.net (angol és spanyol)
+

@@ -1,0 +1,238 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.1 Basın Bülteni
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.1 Basın Bülteni</h1>
+
+<h2>İçindekiler</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Orijinal Sürüm Metni</a><br />
+ &nbsp; <a href="#additional_features">Bu Sürümdeki Diğer Özellikler</a><br />
+ &nbsp; <a href="#quoted_companies">Alıntılanmış Şirket Bilgileri</a><br />
+ &nbsp; <a href="#download">Nereden İndirilebilir?</a><br />
+ &nbsp; <a href="#docs">Belgeler</a><br />
+ &nbsp; <a href="#license">Lisans</a><br />
+ &nbsp; <a href="#contact">Bağlantı Bilgileri</a><br />
+ &nbsp; <a href="#companies">Şirket Desteği</a><br />
+ &nbsp; <a href="#additional_software">Ek Yazılımlar</a><br />
+</p>
+
+<a name="original_release"></a><h2>Orijinal Sürüm Metni</h2>
+<p>
+09 Kasım 2005, Frankfurt, Almanya (OpenDBCon): PostgreSQL Global Development Group,
+PostgreSQL'in dünyanın en gelişmiş açık kaynak kodlu veritabanı olma özelliğini daha
+da ileriye götüren PostgreSQL 8.1 sürümünü gururla duyurur. Gittikçe büyüyen ve gelişen
+topluluk ile birlikte sayıları artan şirket sponsorlarının da desteğiyle beraber 8.1 sürümü 
+PostgreSQL uygulama geliştirme fırsatını daha da genişletecektir. Bu yeni sürüm, bulundurduğu
+başarım arttırımları ve gelişmiş SQL özellikleri ile yüksek hacimdeki transaction işlemleri, 
+veri ambarları ile daha karmaşık ve dağıtık kurumsal yazılımlar için destek içermektedir.
+</p><p>
+Bu özellikler önceki sürümde kendisini kanıtlayan benimsenme eğilimini sürdürecektir. 8.0
+sürümü ilk 7 ayda 1 milyondan fazla indirildi. Bir önceki sürüm yakın bir aralıkta
+300.000 defa indirilmişti.
+</p><p>
+
+PostgreSQL'in kurumsal sponsorlarından birisi olan Persasive Software'in Ürün Yöneticisi
+Lance Obermayer, "Bu proje kesinlikle veritabanı kullanıcılarının zihinleri ile ivmeleniyor" 
+dedi ve devam etti: "Açık kaynak kodlu yazılımlara artan ilgi ile birlikte, PostgreSQL'in daha
+da çok istim üzerine çıkmasını bekliyoruz."
+</p>
+<h3>Bu Sürümdeki Diğer Özellikler</h3>
+<p>
+
+<b>Role:</b> PostgreSQL veritabanı rollerini artık desteklemektedir. Bu özellik karmaşık
+haklara sahip olan büyük sayıda kullanıcıların yönetimini basitleştirmektedir.
+</p><p>
+<b>IN/OUT Parametreleri:</b> PostgreSQL fonksiyonları, J2EE ve .NET uygulamaları için
+karmaşık business mantığına verilen desteği geliştiren  IN, OUT ve INOUT parametrelerini
+artık desteklemektedir.
+</p><p>
+<b>Two-Phase Commit</b> (2PC): Uzun zamandır istenen bu özellik, WAN uygulamalarında ve
+PostgreSQL kullanan heterojen veri merkezlerinde ayrı ayrı sunucularda ACID uyumlu transaction
+çalıştırmaya izin verir.
+</p>
+<h3>Başarım artışları</h3>
+<p>
+<b>Gelişmiş çoklu istemci (SMP) başarımı:</b> Tampon(buffer) yönetimi, PostgreSQL 8.1 için işlemci sayısı ile
+doğru orantılı olarak ölçeklenebilecek şekilde geliştirilmiştir. Bu sayede 8 ve 16 yollu ile dual-core
+ve multi-core işlemcili sunucularda belirgin başarım artışı sağlanmıştır.
+</p><p>
+<b>Bitmap Scan:</b> Uygun olduğu durumlarda, indexler bellekte otomatik olarak bitmaplere dönüştürülecektir.
+Bu sayede çok büyük tablolar üzerinde yapılan karmaşık sorgular yirmi kata kadar daha hızlı çalışacaktır.
+Bu özellik ayrıca çoklu-kolon indexlerine duyulan gereksinimi büyük oranda azaltarak veritabanı yönetimini
+kolaylaştırmaktadır.
+</p><p>
+
+<b>Tablo Bölümleme:</b> PostgreSQL Sorgu Planlayıcısı artık "Constraint Exclusion" adı verilen bir yöntemle
+büyük tabloların hepsini taramaya gereksinim duymamaktadır. Diğer veritabanlarında bulunan Tablo Bölümleme
+özelliğine benzer olarak bu özellik hem başarım artışını, hem de çoklu-gigabayt tabloların veri yönetimini geliştirir.  
+</p><p>
+<b>Shared Row Locking:</b> PostgreSQL'in "satır-seviyesinden daha iyi locking" özelliği artık ikincil anahtarları için de paylaşılmış
+(shared) locking özelliğinin eklenmesi ile birlikte daha yüksek seviyede concurrency desteklemektedir. Bu özellik
+yüksek hacimli OLTP uygulamalarında insert ve update başarımlarını daha da arttıracaktır. 
+</p><p>
+Reliable Computer Solutions'dan Merlin Moncure, "PostgreSQL 8.1 sürümü (bizim) çift işlemcili Opteron
+üretim sunucularında yüksek başarım artışı sağladı" dedi ve ekledi: "Daha net bir söylemle, basit sorguların çalışma zamanlarında
+%20 civarında bir azalma oldu ve işlemci yükü de ek olarak %20 daha azaldı. Bu da yükün %20-%40 oranında azalması anlamına geliyor." 
+</p><p>
+120'den fazla gelişme bulunmaktadır ve bunların bir kısmı basın bülteninde ayrıntılandırılmıştır.
+</p>
+
+<h3>PostgreSQL hakkında</h3>
+<p>
+PostgreSQL Kaliforniya'daki Berkeley Üniversitesinde 20 yıl önce başlatılmıştır ve günümüzde
+yüzlerce geliştiricinin ortak çalışması ile devam ettirilmektedir. İçinde transaction,
+fonksiyonlar, triggerlar, subqueryler gibi enterprise seviyedeki özellikleri barındıran PostgreSQL, bugün
+dünyada bir çok özel kurumda ve kamu kurumunda kullanılmaktadır. PostgreSQL, yazılımın ticari olan ve olmayan
+ortamlarda ücretsiz olarak kullanılmasına izin veren BSD lisansı ile dağıtılmaktadır.
+</p>
+
+<a name="additional_features"></a><h2>Bu sürümdeki diğer özellikler</h2>
+Basın bülteninde listelenen ana özelliklerin yanı sıra, bu sürümde 200'den fazla geliştirici tarafından geliştirilen 
+120'den fazla yeni özellik ve geliştirme bulunmaktadır. Bunların arasında:
+<ul>
+<li><b>GiST:</b> PostgreSQL'in Generalised Search Tree (GiST) daha önce B-Tree indexlerde olan bir çok özelliği
+kullanabilir hale gelmiştir. GiST PostgreSQL'in metin arama indexlemesi (TSearch2), coğrafi sistemler (GIS) için
+altyapı oluşturmaktadır. Bu gelişme ile, yüksek bulunurluk gerektiren uygulamalarda bile karmaşık veri tiplerinin yüksek
+başarım göstermesi sağlanmıştır.</li>
+<li><b>COPY'nin Yeniden Yapılandırılması:</b> COPY büyük miktarlarda verinin %30 daha hızlı işlenebileceği 
+şekilde yeniden yapılandırılmıştır. CSV yükleme geliştirmelerinin yanı sıra, bu özellik büyük veritabanlarının
+PostgreSQL'e yüklenmesini hiç olmadığı kadar hızlı yapmıştır.</li>
+<li><b>64-bit Paylaşılmış Bellek:</b> Tampon yönetim kodu 64-bitlik platformlarda 2 Terabayt'a kadar belleğin kullanılabileceği
+şekilde geliştirilmiştir. Bu da PostgreSQL'i ileride yüksek bellekli sunuculara hazırlayacaktır.</li> 
+<li><b>Enregre Autovacuum:</b> PostgreSQL'in veritabanı bakım deamonu geliştirilmiştir 
+ve ana sunucu programı içine yerleştirilmiştir. Bu da PostgreSQL sunucularının kurulumunu 
+ve yönetimini daha da basitleştirmiştir.</li>
+<li><b>Daha hızlı Aggregate:</b> Aggregate fonksiyonlar rapor sorgularının daha da 
+hızlanacağı şekilde geliştirilmiştir. PostgreSQL geliştiricileri aggregate'ler için 
+hem bellek yönetimini yeniden yazdılar hem de MIN() ve MAX() için index optimizasyonunu eklemişlerdir.</li>
+<li><b>Yönetim Fonksiyonları</b> psql komut satırından temel veritabanı yöneticisi işlemlerinin yapılabileceği
+ve sunucu bilgilerinin alınabileceği yeni fonksiyonlar eklenmiştir. </li>
+<li><b>Uyumluluk fonksiyonları:</b> lastval(), greatest() ve least() fonksiyonları eklenmiştir. 
+Böylece MySQL ve Oracle'den uygulama aktarımı daha da kolaylaşmıştır.</li>
+</ul>
+<p>
+8.1 sürümündeki onlarca yeni gelişmeyi
+<a href="/docs/current/static/release.html">Sürüm Notları</a>'ndan okuyabilirsiniz.
+</p>
+
+<a name="quoted_companies" /><h2>Alıntılanmış Şirket Bilgileri</h2>
+
+<p>
+<b>Pervasive Software</b> (NASDQ: PVSW) şirketlerin veri yatırımlarının değerini serbest bırakmaya
+yardımcı olan yazılımlar sağlamaktadır. Dünyanın 150'den fazla ülkesinde irçok alandan onbinlerce müşterimiz 
+yönetim, entegrasyon, analiz ve kritik verilerinin güvenliği konusunda Persasive'e güvenmektedir.
+Daha fazla bilgi için <a href="http://www.pervasive.com/company">web sayfamızı</a> ziyaret edebilirsiniz.
+</p>
+<p>
+<b>Reliable Computer Solutions</b> bölgesel üretim işlemler için ERP yazılımı ve danışmanlık hizmetleri vermektedir.
+Araç ve Ev Üretimi alanında bütünleşik IT çözümleri üzerinde uzmanlaşan bir şirketiz. Bizim ana ürünümüz, ESP,
+ABD'de 1 milyar dolardan daha fazla üretim hacmini yönetmektedir. 
+Daha fazla bilgi için, 
+Merlin Moncure ile bağlantı kurabilirsiniz (sadece İngilizce)): merlin.moncure@rcsonline.com,
+Telefon: (01) 269-483-1234 x304.
+</p>
+
+<a name="download"></a><h2>Nereden indirilebilir?</h2>
+
+<ul>
+<li><a href="http://www.postgresql.org/ftp/latest/">FTP Yansılarının Listesi</a></li>
+<li><a href="http://www.postgresql.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/win32/">Windows Kurulum Programı</a>
+(Bittorrent ile de elde edilebilir)</li>
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/">Linux, Mac OSX ve Solaris'i de içeren
+ikili (binary) dosyalar</a></li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (Windows Kurulum Programını
+da içerir)</li>
+</ul>
+
+<a name="docs"></a><h2>Belgeler</h2>
+
+<ul>
+<li><a href="/docs/current/static/">Resmi Belgeler</a></li>
+<li><a href="http://techdocs.postgresql.org">Teknik Belgeler (TechDocs)</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li>
+</ul>
+
+<a name="license"></a><h2>Lisans</h2>
+<p>
+PostgreSQL<a href="/about/licence"> BSD lisansını</a> kullanır. Bu <a href="http://www.opensource.org/licenses/bsd-license.php">OSI-sertifikalı lisans</a>
+, PostgreSQL'in kullanımını hiç bir şekilde sınırlamadığı için iş-dostu ve esnek olarak kabul edilir. 
+Birçok şirket desteğinin ve kodun herkes tarafından sahiplenilebilmesinin yanı sıra, BSD lisansı PostgreSQL'i
+kendi uygulamalarında rahatça ve ücretsiz olarak gömülü olarak çalıştırmak isteyen firmalar arasında da popüler yapmaktadır.
+</p>
+
+<a name="contact"></a><h2>Bağlantı Bilgileri</h2>
+
+<p><a href="http://www.PostgreSQL.org.tr">PostgreSQL Türkiye Web Sayfası</a></p>
+<p><a href="http://www.postgresql.org">İngilizce Ana Sayfa</a></p>
+
+<p>İletişim ve sorularınız için:<br />
+Devrim GÜNDÜZ<br />
+PostgreSQL Bölgesel Bağlantısı<br />
++90.535.3289594<br />
+<a href="mailto:devrim@postgresql.org">devrim@postgresql.org</a></p>
+
+<p>Diğer bölgelerdeki bağlantılarımız için <a
+href="/about/press/contact">uluslararası bağlantı listemize</a> bakabilirsiniz.</p>
+
+<a name="companies"></a><h2>Şirket Desteği</h2>
+
+PostgreSQL geliştiricilere sponsor olan, web tutma kaynaklarını sağlayan ve bize maddi
+destek veren firmalar ile varlığına güç katmaktadır. En büyük uzun vadeli sponsorlar
+<a href="/about/sponsors">buradadır</a>.
+
+Ayrıca, <a href="/support/professional_support">PostgreSQL desteği veren şirketlerin
+listesi </a> de bulunmaktadır. Bu listede bireysel danışmanlardan çok uluslu şirketlere
+kadar tüm bilgiler mevcuttur.
+
+<a name="additional_software"></a><h2>Ek Yazılımlar</h2>
+<p>
+Ana PostgreSQL projesi, replikasyon, veri taşıma, uyumluluk, tasarım ve görsel
+yönetim arabirimleri konularında üretim kalitesinde 100'den fazla aktif alt
+projeyle desteklenmektedir.
+</p>
+
+<h3>İlgili Projeler</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>Sürücüler</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+<li><a href="http://search.cpan.org/~rudy/DBD-Pg-1.32/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<h3>Gelişmiş Özellikler için Yazılımlar</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Coğrafi Bilgi Sistemi (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Tam Metin Arama (Full Text Search)(OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Business Intelligence/Data Warehousing (Bizgres)</a></li>
+</ul>
+
+<h3>Görsel Kullanıcı Arabirimleri</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin III</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">Diğer Görsel Arabirimlerin Listesi</a></li>
+</ul>
+
+<h3>Replikasyon</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>
+

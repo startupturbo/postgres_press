@@ -1,0 +1,47 @@
+12 SETTEMBRE 2011: Il PostgreSQL Global Development Group annuncia il rilascio di PostgreSQL 9.1. Quest'ultima versione del leader dei database open source offre tecnologie innovative, estensibilità senza paragoni e nuove funzionalità come replica sincrona, estensioni, tabelle esterne ("foreign data wrapper"), indici "K-Nearest Neighbor".
+
+"PostgreSQL 9.1 fornisce alcune delle più avanzate funzionalità a disposizione di tutti i database open source ed è sostenuto da una comunità attiva e innovativa, con dimostrata esperienza di successo in ambito aziendale. PostgreSQL è inoltre ben posizionato per costruire ed eseguire applicazioni nel cloud", afferma Charles Fan (Vice presidente, Dipartimento di Ricerca e sviluppo, VMware).
+
+Risponde a importanti richieste degli utenti
+
+La versione 9.1 introduce molte funzionalità che per anni sono state richieste dagli utenti, rimuovendo diverse barriere nell'adozione di nuove applicazioni o nella migrazione a PostgreSQL. Fra le altre, sono degne di nota:
+
+* replica sincrona: sicurezza e consistenza dei dati (perdita zero) all'interno di un cluster in alta disponibilità di server PostgreSQL;
+* collation a livello di colonna: definizione delle regole di ordinamento delle stringhe a livello di database, tabella o colonna;
+* tabelle "unlogged": miglioramenti prestazionali per dati volatili (i.e. caching o sessioni web).
+
+"Heroku offre il più grande servizio cloud per PostgreSQL del mondo come 'database-as-a-service'", svela James Lindenbaum, co-fondatore di Heroku. "Il rilascio della replica sincrona dei dati nella 9.1 fornisce ai nostri clienti modalità innovative per la protezione di dati mission-critical. Consacra inoltre PostgreSQL come una delle soluzioni di memorizzazione dati più dinamiche al momento disponibili".
+
+Avanza lo stato dell'arte
+
+La nostra comunità di sviluppatori è in grado di innovare con funzionalità all'avanguardia. La versione 9.1 ne comprende diverse che sono vere e proprie novità nell'industria dei database anche non open source, come:
+
+* indicizzazione "K-Nearest-Neighbor": indici basati sul concetto di distanza, che permettono interrogazioni più veloci nel campo delle ricerche testuali e geografiche;
+* "Serializable Snapshot Isolation": garanzia di consistenza fra transazioni concorrenti senza necessariamente doverle bloccare, mettendo in pratica il concetto di "true serializability";
+* "Writeable Common Table Expression": esecuzione di complessi aggiornamenti ai dati su più passi, utilizzando una singola query;
+* "Security-Enhanced Postgres": implementa la sicurezza di livello militare e il controllo d'accesso vincolato ("Mandatory Access Control").
+
+"OpenERP si è sempre avvalso delle funzionalità di classe enterprise di PostgreSQL per dotare di una base veloce, affidabile e scalabile le applicazioni che aiutano a gestire le operazioni quotidiane delle aziende nostre clienti. L'integrità dei dati in contesti altamente concorrenti e transazionali è un argomento di importanza critica per noi, e siamo veramente entusiasti della funzionalità 'Serializable Snapshot Isolation' introdotta in PostgreSQL 9.1!", aggiunge Olivier Dony, Community Manager di OpenERP.
+
+Estende il motore del database
+
+L'estensibilità di PostgreSQL consente agli utenti di aggiungere nuove funzionalità ad un database già in produzione e di sfruttarlo per compiti che nessun altro sistema di gestione di database è in grado di fare. La versione 9.1 aggiunge nuovi strumenti per l'estensibilità, fra cui:
+
+* tabelle esterne tramite "Foreign Data Wrapper": permette di collegare e interrogare altri database direttamente da PostgreSQL;
+* estensioni: rende più facile creare, caricare e gestire nuove funzionalità del database.
+
+Tutte le funzionalità descritte sopra e molte altre sono descritte in dettaglio sia nella pagina del wiki di PostgreSQL intitolata "What's New In 9.1" (http://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.1) che nelle note di rilascio (http://www.postgresql.org/documentation/current/static/release-9-1).
+
+Nel 25° anniversario dello sviluppo del database PostgreSQL, la nostra comunità continua a migliorare la tecnologia dei database ad ogni rilascio annuale. Scarica subito la versione 9.1 e prova il più avanzato sistema di database open source al mondo.
+
+* Press Kit: http://www.postgresql.org/about/press/presskit91
+* Note di rilascio: http://www.postgresql.org/documentation/current/static/release-9-1
+* Download: http://www.postgresql.org/downloads
+
+Per ulteriori informazioni, contattare:
+GABRIELE BARTOLINI
+0574 870600 / 338 1566217
+it@postgresql.org
+http://www.itpug.org/
+
+Su PostgreSQL: PostgreSQL è il leader dei sistemi di gestione di database open source, con una comunità internazionale costituita da migliaia di utenti e sviluppatori nonché decine di aziende ed enti provenienti da tutte le parti del mondo. Il progetto PostgreSQL vanta 25 anni di attività di ingegneria del software, cominciata al campus di Berkeley dell'Università di California e oggi può vantare un ritmo di sviluppo senza uguali. La gamma di funzionalità mature messe a disposizione da PostgreSQL non soltanto è in grado di competere con quelle offerte da sistemi di database proprietari, ma le migliora in termini  di funzionalità avanzate, estensibilità, sicurezza e stabilità. Scopri maggiori informazioni su PostgreSQL e partecipa attivamente alla nostra comunità su http://www.postgresql.org e, per l'Italia, http://www.itpug.org.

@@ -1,0 +1,232 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.0 Lehdistö materiaali
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.0 Lehdistö materiaali</h1>
+
+<p>NY, NY: 19. Tammikuuta 2005 - PostgreSQL Global Development -ryhmä on 
+julkaissut PostgreSQL tietokantaohjelmiston version 8.0, joka vahvistaa 
+PostgreSQL:n asemaa maailman edistyneimpänä avoimen lähdekoodin tietokantana.
+Tämä julkaisu sisältää ominaisuuksia, jotka ovat aiemmin kuuluneet ainoastaan 
+kaikkein kalliimpiin tietokantajärjestelmiin. Tämän julkaisun myötä PostgreSQL
+tullee olemaan entistä suositumpi sekä yritysten että yksityisten käyttäjien 
+keskuudessa.</p>
+
+<p>Sen lisäksi, että PostgreSQL sisältää parannuksia skaalautuvuudessa, 
+ominaisuuksissa ja suorituskyvyssä, se näyttää myös avoimen lähdekoodin 
+kehityksen nopeuden. Toista tusinaa yritystä, mm. Red Hat, Fujitsu, Afilias, 
+Software Research Associates, Inc., 2nd Quadrant, and Command Prompt Inc, 
+sekä sadat yksityiset kehittäjät ovat tuoneet uusia ominaisuuksia 8.0 versioon 
+enemmän, kuin mihinkään aiempaan PostgreSQL:n versioon.</p>
+
+<p>"Me olemme varmoja, että nämä enterprise-luokan ominaisuudet vetävät 
+puoleensa paljon uusia PostgreSQL käyttäjiä.", sanoi  Takayuki Nakazawa 
+Fujitsun OSS tietokantaohjelmisto ryhmän johtaja. "Fujitsu on ylpeä siitä 
+avusta, jota se on voinut antaa PostgreSQL:n kehittämiseen, sekä toiminnastaan 
+PostgeSQL yhteisössä. Me olemme sitoutuneet auttamaan PostgreSQL yhteisöä 
+tekemään PostgreSQL tietokannasta johtavan tietokantajärjestelmän."</p>
+
+
+<p>Uusia ominaisuuksia:</p>
+
+<ul>
+<li><b>Windows tuki</b>: PostgreSQL toimii nyt Windows järjestelmissä, eikä 
+tarvitse enää emulointi kerrosta. Tämä parantaa PostgreSQL:n tehokkuutta 
+merkittävästi Windows järjestelmissä aiempiin versioihin verrattuna. Natiivin 
+tuen ansiosta PostgreSQL on nyt houkutteleva vaihtoehto windows käyttäjille, 
+sekä yrityksille ja ohjelmistojen kehittäjille.</li>
+<li><b>Jatkoaloituskohdat(Savepoints)</b>: Tämä SQL-standardin ominaisuus antaa
+mahdollisuuden palata transaktiossa takaisin päin, peruuttamatta koko 
+transaktiota. Tämä auttaa erityisesti ohjelmistojen kehittäjiä, jotka 
+tarvitsevat monimutkaisia transaktioita ja virheistä palautumista.</li>
+<li><b>Ajan hetkeen palautus</b>: Tämä ominaisuus mahdollistaa tiedon 
+palauttamisen tiettyyn ajanhetkeen käyttämällä jatkuvasti tallennettavia 
+transaktiolokeja. Tämä antaa pitkään etsityn vaihtoehdon tunneittain tai 
+päivittäin tehdyille varmuuskopioille, joita kriittiset palvelut ovat kaivanneet.</li>
+<li><b>Taulutilat</b>: Elintärkeä ominaisuus ylläpitäjille, jotka hallitsevat 
+suuria, gigatavujen kokoisia tietovarastoja. Taulutilat mahdollistavat taulujen
+ja indeksien sijoittamisen erillisille levyille tai levypakoille. Tämä parantaa
+hakujen tehokkuutta.</li>
+<li><b>IParantunut muistinkäsittely ja I/O</b>: Levyn- ja muistinkäsittely on 
+optimoitu käyttäen "Adaptive Replacement Cache algorithmia", uutta taustalla 
+toimivaa kirjoittajaa, sekä uutta viivästettyä siivousta (vacuumia). Näiden 
+ominaisuuksien ansiosta kuorma on entistä paremmin ennustattavissa ja tehokkuus
+on säännöllisempää kuormapiikeissä.</li>
+</ul>
+
+<p>Javier Soltero, Hyperic LLC:n pääarkkitehti totesi, "PostgreSQL 8.0 antaa 
+meille hyvän rinnakkaisuuden ja suorituskyvyn, jota meidän HQ 
+seurantajärjestelmämme kaipaa. PostgreSQL:n windows tuki mahdollistaa, että 
+voimme laittaa tietokannan tuotteemme mukaan, ja hyödyntää sen skaalautuvuutta 
+ja tehokkuutta. Ja erityisesti PostgreSQL:n lisenssi mahdollistaa, että voimme 
+liittää sen myös vapaasti jaettaviin tuotteisiimme ilman, että joutuisimme 
+maksamaan siitä."</p>
+
+<p>Sen lisäksi, että tässä versiossa on paljon uusia ominaisuuksia, PostgreSQL 
+on parantunut entistä useampien lisäominaisuuksien ja valinnaisten komponenttien
+ansiosta. Sekä Slony-I replikointityökalu että pgPool yhteyksien jako ovat 
+molemmat jo käytettyjä ominaisuuksia korkeaa käyttövarmuutta vaativissa 
+järjestelmissä. Useita tallennettuja proseduraalisia kieliä on lisätty tai 
+merkittävästi laajennettu. Näitä on mm.  PL/Java, PL/PHP and PL/Perl, kun taas 
+Npgsql ja PGsqlClient .NET komponentteja on kehitetty erityisesti tukemaan 
+uusia Windows käyttäjiä.</p>
+
+
+<p>Tutustu kattavaan kuvaukseen uusista 8.0 version ominaisuuksista <a href="http://pgfoundry.org/about/press">lehdistösivullamme</a>.</p>
+
+<p><b>PostgreSQL</b>: PostgreSQL on satojen kehittäjien lähes 20 vuoden 
+yhteistyön tulos, mikä sai alkunsa Californian Berkeleyn yliopistossa. 
+PostgreSQL on pitkään tukenut enterprise luokan ominaisuuksia, kuten 
+transaktioita, funktioita, herättimiä ja alikyselyjä, ja on siksi käytetty 
+monissa vaativissa yrityskohteissa ja valtion virastoissa. PostgreSQL on 
+lisensioitu BSD lisenssillä, jonka ansiosta sitä saa vapaasti käyttää ja jakaa 
+ilmaiseksi sekä kaupallisiin että ei kaupallisiin tarkoituksiin.</p>
+
+<p>Lisää tietoa PostgreSQL:stä sekä itse ohjelmisto: <a href="http://www.postgresql.org/">Englanniksi: http://www.postgresql.org/</a></p>
+
+
+<h2>Lisää tämän version ominaisuuksia</h2>
+
+<p>Aiemmin mainittujen ominaisuuksien lisäksi, tässä versiossa on uusia 
+ominaisuuksia ja parannuksia, joista nykyiset PostgreSQL käyttäjät ilahtuvat.</p>
+
+<ul>
+<li><b>Funktiot</b>: PostgreSQL funktiot tukevat nyt "tähän-dokumentti-tyyliin 
+dollari-lainausta", jonka avulla voi välttää ikävät siskkäiset lainaukset. 
+Lisäksi, uusien jatkoaloituskohtien(savepoint) mukana tuli uusi ominaisuus. 
+PL/pgSQL funktioissa on mahdillisuus rajoitettuun poikkeuskäsittelyyn 
+<code>EXCEPTIONN</code> lauseella.</li>
+<li><b>Tietokannan suunnittelu</b>: Tietokannan ylläpitäjät voivat nyt muuttaa 
+taulujen sarakkeita toisen tyyppisiksi käyttäen <code>ALTER TABLE</code> lausetta. 
+Sarakkeiden määrittely yhdistelmätietotyypeillä on nyt tuettu SQL standardien 
+mukaisesti. Nyt myös kaikki tietokannan objektit tukevat nyt <code>CHANGE OWNER</code> 
+lausetta.</li>
+<li><b>Tiedon tuonti/vienti(import/export)</b>: <code>COPY</code> komento tukee nyt pilkkueroteltua CVS tiedostotyyppiä, mikä tekee tiedon lataamisen ja viennin toisiin ohjelmiin helpommaksi.</li>
+<li><b>Optimoijan parannukset</b>: Kyselyn suunnittelija ja toteuttaja käyttää 
+nyt hyväksi yhteensopivien tietotyyppien indeksejä, mikä vähentää tarvetta 
+explisiittisesti muuttaa vakioiden tietotyyppiä. Tämä versio sisältää myös 
+paremman indeksien käytön ja paremmin optimoidun OR lauseiden käytön. 
+<code>ANALYZE</code>:n käyttämät otokset ovat entistä edustavampia ja <code>TRUNCATE</code> on entistä 
+nopeampi. Sen lisäksi parannuksia valmistelluissa hakusuunnitelmissa, sekä 
+paljon pienempiä parannuksia.</li>
+<li><b>Lokit</b>: Ylläpitäjät voivat määritellä automaattisen lokien 
+kierrätyksen postgresql.conf tiedostossa. PostgreSQL:n lokit ovat myös 
+huomattavasti entistä kofiguroitavampia. Nyt ylläpitäjät voivat määritellä 
+riveille haluamansa alun, tallentaa tiettyjä SQL komentoja sekä järjestelmästä 
+poistumisia.</li>
+<li><b>Varmuuskopiointi</b>: PostgreSQL:n varmuuskopionti ohjelma, pg_dump, on 
+suurelta osin kirjoitettu uudestaan. Uusi versio tuo mukanaan uusia 
+ominaisuuksia, kuten määritellyt alku ja loppu ajat, sekä ratkaisee aiemmat 
+käyttäjäoikeuksiin ja riippuvuuksiin liittyneet ongelmat varmuuskopiossa.</li>
+</ul>
+
+<p>Pienempiä muutoksia ja parannuksia on vielä huomattavasti lisää. <a href="http://pgfoundry.org/docs/8.0/static/release.htm">Release Notes</a> sisältää kattavan listan (englanniksi).</p>
+
+<h2>Kokonaiset lainaukset</h2>
+
+<p>"Fujitsu on erittäin tyytyväinen PostgreSQL 8.0:n sisältämiin uusiin 
+ominaisuuksiin. Me olemme varmoja, että nämä yritystason ominaisuudet 
+houkuttelevat lukuisia uusia PostgreSQL käyttäjiä." sanoi  Takayuki Nakazawa 
+Fujitsun OSS tietokantaohjelmisto ryhmän johtaja. "Fujitsu on ylpeä siitä 
+avusta, jota se on voinut antaa PostgreSQL:n kehittämiseen, sekä toiminnastaa 
+PostgeSQL yhteisössä. Me autamme PostgreSQL yhteisöä tekemään PostgreSQL 
+tietokannasta johtavan tietokantajärjestelmän."</p>
+
+<p>Javier Soltero, Hyperic LLC:n pääarkkitehti totesi, "PostgreSQL 8.0 antaa 
+meille laadukkaan rinnakkaisen suorituskyvyn ja nopeuden, jota meidän HQ 
+seurantajärjestelmämme kaipaa. Meidän tiimimme evaluoi sekä avoimen lähdekoodin
+että kaupallisia java-pohjaisia tietokantoja, jotka toimivat usealla alustalla,
+mutta emme löytäneet sellaista, joka olisi täyttänyt meidän tarpeemme. 
+PostgreSQL:n windows tuki mahdollistaa, että voimme laittaa tietokannan 
+tuotteemme mukaan, ja hyödyntää sen skaalautuvuutta ja tehokkuutta. Ja 
+erityisesti PostgreSQL:n lisenssi mahdollistaa, että voimme liittää sen myös 
+vapaasti jaettaviin tuotteisiimme ilman, että joutuisimme maksamaan siitä. 
+PostgreSQL ryhmällä on hyvin ansaittu maine hyvästä laadusta, jonka olemme 
+todenneet heti alusta asti tutkiessamme ensimmäistä 8.0 beta versiota."</p>
+
+<h2>8.0 löytyy</h2>
+
+<ul>
+<li><a href="http://pgfoundry.org/download/mirrors-ftp">List of FTP Mirrors</a></li>
+<li><a href="http://pgfoundry.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://pgfoundry.org/projects/pginstaller/">Windows asennus</a> (myös Bittorrent:n kautta)</li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (myös Windows asennus)</li>
+</ul>
+
+<h2>Lisäinformaatiota:</h2>
+
+	<p>Suomeksi<br>
+	        Jussi Mikkola<br>
+		+358 40 830 7561<br>
+		<a href="mailto:fi%20at%20postgresql.org">fi at postgresql.org</a></p>
+	<p>Englanniksi:<br>
+		Josh Berkus<br>
+		PostgreSQL Project<br>
+		+1-415-752-2500<br>
+		<a href="mailto:josh%20at%20postgresql.org">josh at postgresql.org</a></p>
+
+<h2>Linkkejä muihin PostgreSQL resursseihin</h2>
+
+<h3>Dokumentaatio</h3>
+
+<ul>
+<li><a href="http://pgfoundry.org/docs">Official Documentation</a></li>
+<li><a href="http://techdocs.postgresql.org/">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li>
+</ul>
+
+<h3>Ajurit</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/psqlodbc/projdisplay.php">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+</ul>
+
+<h3>Graafisia käyttöliittymiä</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdminIII</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">List of other GUIs</a></li>
+</ul>
+
+<h3>Replikointi</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://www.erserver.com/">eRServer</a></li>
+</ul>
+
+<h3>Muita Projects</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org/">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org/">GBorg</a></li>
+</ul>
+
+<h2>Tietoa yrityksistä, joita on lainattu tekstissä</h2>
+
+<p><b>Fujitsu</b>: Fujitsu on johtava maailmanlaajuinen asiakassuuntautuneiden 
+tietojärjestelmien ja kommunikointijärjestelmien toimittaja. Johtavat 
+teknologiat, erittäin luotettavat tietojenkäsittely- ja 
+kommunikaatiojärjestelmät sekä maailmanlaajuinen ammattilaisten verkosto 
+mahdollistavat, että Fujitsu voi toimittaa asiakkailleen järjestelmiä, jotka 
+luovat näille uusia menestyksen mahdollisuuksia. Fujitsun pääkonttori on 
+Tokiossa, ja yrityksen liikevaihto oli 31.3.2004 päättyneellä vuodella 4700 
+miljardia jeniä, eli 45 miljardia dollaria. Enemmän tietoa Fujitsusta 
+<a href="http://www.fujitsu.com/">http://www.fujitsu.com</a>, tai suomessa <a href="http://fi.fujitsu.com/"> http://fi.fujitsu.com</a>
+Lisätietoa Fujitsun PostgreSQL toiminnasta, sekä white paper, <a href="http://fastware.com.au/postgresql.html">http://fastware.com.au/postgresql.html</a>
+Suorat kyselyt Liam O'Duibhir, Fujitsu Australia Software Technology  
+<a href="mailto:liamod%20at%20fast.fujitsu.com.au">liamod at fast.fujitsu.com.au</a>, puhelin (61-2) 9452 9068 (vain englanniksi).
+
+
+<p><b>Hyperic</b>: Hyperic, LLC on teknologiatoimittaja, joka on fokusoitunut 
+toimittamaan järjestelmiä avoimen lähdekoodin ja kaupallisten 
+tietojärjestelmien ylläpitoon. Sen tunnetuin tuote, HQ, on suunniteltu 
+vaihtoehdoksi kalliille vanhoille valvontajärjestelmille, ja siihen kuuluu 
+avoin, skaalautuva, web-pohjainen järjestelmä, joka tukee kaikkia tällä 
+hetkellä käytössä olevia tietoteknisiä järjestelmiä. Lisää informaatiota 
+englanniksi ja espanjaksi <a href="mailto:press%20at%20hyperic.net">press at hyperic.net</a></p>

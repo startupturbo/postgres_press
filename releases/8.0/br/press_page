@@ -1,0 +1,75 @@
+Recursos adicionais nessa versão
+
+Além dos recursos já mencionados anteriormente, existem numerosos outros recursos e melhorias que serão de grande interesse aos usuários do PostgreSQL.
+
+Funções: As funções agora suportam um novo estilo para delimitação de strings utilizando cifrão para evitar o aninhamento de aspas. Além disso, devido à implementação dos pontos de salvamento (savepoints), as funções PL/pgSQL agora têm uma habilidade limitada para tratamento de exceção usando a cláusula EXCEPTION.
+
+Projeto de Base de Dados: Os administradores agora poderão trocar o tipo das colunas utilizando ALTER TABLE. A declaração de colunas com tipo composto agora é suportada de acordo com o padrão SQL. Todos os objetos agora suportam CHANGE OWNER (para mudar o dono).
+
+Importação/Exportação de Dados: O comando COPY agora suporta o popular formato de arquivo delimitado por vírgula (CSV), tornando importações e exportações para outros softwares mais fáceis.
+
+Melhorias no Otimizador: O planejador de consultas agora irá utilizar os índices para tipos de dados compatíveis, reduzindo a necessidade de conversões explícitas de valores constantes. Essa versão também possui um melhor uso dos índices, melhor otimização de cláusulas OR, melhor amostragem para o ANALYZE, um TRUNCATE mais rápido e melhor geração de planos de consulta preparados bem como muitas outras pequenas melhorias em número muito grande para serem mencionadas aqui.
+
+Arquivo de Registro: Os administradores agora podem configurar a rotação automática dos arquivos de registro de operações (logs) através do postgresql.conf. O registro de operações está muito mais configurável e flexível, possibilitando prefixos de linha definidos pelo administrador, registro de comandos SQL específicos além de registrar as desconexões com o serviço.
+
+Cópia de Segurança: O utilitário para cópia de segurança (pg_dump) foi teve boa parte reescrita. Essa versão inclui algumas capacidades novas, como seleção de conjuntos de tabelas, e eliminação de alguns problemas de portabilidade e resolução de dependências nos arquivos de cópia de segurança.
+
+É claro que existem várias outras mudanças e melhorias. Veja as <a href="">Notas de Lançamento</a> para uma lista completa.
+
+Texto completo das citações
+
+"A Fujitsu está muito contente com os novos recursos no PostgreSQL 8.0. Nós estamos confiantes que esses novos recursos corporativos vão atrair um grande número de novo usuários para o PostgreSQL.", disse Takayuki Nakazawa, diretor do departamento de banco de dados de código aberto da Fujitsu. "A Fujitsu está orgulhosa de seu patrocínio em uma série de contribuições para o PostgreSQL e do seu trabalho com a comunidade. Nós estamos comprometidos em ajudar a tornar o PostgreSQL uma referência entre os SGBDs do mercado."
+
+Javier Soltero, arquiteto chefe da Hyperic LLC, disse, "O PostgreSQL 8.0 nos dá o alto nível de concorrência e performance requerido pelo nosso produto de monitoramento HQ. Nossa equipe avaliou bancos de dados comerciais e de multiplataforma e bancos de dados de código aberto escritos em Java e não foi capaz de encontrar um que satisfazia nossas necessidades. Tendo o suporte nativo ao Windows na versão 8.0 nós podemos empacotar o PostgreSQL junto com o nosso produto e ainda nos beneficiar da sua escalabilidade e performance, assim como da sua licença, que nos permite incluí-lo na nossa distribuição sem compromissos comerciais. O grupo de desenvolvimento do PostgreSQL tem uma merecida reputação de qualidade que ficou evidente desde o primeiro beta público da versão 8.0 que testamos." 
+
+Onde baixar a versão 8.0:
+	Lista de espelhos FTP
+	Bittorrent
+	Instalador Windows (também disponível via Bittorrent)
+	SourceForge (incluindo o instalador Windows)
+
+Contato para obter mais informação:
+	Em português:
+		Diogo de Oliveira Biazus
+		PostgreSQL Brasil
+		(51) 91410130
+		br@postgresql.org
+
+	Ou em inglês:
+		Josh Berkus
+		PostgreSQL Project
+		+1-415-752-2500
+		josh@postgresql.org
+
+Links para obter mais informação sobre PostgreSQL:
+
+Documentação:
+	Documentação Oficial
+	TechDocs
+	General Bits
+
+Drivers:
+	JDBC
+	ODBC
+	.Net
+
+Interfaces Gráficas:
+	pgAdminIII
+	phpPgAdmin
+	pgAccess
+	Lista de outras GUIs
+
+Replicação:
+	Slony-I
+	pgReplicator
+	eRServer
+
+Projetos Relacionados:
+	pgFoundry
+	GBorg
+
+Informação sobre as empresas citadas
+
+Sobre a Fujitsu: A Fujitsu é uma das líderes em soluções de TI e comunicações focadas no cliente para o mercado global. Tecnologias de ponta, plataformas de computação e comunicação de alta confiabilidade, e um conjunto global de expertos em sistemas e serviços colocam a Fujitsu em uma posição única para entregar soluções abrangentes que abrem infinitas possibilidades para o sucesso de seus clientes. Com a sua matriz em Tóquio, a Fujitsu Ltda. (TSE: 6702) anunciou lucros consolidados de 7,7 trilhões de ienes (US$ 45 bilhões) para o ano fiscal que terminou em 31 de março de 2004. Mais informação sobre a Fujitsu está disponível em: http://www.fujitsu.com. Detalhes sobre a iniciativa de suporte ao PostgreSQL da Fujitsu estão disponíveis em: http://fastware.com.au/postgresql.html. Por favor direcione quaisquer perguntas para Liam O'Duibhir, Fujitsu Australia Software Technology , telefone: (61-2) 9452 9068 
+
+Sobre a Hyperic: Hyperic, LLC é uma empresa de tecnologia focada na criação de soluções para gerenciamento de infra-estrutura de TI comercial e de código aberto. O HQ, seu produto principal, é desenvolvido como uma alternativa as caras e desatualizadas plataformas para gerenciamento com uma plataforma de código aberto, escalável, e baseada na web que provê suporte a todas as tecnologias usadas na área de TI hoje em dia. Para obter mais informação entre em contato com press@hyperic.net. 

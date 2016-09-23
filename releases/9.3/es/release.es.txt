@@ -1,0 +1,161 @@
+PostgreSQL 9.3 ha sido Liberado
+===============================
+
+9 de septiembre de 2013: El Grupo Global de Desarrollo de PostgreSQL anuncia
+el lanzamiento de PostgreSQL 9.3, la última versión del líder mundial en sistemas
+de base de datos relacionales de código abierto. Esta versión amplía la fiabilidad
+de PostgreSQL, disponibilidad y capacidad de integración con otras bases de datos. 
+Los usuarios ya están descubriendo que al utilizar la versión 9.3 pueden crear aplicaciones
+que antes no habrían sido posibles.
+
+"PostgreSQL 9.3 ofrece características que como desarrollador de aplicaciones
+puedo utilizar de inmediato: Mejor funcionalidad JSON, indexación de expresiones
+regulares y fácil federación de bases de datos con el conector de datos foráneos de
+Postgres. No tengo ni idea de cómo terminé proyectos sin 9.3," dice Jonathan S. Katz,
+CTO de VenueBook.
+
+Datos foráneos modificables
+----------------------------
+
+En la versión 9.3 los conectores de datos foráneos están habilitados para escrituras,
+lo que permite el intercambio bidireccional de datos entre sistemas. Los complejos
+entornos de TI de hoy en día implican múltiples bases de datos y fuentes de datos
+semi-estructurados, y PostgreSQL le ayuda a integrarlos en una pila coherente. 
+El proyecto también ha lanzado postgres_fdw, un controlador para federación de bases de
+datos, de alto rendimiento, que permite leer y escribir de PostgreSQL a PostgreSQL.
+
+"Los conectores de datos foráneos modificables nos permiten conectar y probar, sin problemas,
+diferentes alternativas de back-end, lo que nos permite abordar diferentes
+necesidades de forma rápida y hacer prototipos de forma inteligente", explica Lee Holloway,
+Co-fundador e Ingeniero Líder en CloudFlare. "Es emocionante concebir y lanzar nuevos almacenes
+de datos (incluyendo nuestros propios experimentos internos escritos en Go) y luego verlos
+leer, escribir, e incluso realizar transacciones entre ellos".
+
+Disponibilidad y confiabilidad mejoradas
+-----------------------------------------
+
+"Postgres ha sido mi opción favorita por su legendaria estabilidad, robustez, fuerte coherencia,
+seguridad, apego a la norma ACID y conformidad con el estándar SQL", dice Pascal Bouchareine,
+director de investigación y desarrollo en Gandi.net. "Estoy especialmente emocionado de saber
+más acerca del failover rápido que viene en 9.3".
+
+Esta nueva versión incluye características para mejorar y extender la conocida confiabilidad
+y disponibilidad de PostgreSQL:
+
+* Sumas de verificación de páginas de datos: ayuda a administradores a detectar rápidamente
+  discos con errores o hardware defectuoso que corrompe los datos.
+* Failover rápido: permite cambiar de maestro a esclavo en cuestión de fracciones de segundo,
+  otorgando disponibilidad de grado carrier.
+* Streaming-only remastering: reconfiguración de réplicas en cascada más fácil y rápida
+  después de un failover.
+
+Características amigables a los desarrolladores
+------------------------------------------------
+
+Tal como con cada lanzamiento anual, PostgreSQL 9.3 incluye muchas características para hacer
+el trabajo con PostgreSQL más fácil, más flexible y más divertido para los desarrolladores de
+aplicaciones, administradores y arquitectos de sistemas. Estas características incluyen:
+
+* Métodos constructores y extractores adicionales para JSON
+* Vistas actualizables automáticas
+* pg_dump en paralelo para acelerar el respaldo de bases de datos muy grandes
+* LATERAL JOINs
+
+Además, PostgreSQL 9.3 permite al usuario definir procesos en segundo plano plano lo que permite
+a los desarrolladores escribir administradores de tareas, manejadores de peticiones, procesos en
+paralelo, herramientas de gestión de colas y otras aplicaciones de ayuda para que PostgreSQL pueda
+trabajar como coordinador de la carga de trabajo. Un ejemplo de esto ya liberada es Mongres,
+un proceso en segundo plano que acepta consultas MongoDB, las interpreta y las pasa a PostgreSQL.
+
+Contactos
+----------
+
+Argentina
+Mariano Reingart
+ar@postgresql.org
+Teléfono: +54 (011) 4450-0716
+http://www.postgresql.org.ar/
+
+Brasil
+Euler Taveira de Oliveira
+br@postgresql.org
+Teléfono: +55 (63) 84594598
+http://www.postgresql.org.br
+
+Chile
+Álvaro Herrera
+alvherre@postgresql.org
+Teléfono: +56-9-74990919
+http://www.postgresql.org.es/
+
+Colombia
+Ricardo Mendoza
+co@postgresql.org
+Teléfono: 57-3164343548
+http://www.postgresql.org.es/
+
+Cuba
+Gilberto Castillo Martínez
+cu@postgresql.org
+Teléfono: +5352881491
+http://postgresql.uci.cu/
+
+República Dominicana
+Edwin Quijada
+do@postgresql.org
+Teléfono: +1-809-471-3172
+Teléfono: +1-809-849-8087
+http://www.postgresql.org.es/
+
+Ecuador
+Jaime Casanova
+ec@postgresql.org
+Teléfono: +593 987171157
+http://www.postgresql.org.es/
+
+Panamá
+Santiago Zárate
+pa@postgresql.org
+Teléfono: +(507) 64271684
+http://www.postgresql.org.es/
+
+Perú
+Ernesto Quiñones
+pe@postgresql.org
+Teléfono: (51)(1)5645424
+http://www.postgresql.org.es/
+
+España
+Emanuel Calvo Franco
+es@postgresql.org
+Teléfono: 0034 637327378
+http://www.postgresql.org.es/
+
+Uruguay
+Fernando Fontana
+uy@postgresql.org
+Teléfono: 59899639046
+http://www.postgresql.org.es/
+
+Enlaces
+--------
+
+* Descargas:
+  http://www.postgresql.org/downloads
+* Dossier de prensa:
+  http://www.postgresql.org/about/press/presskit93
+* Notas de Versión:
+  http://www.postgresql.org/docs/9.3/static/release-9-3.html
+* Lo nuevo en 9.3:
+  https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.3
+
+Acerca de PostgreSQL
+---------------------
+
+PostgreSQL es el sistema de base de datos de código abierto líder, con una comunidad global de miles
+de usuarios y colaboradores y decenas de empresas y organizaciones. El proyecto PostgreSQL se
+basa en más de 25 años de ingeniería, iniciando en la Universidad de California, Berkeley, y tiene un
+ritmo sin precedentes de desarrollo en la actualidad. El conjunto de características maduras de
+PostgreSQL no sólo coincide con los mejores sistemas de bases de datos privativas, sino que los
+supera en funciones de bases de datos avanzadas, extensibilidad, seguridad y estabilidad. Aprenda
+más sobre PostgreSQL y participa en nuestra comunidad en http://www.postgresql.org.

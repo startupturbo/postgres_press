@@ -1,0 +1,9 @@
+Pages are encoded in ISO-8859-2.
+
+&bdquo; and &rdquo; are Polish quote characters (",," and "''").
+If entities are not desired, standard >>"<< in place of them.
+
+I changed the encoding from UTF-8 to ISO-8859-2 since browsers
+seem to use ISO-8859-1 fonts and "stuck in" ISO-8859-2 when
+necessary; which looks rather ugly.  Having ISO-8859-2 encoding
+explicitly does seem to help.

@@ -1,0 +1,97 @@
+08 Noiembrie 2005, Frankfurt, Germania (OpenDBCon):  PostgreSQL Global Development
+Group anunta lansarea PostgreSQL 8.1, consolidandu-si pozitia de cea mai 
+avansata baza de date open-source din lume. Conceputa, realizata si testata
+de catre o comunitate mare si in continua dezvoltare sprijinita de tot mai 
+multe companii prin sponsorizari si suport, versiunea 8.1 va extinde aria 
+de raspandire a aplicatiilor bazate pe PostgreSQL. Noua versiune include 
+imbunatatiri ale performantelor si facilitati SQL avansate care vor permite
+realizarea de data warehouses mai mari, procesari de mare volum si 
+construirea de aplicatii complexe de nivel enterprise.
+
+Aceste facilitati vor mentine tendinta de crestere a gradului de utilizare 
+a PostgreSQL, tendinta remarcata in cazul versiunii anterioare. Versiunea 
+8.0 a fost descarcata de un milion de ori in primele sapte luni, in 
+comparatie cu cele 300,000 descarcari ale versiunii anterioare intr-un 
+interval de timp similar.
+
+"Proiectul in mod clar se bucura de o din ce in ce mai mare recunoastere
+din partea utilizatorilor de baze de date," a spus Lance Obermeyer, 
+Director de Productie la Pervasive Software, unul dintre sponsorii 
+PostgreSQL. "Dat fiind interesul in crestere pentru infrastructura 
+software de tip open source, ne asteptam ca PostgreSQL sa se dezvolte 
+din ce in ce mai mult."
+
+Noi Facilitati Avansate
+--------------------------
+
+Roles: PostgreSQL suporta acum role-uri. Acestea simplifica gestionarea
+unui numar mare de utilizatori si a drepturilor de acces care le revin.
+
+Parametri IN/OUT: functiile PostgreSQL suporta acum parametri de tip 
+IN, OUT si INOUT, ceea ce usureaza dezvoltarea aplicatiilor complexe
+cum ar fi cele de tip J2EE si .NET .
+
+Two-Phase Commit (2PC): asigura tranzactii conforme ACID intre servere 
+diferite.  Aceasta facilitate a fost mult timp ceruta, fiind necesara
+pentru aplicatiile de tip WAN si pentru centrele eterogene de date care 
+folosesc PostgreSQL. 
+
+Performante Imbunatatite
+--------------------------
+
+Imbunatatirea performantelor pentru platformele multiprocesor (SMP): 
+scalabilitatea buffer manager-ului a fost imbunatatita de asa 
+natura incat performantele cresc aproape liniar odata cu cresterea
+numarului de procesoare. Castigul de performanta este semnificativ
+in cazul serverelor 8-way, 16-way, dual-core sau multi-core.
+
+Bitmap Scan: indecsii sunt convertiti dinamic, cand este cazul,
+in bitmap-uri stocate in memorie - ceea ce poate rapidiza de
+pana la douazeci de ori regasirea datelor folosind indecsii in
+cazul cererilor complexe pe tabele foarte mari. De asemenea 
+este simplificata gestionarea datelor deoarece este redusa
+necesitatea crearii de indecsi multi-coloana. 
+
+Table Partitioning: planner-ul este acum capabil sa evite parcurgerea 
+a sectiuni intregi ale tabelelor mari folosind o tehnica denumita
+Constraint Exclusion. Aceasta facilitate imbunatateste performantele 
+si posibilitatile de gestionare a datelor in cazul tabelelor de mari 
+dimensiuni, similar cu ceea ce ofera si alte sisteme de gestiune a
+bazelor de date. 
+
+Shared Row Locking: in ceea ce priveste posibilitatile de locking 
+PostgreSQL suporta acum locking-ul de tip shared row asupra cheilor
+externe, in conditii de acces concurent la date.  Astfel este 
+imbunatatita viteza de insert si update in cazul multor aplicatii 
+OLTP de mare volum de date.
+
+"PostgreSQL 8.1 ofera o imbunatatire semnificativa a performantelor 
+pe serverele noastre de productie cu doua procesoare Opteron,"
+a declarat Merlin Moncure, administrator de baze de date la  
+Reliable Computer Solutions. "Mai exact, este vorba despre o reducere 
+a timpului de executie de aproximativ 20% pentru query-urile simple si 
+de o reducere cu 20% a gradului de incarcare a procesorului, ceea ce 
+imbunatateste performantele serverului cu 20-40% ." 
+
+Noua versiune aduce mai mult de 120 alte imbunatatiri, o parte dintre 
+acestea fiind detaliate aici :
+    http://www.postgresql.org/about/press/presskit81.html.ro
+
+Pentru mai multe informatii puteti contacta:
+
+   Adrian Maier
+   PostgreSQL Regional Contact
+   +40-723-002-097
+   ro@postgresql.org
+
+
+Despre PostgreSQL
+------------------
+PostgreSQL este rezultatul muncii colective a sute de dezvoltatori, 
+vreme de aproximativ douazeci de ani, avandu-si originea la University of
+California din Berkeley. Datorita faptului ca suporta de mult timp un set 
+de facilitati de nivel enterprise incluzand tranzactii, functii stocate, 
+triggere si subcereri, PostgreSQL este utilizat de numeroase companii si 
+agentii guvernamentale cu cerinte inalte. PostgreSQL este distribuit sub 
+licenta BSD, ceea ce permite utilizarea si distribuirea sa gratuita atat 
+pentru aplicatii comericale cat si necomerciale. 

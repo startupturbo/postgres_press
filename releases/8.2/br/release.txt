@@ -1,0 +1,52 @@
+5 de Dezembro de 2006, Washington DC (conferência LISA): O Grupo Global de Desenvolvimento
+do PostgreSQL anuncia hoje o lançamento da versão 8.2 do sistema gerenciador
+de bancos de dados objeto-relacional PostgreSQL. A décima quarta versão
+adiciona recursos, maturidade e a performance necessários aos usuários corporativos,
+além de incluir gerenciabilidade comparável aos SGBDs comerciais líderes de mercado.
+A versão 8.2 deve incentivar ainda mais migrações para o PostgreSQL.
+
+"Essa versão toca em praticamente todos os comandos e utilitário do banco de dados",
+disse o membro do grupo central de desenvolvedores e arquiteto de
+bancos de dados da EnterpriseDB Bruce Momjian.
+"Adiciona sintaxes expandidas, compatíveis com os padrões, interfaces
+solicitadas pela comunidade de usuários, facilitando o uso de todos os
+recursos avançados do PostgreSQL por novos DBAs".
+
+"A Unisys está impressionada com as melhorias significativas na escalabilidade
+e performance do PostgreSQL em sistemas multi-processados de grande escala",
+declara Ali Shadman, vice presidente e gerente de soluções de código aberto
+da Unisys. "A versão 8.2, recentemente lançada, continua com o amadurecimento do PostgreSQL em um sistema de gerenciamento de banco de dados apto a adoção corporativa".
+
+Novas ferramentas e recursos que facilitam o gerenciamento e desenvolvimento com o banco de dados incluem:
+
+Melhorias na performance: a versão 8.2 aumenta em aproximadamente 20%
+a performance geral em sistemas OLTP (processamento online de transações) de grande porte.
+Os usuários podem ganhar ainda mais em eficiência nos sistemas de data warehousing.
+As mudanças incluem ordenamento mais rápido em memória e em disco, melhor aproveitamento de múltiplos processadores, melhor planejamento de consultas com dados particionados, cargas mais velozes de grandes blocos de dados e um grande ganho de performance em junções externas.
+
+Bancos de Dados para Recuperação Imediata: através de uma extensão do recurso
+de Recuperação de Ponto no Tempo (disponível a partir da 8.0), administradores podem facilmente criar cópia tolerante a falha de seu agrupamento de banco de dados.
+
+Criação de índices online:  agora a criação de índices pode ocorrer enquanto
+aplicações gravam dados nas mesmas tabelas, permitindo ajustes de performance sem tempo de espera.
+
+Características do SQL 2003: o PostgreSQL, famoso por seguir padrões,
+adicionou diversas sintaxes para recursos introduzidos na especificação do ANSI SQL 2003, incluindo:
+funções de agregações estatísticas, cláusula VALUE com multiplas linhas, UPDATE RETURNING e agregação com múltiplas colunas.
+
+Recursos avençados, disponibilizados no PostgreSQL 8.2 antes de qualquer outro banco de dados incluem:
+
+Índices Invertidos Genéricos (GIN): suporta um método mais extensível e programável de indexar dados semi-estruturados e documentos.
+
+DTrace: o PostgreSQL foi preparado para o Solaris DTrace e outras ferramentas avançadas de rastreamento através do Framework Genérico de Monitoramento.
+
+"Com data warehouse hospedando tabelas com bilhões de linhas e muitos terabytes de dados, a criação de índices online e as cópias para recuperação imediata são cruciais", disse Theo Schlossnagle, diretor da OmniTI Computer Consulting. "Nós também estamos empolgados com o fato do PostgreSQL ter implementado o DTrace.
+Isso significa que o nosso monitoramento do sistema agora pode incorporar dados específicos sobre o banco de dados levando a resultados muito mais significativos".
+
+Existem muitos outros recursos e melhorias na 8.2 que tornarão os DBAs de PostgreSQL mais produtivos. Veja o kit de imprensa em (http://www.postgresql.org/about/press/presskit82.html.br) para detalhes.
+
+Baixe o PostgreSQL da nossa página de downloads: http://www.postgresql.org/download
+
+Sobre o PostgreSQL: O PostgreSQL é o trabalho coletivo de centenas de desenvolvedores, construído em vinte anos de desenvolvimento que se iniciou na Universidade de Berkeley, na Califórnia. Com seu suporte maduro a um conjunto de recursos de nível corporativo como transações, funções, gatilhos e subconsultas, o PostgreSQL é utilizado por várias empresas e agências do governo. O PostgreSQL é distribuído sob a licença BSD, que permite o uso e distribuição sem custos para uso em 
+aplicações comerciais ou não-comerciais.
+

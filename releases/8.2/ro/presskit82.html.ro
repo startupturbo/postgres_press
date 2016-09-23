@@ -1,0 +1,324 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.2 - Comunicat de Presa
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.2 - Comunicat de Pres&#259;</h1>
+
+<h2>Con&#355;inut</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Comunicatul de Pres&#259;</a><br />
+ &nbsp; <a href="#additional_features">Alte Facilit&#259;&#355;i</a><br />
+ &nbsp; <a href="#download">Download</a><br />
+ &nbsp;	<a href="#docs">Documenta&#355;ie</a><br />
+ &nbsp; <a href="#license">Licen&#355;a</a><br />
+ &nbsp; <a href="#contact">Date de Contact</a><br />
+ &nbsp; <a href="#quoted_companies">Companii Citate</a><br />
+ &nbsp; <a href="#companies">Suport Comercial</a><br />
+ &nbsp; <a href="#additional_software">Software Adi&#355;ional</a><br />
+ &nbsp; <a href="#translations">Versiunea &#238;n Englez&#259;</a><br />
+</p>
+
+<a name="original_release"></a><h2>Comunicatul de Pres&#259;</h2>
+<p><b>5 Decembrie 2006:</b> PostgreSQL Global Development
+Group anun&#355;&#259; lansarea PostgreSQL versiunea 8.2 . 
+Aceasta este a 14-a lansare public&#259; a sistemului de gestiune a bazelor de
+date obiectual-rela&#355;ionale PostgreSQL &#351;i aduce facilit&#259;&#355;i noi,
+maturitate &#351;i performan&#355;e sporite, precum &#351;i posibilit&#259;&#355;i 
+de administrare comparabile cu cele ale sistemelor de baze de date comerciale consacrate. 
+Se a&#351;teapt&#259; ca versiunea 8.2 s&#259; aduc&#259; multe migr&#259;ri
+c&#259;tre PostgreSQL.</p>
+
+<p>"Aceast&#259; nou&#259; versiune cuprinde &#238;mbun&#259;t&#259;&#355;iri la
+nivelul aproape fiec&#259;rei comenzi sau facilit&#259;&#355;i a bazei de date,"
+a spus Bruce Momjian, membru al nucleului de dezvoltatori PostgreSQL &#351;i 
+arhitect de baze de date la EnterpriseDB. "Au fost ad&#259;ugate elemente de
+sintax&#259; extinse &#351;i compatibile cu alte sisteme, precum &#351;i noi 
+interfe&#355;e care permit noilor administratori de baze de date s&#259; 
+foloseasc&#259; din plin facilit&#259;&#355;ile avansate ale PostgreSQL."</p>
+
+<p>"Unisys este &#238;nc&#226;ntat s&#259; observe progresul semnificativ al
+PostgreSQL &#238;n ceea ce prive&#351;te scalabilitatea &#351;i performan&#355;ele 
+pe sisteme multi-procesor," a declarat Ali Shadman, vice-pre&#351;edinte &#351;i
+manager general la Unisys, Open Source Solutions, Systems and Technology. 
+"Noua versiune 8.2 continu&#259; maturizarea PostgreSQL &#238;ntr-un sistem
+de gestiune a bazelor de date perfect capabil de a sus&#355;ine adoptarea de 
+c&#259;tre organiza&#355;ii mari de tip enterprise."</p> 
+
+<p>
+Dintre noile unelte &#351;i facilit&#259;&#355;i, menite s&#259; fac&#259; gestionarea 
+bazelor de date &#351;i dezvoltarea mai u&#351;oare, cele mai importante sunt
+urm&#259;toarele:</p>
+
+<p><b>&#206;mbun&#259;t&#259;&#355;irea Performan&#355;elor:</b> versiunea 8.2 
+&#238;nregistreaz&#259; performan&#355;e cu 20% mai bune &#238;n cadrul sistemelor de test
+de tip OLTP (online transaction processing). Utilizatorii pot beneficia de performan&#355;e
+chiar &#351;i mai bune pentru aplica&#355;iile de tip data warehousing. 
+Schimb&#259;rile const&#259; &#238;n : sortare mai rapid&#259; (at&#226;t &#238;n memorie 
+c&#226;t &#351;i pe disc), scalabilitate mai bun&#259; multi-procesor, planificarea mai
+eficient&#259; &#238;n cazul datelor parti&#355;ionate, outer join-uri cu mult accelerate
+&#351;i &#238;nc&#259;rcarea mai rapid&#259; a datelor &#238;n maniera bulk .</p>
+
+<p><b>Baze de date Warm Standby:</b>  prin extinderea facilit&#259;&#355;ii Point in Time Recovery
+(introdus&#259; de versiunea 8.0), administratorii pot acum s&#259; creeze cu 
+u&#351;urin&#355;&#259; o baz&#259; de date duplicat gata de a fi folosit&#259; imediat &#238;n 
+cazul &#238;n care se &#238;nt&#226;mpl&#259; ceva cu baza de date normal&#259; .</p>
+
+<p><b>Construirea Online a Indec&#351;ilor:</b> construirea indec&#351;ilor poate acum s&#259; 
+aib&#259; loc concomitent cu scrierea &#238;n tabele de c&#259;tre aplica&#355;ii. Astfel, 
+se evit&#259; blocarea tabelelor &#238;n timpul cre&#259;rii de noi indec&#351;i.</p>
+
+<p><b>Facilit&#259;&#355;i SQL:2003 :</b>  PostgreSQL, bine cunoscut pentru conformitatea
+cu standardele, a implementat mai multe facilit&#259;&#355;i introduse de standardul ANSI
+SQL:2003, &#351;i anume: func&#355;ii agregat statistice, expresii VALUE de 
+tip multi-r&#226;nd, UPDATE RETURNING &#351;i agregate pe mai multe coloane.</p>
+
+<p>PostgreSQL 8.2 ofer&#259; o serie de facilit&#259;&#355;i avansate, &#238;naintea 
+altor sisteme de gestiune a bazelor de date :</p>
+
+<p><b>Generalized Inverted Indexes:</b> suport pentru o modalitate mai scalabil&#259;
+&#351;i programabil&#259; de indexare pentru date semi-structurate &#351;i text.</p>
+
+<p><b>DTrace:</b>  PostgreSQL este compatibil acum cu Solaris DTrace &#351;i alte unelte
+avansate de analiz&#259; folosind Generic Monitoring Framework.</p>
+
+<p>"Bazele noastre de date pentru data warehousing con&#355;in tabele cu miliarde de 
+&#238;nregistr&#259;ri &#238;nsum&#226;nd terabytes de date. De aceea
+facilit&#259;&#355;ile de construire online a indec&#351;ilor &#351;i de
+hot-standby sunt cruciale pentru noi," a spus Theo Schlossnagle, cu func&#355;ia
+de Principal la OmniTI Computer Consulting.  "De asemenea ne bucur&#259;m de
+faptul c&#259; PostgreSQL este acum compatibil cu DTrace. Aceasta &#238;nseamn&#259;
+c&#259; analizele noastre sistematice asupra sistemelor vor &#238;ncorpora de acum
+&#351;i informa&#355;ii specifice bazei de date, rezultatele fiind mult mai
+precise."</p>
+
+<p>Versiunea 8.2 aduce multe alte facilit&#259;&#355;i adi&#355;ionale &#351;i 
+&#238;mbun&#259;t&#259;&#355;iri care vor ajuta administratorii de baze de date
+s&#259; fie mai productivi. Pentru detalii consulta&#355;i press kit-ul. 
+PostgreSQL poate fi downloadat <a href="/download">de aici.</a></p>
+
+<p><b>Despre PostgreSQL:</b> PostgreSQL este rezultatul muncii colective a sute de dezvoltatori,
+vreme de aproximativ dou&#259;zeci &#351;i unu de ani, av&#226;ndu-&#351;i originea la University of
+California din Berkeley. Datorit&#259; faptului c&#259; suport&#259; de mult timp un set
+de facilit&#259;&#355;i avansate incluz&#226;nd tranzac&#355;ii, func&#355;ii stocate,
+triggere &#351;i subcereri, PostgreSQL este utilizat de numeroase companii &#351;i
+agen&#355;ii guvernamentale cu cerin&#355;e &#238;nalte. PostgreSQL este distribuit sub
+licen&#355;a BSD, ceea ce permite utilizarea &#351;i distribuirea sa gratuit&#259; at&#226;t
+pentru aplica&#355;ii comerciale c&#226;t &#351;i necomerciale.
+</p>
+
+<a name="additional_features"></a><h2>Alte Facilit&#259;&#355;i</h2>
+&#206;nafar&#259; de nout&#259;&#355;ile prezentate &#238;n comunicatul de pres&#259;,
+versiunea 8.2 aduce peste 200 de noi facilit&#259;&#355;i &#351;i 
+&#238;mbun&#259;t&#259;&#355;iri. C&#226;teva dintre acestea sunt :
+<ul>
+<li>Advisory Locks: permit aplica&#355;iilor s&#259; foloseasc&#259; &#238;n mod direct 
+rapidul sistem de locking al PostgreSQL.</li>
+<li>pg_dump selectiv: permite salvarea consistent&#259; a unui set de tabele, includerea
+&#351;i excluderea fiind specificat&#259; prin expresii regulare.</li>
+<li>Prepared Statements: o nou&#259; interfa&#355;&#259; de administrare &#351;i 
+&#238;mbun&#259;t&#259;&#355;irea performan&#355;elor.</li>
+<li>ISN/ISBN: acest modul, care con&#355;ine tipuri de date pentru identificarea produselor
+&#238;n sistemele de gestiune &#351;i distribu&#355;ie, a fost actualizat pentru a suporta 
+ultimele standarde interna&#355;ionale.</li>
+<li>Criptografie: modulul pgcrypto, care suport&#259; criptografia &#238;n cadrul bazei de
+date, a fost modificat pentru a con&#355;ine cei mai recen&#355;i algoritmi.</li>
+<li>&#206;mbun&#259;t&#259;&#355;iri SQL : noi elemente de sintax&#259;, cum sunt UPDATE RETURNING, DROP IF EXISTS, ON COMMIT, precum &#351;i noi comenzi pentru setarea proprietarului &#351;i a permisiunilor, pentru ca 
+gestionarea obiectelor din baza de date din linia de comand&#259; s&#259; fie c&#226;t mai 
+facil&#259;.</li>
+<li>PSQL Batch Selection: psql suport&#259; acum returnarea &#238;nregistrarilor &#238;n
+seturi, &#238;n loc de a le afi&#351;a &#238;n consol&#259; pe toate de-odat&#259;.</li>
+<li>Refactorizarea ECPG : precompilatorul PostgreSQL pentru limbajul C a fost &#238;n mare
+m&#259;sur&#259; rescris &#351;i au fost ad&#259;ugate noi interfe&#355;e.</li>
+<li>&#206;mbun&#259;t&#259;&#355;iri majore ale modulului TSearch2 : suport pentru UTF-8 , tezaur de cuvinte, suport pentru rescrierea query-urilor &#351;i indexare folosind GIN .</li>
+<li>PL/Python: suport&#259; acum parametri cu nume &#351;i func&#355;ii care returneaz&#259; seturi  de &#238;nregistr&#259;ri.</li>
+</ul>
+<p>Arhitectura extensibil&#259; a PostgreSQL a dus la construirea de c&#259;tre comunitate
+a numeroase extensii precum limbaje procedurale adi&#355;ionale, interfe&#355;e c&#259;tre 
+alte sisteme, noi tipuri de indec&#351;i, unelte de replicare &#351;i multe altele. 
+Aceste extensii &#351;i module sunt disponibile pe site-ul <a href="http://www.pgfoundry.org">pgFoundry</a>  (site-ul oficial al PostgreSQL destinat proiectelor adi&#355;ionale construite
+de c&#259;tre comunitate).
+C&#226;teva dintre proiectele care au &#238;nregistrat recent evolu&#355;ii semnificative
+sunt:</p>
+<ul>
+<li>Full Disjunctions: este un algoritm de join nou. Datorit&#259; Google Summer of Code, 
+PostgreSQL este primul sistem de baze de date care de&#355;ine o implementare a acestuia.</li>
+<li>PGPoolII: PGPool, sponsorizat de guvernul japonez, are acum facilit&#259;&#355;i de load-balancing &#351;i de parti&#355;ionare</li>
+<li>PL/Java: unul dintre cele dou&#259; limbaje procedurale Java este &#238;n &#238;ntregime gata 
+spre a fi folosit &#238;n produc&#355;ie, permi&#355;&#226;nd folosirea &#238;n &#238;ntregime 
+a limbajului Java &#238;n cadrul bazei de date.</li>
+</ul>
+
+<p>
+Lista complet&#259; a nout&#259;&#355;ilor &#351;i &#238;mbun&#259;t&#259;&#355;irilor 
+aduse de versiunea 8.2 poate fi g&#259;sit&#259; &#238;n 
+<a href="/docs/current/static/release.html">Release Notes.</a>
+</p>
+
+<a name="download"></a><h2>Download</h2>
+
+<ul>
+<li><a href="/ftp/latest/">Lista mirror-urilor FTP</a></li>
+<li><a href="/download/bittorrent">Bittorrent</a></li>
+<li><a href="/ftp/binary/v8.2.0/win32/">Installer-ul pentru 
+Windows</a> (disponibil &#351;i prin Bittorrent)</li>
+<li><a href="/ftp/binary/v8.2.0/">Alte binare,
+inclusiv pentru Linux, Mac OSX &#351;i Solaris</a></li>
+<li><a href="/projects/pgsql/">SourceForge</a> (inclusiv
+installer-ul pentru Windows)</li>
+</ul>
+
+<a name="docs"></a><h2>Documenta&#355;ie</h2>
+
+<ul>
+<li><a href="/docs">Documenta&#355;ia Oficial&#259;</a></li>
+<li><a href="/docs/techdocs">TechDocs</a></li>
+<li><a href="/about/press/faq">&#206;ntreb&#259;ri Frecvente</a></li>
+</ul>
+
+<a name="license"></a><h2>Licen&#355;a</h2>
+<p>
+PostgreSQL utilizeaz&#259; <a href="/about/licence">licen&#355;a BSD</a>,
+care necesit&#259; doar s&#259; fie p&#259;strate &#238;n codul surs&#259; 
+informa&#355;iile cu privire la copyright &#351;i licen&#355;iere. Aceast&#259;
+licen&#355;&#259; <a href="http://www.opensource.org/licenses/bsd-license.php"> 
+certificat&#259; OSI</a> este considerat&#259; ca fiind flexibil&#259; &#351;i 
+avantajoas&#259; din punctul de vedere al companiilor, deoarece nu restric&#355;ioneaz&#259;
+utilizarea PostgreSQL &#238;n combina&#355;ie cu aplica&#355;iile comerciale sau
+proprietare. Datorit&#259; licen&#355;ei BSD, suportului tehnic oferit de c&#259;tre 
+numeroase companii &#351;i a faptului c&#259; sursele fac parte din proprietatea 
+public&#259;, PostgreSQL este foarte popular printre produc&#259;torii care doresc 
+s&#259; &#238;nglobeze un motor de baze de date &#238;n cadrul propriilor produse
+software, deoarece nu au a se teme de tarife, de dependen&#355;a de un alt
+produc&#259;tor sau de eventuale modific&#259;ri a termenilor licen&#355;ierii.
+</p>
+
+<a name="contact"></a><h2>Date de Contact</h2>
+
+<p><a href="http://www.postgresql.org">Site-ul web al PostgreSQL (English)</a></p>
+
+<p>Pentru mai multe informa&#355;ii pute&#355;i contacta:<br />
+Adrian Maier<br />
+Bucure&#351;ti<br />
++40-723-002-097<br />
+<a href="mailto:ro@postgresql.org">ro@postgresql.org</a></p>
+
+<p>Pute&#355;i g&#259;si persoanele de contact pentru alte regiuni geografice <a
+href="/about/press/contact">aici.</a></p>
+
+<a name="quoted_companies"></a><h2>Companii Citate</h2>
+<p>"Unisys este &#238;nc&#226;ntat s&#259; observe progresul semnificativ al
+PostgreSQL &#238;n ceea ce prive&#351;te scalabilitatea &#351;i performan&#355;ele 
+pe sisteme multi-procesor," a declarat Ali Shadman, vice-pre&#351;edinte &#351;i
+manager general la Unisys, Open Source Solutions, Systems and Technology. 
+"Noua versiune 8.2 continu&#259; maturizarea PostgreSQL &#238;ntr-un sistem
+de gestiune a bazelor de date perfect capabil de a sus&#355;ine adoptarea de 
+c&#259;tre organiza&#355;ii mari de tip enterprise. PostgreSQL este o component&#259;
+cheie a Unisys Open and Secure Integrated Solution -- OASIS , produs bazat
+pe Java EE care utilizeaz&#259; o serie de tehnologii open source.   
+Unisys inten&#355;ioneaz&#259; s&#259; continue a sprijini activ comunitatea
+PostgreSQL pentru extinderea acestuia &#238;n zona enterprise."</p>
+<p><b>Despre Unisys:</b> <a href="http://www.unisys.com/">Unisys</a> este o
+companie multina&#355;ional&#259; care ofer&#259; servicii &#351;i solu&#355;ii 
+tehnologice.
+Unisys ofer&#259; servicii de consultan&#355;&#259;, integrare de sisteme,
+outsourcing, infrastructur&#259; &#351;i tehnologii pentru servere - av&#238;nd
+scopul de a ajuta clien&#355;ii s&#259; beneficieze de o bun&#259; &#351;i sigur&#259;
+func&#355;ionare a opera&#355;iunilor business-ului. 
+
+Unisys ajut&#259; organiza&#355;iile s&#259; devin&#259; mai sigure prin
+introducerea de vizibilitate &#238;n cadrul opera&#355;iunilor care 
+constituie business-ul clientului.
+Cu ajutorul Unisys 3D Visible Enterprise, impactul diferitelor decizii
+(cu privire la investi&#355;ii, oportunit&#259;&#355;i &#351;i riscuri)
+poate fi observat &#238;n mod vizual. 
+
+<a href="mailto:brian.daly@unisys.com">Brian Daly</a> poate fi contactat
+(numai &#238;n englez&#259;) pentru &#238;ntreb&#259;ri cu privire la 
+acest&#259; versiune. Telefon:  215-986-2214 </p>
+<p>"Noi gestion&#259;m numeroase sisteme critice bazate pe PostgreSQL rul&#226;nd 
+pe Solaris 10. Bazele noastre de date pentru data warehousing con&#355;in tabele
+cu miliarde de &#238;nregistr&#259;ri &#238;nsum&#226;nd terabytes de date. De aceea
+facilit&#259;&#355;ile de construire online a indec&#351;ilor &#351;i de 
+hot-standby sunt cruciale pentru noi," a spus Theo Schlossnagle, cu func&#355;ial
+de Principal la OmniTI Computer Consulting.  "De asemenea ne bucur&#259;m de
+faptul c&#259; PostgreSQL este acum compatibil cu DTrace. Aceasta &#238;nseamn&#259;
+c&#259; analizele noastre sistematice asupra sistemelor vor &#238;ncorpora de acum
+&#351;i informa&#355;ii specifice bazei de date, rezultatele fiind mult mai 
+precise."</p>
+<p><b>Despre OmniTI:</b> <a href="http://omniti.com/home">OmniTI</a>
+ este o companie de consultan&#355;&#259; &#238;n domeniul tehnologiilor Internet 
+localizat&#259; &#238;n Statele Unite - Columbia, Maryland. Av&#226;nd o list&#259;
+de clien&#355;i impresionant&#259;, OmniIT s-a dovedit a fi compania care poate
+oferi solu&#355;ii la cele mai provocatoare probleme de scalabilitate, 
+performan&#355;&#259; &#351;i securitate cu care se confrunt&#259; aplica&#355;iile
+de tip web la ora actual&#259;. 
+Date de contact (numai &#238;n englez&#259;) 877-887-3031 sau info@omniti.com.</p>
+
+<a name="companies"></a><h2>Suport Comercial</h2>
+
+<p>PostgreSQL beneficiaz&#259; de sprijinul a numeroase companii care
+sponsorizeaz&#259; dezvoltatorii, asigur&#259; resurse de g&#259;zduire
+&#351;i ofer&#259; suport financiar. Cei mai importan&#355;i dintre
+sponsori sunt lista&#355;i <a href="/about/sponsors">aici</a>.</p>
+
+<p>Exist&#259; de asemenea o larg&#259; comunitate de <a
+href="/support/professional_support">companii care ofer&#259;
+suport tehnic pentru PostgreSQL</a>, de la consultan&#355;i
+individuali la companii multina&#355;ionale.</p>
+
+Cei care doresc s&#259; sprijine PostgreSQL prin dona&#355;ii pot afla de 
+<a href="/about/donate">aici</a> detalii despre cum pot proceda.
+
+<a name="additional_software"></a><h2>Software Adi&#355;ional</h2>
+<p>
+Pe l&#226;ng&#259; proiectul PostgreSQL propriu-zis mai exist&#259; peste 100 de
+sub-proiecte active care ofer&#259; solu&#355;ii mature pentru replicare, migrare, 
+compatibilitate, interoperabilitate, precum &#351;i unelte grafice de administrare 
+&#351;i proiectare.
+</p>
+
+<h3>Site-uri cu proiecte legate de PostgreSQL</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>Drivere</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://pgfoundry.org/projects/npgsql">.Net</a></li>
+<li><a href="http://search.cpan.org/~dbdpg/DBD-Pg/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<h3>Facilit&#259;&#355;i Avansate</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Geographic Information Server (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Full Text Search (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Business Intelligence/Data Warehousing (Bizgres)</a></li>
+</ul>
+
+<h3>Interfe&#355;e Grafice (GUI)</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin3</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="/docs/techdocs.54">Lista altor aplicatii GUI</a></li>
+</ul>
+
+<h3>Replicare</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>
+
+<a name="translations"></a><h2>Versiunea &#238;n englez&#259; a acestui document</h2>
+
+<p><a href="/about/press/presskit82.html.en">Comunicatul de pres&#259; &#238;n limba englez&#259;</a></p>

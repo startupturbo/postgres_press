@@ -1,0 +1,102 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.3 Press Kit
+<!-- END page_title_block -->
+
+<h2>Obsah</h2>
+<ul>
+<li><a href="#PostgreSQL_8.3_Press_Kit">PostgreSQL 8.3 Press Kit</a>
+<ul>
+<li><a href="#P.C5.AFvodn.C3.AD_tiskov.C3.A1_zpr.C3.A1va">Původní tisková zpráva</a></li>
+<li><a href="#Roz.C5.A1.C3.AD.C5.99en.C3.A1_verze">Rozšířená verze</a></li>
+<li><a href="#Seznam_nov.C3.BDch_funkc.C3.AD">Seznam nových funkcí</a></li>
+<li><a href="#Ke_sta.C5.BEen.C3.AD">Ke stažení</a></li>
+<li><a href="#Licence">Licence</a></li>
+<li><a href="#Kontakt">Kontakt</a></li>
+<li><a href="#Citace_z_korpor.C3.A1tn.C3.AD_sf.C3.A9ry">Citace z korporátní sféry</a></li>
+<li><a href="#Korpor.C3.A1tn.C3.AD_podpora">Korporátní podpora</a></li>
+<li><a href="#Odkazy">Odkazy</a>
+<ul>
+<li><a href="#V.C3.BDvojov.C3.A9_n.C3.A1stroje">Vývojové nástroje</a></li>
+<li><a href="#Replikace_a_horizont.C3.A1ln.C3.AD_.C5.A1k.C3.A1lov.C3.A1n.C3.AD">Replikace a horizontální škálování</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a name="PostgreSQL_8.3_Press_Kit"></a><h1>PostgreSQL 8.3 Press Kit</h1>
+<a name="P.C5.AFvodn.C3.AD_tiskov.C3.A1_zpr.C3.A1va"></a><h2>Původní tisková zpráva</h2>
+<p><b> 4. února 2008, New York, NY:</b>The PostgreSQL Global Development Group dnes představil novou verzi 8.3 jeho vysoce výkonného, objektově-relačního systému správy dat. Tato verze obsahuje rekordní počet nových nebo upravených funkcí, které výrazně zlepšují vlastnosti PostgreSQL a to jak pro aplikační vývojáře, databázové administrátory tak  pro uživatele. Nová verze obsahuje na 280 záplat (patches) od několika desítek vývojářů z 18 zemí celého světa.
+</p><p>&#8222;Pokračující vývoj open source databáze PostgreSQL poskytuje uživatelům možnost používat neproprietární databázi, šetřit finanční prostředky, zvyšovat výkon a produktivitu.  Úspěch PostgreSQL na OpenSolarisu je v zájmu Sunu - jak na našich x64 nebo Sun SPARC serverech, tak i na hardware Dellu, HP a IBM -  poskytujeme široký výběr školení a služeb  zákazníkům, kteří chtějí používat PostgreSQL. Nová verze PostgreSQL je působivá a my povzbuzujeme zákazníky na celém světě, aby se o ni zajímali&#8220;, řekl Rich Green, výkonný viceprezident pro software ve společnosti Sun Microsystems.
+</p><p>Oproti předchozím verzím je výkon 8.3 konzistentnější. V každé transakci, bez ohledu na aktuální zátěž, sedm dní v týdnu, padesát dva týdnů v roce, se uživatel může spolehnout na vysoký výkon prokázaný v nedávno publikovaných výkonnostních testech. A to díky funkcím:
+</p>
+<ul><li> Heap Only Tuples (HOT). která odstraňuje 3/4 režie údržby často aktualizovaných tabulek
+</li><li> Rozložení zátěže způsobené kontrolními body (checkpointy), snižující četnost chcekpointů ve špičce zátěže serveru (Spread Checkpoint)
+</li><li> Samočinně se ladící proces zápisu na disk 
+</li><li> V režimu asynchronního potvrzování jsou znatelně kratší prováděcí časy některých transakcí 
+</li></ul>
+<p>&#8222;PostgreSQL je chytřejší&#8220; řekl Bruce Momjian, člen PostgreSQL core týmu.
+</p><p>PostgreSQL je první open source databází, kde bylo implementováno synchronizované čtení, které významně snižuje I/O v procesu dolování dat. Tým, který se věnuje PostgreSQL na platformě Microsoft Windows, upravil zdrojové kódy tak, že je lze přeložit v prostředí Microsoft Visual C++. To výrazně zvyšuje stabilitu a výkonnost na této platformě a také zpřístupňuje projekt zájemcům z řad vývojářů používajících Windows. Nové možnosti logování a snížení režie kolektoru statistik umožní jednodušší monitorování databázových serverů. 
+</p><p>Zatím každá verze PostgreSQL přinesla nové funkce určené aplikačním vývojářům. 8.3 v této tradici pokračuje a obsahuje:
+</p>
+<ul><li> Podporu SQL/XML dle ANSI standardu včetně možnosti exportu v XML
+</li><li> Integrovaný fulltext: vlastní pokročilý vyhledávací engine TSearch2 byl integrován do jádra, rozšířen o podporu nových slovníků a jazyků a upraven tak, aby jeho konfigurace byla jednodušší
+</li><li> Podporu autentifikace GSSAPI a SSPI
+</li><li> Nové datové typy: UUID, výčty a pole kompozitních typů
+</li></ul>
+<p>&#8222;Na našich serverech PostgreSQL zpracujeme přes 18.000 dotazů za sekundu nad 300GB dat, a tato čísla rostou každý měsíc&#8220;, řekl Gavin Roy, CTO MyYearbook.com (www stránky jedné z nejrychleji rostoucích sociálních sítí). &#8222;Hodně si slibujme od HOT, změn v používání sdílené paměti a integrovaného fulltextu. Předběžné testy ukazují, že 8.3 si lépe poradí se zátěží při rychlejší odezvě. Skutečně se na 8.3 těšíme.&#8220;
+</p><p>V návaznosti na nové funkce jádra bude během cyklu 8.3 dokončeno a uvolněno několik nových rozšiřujících komponent. Jedná se o SMNP podporu, podporu horizontálního škálování v PL/Proxy, pgPoolu2, Bucardu, nové grafické ladící prostředí uložených procedur a škálovatelné poolování spojení nazvané pgBouncer. Tyto komponenty rozšíří již nyní bohatou nabídku dostupného příslušenství.
+</p><p>O dalších nových funkcích a zlepšení těch stávajících 8.3, se dočtete v press kitu.
+</p><p>Stáhněte si PostgreSQL z našich <a href="http://www.postgresql.org/download">stránek</a>.
+</p><p>PostgreSQL: PostgreSQL je kolektivní prací stovek vývojářů stavějících na jednadvacetiletém vývoji, který začal na Státní univerzitě v Kalifornii v Berkeley. Pro svou dlouhodobou podporou funkcí, které očekáváme od enterprise-level transakční databáze a pro svou škálovatelnost, dnes řada nejnáročnějších obchodních organizací a vládních agentur používá PostgreSQL. PostgreSQL je šířen pod licencí BSD, která dovoluje užití a distribuci bez poplatků pro komerční i nekomerční aplikace.  Více se dozvíte na <a href="http://www.postgresql.org">naší domácí stránce</a>.
+</p>
+<a name="Roz.C5.A1.C3.AD.C5.99en.C3.A1_verze"></a><h2>Rozšířená verze</h2>
+<a name="Seznam_nov.C3.BDch_funkc.C3.AD"></a><h2>Seznam nových funkcí</h2>
+<ul><li> <a href="/about/press/features83">Úplný seznam vlastností</a>
+</li><li> <a href="/about/featurematrix">Tabulka vlastností (pouze v anglickém jazyce)</a>
+</li><li> <a href="docs/8.3/static/release-8-3.html">Poznámky k vydání (Release Notes)</a>
+</li></ul>
+<a name="Ke_sta.C5.BEen.C3.AD"></a><h2>Ke stažení</h2>
+<ul><li> <a href="/downloads/ftp/source/v8.3">Zdrojový kód</a>
+</li><li> <a href="downloads/ftp/binary/v8.3">Přeložené instalační soubory pro Windows, Fedoru a Solaris</a>
+</li><li> <a href="http://www.pgfoundry.org">Doplňkové příslušenství</a>
+</li></ul>
+<a name="Licence"></a><h2>Licence</h2>
+<p>PostgreSQL je šířeno pod licencí <a href="http://www.pgsql.cz/index.php/1.03_Pod_jakou_licenc%C3%AD_je_PostgreSQL">BSD</a>. Ta vyžaduje pouze aby licencovaný kód obsahoval příslušný copyright a licenční informace. Tato <a href="http://www.opensource.org/licenses/bsd-license.php">OSI-certifikovaná licence</a> je ceněna pro svou flexibilitu a otevřenost k podnikání (business-friendly), jelikož nijak neomezuje použítí PostgreSQL v komerčních a proprietárních aplikacích. Díky této licenci a skutečnosti, že PostgreSQL není ve vlastnictví žádné firmy (kód je veřejný), je PostgreSQL populární pro řadu dodavatelů řešení, kteří integrují databázi do svých produktů bez obav z licenčních poplatků, možné závislosti na jednom dodavateli a  ze změny licenčních ujednání.
+</p>
+<a name="Kontakt"></a><h2>Kontakt</h2>
+<p>všeobecné dotazy<br />
+Pavel Stěhule<br />
+PostgreSQL Project<br />
++420-724-191-000<br />
+<a href="mailto:press@postgresql.org">mailto:cz@postgresql.org</a>
+</p><p>Lokální kontakt pro konkrétní oblast najdete v <a href="/about/press/contact">našem seznamu mezinárodních kontaktů</a>.
+</p>
+<a name="Citace_z_korpor.C3.A1tn.C3.AD_sf.C3.A9ry"></a><h2>Citace z korporátní sféry</h2>
+<p>&#8222;Pokračující vývoj open source databáze PostgreSQL poskytuje uživatelům možnost používat neproprietární databázi, šetřit finanční prostředky, zvyšovat výkon a produktivitu.  Úspěch PostgreSQL na OpenSolarisu je v zájmu Sunu - jak na našich x64 nebo Sun SPARC serverech, tak i na hardware Dellu, HP a IBM -  poskytujeme široký výběr školení a služeb  zákazníkům, kteří chtějí používat PostgreSQL. Nová verze PostgreSQL je působivá a my povzbuzujeme zákazníky na celém světě, aby se o ni zajímali&#8220;, řekl Rich Green, výkonný viceprezident pro software ve společnosti Sun Microsystems.
+</p><p><b>Kontakt pro Sun Microsystems</b>: Terri Molini, 01-408-404-4976, <a href="mailto:terri.molini@sun.com">mailto:terri.molini@sun.com</a>
+</p><p>&#8222;Na našich serverech PostgreSQL zpracujeme přes 18.000 dotazů za sekundu nad 300GB dat, a tato čísla rostou každý měsíc&#8220;, řekl Gavin Roy, CTO MyYearbook.com (www stránky jedné z nejrychleji rostoucích sociálních sítí). &#8222;Hodně si slibujme od HOT, změn v používání sdílené paměti a integrovaného fulltextu. Předběžné testy ukazují, že 8.3 si lépe poradí se zátěží při rychlejší odezvě. Skutečně se na 8.3 těšíme.&#8220;
+</p><p><b>O MyYearbook.com</b>myYearbook.com  je v USA nejrozšířenější sociální síť na internetu. Jejími uživateli jsou převážně studenti ve věku 12-17 let. MyYearbook má více než 4.7 miliónu uživatelů a každé dva měsíce jeden milión nových uživatelů.  Kontakt <a href="mailto:press@myyearbook.com">mailto:press@myyearbook.com</a>.
+</p>
+<a name="Korpor.C3.A1tn.C3.AD_podpora"></a><h2>Korporátní podpora</h2>
+<p>PostgreSQL se těší podpoře řady firem, které sponzorují vývojáře, poskytují hosting a podporují ji finančně. Největší dlouhodobí sponzoři jsou uvedení na naší  <a href="/about/sponsors">stránce sponzorů vývoje</a>.
+</p><p><a href="/about/donate">Dary a příspěvky</a> jsou s povděkem přijímány.
+</p>
+<a name="Odkazy"></a><h2>Odkazy</h2>
+<p>Projekt PostgreSQL rozšiřuje více než sto aktivních podprojektů, které, v produkční kvalitě, nabízejí řešení pro replikaci, migraci, kompatibilitu, interoperabilitu a nástroje pro návrh a administraci. Většinu těchto dodatečných komponent lze nalézt na <a href="http://projects.postgresql.org">pgFoundry</a> nebo na naší stránce <a href="/download">"Ke stažení"</a>.
+</p>
+<a name="V.C3.BDvojov.C3.A9_n.C3.A1stroje"></a><h3>Vývojové nástroje</h3>
+<ul><li> <a href="http://pgsnmpd.projects.postgresql.org/">pgSNMP</a>
+</li><li> <a href="http://pgfoundry.org/projects/edb-debugger/">PL/pgSQL Debugger</a>
+</li></ul>
+<a name="Replikace_a_horizont.C3.A1ln.C3.AD_.C5.A1k.C3.A1lov.C3.A1n.C3.AD"></a><h3>Replikace a horizontální škálování</h3>
+<ul><li> <a href="http://bucardo.org/">Bucardo</a>
+</li><li> <a href="https://developer.skype.com/SkypeGarage/DbProjects/SkyTools">Skytools</a>
+<ul><li> <a href="https://developer.skype.com/SkypeGarage/DbProjects/PlProxy">PL/Proxy</a>
+</li><li> <a href="https://developer.skype.com/SkypeGarage/DbProjects/pgBouncer">pgBouncer</a>
+</li></ul>
+</li><li> <a href="http://www.slony.info/">Slony-I</a>
+</li><li> <a href="http://pgfoundry.org/projects/pgpool/">pgPool</a>
+</li><li> <a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a>
+</li><li> <a href="http://www.postgresql.at/english/pr_cybercluster_e.html">CyberCluster</a>
+</li></ul>
+

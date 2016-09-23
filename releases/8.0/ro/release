@@ -1,0 +1,31 @@
+NY, NY: 19 Ianuarie 2005 - Grupul PostgreSQL Global Development a lansat versiunea 8.0 a sistemului obiectual-relational de gestiune a bazelor de date PostgreSQL, consolidandu-si pozitia de cea mai avansata baza de date open-source din lume. Aceasta noua versiune include facilitati disponibile doar in cazul celor mai costisitoare sisteme de baze de date si se asteapta sa mareasca substantial gradul de adoptare a PostgreSQL atat de catre utilizatori cat si de catre furnizorii de software.
+
+Pe langa imbunatatirile semnificative aduse in ceea ce priveste scalabilitatea, facilitatile si performantele, PostgreSQL 8.0 demonstreaza viteza de dezvoltare remarcabila a miscarii open-source.  Numeroase companii, cum sunt Red Hat, Fujitsu, Afilias, Software Research Associates, Inc., 2nd Quadrant, si Command Prompt Inc., precum si sute de dezvoltatori individuali, au contribuit la adaugarea unui numar de noi facilitati majore mai mare decat in cazul oricarei versiuni anterioare.
+
+"Suntem increzatori ca aceste facilitati de nivel enterprise vor atrage un numar mare de utilizatori noi.", a spus domnul Takayuki Nakazawa, director al departamentului OSS Database in Software Group de la Fujitsu. "Fujitsu este mandru de sponsorizarea prin contributiile sale la PostgreSQL si de activitatea sa in cadrul comunitatii PostgreSQL. Suntem hotarati sa ajutam PostgreSQL sa devina cel mai bun sistem de gestiune al bazelor de bate."
+
+Noile facilitati sunt:
+
+Suport Nativ pentru Windows:  PostgreSQL functioneaza acum sub Windows in mod nativ, fara a avea nevoie de emulare.  Aceasta asigura performante cu mult mai bune in comparatie cu versiunile anterioare, ceea ce ofera o alternativa atragatoare la sistemele de baze de date proprietare pentru producatorii independenti de software, corporatii si dezvoltatorii de Windows individuali.
+
+Savepoints:  Aceasta facilitate SQL standard permite executarea operatiunii de rollback asupra unor parti specifice din cadrul unei tranzactii, fara a o anula in intregime. Beneficiarii acestei facilitati sunt in primul rand dezvoltatorii de aplicatii business care au nevoie de tranzactii complexe cu recuperare in caz de eroare.
+
+Point in Time Recovery: Aceasta facilitate permite restaurarea completa a datelor pe baza arhivarii automate si continue a log-urilor cu tranzactii.  Reprezinta o alternativa la backup-urile efectuate din ora in ora sau zilnic necesare mai ales in cazul serviciilor pentru care disponibilitatea datelor are un caracter critic.
+
+Tablespaces:  Sunt cruciale pentru administratorii sistemelor de warehousing cu date de ordinul gigabytes-lor. Tablespace-urile permit plasarea tabelelor si a indecsilor de mari dimensiuni pe discuri special destinate, ceea ce imbunatateste viteza de procesare a datelor.
+
+Gestionarea Imbunatatita a Memoriei si a Discurilor:  Utilizarea discului si a memoriei au fost optimizate cu ajutorul algoritmului Adaptive Replacement Cache, a noului background writer, si a noii facilitati vacuum delay.   Acestea vor duce la grade de incarcare mai predictibile si in performante substantial mai consistente in perioadele de utilizare maxima.
+
+Javier Soltero, Arhitect Sef la Hyperic LLC, a declarat "PostgreSQL 8.0 ne ofera nivelul inalt de concurenta si de viteza necesar produsului nostru de monitorizare. Acum cand PostgreSQL 8.0 este suportat nativ sub Windows putem sa il inglobam in produsul nostru si sa beneficiem de scalabilitatea si performantele sale dovedite, precum si de licenta sa care ne permite sa il includem impreuna cu produsul nostru fara a avea obligatii comerciale."
+
+Pe langa numeroasele facilitati inglobate incluse in aceasta noua versiune, PostgreSQL a fost extins datorita dezvoltarii accelerate de componente add-on si optionale.    Solutia de replicare Slony-I si utilitarul pgPool (pentru connection pooling/brokering) sunt deja utilizate pentru crearea de baze de date cu un grad inalt de disponibilitate.   Au fost adaugate sau extinse mai multe limbaje pentru proceduri stocate : PL/Java, PL/PHP and PL/Perl. Data provider-ele Npgsql si PGsqlClient au fost extinse in sprijinul noilor si numerosilor utilizatori Windows.
+
+Puteti consulta lista completa si descrirea noilor facilitati ale PostgreSQL 8.0 accesand pagina noastra continand comunicatul de presa.
+
+Despre PostgreSQL: PostgreSQL este rezultatul muncii colective a sute de dezvoltatori, vreme de aproape douazeci de ani, avandu-si originea la University of California din Berkeley.  Datorita faptului ca suporta de mult timp un set de facilitati de nivel enterprise incluzand tranzactii, functii stocate, triggere si subcereri, PostgreSQL este folosit de catre companii si agentii guvernamentale cu cerinte inalte. PostgreSQL este distribuit sub licenta BSD, ceea ce permite utilizarea si distribuirea sa gratuita atat pentru aplicatii comericale cat si necomerciale.
+
+Pentru a afla mai multe despre PostgreSQL sau pentru a-l descarca, puteti vizita:
+	http://www.postgresql.ro
+	Sau http://www.postgresql.org/
+
+Puteti afla mai multe informatii despre Fujitsu si Hyperic LLC din pagina continand comunicatul de presa.

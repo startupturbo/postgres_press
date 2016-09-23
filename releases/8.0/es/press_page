@@ -1,0 +1,151 @@
+Características Adicionales en Esta Versión
+
+Además de las características principales mencionadas más arriba, hay
+numerosas funcionalidades y nuevas mejoras que serán de gran interés para
+usuarios existentes de PostgreSQL.
+
+Funciones:  Las funciones en PostgreSQL ahora soportan "demarcado de dólar"
+(semejantes a here-docs), que permite evitar las molestas comillas anidadas.
+Además, como beneficio de los nuevos Puntos de Salvaguarda, las funciones
+PL/pgSQL tienen una limitada capacidad de manejar excepciones usando la
+cláusula EXCEPTION.
+
+Diseño de Bases de Datos:  Los administradores de bases de datos pueden
+cambiar los tipos de datos de las columnas directamente en las tablas usando
+ALTER TABLE. Se soporta la declaración de columnas con tipos de datos
+compuestos, en conformidad con el estándar SQL. Todos los objetos de las
+bases de datos soportan CHANGE OWNER.
+
+Importación y Exportación de Datos:  El comando COPY ahora soporta el común
+formato separado por comas (CSV), haciendo más sencillas las transferencias
+de datos desde y hacia otro software.
+
+Mejoras al optimizador:  El optimizador de consultas hará uso de los índices
+para tipos de datos compatibles, reduciendo significativamente la necesidad
+de aplicar conversiones explícitas de valores constantes. Esta versión
+incluye además empleo optimizado de los índices, mejor optimización de
+cláusulas OR, muestreo mejorado en ANALYZE, TRUNCATE más rápido, y mejor
+generación de sentencias preparadas, además de mejoras menores demasiado
+numerosas para ser mencionadas aquí.
+
+Registro:  Los administradores pueden habilitar rotación automática de los
+archivos de registro a través del archivo postgresql.conf. Además, el
+registro es mucho más configurable que antes, incluyendo la posibilidad de
+agregar a cada línea prefijos definidos por el administrador, el registro de
+tipos específicos de sentencias SQL, y la posibilidad de registrar las
+desconexiones.
+
+Respaldos:  La utilidad portable de respaldos, pg_dump, ha sido reescrita
+extensivamente. Esta versión añade algunas capacidades nuevas, como la
+inclusión de las horas de inicio y término, a la vez que se han eliminado
+los problemas restantes de privilegios y dependencias entre los objetos
+respaldados.
+
+Ciertamente, hay otros cambios y mejoras. En las <a href="">Release
+Notes</a> puede ver la lista completa.
+
+Texto Completo de las Citas
+
+"Fujitsu está muy satisfecho con las nuevas características en PostgreSQL
+8.0. Confiamos en que estas características empresariales atraerán un gran
+número de nuevos usuarios a PostgreSQL", afirma Takayuki Nakazawa, Director
+de Bases de Datos de Código Abierto del Grupo de Software de Fujitsu.
+"Fujitsu está orgulloso de su patrocinio sobre las contribuciones a
+PostgreSQL y su trabajo con la comunidad de PostgreSQL. Nuestro compromiso
+es ayudar a hacer de PostgreSQL el Sistema de Gestión de Bases de Datos
+líder".
+
+Javier Soltero, Arquitecto Jefe de Hyperic LLC, señala que "PostgreSQL 8.0 nos
+provee del alto grado de concurrencia y rendimiento necesarios para nuestro
+producto de monitoreo HQ. Nuestro equipo evaluó sistemas de bases de datos Java
+multiplataforma comerciales y de código abierto y no logramos encontrar ninguno
+que cumpliera nuestros requerimientos. Tener ahora un soporte nativo sobre
+Windows implica que podemos incluir a PostgreSQL en nuestro producto y
+beneficiarnos de la comprobada escalabilidad y desempeño de PostgreSQL, así
+como de su licencia, la cual nos permite incorporarlo en nuestra distribución
+sin obligaciones comerciales. El grupo de PostgreSQL tiene una reputación de
+alta calidad bien ganada, la cual ha sido evidente para nosotros desde que
+evaluamos el primer beta de 8.0."
+
+Dónde Obtener 8.0:
+	Lista de Espejos FTP
+	Bittorrent
+	Instalador de Windows (también disponible vía Bittorrent)
+	SourceForge (incluyendo el Instalador de Windows)
+
+Para Obtener Más Información:
+	En Español:
+		Argentina
+		Christian Koruki
+		ar@postgresql.org
+		Teléfono: +54-11-5004-3227
+		http://www.dbas.com.ar/postgresql
+
+		Chile
+		Álvaro Herrera
+		cl@postgresql.org
+		Teléfono: +56-63-210164
+		http://www.postgresql.cl/
+
+		Ecuador
+		Jaime Casanova
+		ec@postgresql.org
+		Celular: 593-09-7538461
+
+	O en Inglés:
+		Josh Berkus
+		PostgreSQL Project
+		+1-415-752-2500
+		josh@postgresql.org
+
+Enlaces a Otros Recursos de PostgreSQL:
+
+Documentación:
+	Documentación Oficial
+	TechDocs
+	General Bits
+
+Controladores:
+	JDBC
+	ODBC
+	.Net
+
+Interfaces Gráficas de Usuario:
+	pgAdminIII
+	phpPgAdmin
+	pgAccess
+	Listado de Otras GUIs
+
+Replicación:
+	Slony-I
+	pgReplicator
+	eRServer
+
+Proyectos Relacionados:
+	pgFoundry
+	GBorg
+
+Información Sobre Compañías Citadas
+
+Sobre Fujitsu: Fujitsu es un proveedor líder de soluciones orientadas al
+consumidor de IT y telecomunicaciones, para el mercado global. Tecnologías
+que marcan pautas, plataformas de alta disponibilidad para computación y
+telecomunicaciones, y un equipo mundial de expertos en sistemas y servicios
+posicionan de forma única a Fujitsu para entregar soluciones completas, que
+abren infinitas posibilidades para el éxito de sus clientes. Radicado en
+Tokyo, Fujitsu Limited (TSE: 6702) reportó ingresos consolidados de 4.7
+millones de millones de yenes (US$45.000 millones) durante el año fiscal que
+terminó el 31 de marzo de 2004. Más información general sobre Fujitsu se
+encuentra disponible en http://www.fujitsu.com. Más detalles sobre la
+iniciativa Fujitsu Supported PostgreSQL (FSP) están disponibles en
+http://fastware.com.au/postgresql.html. Por favor dirija sus inquietudes a
+Liam O'Duibhir, Fujitsu Australia Software Technology
+<liamod@fast.fujitsu.com.au>, teléfono (61-2) 9452 9068 (sólo inglés).
+
+Sobre Hyperic: Hyperic, LLC es un proveedor de tecnología enfocado en
+entregar soluciones para manejar infraestructura IT comercial y de código
+abierto. Su producto estrella HQ apunta a proveer una alternativa a
+plataformas de manejo costosas y anticuadas, a través de una plataforma
+abierta, escalable, basada en web, la cual provee soporte completo para
+todas las tecnologías usadas en IT hoy en día. Para mayor información,
+diríjase a press@hyperic.net (inglés y español).

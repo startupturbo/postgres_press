@@ -1,0 +1,76 @@
+8. Marraskuuta 2005, Frankfurt, Saksa (OpenDBCon): PostgreSQL Global Development -ryhmä 
+on julkistanut PostgreSQL tietokantaohjelmiston version 8.1, joka edelleen
+parantaa PostgreSQL:n johtoa maailman edistyksellisimpänä avoimen lähdekoodin tietokantana.
+Uuden version on suunnitellut, rakentanut ja testannut entistä suurempi yhteisö,
+jota on tukenut entistä useampi yritys. Versio 8.1 laajentaa PostgreSQL:n käyttömahdollisuuksia.
+Uusi versio on tehokkaampi ja sisältää SQL ominaisuuksia, jotka tukevat entistä laajempia
+tietovarastoja, suurempia transaktiomääriä, sekä hajautetumpaa ympäristöä.
+
+Nämä ominaisuudet tukevat PostgreSQL:n kasvu-uraa, joka pohjautuu edelliseen versioon. 
+Versiota 8.0 on ladattu PostgreSQL:n sivuilta miljoona kertaa ensimmäisten seitsemän kuukauden
+aikana. Vastaavassa ajassa, edellistä versiota oli ladattu 300 000 kertaa. 
+
+"Projekti on selvästi saamassa entistä enemmän tilaa tietokantakäyttäjien mielessä.",
+totesi Lance Obermeyer, Pervasive Softwaren tuotejohtaja, yksi PostgreSQL:n yritystukijoista.
+"Huomioiden yleisen kiinnostuksen kasvun avoimen lähdekoodin ohjelmistoihin, odotamme PostgreSQL:n
+kasvavan vielä lisää."
+
+Uusia ominaisuuksia
+--------------------
+
+Roolit: PostgreSQL tukee nyt rooleja tietokannassa, jonka ansiosta
+on entistä helpompi hallita suuria käyttäjämääriä, joilla on monimutkaisia oikeuksia.
+
+IN/OUT Parametrit:  PostgreSQL funktiot tukevat nyt IN, OUT and INOUT
+parameterejä, jotka merkittävästi helpottavat monimutkaisten J2EE and .NET järjestelmien 
+toteutusta.
+
+Two-Phase Commit (kaksivaiheinen commit) (2PC): Kauan PostgreSQL:ään kaivattu ominaisuus, joka mahdollistaa 
+ACID-yhteensopivat transaktiot laajalti hajautetujen järjestelmien välillä.
+
+Tehokkuus
+----------
+
+Parannettu moniprosessori (SMP) tehokkuus: Version 8.1 puskurin hallintaa
+on parannettu, ja se skaalautuu melkein lineaarisesti prosessorien suhteen. Tästä 
+saadaan merkittävää hyötyä, sekä 8 että 16 ja dual ja multicore prosessorisissa palvelimissa.
+
+Bittikartta skannaus: indeksit muutetaan tarvittaessa bittikartoiksi 
+muistissa, jolla saadaan jopa 20 kertaa nopeampi indeksointi monimutkaisissa, suuria
+tauluja koskevissa kyselyissä. Tämä myös yksinkertaistaa tietokannan hallintaa vähentämällä
+tarvetta useiden sarakkeiden indekseille.
+
+Taulujen partitiointi: Suunnittelija pystyy nyt välttämään suurien taulujen kokonaisten
+osioiden skannauksen käyttämällä tekniikkaa, joka tunnetaan nimellä "Constraint Exclusion". 
+Vastaavasti, kuten joissain tietokantajärjestelmissä käytetty taulujen partitiointi, tämä ominaisuus
+parantaa sekä tietojen hallintaa, että tehokkuutta, useiden gigatavujen tauluissa.
+
+Jaetut rivilukot: PostgreSQL:n "parempi kuin rivilukko", on nyt vielä entistä rinnakkaisempi
+uusien vieraiden avainten jaettujen lukkojen ansiosta. Jaetut lukot parantavat lisäyksien ja päivitysten 
+tehokkuutta monissa OLTP aplikaatioissa, joissa on suuret volyymit.
+
+"PostgreSQL 8.1 on entistä paljon tehokkaampi lähes kaikessa, käyttämissämme tupla-prosessori Opteron
+tuotantoservereissä.", totesi Merlin Moncure, Reliable Computer Solutionsin tietokanta administraattori.
+"Erityisesti olen huomannut, että yksinkertaisiin kyselyihin menee 20% aikaisempaa vähemmän aikaa ja samalla CPU 
+kuorma on 20% entistä pienempi. Tästä seuraa 20-40% vähemmän kuormaa serverille."
+
+Versiossa 8.1 on yli 120 parannusta, joista vain osa on mainittu tässä.
+
+Yhteystiedot
+-------------
+
+Jussi Mikkola
+PostgreSQL Regional Contact
++358 40 830 7561
+fi@postgresql.org
+
+
+PostgreSQL
+-----------
+
+PostgreSQL on satojen kehittäjien yhteistyön tulos. Melkein 20 vuoden kehityksen tulos, 
+joka sai alkunsa Californian Berkeleyn yliopistossa. PostgreSQL on pitkään tukenut enterprise 
+luokan ominaisuuksia, kuten transaktioita, funktioita, triggereitä ja alikyselyjä, ja on siksi 
+käytetty monissa vaativissa yrityskohteissa ja valtion virastoissa. PostgreSQL on lisensioitu BSD 
+lisenssillä, jonka ansiosta sitä saa vapaasti käyttää ja jakaa ilmaiseksi sekä kaupallisiin, 
+että ei kaupallisiin tarkoituksiin.

@@ -1,0 +1,52 @@
+PostgreSQL 8.4版发布
+
+
+2009/07/01，PostgreSQL全球开发组宣布PostgreSQL8.3版发布，这个举措也兑现了PostgreSQL全球开发组对全球最为功能强大的开源数据库的持续快速开发，
+这个版本包含一系列的功能增强用于使数据库管理、查询、数据库编程等比以前更加简单，在8.4版本中多达293处新增或改进，这也给你下一个项目采用PostgreSQL提供了更多的理由。
+
+在PostgreSQL 8.4版本中，更新内容最多的地方是提高管理和监控系统运行的工具或指令。每一个用户都会有他们喜欢的特性，来让每天的PostgreSQL的管理工作更加简单和更有效率。
+
+“我们已使用PostgreSQL有七年了，我们的确很期待8.4版本中的新特性，特别是列级权限控制、分数据库的编码设置、GIN索引的局部匹配以及用户自定义的异常”，来自ZooLoo.com公司的
+技术总监Jeffrey Webster说道，“PostgreSQL允许我们的数据在快速增长后而不必降低数据集成性。”
+
+在这些最引人关注的增强功能之中包括：
+
+ * 以并行方式进行数据恢复，最高可提高至原来8倍速度
+ * 按列进行权限控制，允许对敏感数据进行更加细致的授权控制
+ * 可以针对每一个数据库进行不同编码区分，这尤其在多语言环境下非常有用
+ * 通过pg_migrator功能进行在线快速升级，允许从8.3至8.4升级时而不必会有较长的停机时间
+ * 新的查询监控工具，从而给管理员对查询的运行以更多的参考信息
+
+PostgreSQL 8.4版通过使用ANSI SQL2003标准中的窗口函数、公共表表达式和递归查询使得数据分析更加容易。“这些查询结构的增加充分地展示了PostgreSQL的查询能力，它允许用户在单个
+查询中得出很有意思的结果，而这在以前是不可能实现的，”　来自Truviso公司的创始人Sailesh Krishnamurthy评价道，而对存储过程的增强，如缺省参数和可变数量参数的功能实现，使得
+服务器端的编程更简单和简洁。
+
+新版本也提升了应用程序的性能，来自威斯康星州法院的数据库管理员Kevin Grittner评论道，“PostgreSQL在每一个主要版本中都提升了性能，8.4版本中增加了好几处优化，如半
+联合和反联合查询，它们大大降低了我们查询请求量最多的查询的运行时间。”
+
+这些更新的特性也意味着PostgreSQL 8.4版本将可能服务更多的用户，如OpenStreetMap项目。“当我们计划为OpenStreetMap API开发一个新版本时，很明显我们需要一个世界级的数据库系统，
+它不仅要具备我们需要的一切特性，同时也要在我们的规模快速扩大时也可以运行得很好才行，虽然有很多开源数据库可供选择，很明显，PostgreSQL才是我们的选择。”来自OpenStreetMap
+公司的系统管理员Tom Hughes评价说。
+
+欲了解更多详情可联系： 
+
+何伟平
+电子邮箱：laserhenry@gmail.com
+
+周到京
+电子邮箱：cn@postgresql.org
+移动电话：086 13515513326
+
+中文社区网址：http://www.pgsqldb.org/
+
+
+* PostgreSQL 8.4版本下载地址： http://www.postgresql.org/download/
+
+* PostgreSQL 8.4版本完整特性列表：http://www.postgresql.org/about/press/features84
+
+* PostgreSQL 8.4版本发布声明：http://www.postgresql.org/docs/8.4/static/release.html
+
+* PostgreSQL 8.4版本发布宣传资料(完整版)： http://www.postgresql.org/about/press/presskit84.html
+
+关于POSTGRESQL： PostgreSQL起源于加利福利亚的伯克利大学，经过数百名开发人员超过20年的协同工作开发而成的。自发布以来一直支持企业级事务应用数据库的各种功能
+和具备优秀的可伸缩性，PostgreSQL现被很多要求苛刻的商业客户及政府机构广泛使用。PostgreSQL使用BSD版权进行发布，该版权允许用户完全免费地在商业应用及非商业应用中使用或是分发PostgreSQL，更多详情可浏览：http://www.postgresql.org 网站。

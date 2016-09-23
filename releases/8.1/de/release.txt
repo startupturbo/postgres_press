@@ -1,0 +1,115 @@
+8. November 2005, Frankfurt, Deutschland (OpenDBCon)
+
+Die weltweite PostgreSQL-Entwicklungsgruppe kündigt stolz die Version 
+PostgreSQL 8.1 an, die PostgreSQLs Vorsprung als das am weitesten 
+fortgeschrittene Open-Source Datenbank-Managementsystem noch weiter 
+vergrößert. PostgreSQL 8.1 erweitert die Anwendungsbereiche in der 
+Applikationsentwicklung und wurde von einer großen und wachsenden 
+Community konzipiert, entwickelt und getestet, sowie von einer 
+steigenden Anzahl von Unternehmen gefördert und unterstützt. Die neue 
+Version beinhaltet Leistungsverbesserungen und fortgeschrittene 
+SQL-Features, die sowohl größeren Data-Warehouse-Systemen zugute 
+kommen, als auch bei höheren Transaktionsmengen und komplexeren, 
+verteilten Unternehmenslösungen zum Tragen kommen.
+
+Diese Leistungsmerkmale werden den Trend zur steigenden Verbreitung von 
+PostgreSQL fortsetzen, der mit den vorherigen Versionen eingeläutet 
+wurde. So verzeichnete die Version 8.0 über eine Million Downloads 
+innerhalb der ersten sieben Monate, während es die Vorgänger-Version in 
+einem vergleichbaren Zeitraum auf rund 300.000 brachte.
+
+"Im Bewusstsein von Datenbank-Anwendern hat das Projekt deutlich an 
+Drehmoment gewonnen", so Lance Obermeyer, Produktmanager bei Pervasive 
+Software, einer der PostgreSQL-Sponsoren aus der Wirtschaft. 
+"Angesichts des wachsenden Interesses an Open-Source-basierter 
+Infrastruktur-Software erwarten wir, dass PostgreSQL sogar noch weiter 
+an Fahrt gewinnen wird."
+
+
+Neue fortgeschrittene Datenbank-Features
+----------------------------------------
+
+Rollen: PostgreSQL unterstützt jetzt Benutzer-Rollen, welche die 
+Verwaltung einer großen Zahl von Anwendern mit komplexen und 
+überlappenden Datenbankrechten vereinfachen.
+
+IN/OUT-Parameter: PostgreSQL-Funktionen bieten jetzt IN-, OUT- und
+INOUT-Parameter, welche die Unterstützung komplexer Geschäftslogik in
+J2EE- und .NET-Anwendungen erheblich verbessern.
+
+Zwei-Phasen-Commit (2PC): Lang ersehnt für WAN-Anwendungen und 
+heterogene Datenzentren mit PostgreSQL im Einsatz, erlaubt diese 
+Eigenschaft ACID-konforme Transaktionen über Server an verschiedenen 
+Standorten hinweg.
+
+
+Leistungsverbesserungen
+-----------------------
+
+Verbesserte Multiprozessor (SMP) Leistung: Der Puffer-Manager in 8.1 
+wurde dahingehend verbessert, daß er beinahe linear mit der Anzahl der 
+Prozessoren skaliert. Dies führt zu einem signifikanten 
+Performance-Gewinn bei 8-fach-, 16-fach-, Dual-Core- und 
+Multi-Core-Servern.
+
+Bitmap-Scan: Indizes werden (wo es sinnvoll ist) im Hauptspeicher 
+dynamisch in Bitmaps umgewandelt, was bei komplexen Abfragen gegen sehr 
+große Tabellen zu einer bis zu zwanzig Mal schnelleren Index-Leistung 
+führt. Durch die starke Verringerung des Bedarfs an Mehrspaltenindizes 
+hilft dies auch, die Datenbankverwaltung zu vereinfachen.
+
+Tabellen-Partitionierung: Durch ein Verfahren, das als 
+Beschränkungsauschluss bekannt ist, ist der Abfrageplaner nun in der 
+Lage ganze Bereiche großer Tabellen bei einer Suche auszuklammern. 
+Ähnlich der Tabellen-Partitionierung, die man in anderen 
+Datenbank-Managementsystemen findet, verbessert diese Eigenschaft 
+sowohl die Leistung als auch das Datenmanagement für Tabellen mit einer 
+Größe von mehreren Gigabytes.
+
+Shared Row-Locks: PostgreSQLs bekannter Ansatz "Besser als Row-level 
+Locking" unterstützt jetzt durch die Implementierung von 
+nicht-exklusiven Sperren für Fremdschlüssel einen noch höheren Grad an 
+Parallelität. Diese Art von Sperre verbessert die INSERT- und 
+UPDATE-Leistung in vielen OLTP-Anwendungen mit hohem Datenaufkommen.
+
+"PostgreSQL 8.1 bedeutet in fast jeder Hinsicht einen großen 
+Leistungssprung auf unseren Produktivmaschinen mit 
+Dual-Opteron-Prozessoren.", äußert sich Merlin Moncure, 
+Datenbank-Administrator bei Reliable Computer Solutions. "Im Detail 
+können wir einen Zeitgewinn von 20 Prozent bei einfachen Abfragen 
+beobachten, zusätzlich zur Reduzierung der CPU-Last um 20 Prozent, 
+alles in allem also eine erstaunliche 20- bis 40-prozentige 
+Verbesserung beim Verlauf der Server-Last.
+
+Es gibt über 120 andere Erweiterungen, von denen einige in unserer 8.1
+Pressemappe detaillierter beschrieben werden:
+http://www.postgresql.org/about/press/presskit81.html.de
+
+
+Um mehr über PostgreSQL zu erfahren oder die Software herunterzuladen, 
+besuchen Sie bitte:
+	In Deutsch: http://www.postgresql.de/
+	Oder in Englisch: http://www.postgresql.org/
+
+Deutschland
+Anastasios Hatzis
+de@postgresql.org
+Tel.: +49-163-6919728
+http://www.postgresql.de/
+
+Österreich
+Ewald Geschwinde
+at@postgresql.org
+Mobil: +43-664-4527844
+
+
+PostgreSQL ist das gemeinsame Werk von hunderten Software-Entwicklern 
+und baut auf eine fast 20-jährige Entwicklung, welche an der University 
+of California in Berkeley begann. Aufgrund der langjährigen 
+Unterstützung von umfangreichen Leistungsmerkmalen im 
+Enterprise-Bereich, unter anderem Transaktionen, Funktionen, Trigger 
+und Sub-Queries, wird PostgreSQL heute von vielen der anspruchsvollsten 
+Unternehmen und Behörden eingesetzt. PostgreSQL steht unter der 
+BSD-Lizenz, welche die Nutzung und Distribution ohne Lizenzgebühren 
+erlaubt, sowohl für kommerzielle als auch für nicht-kommerzielle 
+Anwendungen.

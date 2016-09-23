@@ -1,0 +1,183 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.3版发布宣传资料
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.3 版发布宣传资料</h1>
+
+<h2>目录</h2>
+
+<p>
+ &nbsp; <a href="#original_release">新版本发布说明的原文</a><br />
+ &nbsp; <a href="#additional_features">特性列表</a><br />
+ &nbsp; <a href="#download">下载地址</a><br />
+ &nbsp; <a href="#docs">文档</a><br />
+ &nbsp; <a href="#license">版权声明</a><br />
+ &nbsp; <a href="#contact">联系方式</a><br />
+ &nbsp; <a href="#quoted_companies">相关商业公司信息</a><br />
+ &nbsp; <a href="#companies">企业支持</a><br />
+ &nbsp; <a href="#additional_software">其他相关软件</a><br />
+</p>
+
+<a name="original_release"></a><h2>新版本发布说明的原文</h2>
+
+<p><b>2008年2月4日，纽约：</b>  PostgreSQL全球开发组宣布高性能的面向目标的数据库管理系统PostgreSQL8.3版发布。来自18国家和地区的几十名PostgreSQL开发人员为新版本的PostgreSQL贡献了超过280处更新，这个版本的一系列新的和改进的特性，对应用程序设计人员、数据库管理员、数据库用户都极大地增强了可用性。
+</p>
+
+
+<p>
+“开源数据库PostgreSQL持续的发展给了用户一个发布非商业化数据库的选择，可以使用户节约费用、提升性能和提高生产效率。PostgreSQL 8.3版是一个令人印象深刻的新版本，我们鼓励我们世界各地的客户去使用它”， Sun公司的执行副总裁Rich Green先生说道。
+</p>
+
+<p>
+PostgreSQL 8.3版比以前的版本提供了更强大的性能一致性，它保证了一年52周，每周７天，不论是负载高峰时刻还是非高峰时刻，均能提供类似近期在性能测试中表现的一样的高性能。主要的性能增强内容包括：
+</p>
+
+<ul>
+<li>堆内索引技术（HOT)，它对更新频繁的表最多可减少3/4的系统开销。</li>
+<li>负载分布式的检查点功能，减少了检查点功能在高峰负载时的运行次数。</li>
+<li>可自动执行的后台写入程序的自我调节功能。</li>
+<li>对部分事务执行时的异步提交功能可大幅加快响应时间。</li>
+</ul>
+
+<p>
+这些改变也大大地提高了数据库的事务处理的能力，根据不同的工作负载，可提高性能5%至30%之间。
+</p>
+
+<p>
+“PostgreSQL变得更加智能了”，PostgreSQL核心开发组成员Bruce Momjian解释说。
+</p>
+
+<p>
+PostgreSQL是第一个实现同步扫描的开源数据库，该功能极大地减少了数据挖掘时的Ｉ／Ｏ次数。Windows平台的开发组现在已经可以用Visual C++编译PostgreSQL，这也提高了PostgreSQL在Windows平台的稳定性和性能，也使Windows的开发人员更方便参与PostgreSQL的相关项目。新增了新的日志选项和减少了系统状态收集器的开销也使得监控服务器的状态变得更加容易。
+</p>
+<p>
+当然，对应用程序开发人员来说，没有提供很多新特性就不是一个全面更新的PostgreSQL了，新的特性包括：
+</p>
+
+<ul>
+<li>对于SQL/XML标准的支持， 包括XML的导出。</li>
+<li>全文搜索：高级全文搜索工具TSearch2现在已嵌入系统核心中，同时管理更加方便，增加了新的语言和字典。</li>
+<li>GSSAPI和SSPI认证的支持。</li>
+<li>新的数据类型：UUIDs、ENUMs和复合类型的数组。</li>
+</ul>
+
+<p>
+“我们使用PostgreSQL服务器对我们达300G的用户数据库执行每秒超过18000次的查询，并且这些用户数据每月还在上升，”社交类（SNS）网站MyYearbook.com的ＣＴＯ技术总监Gavin Roy说道，“我们对HOT功能、共享缓冲的扫描提升和集成Tsearch索引功能都感觉很兴奋。初步的测试显示8.3版本将提高我们数据库的负载能力，缩短系统响应时间。我们真的很期待新版本的发布。”
+</p>
+
+<p>
+除了很多的新功能外，一些附加的模块也已完善并随着8.3版本的发布而发布1.0版本。这些模块包括SNMP支持、PL/Proxy、pgPool2，以及一个图形化的存储过程调试器Bucardo，还有名为pgBouncer的连接缓冲池。这些模块现在都已可以使用。
+</p>
+
+<p>
+在8.3版本中还有其他一系列辅助功能和改进的地方，这些都使PostgreSQL成为一个更加强大的数据库平台，可浏览相关新闻发布稿以浏览更多细节。
+</p>
+
+<p>
+可从以下网址下载最新版PostgreSQL： <a href="http://www.postgresql.org/download">下载页面</a>。
+</p>
+
+<p>
+关于POSTGRESQL： PostgreSQL起源于加利福利亚的伯克利大学，经过数百名开发人员21年的协同工作开发而成的。自发布以来一直支持企业级事务应用数据库的各种功能
+和具备优秀的可伸缩性，PostgreSQL现被很多要求苛刻的商业客户及政府机构广泛使用。PostgreSQL使用BSD版权进行发布，该版权允许用户完全免费地在商业应用及非商业应用中使用或是分发PostgreSQL，更多详情可浏览：<a href="http://www.postgresql.org">我们的网站</a>。
+</p>
+
+<h2>发布声明的辅助说明部分</h2>
+
+<a name="additional_features"></a><h2>特性列表</h2>
+<p>
+PostgreSQL 8.3版本有一系列全新开发的新特性，为便于浏览按分类别设计了下述页面：
+<ul>
+<li><a href="/about/press/features83">所有特性列表</a></li>
+<li><a href="/about/featurematrix">特性阵列对照表（仅为英文）</a></li>
+<li><a href="/docs/8.3/static/release-8-3.html">发布声明</a></li>
+</ul>
+<a name="download"></a><h2>下载</h2>
+<ul>
+<li><a href="/ftp/source/v8.3">源代码</a></li>
+<li><a href="/ftp/binary/v8.3">已编译好的二进制程序</a>，包括Windows平台、Red Hat Linux平台和Solaris平台</li>
+<li><a href="http://www.pgfoundry.org">其他选装的模块</a></li>
+</ul>
+
+<a name="docs"></a><h2>文档</h2>
+<p>
+HTML格式的文档和man格式的手册随PostgreSQL一起安装， 也可以通过在我们的网站上以交互的方式对<a href="/docs/8.3/interactive">在线帮助文进</a>行随意地浏览、检索或是注释反馈。
+</p>
+
+<a name="license"></a><h2>版权声明</h2>
+<p>
+PostgreSQL 使用<a href="/about/licence">BSD版权</a>，它只要求对有版权的源代码保留其版权和授权的信息即可。
+由于这个经 <a href="http://www.opensource.org/licenses/bsd-license.php">OSI认证的版权</a>不限制PostgreSQL在商业环境和有版权的应用程序中使用，
+因此被公认为是非常有灵活性和对商业应用是友好的。加上有多个公司的支持和源代码归属公共所有，BSD的版权使得PostgreSQL在那些希望在自己的产品里嵌入数据库的厂商中很
+流行，因为他们不用担心费用、嵌入软件的版权锁以及版权条款的改变。
+</p>
+
+<a name="contact"></a><h2>联系方式</h2>
+
+<p><a href="http://www.postgresql.org">PostgreSQL网站首页</a></p>
+
+<p>联系人：<br />
+何伟平<br />
+北京<br />
+<a href="mailto:laserhenry@gmail.com">laserhenry@gmail.com</a><br />
+<br />
+周到京<br />
+合肥<br />
+086013515513326<br />
+<a href="mailto:cn@postgresql.org">cn@postgresql.org</a>
+</p>
+
+<p>要查询特定地区的联系人，可浏览<a href="/about/press/contact">我们的全球联系人员列表。</a></p>
+
+<a name="quoted_companies"></a><h2>相关商业公司信息</h2>
+<p>
+“开源数据库PostgreSQL持续的发展给了用户一个发布非商业化数据库的选择，可以使用户节约费用、提升性能和提高生产效率。Sun公司正致力于在OpenSolaris平台上成功地应用PostgreSQL的工作－－包括在我们所有的X64和Sun SPARC服务器上，当然也包括Dell、HP和IBM公司的硬件－－我们提供使用安装PostgreSQL的各种培训和技术支持。PostgreSQL 8.3版是一个令人印象深刻的新版本，我们鼓励我们世界各地的客户去使用它”， Sun公司的执行副总裁Rich Green先生说道。
+</p>
+<p>
+<b>联系Sun公司</b> （仅英语）: Terri Molini, 01-408-404-4976, terri.molini@sun.com
+</p>
+
+<p>
+“我们使用PostgreSQL服务器对我们达300G的用户数据库执行每秒超过18000次的查询，并且这些用户数据每月还在上升，”社交类（SNS）网站MyYearbook.com的ＣＴＯ技术总监Gavin Roy说道，“我们对HOT功能、共享缓冲的扫描提升和集成Tsearch索引功能都感觉很兴奋。初步的测试显示8.3版本将提高我们数据库的负载能力，缩短系统响应时间。我们真的很期待新版本的发布。”
+</p>
+<p>
+<b>关于MyYearbook.com网站</b>：myYearbook.com网站是互联网上美国最大的主要为十几岁年轻人进行媒体交流的网站之一。近５个月来他们的页面浏览量剧增500%，myYearBook现在已从只为一所高中服务发展到有470万会员，并且现在每两个月就增加100万新会员。联系邮箱：press@myyearbook.com （仅英语）。
+</p>
+
+<a name="companies"></a><h2>企业支持</h2>
+
+<p>
+PostgreSQL获得了一大批公司的支持，他们资助开发人员，提供网上资源以及给予了资金上的支持。一些较大的且长期支持的公司名单列在我们的 <a href="/about/sponsors">开发支持页面。</a>
+</p>
+
+<p>
+还有<a href="/support/professional_support">大量的公司</a>提供从独立顾问到跨国公司的 PostgreSQL 支持。
+</p>
+
+<a href="/about/donate">捐款资助</a> 方式也会被很高兴地接受。
+
+<a name="additional_software"></a><h2>相关链接</h2>
+<p>
+目前除了PostgreSQL自身这个主项目外，还有超过100多个与PostgreSQL相关的子项目，它们均高质量地提供了数据复制、数据迁移、兼容性、协同工作、数据库设计等方面的功能以及图形方式的管理工具，这些均增强了PostgreSQL的功能。大多数的附加模块均列在<a href="http://www.pgfoundry.org">pgFoundry网站</a> 或是我们的 <a href="/download">下载页面。</a>  下面是一些发布声明中提到的模块链接：
+</p>
+
+<h3>开发工具类</h3>
+<ul>
+<li><a href="http://pgsnmpd.projects.postgresql.org/">pgSNMP</a></li>
+<li><a href="http://pgfoundry.org/projects/edb-debugger/">PL/pgSQL 调试器</a></li>
+</ul>
+
+<h3>数据复制和数据集群类</h3>
+
+<ul>
+<li><a href="http://bucardo.org/">Bucardo</a></li>
+<li><a href="https://developer.skype.com/SkypeGarage/DbProjects/SkyTools">Skytools</a>，包括<a href="https://developer.skype.com/SkypeGarage/DbProjects/PlProxy">PL/Proxy</a> 和<a href="https://developer.skype.com/SkypeGarage/DbProjects/PgBouncer">pgBouncer</a></li>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+<li><a href="http://www.postgresql.at/english/pr_cybercluster_e.html">CyberCluster</a></li>
+</ul>
+
+
+
+

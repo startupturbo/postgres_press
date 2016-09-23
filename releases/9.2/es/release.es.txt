@@ -1,0 +1,101 @@
+10 de septiembre de 2012: El Grupo Global de Desarrollo de PostgreSQL anuncia PostgreSQL 9.2, la última versión del líder en bases de datos de código abierto. Desde el anuncio del beta en mayo, los comercializadores y desarrolladores lo han elogiado como un salto importante en rendimiento, escalabilidad y flexibilidad. Se esperan cifras récord de usuarios que migrarán a esta versión.
+
+“PostgreSQL 9.2 se libera con soporte nativo para JSON, índices de cobertura, mejoras de replicación y de desempeño, y muchas otras características. Esperamos esta versión con ansias y la pondremos a disposición de Early Access en cuanto salga al mercado desde la comunidad PostgreSQL”, dice Ines Sombra, Lead Data Engineer, Engine Yard.
+
+Rendimiento y escalabilidad mejorados
+
+Las mejoras en la escalabilidad vertical de PostgreSQL mejoran la utilización eficiente de los recursos de hardware en servidores más potentes. Los avances en gestión de bloqueos, eficiencia en escritura, acceso de sólo índices y en otras operaciones de bajo nivel permiten que PostgreSQL pueda manejar cargas de trabajo de volumen aún mayor.  En números, esto significa:
+
+* Hasta 350.000 consultas de lectura por segundo (más de 4 veces más rápido)
+* Consultas en almacenes de datos con acceso sólo de índices (2-20 veces más rápido)
+* Hasta 14.000 escrituras de datos por segundo (5 veces más rápido)
+* Hasta un 30% de reducción de consumo de energía por la CPU
+
+Además, la adición de replicación en cascada permite a los usuarios procesar lotes más grandes mediante servidores escalados horizontalmente bajo PostgreSQL 9.2.
+
+“NewsBlur, un lector social de noticias, utiliza Postgres para el almacenamiento de millones de sitios web y suscripciones. Sólido y confiable durante años”, dice Samuel Clay, fundador de NewsBlur.com. “Nos mantenemos constantemente a la vanguardia (actualmente con 9.1 y migrando a 9.2 sólo por la replicación en cascada) y todo ha sido satisfactorio desde 8.4”.
+
+Soporte flexible para desarrolladores
+
+La flexibilidad de PostgreSQL se refleja en la diversidad de las organizaciones que lo han adoptado. Por ejemplo, la NASA, la FAA, Chicago Mercantile Exchange e Instagram confían en él para realizar aplicaciones de misión crítica. La versión 9.2 amplía aún más esta flexibilidad mediante la inclusión de soporte para tupos de intervalo y JSON, lo que permite a los desarrolladores usar PostgreSQL de maneras completamente nuevas.
+
+Los tipos de intervalo (range types) permiten a los desarrolladores crear mejores aplicaciones de agendamiento, científicas y financieras. Ningún otro motor SQL implementa esta característica, la cual permite una gestión inteligente de intervalos de tiempo y números.
+
+Con PostgreSQL 9.2, el resultado de una consulta se puede devolver en forma de datos JSON. Combinado con las nuevas extensiones de programación PL/V8 para Javascript y PL/Coffee, y el almacén de llave-valor HStore opcional, los usuarios ahora pueden utilizar PostgreSQL como base de datos de documentos “NoSQL”, manteniendo a la vez la fiabilidad, flexibilidad y rendimiento de PostgreSQL.
+
+“El soporte nativo para JSON en PostgreSQL proporciona un mecanismo eficaz para la creación y el almacenamiento de documentos para APIs web. Utilizamos bibliotecas front-end como jQuery para solicitar datos en estructuras tabulares y de árbol; esta nueva característica hace conveniente la extracción de dichos datos en formato JSON, proveyendo ventajas de rendimiento”, dice Taras Mitran, Arquitecto Senior, IVC Inc.
+
+- Kit de prensa: http://www.postgresql.org/about/press/presskit92
+- Notas de versión: http://www.postgresql.org/documentation/current/static/release-9-2
+- Descargas: http://www.postgresql.org/downloads
+
+Para mayor información, contacte:
+
+Argentina
+Mariano Reingart
+ar@postgresql.org
+Teléfono: +54 (011) 4450-0716
+http://www.postgresql.org.ar/
+
+Brasil
+Euler Taveira de Oliveira
+br@postgresql.org
+Teléfono: +55 (63) 84594598
+http://www.postgresql.org.br
+
+Chile
+Álvaro Herrera
+alvherre@postgresql.org
+Teléfono: +56-9-74990919
+http://www.postgresql.org.es/
+
+Colombia
+Ricardo Mendoza
+co@postgresql.org
+Teléfono: 57-3164343548
+http://www.postgresql.org.es/
+
+Cuba
+Gilberto Castillo Martínez
+cu@postgresql.org
+Teléfono: +5352881491
+http://postgresql.uci.cu/
+
+República Dominicana
+Edwin Quijada
+do@postgresql.org
+Teléfono: +1-809-471-3172
+Teléfono: +1-809-849-8087
+http://www.postgresql.org.es/
+
+Ecuador
+Jaime Casanova
+ec@postgresql.org
+Teléfono: +593 87171157
+http://www.postgresql.org.es/
+
+Panamá
+Santiago Zárate
+pa@postgresql.org
+Teléfono: +(507) 64271684
+http://www.postgresql.org.es/
+
+Perú
+Ernesto Quiñones
+pe@postgresql.org
+Teléfono: (51)(1)5645424
+http://www.postgresql.org.es/
+
+España
+Emanuel Calvo Franco
+es@postgresql.org
+Teléfono: 0034 637327378
+http://www.postgresql.org.es/
+
+Uruguay
+Fernando Fontana
+uy@postgresql.org
+Teléfono: 59899639046
+http://www.postgresql.org.es/
+
+Acerca de PostgreSQL: PostgreSQL es líder entre los gestores de bases de datos de código abierto, y cuenta con una comunidad global de miles de contribuyentes y usuarios, y docenas de compañías y organizaciones. El Proyecto PostgreSQL tiene más de 20 años de ingeniería, desde sus inicios en la Universidad de Berkeley, California, con un ritmo de desarrollo actual sin precedentes. El conjunto de funcionalidades de PostgreSQL no sólo es comparable a los mejores sistemas gestores de datos propietarios, sino que las superan en características avanzadas, extensibilidad, seguridad y estabilidad. Obtenga más información sobre PostgreSQL y participe en nuestra comunidad en http://www.postgresql.org.

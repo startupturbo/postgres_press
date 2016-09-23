@@ -1,0 +1,79 @@
+5 DECEMBRIE 2006, Washington DC (LISA Conference) : PostgreSQL Global Development 
+Group anunta lansarea PostgreSQL versiunea 8.2 . Aceasta este a 14-a lansare publica 
+a sistemului de gestiune a bazelor de date obiectual-relationale PostgreSQL si 
+aduce facilitati noi, maturitate si performante sporite, precum si posibilitati
+de administrare comparabile cu cele ale sistemelor de baze de date comerciale 
+consacrate. Se asteapta ca versiunea 8.2 sa aduca multe migrari catre PostgreSQL.
+
+"Aceasta noua versiune cuprinde imbunatatiri la nivelul aproape fiecarei comenzi sau 
+facilitati a bazei de date," a spus Bruce Momjian, membru al nucleului de dezvoltatori 
+PostgreSQL si arhitect de baze de date la EnterpriseDB. "Au fost adaugate elemente de
+sintaxa extinse si compatibile cu alte sisteme, precum si noi interfete care permit 
+noilor administratori de baze de date sa foloseasca din plin facilitatile avansate 
+ale PostgreSQL."
+
+"Unisys este incintat sa observe progresul semnificativ al PostgreSQL in ceea ce 
+priveste scalabilitatea si performantele pe sisteme multi-procesor," a declarat 
+Ali Shadman, vice-presedinte si manager general la Unisys, Open Source Solutions, 
+Systems and Technology. "Noua versiune 8.2 continua maturizarea PostgreSQL 
+intr-un sistem de gestiune a bazelor de date perfect capabil de a sustine adoptarea 
+de catre organizatii mari de tip enterprise."
+
+Dintre noile unelte si facilitati, menite sa faca gestionarea bazelor de date si 
+dezvoltarea mai usoare, cele mai importante sunt urmatoarele:
+
+Imbunatatirea Performantelor: versiunea 8.2 inregistreaza performante cu 20% mai bune 
+in cadrul sistemelor de test de tip OLTP (online transaction processing). Utilizatorii 
+pot beneficia de performante chiar mai bune pentru aplicatiile de tip data warehousing.
+Schimbarile consta in : sortare mai rapida (atit in memorie, cit si pe disc), 
+scalabilitate mai buna multi-procesor, planificarea mai eficienta in cazul datelor 
+partitionate, outer join-uri cu mult accelerate si incarcarea mai rapida a datelor 
+in maniera bulk .
+
+Baze de date Warm Standby:  prin extinderea facilitatii Point in Time Recovery
+(introdusa de versiunea 8.0), administratorii pot acum sa creeze cu usurinta o 
+baza de date duplicat gata de a fi folosita imediat in cazul in care se 
+intimpla ceva cu baza de date normala .
+
+Construirea Online a Indecsilor:  construirea indecsilor poate acum sa aiba loc 
+concomitent cu scrierea in tabele de catre aplicatii. Astfel, se evita 
+blocarea tabelelor in timpul crearii de noi indecsi.
+
+Facilitati SQL:2003 :  PostgreSQL, bine cunoscut pentru conformitatea cu 
+standardele, a implementat mai multe facilitati introduse de standardul ANSI
+SQL:2003, si anume: functii agregat statistice, expresii VALUE de tip 
+multi-rand, UPDATE RETURNING si agregate pe mai multe coloane.
+
+PostgreSQL 8.2 ofera o serie de facilitati avansate, inaintea altor sisteme 
+de gestiune a bazelor de date :
+
+Generalized Inverted Indexes: suport pentru o modalitate mai scalabila si 
+programabila de indexare pentru date semi-structurate si text.
+
+DTrace:  PostgreSQL este compatibil acum cu Solaris DTrace si alte unelte
+avansate de analiza folosind Generic Monitoring Framework.
+
+"Bazele noastre de date pentru data warehousing contin tabele cu miliarde de
+inregistrari insumind terabytes de date. De aceea facilitatile de construire 
+online a indecsilor si de hot-standby sunt cruciale pentru noi," a spus Theo 
+Schlossnagle, cu functia de Principal la OmniTI Computer Consulting. "De 
+asemenea ne bucuram de faptul ca PostgreSQL este acum compatibil cu DTrace. 
+Aceasta inseamna ca analizele noastre sistematice asupra sistemelor vor 
+incorpora de acum si informatii specifice bazei de date, rezultatele fiind 
+mult mai precise."
+
+Versiunea 8.2 aduce numeroase alte facilitati si imbunatatiri care vor ajuta 
+administratorii de baze de date sa fie mai productivi. Pentru detalii 
+puteti consulta http://www.postgresql.org/about/press/presskit82.html.en 
+PostgreSQL poate fi downloadat de aici: http://www.postgresql.org/download 
+
+DESPRE POSTGRESQL: PostgreSQL este rezultatul muncii colective a sute de 
+dezvoltatori, vreme de aproximativ douazeci si unu de ani, avindu-si originea 
+la University of California din Berkeley. Datorita faptului ca suporta de mult 
+timp un set de facilitati avansate incluzind tranzactii, functii stocate, 
+triggere si subcereri, PostgreSQL este utilizat de numeroase companii si 
+agentii guvernamentale cu cerinte inalte. PostgreSQL este distribuit sub
+licenta BSD, ceea ce permite utilizarea si distribuirea sa gratuita atit
+pentru aplicatii comerciale cit si necomerciale.
+
+

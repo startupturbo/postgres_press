@@ -1,0 +1,133 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.0 - comunicat de presa
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.0 - comunicat de presa</h1>
+
+<p>NY, NY: 19 Ianuarie 2005 - Grupul PostgreSQL Global Development a lansat versiunea 8.0 a sistemului obiectual-relational de gestiune a bazelor de date PostgreSQL, consolidandu-si pozitia de cea mai avansata baza de date open-source din lume. Aceasta noua versiune include facilitati disponibile doar in cazul celor mai costisitoare sisteme de baze de date si se asteapta sa mareasca substantial gradul de adoptare a PostgreSQL atat de catre utilizatori cat si de catre furnizorii de software.</p>
+
+<p>Pe langa imbunatatirile semnificative aduse in ceea ce priveste scalabilitatea, facilitatile si performantele, PostgreSQL 8.0 demonstreaza viteza de dezvoltare remarcabila a miscarii open-source. Numeroase companii, cum sunt Red Hat, Fujitsu, Afilias, Software Research Associates, Inc., 2nd Quadrant, si Command Prompt Inc., precum si sute de dezvoltatori individuali, au contribuit la adaugarea unui numar de noi facilitati majore mai mare decat in cazul oricarei versiuni anterioare.</p>
+
+<p>"Suntem increzatori ca aceste facilitati de nivel enterprise vor atrage un numar mare de utilizatori noi.", a spus domnul Takayuki Nakazawa, director al departamentului OSS Database in Software Group de la Fujitsu. "Fujitsu este mandru de sponsorizarea prin contributiile sale la PostgreSQL si de activitatea sa in cadrul comunitatii PostgreSQL. Suntem hotarati sa ajutam PostgreSQL sa devina cel mai bun sistem de gestiune al bazelor de bate."</p>
+
+<p>Noile facilitati sunt:</p>
+
+<ul>
+<li><b>Suport Nativ pentru Windows</b>: PostgreSQL functioneaza acum sub Windows in mod nativ, fara a avea nevoie de emulare. Aceasta asigura performante cu mult mai bune in comparatie cu versiunile anterioare, ceea ce ofera o alternativa atragatoare la sistemele de baze de date proprietare pentru producatorii independenti de software, corporatii si dezvoltatorii de Windows individuali.</li>
+
+<li><b>Savepoints</b>: Aceasta facilitate SQL standard permite executarea operatiunii de rollback asupra unor parti specifice din cadrul unei tranzactii, fara a o anula in intregime. Beneficiarii acestei facilitati sunt in primul rand dezvoltatorii de aplicatii business care au nevoie de tranzactii complexe cu recuperare in caz de eroare.</li>
+
+<li><b>Point in Time Recovery</b>: Aceasta facilitate permite restaurarea completa a datelor pe baza arhivarii automate si continue a log-urilor cu tranzactii. Reprezinta o alternativa la backup-urile efectuate din ora in ora sau zilnic necesare mai ales in cazul serviciilor pentru care disponibilitatea datelor are un caracter critic.</li>
+
+<li><b>Tablespaces</b>: Sunt cruciale pentru administratorii sistemelor de warehousing cu date de ordinul gigabytes-lor. Tablespace-urile permit plasarea tabelelor si a indecsilor de mari dimensiuni pe discuri special destinate, ceea ce imbunatateste viteza de procesare a datelor.</li>
+
+<li><b>Gestionarea Imbunatatita a Memoriei si a Discurilor</b>: Utilizarea discului si a memoriei au fost optimizate cu ajutorul algoritmului Adaptive Replacement Cache, a noului background writer, si a noii facilitati vacuum delay. Acestea vor duce la grade de incarcare mai predictibile si in performante substantial mai consistente in perioadele de utilizare maxima.</li>
+</ul>
+
+<p>Javier Soltero, Arhitect Sef la Hyperic LLC, a declarat "PostgreSQL 8.0 ne ofera nivelul inalt de concurenta si de viteza necesar produsului nostru de monitorizare. Acum cand PostgreSQL 8.0 este suportat nativ sub Windows putem sa il inglobam in produsul nostru si sa beneficiem de scalabilitatea si performantele sale dovedite, precum si de licenta sa care ne permite sa il includem impreuna cu produsul nostru fara a avea obligatii comerciale."</p>
+
+<p>Pe langa numeroasele facilitati continute in aceasta noua versiune, PostgreSQL a fost extins datorita dezvoltarii accelerate de componente add-on si optionale. Solutia de replicare Slony-I si utilitarul pgPool (pentru connection pooling/brokering) sunt deja utilizate pentru crearea de baze de date cu un grad inalt de disponibilitate. Au fost adaugate sau extinse mai multe limbaje pentru proceduri stocate : PL/Java, PL/PHP and PL/Perl. Data provider-ele Npgsql si PGsqlClient au fost extinse in sprijinul noilor si numerosilor utilizatori Windows.</p>
+
+<p>Puteti consulta lista completa si descrirea noilor facilitati ale PostgreSQL 8.0 accesand pagina noastra continand <a href="/about/press">comunicatul de presa</a>.</p>
+
+<p><b>Despre PostgreSQL</b>: PostgreSQL este rezultatul muncii colective a sute de dezvoltatori, vreme de aproape douazeci de ani, avandu-si originea la University of California din Berkeley. Datorita faptului ca suporta de mult timp un set de facilitati de nivel enterprise incluzand tranzactii, functii stocate, triggere si subcereri, PostgreSQL este folosit de catre companii si agentii guvernamentale cu cerinte inalte. PostgreSQL este distribuit sub licenta BSD, ceea ce permite utilizarea si distribuirea sa gratuita atat pentru aplicatii comericale cat si necomerciale.</p>
+
+<p>Pentru a afla mai multe despre PostgreSQL sau pentru a-l descarca, puteti vizita 
+<a href="http://www.postgresql.org/">http://www.postgresql.ro</a>
+sau <a href="http://www.postgresql.ro/">http://www.postgresql.ro</a>.
+
+<h2>Facilitati Aditionale in Aceasta Versiune</h2>
+
+<p>Alaturi de facilitatile majore descrise mai sus, exista numeroase imbunatatiri si facilitati de interes pentru utilizatorii PostgreSQL deja existenti.</p>
+
+<ul>
+<li><b>Functii</b>:   Acum PostgreSQL permite definirea functiilor utilizand o noua modalitate de marcare a inceputului si sfarsitului functiei (dollar-quoting) care elimina necesitatea de a dubla caracterele apostroaf in cadrul functiei.  In plus, datorita existentei savepoint-urilor, functiile PL/pgSQL pot acum sa trateze anumite tipuri de exceptii cu ajutorul clauzei <code>EXCEPTION</code>.</li>
+
+<li><b>Database Design</b>:  Administratorii de baze de date pot acum sa modifice tipul coloanelor din mers utilizand <code>ALTER TABLE</code>.  Acum este suportata declararea coloanelor folosind tipuri de date compozite - conform standardului SQL.  Toate obiectele bazei de date suporta acum <code>CHANGE OWNER</code>.</li>
+
+<li><b>Importul/Exportul Datelor</b>:  Comanda <code>COPY</code> suporta acum formatul de fisiere CSV (comma separated values), facilitand importul si exportul catre alte produse software.</li>
+
+<li><b>Imbunatatiri ale Optimizatorului</b>:  Query planner-ul si executor-ul pot utiliza acum indecsi pentru tipurile de date compatibile, reducand necesitatea de a face cast-uri explicite pentru valorile constante. Aceasta versiune include de asemenea imbunatatiri la utilizarea indecsilor, optimizare mai buna pentru clauzele OR, esantionare imbunatatita pentru <code>ANALYZE</code>, <code>TRUNCATE</code> mai rapid, si generare mai buna a planurilor de executie pregatite (prepared), la care se adauga multe imbunatatiri punctuale - prea numeroase pentru a le putea aminti pe toate.</li>
+
+<li><b>Logging</b>:  Administratorii pot acum sa activeze reciclarea automata a log-urilor PostgreSQL cu ajutorul optiunilor din fisierul postgresql.conf.  Facilitatile de logging ale PostgreSQL sunt acum mult mai configurabile decat inainte, fiind posibile setarea de catre administrator a formatului prefixelor, scrierea in log a anumitor comenzi SQL si preluarea in log-uri a deconectarilor.</li>
+
+<li><b>Backup</b>:  Utilitarul de backup al PostgreSQL, pg_dump, a fost in mare parte rescris.  Noua versiune aduce facilitati noi. Au fost adaugati timpii de start si de stop, si au fost eliminate o serie de dificultati la restaurarea datelor, dificultati legate de drepturile de acces si de dependinte legate de fisierele backup.</li>
+
+<p>Desigur exista multe alte modificari si imbunatatiri.  Lista completa a acestora se gaseste in <a href="/docs/8.0/static/release.htm">Release Notes</a> .</p>
+
+<h2>Textele Complete ale Citatelor</h2>
+
+<p>"Fujitsu este incantat de noile facilitati ale PostgreSQL 8.0. Suntem increzatori ca aceste facilitati de nivel enterprise vor atrage un numar mare de utilizatori noi.", a spus domnul Takayuki Nakazawa, director al departamentului OSS Database in Software Group de la Fujitsu. "Fujitsu este mandru de sponsorizarea prin contributiile sale la PostgreSQL si de activitatea sa in cadrul comunitatii PostgreSQL. Suntem hotarati sa ajutam PostgreSQL sa devina cel mai bun sistem de gestiune al bazelor de bate."</p>
+
+<p>Javier Soltero, Arhitect Sef la Hyperic LLC, a declarat "PostgreSQL 8.0 ne ofera nivelul inalt de concurenta si de viteza necesar produsului nostru de monitorizare. Echipa noastra a evaluat mai multe sisteme de baze de date multiplatforma comerciale si open-source bazate pe Java, fara a gasi nici o varianta care sa raspunda nevoilor noastre. Acum cand PostgreSQL 8.0 este suportat nativ sub Windows putem sa il inglobam in produsul nostru si sa beneficiem de scalabilitatea si performantele sale dovedite, precum si de licenta sa care ne permite sa il includem impreuna cu produsul nostru fara a avea obligatii comerciale. Grupul PostgreSQL are o binemeritata reputatie in ceea ce priveste calitatea - ceea ce a fost evident pentru noi chiar de la prima versiune 8.0 beta evaluata."</p>
+
+<h2>Download: PostgreSQL 8.0 poate fi descarcat prin:<h2>
+<ul>
+<li><a href="http://wwwmaster.postgresql.org/ftp/latest">Lista FTP Mirrors</a></li>
+<li><a href="http://www.postgresql.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://wwwmaster.postgresql.org/ftp/win32">Windows Installer</a> (disponibil si prin Bittorrent)</li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (inclusiv Windows installer)</li>
+</ul>
+		
+
+<h2>Pentru mai multe informatii puteti contacta:</h2>
+<p>	In romana:<br />
+        Adrian Maier<br />
+        +40-723-002-097<br />
+		ro@postgresql.org</p>
+
+<p>	Sau in engleza:<br />
+		Josh Berkus<br />
+		PostgreSQL Project<br />
+		+1-415-752-2500<br />
+		josh@postgresql.org</p>
+
+<h2>Link-uri catre alte resurse PostgreSQL:</h2>
+
+<h3>Documentatie:</h3>
+<ul>
+	<li><a href="/docs">Documentatia Oficiala</a></li>
+	<li><a href="http://techdocs.postgresql.org">TechDocs</a></li>
+	<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li>
+</ul>
+
+<h3>Drivere:</h3>
+<ul>
+	<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+	<li><a href="http://gborg.postgresql.org/project/psqlodbc/projdisplay.php">ODBC</a></li>
+	<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+</ul>
+
+<h3>Interfete Utilizator Grafice (GUI):</h3>
+<ul>
+	<li><a href="http://www.pgadmin.org/">pgAdminIII</a></li>
+	<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+	<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+	<li><a href="http://techdocs.postgresql.org/guides/GUITools">Lista altor GUI</a></li>
+</ul>
+	
+
+<h3>Replicare:</h3>
+<ul>
+	<li><a href="http://www.slony.info/">Slony-I</a></li>
+	<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+	<li><a href="http://www.erserver.com/">eRServer</a></li>
+</ul>
+	
+
+<h3>Proiecte Legate de PostgreSQL:</h3>
+<ul>
+	<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+	<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+	
+
+<h2>Informatii despre Companiile Citate</h2>
+
+<p><b>Despre Fujitsu</b>: Fujitsu este un furnizor international de solutii IT si comunicatii centrate pe necesitatile clientului. Datorita tehnologiilor, platformelor de calcul si de comunicatie robuste, si datorita echipei de experti raspandite in intreaga lume, Fujitsu reuseste sa asigure solutii complete care deschid noi posibilitati de dezvoltare pentru beneficiari. Cu sediul la Tokyo, Fujitsu Limited (TSE: 6702) a raportat venituri de 4700 miliarde yeni (45 miliarde $) pentru anul fiscal care s-a incheiat la 31 martie 2004. Puteti afla informatii despre Fujitsu accesand <a href="http://www.fujitsu.com">http://www.fujitsu.com</a>. Puteti afla informatii despre initiativa Fujitsu Supported PostgreSQL (FSP) accesand <a href="http://fastware.com.au/postgresql.html">http://fastware.com.au/postgresql.html</a>. De asemenea puteti adresa intrebari (in engleza) catre Liam O'Duibhir, Fujitsu Australia Software Technology <a href="mailto:liamod@fast.fujitsu.com.au">liamod@fast.fujitsu.com.au</a>, telefon (61-2) 9452 9068 (numai in engleza). </a>
+
+<p><b>Despre Hyperic</b>: Hyperic, LLC este un furnizor de solutii pentru gestionarea infrastructurii IT open-source si comerciale. Produsul HQ principal al companiei are drept scop oferirea unei alternative la sistemele scumpe si invechite de management, prin oferirea unei platforme deschise, scalabile si bazate pe tehnologii web, platforma care are suport pentru toate tehnologiile IT utilizate in prezent. Pentru mai multe informatii puteti contacta <a href="mailto:press@hyperic.net">press@hyperic.net</a>.
+
+
+
+

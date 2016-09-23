@@ -1,0 +1,30 @@
+NY, NY: 19. Tammikuuta 2005 - PostgreSQL Global Development -ryhmä on julkaissut PostgreSQL tietokantaohjelmiston version 8.0, joka vahvistaa PostgreSQL:n asemaa maailman edistyneimpänä avoimen lähdekoodin tietokantana. Tämä julkaisu sisältää ominaisuuksia, jotka ovat aiemmin kuuluneet ainoastaan kaikkein kalliimpiin tietokantajärjestelmiin. Tämän julkaisun myötä PostgreSQL tullee olemaan entistä suositumpi sekä yritysten että yksityisten käyttäjien keskuudessa.
+
+Sen lisäksi, että PostgreSQL sisältää parannuksia skaalautuvuudessa, ominaisuuksissa ja suorituskyvyssä, se näyttää myös avoimen lähdekoodin kehityksen nopeuden. Toista tusinaa yritystä, mm. Red Hat, Fujitsu, Afilias, Software Research Associates, Inc., 2nd Quadrant, and Command Prompt Inc, sekä sadat yksityiset kehittäjät ovat tuoneet uusia ominaisuuksia 8.0 versioon enemmän, kuin mihinkään aiempaan PostgreSQL:n versioon.
+
+"Me olemme varmoja, että nämä enterprise-luokan ominaisuudet vetävät puoleensa paljon uusia PostgreSQL käyttäjiä.", sanoi  Takayuki Nakazawa Fujitsun OSS tietokantaohjelmisto ryhmän johtaja. "Fujitsu on ylpeä siitä avusta, jota se on voinut antaa PostgreSQL:n kehittämiseen, sekä toiminnastaan PostgeSQL yhteisössä. Me olemme sitoutuneet auttamaan PostgreSQL yhteisöä tekemään PostgreSQL tietokannasta johtavan tietokantajärjestelmän."
+
+Uusia ominaisuuksia:
+
+Windows tuki: PostgreSQL toimii nyt Windows järjestelmissä, eikä tarvitse enää emulointi kerrosta. Tämä parantaa PostgreSQL:n tehokkuutta merkittävästi Windows järjestelmissä aiempiin versioihin verrattuna. Natiivin tuen ansiosta PostgreSQL on nyt houkutteleva vaihtoehto windows käyttäjille, sekä yrityksille ja ohjelmistojen kehittäjille.
+
+Jatkoaloituskohdat(Savepoints): Tämä SQL-standardin ominaisuus antaa mahdollisuuden palata transaktiossa takaisin päin, peruuttamatta koko transaktiota. Tämä auttaa erityisesti ohjelmistojen kehittäjiä, jotka tarvitsevat monimutkaisia transaktioita ja virheistä palautumista.
+
+Ajan hetkeen palautus: Tämä ominaisuus mahdollistaa tiedon palauttamisen tiettyyn ajanhetkeen käyttämällä jatkuvasti tallennettavia transaktiolokeja. Tämä antaa pitkään etsityn vaihtoehdon tunneittain tai päivittäin tehdyille varmuuskopioille, jotia kriittiset palvelut ovat kaivanneet.
+
+Taulutilat: Elintärkeä ominaisuus ylläpitäjille, jotka hallitsevat suuria, gigatavujen kokoisia tietovarastoja. Taulutilat mahdollistavat taulujen ja indeksien sijoittamisen erillisille levyille tai levypakoille. Tämä parantaa hakujen tehokkuutta.
+
+Parantunut muistinkäsittely ja I/O: Levyn- ja muistinkäsittely on optimoitu käyttäen "Adaptive Replacement Cache algorithmia", uutta taustalla toimivaa kirjoittajaa, sekä uutta viivästettyä siivousta (vacuumia). Näiden ominaisuuksien ansiosta kuorma on entistä paremmin ennustattavissa ja tehokkuus on säännöllisempää kuormapiikeissä. 
+
+Javier Soltero, Hyperic LLC:n pääarkkitehti totesi, "PostgreSQL 8.0 antaa meille hyvän rinnakkaisuuden ja suorituskyvyn, jota meidän HQ seurantajärjestelmämme kaipaa. PostgreSQL:n windows tuki mahdollistaa, että voimme laittaa tietokannan tuotteemme mukaan, ja hyödyntää sen skaalautuvuutta ja tehokkuutta. Ja erityisesti PostgreSQL:n lisenssi mahdollistaa, että voimme liittää sen myös vapaasti jaettaviin tuotteisiimme ilman, että joutuisimme maksamaan siitä."
+
+Sen lisäksi, että tässä versiossa on paljon uusia ominaisuuksia, PostgreSQL on parantunut entistä useampien lisäominaisuuksien ja valinnaisten komponenttien ansiosta. Sekä Slony-I replikointityökalu että pgPool yhteyksien jako ovat molemmat jo käytettyjä ominaisuuksia korkeaa käyttövarmuutta vaativissa järjestelmissä. Useita tallennettuja proseduraalisia kieliä on lisätty tai merkittävästi laajennettu. Näitä on mm.  PL/Java, PL/PHP and PL/Perl, kun taas Npgsql ja PGsqlClient .NET komponentteja on kehitetty erityisesti tukemaan uusia Windows käyttäjiä.
+
+Tutustu kattavaan kuvaukseen uusista 8.0 version ominaisuuksista lehdistösivullamme.
+
+PostgreSQL:  PostgreSQL on satojen kehittäjien lähes 20 vuoden yhteistyön tulos, mikä sai alkunsa Californian Berkeleyn yliopistossa. PostgreSQL on pitkään tukenut enterprise luokan ominaisuuksia, kuten transaktioita, funktioita, herättimiä ja alikyselyjä, ja on siksi käytetty monissa vaativissa yrityskohteissa ja valtion virastoissa. PostgreSQL on lisensioitu BSD lisenssillä, jonka ansiosta sitä saa vapaasti käyttää ja jakaa ilmaiseksi sekä kaupallisiin että ei kaupallisiin tarkoituksiin.
+
+Lisää tietoa PostgreSQL:stä sekä itse ohjelmisto:
+	Englanniksi: http://www.postgresql.org/
+
+Lisää informaatiota Fujitsusta and Hyperic LLC:sta löytyy lehdistösivulta.

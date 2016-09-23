@@ -1,0 +1,279 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.0 Press Kit
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.0 Press Kit</h1>
+
+<p>NY,NY: 19 de enero de 2005 - El Grupo de Desarrollo Global de PostgreSQL ha
+liberado la versi&oacute;n 8.0 del Sistema de Gesti&oacute;n de Bases de Datos
+Objeto-Relacional PostgreSQL, reafirmando su posici&oacute;n como la base de
+datos de c&oacute;digo abierto m&aacute;s avanzada del mundo. Esta
+versi&oacute;n incluye caracter&iacute;sticas antes disponibles solamente en
+los Sistemas de Gesti&oacute;n de Base de Datos propietarios m&aacute;s
+costosos.  Se espera que esta versi&oacute;n aumente de manera sustancial la
+adopci&oacute;n de PostgreSQL por los usuarios finales y proveedores de
+software.</p>
+
+<p>Adem&aacute;s de nuevas caracter&iacute;sticas y mejoras significativas en
+la escalabilidad y desempe&ntilde;o, PostgreSQL 8.0 ejemplifica la velocidad
+inigualable del desarrollo del C&oacute;digo Abierto. M&aacute;s de una docena
+de compa&ntilde;&iacute;as, entre las cuales se incluyen Red Hat, Fujitsu,
+Afilias, Software Research Associates, Inc., 2nd Quadrant y Command Prompt,
+Inc., as&iacute; como cientos de desarrolladores individuales contribuyeron en
+esta versi&oacute;n, a&ntilde;adiendo m&aacute;s funcionalidades a 8.0 que las
+incorporadas en cualquier versi&oacute;n previa.</p>
+
+<p>&#0171;Confiamos en que estas caracter&iacute;sticas empresariales atraer&aacute;n
+un gran n&uacute;mero de nuevos usuarios a PostgreSQL&#0187;, afirma Takayuki
+Nakazawa, Director de Base de Datos de C&oacute;digo Abierto del Grupo de
+Software de Fujitsu. &#0171;Fujitsu est&aacute; orgulloso de su patrocinio sobre las
+contribuciones a PostgreSQL y su trabajo con la comunidad de PostgreSQL.
+Nuestro compromiso es ayudar a hacer de PostgreSQL el Sistema de Gesti&oacute;n
+de Base de Datos l&iacute;der&#0187;.</p>
+
+<p>Las nuevas caracter&iacute;sticas incluyen:</p>
+
+<ul>
+<li><b>Soporte nativo a Windows:</b> PostgreSQL se ejecuta en forma nativa en
+sistemas Windows, sin requerir de una capa de emulaci&oacute;n. Esto
+proporciona una mejora dr&aacute;matica del desempe&ntilde;o con respecto a
+versiones previas y ofrece a los proveedores de software, usuarios corporativos
+y desarrolladores en Windows una alternativa convincente frente a otros
+software de Bases de Datos propietarios.</li>
+
+<li><b>Puntos de Salvaguarda</b> (Savepoints): Esta caracter&iacute;stica del
+est&aacute;ndar SQL permite que partes espec&iacute;ficas de una
+transacci&oacute;n sobre la base de datos sean objeto de un roll back sin
+necesidad de abortar toda la operaci&oacute;n. Esto beneficia a los
+desarrolladores de aplicaciones de negocios que requieren transacciones
+complejas con recuperaci&oacute;n de errores.</li>
+
+<li><b>Recuperaci&oacute;n Puntual</b> (Point in Time Recovery): Esta
+caracter&iacute;stica permite ejecutar una restauraci&oacute;n completa de los
+datos desde los archivos de registro de transacciones que se actualizan de
+manera autom&aacute;tica y continua.  Esta caracter&iacute;stica provee una
+alternativa largamente esperada a los respaldos horarios o diarios en servicios
+cr&iacute;ticos de datos con PostgreSQL.</li>
+
+<li><b>Espacios de Tablas</b> (Tablespaces): &Eacute;sta es una
+caracter&iacute;stica crucial para los administradores de grandes sistemas de
+almac&eacute;n de datos; los espacios de tablas permiten la ubicaci&oacute;n de
+grandes tablas e &iacute;ndices en sus propios discos individuales o en
+arreglos de discos, mejorando de esta forma el desempe&ntilde;o de las
+consultas.</li>
+
+<li><b>Mejoras en el Manejo de la Memoria y E/S</b>: El uso de discos y memoria
+ha sido optimizado mediante el uso del algoritmo de &#0171;Reemplazo Adaptativo de
+Cache&#0187; (ARC), el nuevo escritor en segundo plano y la nueva
+caracter&iacute;stica de retardo de la recolecci&oacute;n de basura (vacuum).
+Esto producir&aacute; cargas m&aacute;s predecibles y un desempe&ntilde;o
+sustancialmente m&aacute;s consistente durante los per&iacute;odos de uso
+intensivo.</li>
+</ul>
+
+<p>Javier Soltero, Arquitecto Jefe de Hyperic LLC, se&ntilde;ala que
+&#0171;PostgreSQL 8.0 nos provee del alto grado de concurrencia y rendimiento
+necesarios para nuestro producto de monitoreo HQ. Tener ahora en PostgreSQL 8.0
+un soporte nativo sobre Windows implica que podemos incluir a PostgreSQL en
+nuestro producto y beneficiarnos de la comprobada escalabilidad y
+desempe&ntilde;o de PostgreSQL, as&iacute; como de su licencia, la cual nos
+permite incluirlo en nuestra distribuci&oacute;n sin obligaciones
+comerciales&#0187;.</p>
+
+<p>Adem&aacute;s de las m&uacute;ltiples caracter&iacute;sticas incorporadas en
+esta versi&oacute;n, PostgreSQL ha sido mejorado mediante el desarrollo
+acelerado de componentes complementarios durante el &uacute;ltimo a&ntilde;o.
+La herramienta de replicaci&oacute;n Slony-I y el utilitario de reserva y
+agenciaci&oacute;n de conexiones PgPool ya se est&aacute;n utilizando en
+granjas de servidores de alta disponibilidad.  Se han a&ntilde;adido o
+extendido ampliamente varios lenguajes para procedimientos almacenados, entre
+los cuales se incluyen <code>PL/Java</code>, <code>PL/PHP</code> y <code>PL/Perl</code>, en tanto que, para un mejor
+soporte a los nuevos usuarios con sistemas Windows, se han ejecutado mejoras a
+los proveedores de datos .NET, Npqsql y PgsqlClient.</p>
+
+<p><b>Acerca de PostgreSQL</b>: PostgreSQL es el trabajo colectivo de cientos
+de desarrolladores, fundamentado en casi 20 a&ntilde;os de desarrollo que se
+iniciaron en la Universidad de California en Berkeley (EUA). Con su extensivo
+soporte a caracter&iacute;sticas de nivel empresarial como transacciones,
+funciones, disparadores y subconsultas, PostgreSQL est&aacute; siendo utilizado
+actualmente por muchos exigentes negocios y agencias de gobierno. PostgreSQL se
+distribuye bajo licencia BSD, la cual permite su uso y distribuci&oacute;n sin
+pago de licencias en aplicaciones tanto comerciales como no comerciales.</p>
+
+<p>Para saber m&aacute;s acerca de PostgreSQL o bajarlo, visite:</p>
+<ul>
+<li><b><a href="http://www.postgresql.cl/">PostgreSQL en Espa&ntilde;ol</a></b></li>
+<li><b><a href="http://www.postgresql.org/">PostgreSQL en Ingl&eacute;s</a></b></li>
+</ul>
+
+<h2>Caracter&iacute;sticas Adicionales en Esta Versi&oacute;n</h2>
+
+<p>Adem&aacute;s de las caracter&iacute;sticas principales mencionadas
+m&aacute;s arriba, hay numerosas funcionalidades y nuevas mejoras que
+ser&aacute;n de gran inter&eacute;s para usuarios existentes de PostgreSQL.</p>
+<ul>
+<li><b>Funciones:</b>  Las funciones en PostgreSQL ahora soportan &#0171;demarcado de
+d&oacute;lar&#0187; (semejantes a here-docs), que permite evitar las molestas
+comillas anidadas.  Adem&aacute;s, como beneficio de los nuevos Puntos de
+Salvaguarda, las funciones <code>PL/pgSQL</code> tienen una limitada capacidad de manejar
+excepciones usando la cl&aacute;usula <code>EXCEPTION</code>.</li>
+
+<li><b>Dise&ntilde;o de Bases de Datos</b>:  Los administradores de bases de
+datos pueden cambiar los tipos de datos de las columnas directamente en las
+tablas usando <code>ALTER TABLE</code>. Se soporta la declaraci&oacute;n de columnas con
+tipos de datos compuestos, en conformidad con el est&aacute;ndar SQL. Todos los
+objetos de las bases de datos soportan <code>CHANGE OWNER</code>.</li>
+
+<li><b>Importaci&oacute;n y Exportaci&oacute;n de Datos</b>:  El comando
+<code>COPY</code> ahora soporta el com&uacute;n formato separado por comas
+(CSV), haciendo m&aacute;s sencillas las transferencias de datos desde y hacia
+otro software.</li>
+
+<li><b>Mejoras al optimizador</b>:  El optimizador de consultas har&aacute; uso
+de los &iacute;ndices para tipos de datos compatibles, reduciendo
+significativamente la necesidad de aplicar conversiones expl&iacute;citas de
+valores constantes. Esta versi&oacute;n incluye adem&aacute;s empleo optimizado
+de los &iacute;ndices, mejor optimizaci&oacute;n de cl&aacute;usulas OR,
+muestreo mejorado en <code>ANALYZE</code>, <code>TRUNCATE</code> m&aacute;s
+r&aacute;pido, y mejor generaci&oacute;n de sentencias preparadas,
+adem&aacute;s de mejoras menores demasiado numerosas para ser mencionadas
+aqu&iacute;.</li>
+
+<li><b>Registro</b>:  Los administradores pueden habilitar rotaci&oacute;n
+autom&aacute;tica de los archivos de registro a trav&eacute;s del archivo
+postgresql.conf. Adem&aacute;s, el registro es mucho m&aacute;s configurable
+que antes, incluyendo la posibilidad de agregar a cada l&iacute;nea prefijos
+definidos por el administrador, el registro de tipos espec&iacute;ficos de
+sentencias SQL, y la posibilidad de registrar las desconexiones.</li>
+
+<li><b>Respaldos</b>:  La utilidad portable de respaldos, pg_dump, ha sido
+reescrita extensivamente. Esta versi&oacute;n a&ntilde;ade algunas capacidades
+nuevas, como la inclusi&oacute;n de las horas de inicio y t&eacute;rmino, a la
+vez que se han eliminado los problemas restantes de privilegios y dependencias
+entre los objetos
+respaldados.</li>
+</ul>
+
+Ciertamente, hay otros cambios y mejoras. En las <a
+href="http://www.postgresql.org/docs/8.0/static/release.htm#RELEASE-8-0">Release Notes</a> puede ver la lista
+completa.
+
+<h2>Texto Completo de las Citas</h2>
+
+<p>&#0171;Fujitsu est&aacute; muy satisfecho con las nuevas caracter&iacute;sticas en
+PostgreSQL 8.0. Confiamos en que estas caracter&iacute;sticas empresariales
+atraer&aacute;n un gran n&uacute;mero de nuevos usuarios a PostgreSQL&#0187;, afirma
+Takayuki Nakazawa, Director de Bases de Datos de C&oacute;digo Abierto del
+Grupo de Software de Fujitsu.  &#0171;Fujitsu est&aacute; orgulloso de su patrocinio
+sobre las contribuciones a PostgreSQL y su trabajo con la comunidad de
+PostgreSQL. Nuestro compromiso es ayudar a hacer de PostgreSQL el Sistema de
+Gesti&oacute;n de Bases de Datos l&iacute;der&#0187;.</p>
+
+<p>Javier Soltero, Arquitecto Jefe de Hyperic LLC, se&ntilde;ala que
+&#0171;PostgreSQL 8.0 nos provee del alto grado de concurrencia y rendimiento
+necesarios para nuestro producto de monitoreo HQ. Nuestro equipo evalu&oacute;
+sistemas de bases de datos Java multiplataforma comerciales y de c&oacute;digo
+abierto y no logramos encontrar ninguno que cumpliera nuestros requerimientos.
+Tener ahora un soporte nativo sobre Windows implica que podemos incluir a
+PostgreSQL en nuestro producto y beneficiarnos de la comprobada escalabilidad y
+desempe&ntilde;o de PostgreSQL, as&iacute; como de su licencia, la cual nos
+permite incorporarlo en nuestra distribuci&oacute;n sin obligaciones
+comerciales. El grupo de PostgreSQL tiene una reputaci&oacute;n de alta calidad
+bien ganada, la cual ha sido evidente para nosotros desde que evaluamos el
+primer beta de 8.0.&#0187;</p>
+
+<h2>D&oacute;nde Obtener 8.0:</h2>
+<ul>
+	<li><a href="http://www.postgresql.org/download/mirrors-ftp">Lista de Espejos FTP</a></li>
+	<li><a href="http://www.postgresql.org/download/bittorrent">Bittorrent</a></li>
+	<li><a href="http://pgfoundry.org/projects/pginstaller/">Instalador de Windows (tambi&eacute;n disponible v&iacute;a Bittorrent)</a></li>
+	<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge (incluyendo el Instalador de Windows)</a></li>
+</ul>
+
+<h2>Para Obtener M&aacute;s Informaci&oacute;n:</h2>
+	<p>En Espa&ntilde;ol:<br />
+		Argentina<br />
+		Christian Kuroki<br />
+		<a href="mailto:ar@postgresql.org">ar at postgresql.org</a><br />
+		Tel&eacute;fono: +54-11-5004-3227<br />
+		http://www.dbas.com.ar/postgresql<br />
+		<br />
+		Chile<br />
+		&Aacute;lvaro Herrera<br />
+		<a href="mailto:cl@postgresql.org">cl at postgresql.org</a><br />
+		Tel&eacute;fono: +56-63-210164<br />
+		http://www.postgresql.cl/<br />
+		<br />
+		Ecuador<br />
+		Jaime Casanova<br />
+		<a href="mailto:ec@postgresql.org">ec at postgresql.org</a><br />
+		Celular: 593-09-7538461<br />
+</p>
+<p>	O en Ingl&eacute;s:<br />
+		Josh Berkus<br />
+		PostgreSQL Project<br />
+		+1-415-752-2500<br />
+		<a href="press@postgresql.org">press at postgresql.org</a>
+	</p>
+
+<h2>Enlaces a Otros Recursos de PostgreSQL:</h2>
+
+<h3>Documentaci&oacute;n:</h3><ul>
+	<li><a href="/docs">Documentaci&oacute;n Oficial</a></li>
+	<li><a href="http://techdocs.postgresql.org">TechDocs</a></li>
+	<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li></ul>
+
+<h3>Controladores:</h3>
+	<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+	<li><a href="http://gborg.postgresql.org/project/psqlodbc/projdisplay.php">ODBC</a></li>
+	<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li></ul>
+
+<h3>Interfaces Gr&aacute;ficas de Usuario:</h3>
+	<ul>
+<li><a href="http://www.pgadmin.org/">pgAdminIII</a></li>
+	<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+	<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+	<li><a href="http://techdocs.postgresql.org/guides/GUITools">Listado de Otras GUIs</a></li></ul>
+
+<h3>Replicaci&oacute;n:</h3></ul>
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://www.erserver.com/">eRServer</a></li>
+</ul>
+
+<h3>Proyectos Relacionados</h3>
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h2>Informaci&oacute;n Sobre Compa&ntilde;&iacute;as Citadas</h2>
+
+<p><b>Sobre Fujitsu</b>: Fujitsu es un proveedor l&iacute;der de soluciones
+orientadas al consumidor de IT y telecomunicaciones, para el mercado global.
+Tecnolog&iacute;as que marcan pautas, plataformas de alta disponibilidad para
+computaci&oacute;n y telecomunicaciones, y un equipo mundial de expertos en
+sistemas y servicios posicionan de forma &uacute;nica a Fujitsu para entregar
+soluciones completas, que abren infinitas posibilidades para el &eacute;xito de
+sus clientes. Radicado en Tokyo, Fujitsu Limited (TSE: 6702) report&oacute;
+ingresos consolidados de 4.7 millones de millones de yenes (US$45.000 millones)
+durante el a&ntilde;o fiscal que termin&oacute; el 31 de marzo de 2004.
+M&aacute;s informaci&oacute;n general sobre Fujitsu se encuentra disponible en
+<a href="http://www.fujitsu.com">fujitsu.com</a>. M&aacute;s detalles sobre la
+iniciativa Fujitsu Supported PostgreSQL (FSP) est&aacute;n disponibles en <a
+href="http://fastware.com.au/postgresql.html">FASTWare</a>. Por favor dirija
+sus inquietudes a <a href="mailto:liamod@fast.fujitsu.com.au">Liam
+O'Duibhir</a>, Fujitsu Australia Software Technology, tel&eacute;fono (61-2)
+9452 9068 (s&oacute;lo ingl&eacute;s).</p>
+
+<p><b>Sobre Hyperic</b>: Hyperic, LLC es un proveedor de tecnolog&iacute;a
+enfocado en entregar soluciones para manejar infraestructura IT comercial y de
+c&oacute;digo abierto. Su producto estrella HQ apunta a proveer una alternativa
+a plataformas de manejo costosas y anticuadas, a trav&eacute;s de una
+plataforma abierta, escalable, basada en web, la cual provee soporte completo
+para todas las tecnolog&iacute;as usadas en IT hoy en d&iacute;a. Para mayor
+informaci&oacute;n, dir&iacute;jase a <a
+href="mailto:press@hyperic.net">press@hyperic.net</a> (ingl&eacute;s y
+espa&ntilde;ol).</p>

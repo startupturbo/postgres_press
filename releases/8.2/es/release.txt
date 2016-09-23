@@ -1,0 +1,101 @@
+Christian Kuroki          Diogo Biazus           Álvaro Herrera
+Buenos Aires, Argentina   Porto Alegre, Brasil   Valdivia, Chile
++54-11-6560-5785          +55 51 91410130        +56-63-210164
+ar@postgresql.org         br@postgresql.org      cl@postgresql.org
+
+                          César Villanueva
+                          Venezuela
+                          +58-416-6153429
+                          ve@postgresql.org
+
+FOR RELEASE 22:00 DECEMBER 5
+
+Washington, D.C., EUA, 5 de diciembre, 2006 (Conferencia LISA): El Grupo
+Global de Desarrollo de PostgreSQL anuncia hoy el lanzamiento de la
+versión 8.2 del sistema de manejo objeto-relacional de bases de datos
+PostgreSQL. Este 14avo lanzamiento público agrega características,
+madurez y rendimiento requeridos por los usuarios corporativos,
+entregando simplicidad de manejo comparable a los sistemas líderes de
+manejo de bases de datos. Se espera que la versión 8.2 conduzca a aún
+más migraciones hacia PostgreSQL.
+
+"En esta nueva versión se modifica casi cada una de las órdenes y
+facilidades del sistema", dice Bruce Momjiam, miembro del grupo central
+de desarrollo y arquitecto de bases de datos de EnterpriseDB.  "Agrega
+sintaxis extendida y compatible, e interfaces que han sido solicitadas
+por nuestra comunidad, haciendo más fácil para nuevos DBAs el uso de
+todas las características avanzadas de PostgreSQL."
+
+"Unisys está complacido en observar mejoras significativas en la
+escalabilidad y rendimiento de PostgreSQL en sistemas multiprocesador de
+gran escala", dice Ali Shadman, vicepresidente y gerente general de
+Soluciones de Código Abierto, Sistemas y Tecnología, Unisys.  "La nueva
+versión 8.2 continúa la evolución de PostgreSQL en un sistema gestor de
+bases de datos capaz de adopción empresarial".
+
+Las nuevas herramientas y características que facilitan la gestión de
+bases de datos y el desarrollo incluyen:
+
+Mejoras de Rendimiento: la versión 8.2 mejora el rendimiento en
+alrededor de un 20% en pruebas de sistemas OLTP (procesamiento en línea
+de transacciones) de gran escala.  Los usuarios de sistemas data
+warehouse pueden notar mejoras aún mayores.  Los cambios incluyen
+ordenamientos en memoria y en disco más rápido, mejor escalabilidad en
+sistemas multi-procesador, mejor optimización de consultas sobre datos
+particionados, cargas masivas más rápidas y outer joins
+considerablemente acelerados.
+
+Bases de Datos Warm Standby: una extensión a nuestra característica de
+"recuperación a un punto en el tiempo", introducida en la versión 8.0,
+permite a los administradores crear fácilmente una copia para
+recuperación inmediata (failover) de su cluster de bases de datos.
+
+Construcción en línea de índices: la construcción de índices puede
+ocurrir mientras las aplicaciones escriben a las tablas de la base de
+datos, permitiendo el afinamiento de rendimiento sin afectar la
+disponibilidad.
+
+Características de SQL 2003: PostgreSQL, bien conocido por su
+conformidad a los estándares, ha agregado sintaxis para varias
+características introducidas en la especificación ANSI SQL:2003,
+incluyendo funciones de agregación estadística, sentencias VALUE con
+múltiples registros, UPDATE RETURNING y funciones de agregación de
+múltiples columnas.
+
+
+Las características avanzadas que se ofrecen con PostgreSQL 8.2 antes
+que ningún otro sistema de gestor de bases de datos incluyen:
+
+Índices Invertidos Generalizados: una forma más escalable y programable
+de indexar datos semi-estructurados y texto.
+
+DTrace: PostgreSQL ha sido instrumentado para permitir la trazabilidad a
+través de un marco genérico de monitoreo, usando DTrace en Solaris y
+otras herramientas avanzadas de traza.
+
+"Con instancias de data warehouse con tablas de miles de millones de
+registros y varios terabytes de datos, las capacidades de construcción
+en línea de índices y hot-standby son cruciales", dice Theo
+Schlossnagle, Director en OmniTI Computer Consulting.  "Estamos
+entusiasmados con el hecho de que PostgreSQL sea un ciudadano de primera
+clase de DTrace.  Esto permite que nuestros permanentes esfuerzos de
+análisis de sistemas incorpore datos específicos de las bases de datos,
+llevando a resultados mucho más certeros".
+
+
+Hay decenas de características y mejoras adicionales en 8.2, las cuales
+harán más productivos a los DBAs.  Vea el kit de prensa para mayores
+detalles (http://www.postgresql.org/about/press/presskit82.html.es)
+Descargue PostgreSQL desde nuestra página de descargas:
+http://www.postgresql.org/download
+
+
+ACERCA DE POSTGRESQL: PostgreSQL es el trabajo colectivo de cientos de
+desarrolladores, basándose en veintiún años de desarrollo que empezaron
+en la Universidad de California en Berkeley. Con su soporte de larga
+data de un conjunto de características de nivel empresarial, el cual
+incluye transacciones, funciones, triggers y subconsultas, PostgreSQL
+está siendo usado por muchas de las más exigentes empresas y agencias de
+gobierno.  PostgreSQL se distribuye bajo licencia BSD, lo cual permite
+el uso y distribución sin costo, tanto para aplicaciones comerciales
+como no comerciales.

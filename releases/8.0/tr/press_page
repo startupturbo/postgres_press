@@ -1,0 +1,100 @@
+Bu sürümdeki diðer özellikler
+
+Daha önce belirtilen yeni ana özelliklerin yaný sýra, mevcut PostgreSQL kullanýcýlarýnýn da ilgisini çekecek bazý yeni özellikler ve geliþtirmeler 
+mevcuttur.
+
+    * Fonksiyonlar: PostgreSQL fonksiyonlarý artýk here-docs-style dollar-quoting desteklemektedir. Bu özellik, kullanýcýlarýn karmaþýk ve içiçe 
+týrnaklardan kaçýnmalarýna yardýmcý olmaktadýr. Ayrýca, yeni Savepoint özelliðinin bir yararý olarak, PL/pgSQL fonksiyonlarý EXCEPTION tümceciði 
+kullanarak sýnýrlý exception-handling yeteneðine sahiptir.
+    * Veritabaný tasarýmý: Veritabaný yöneticileri artýk ALTER TABLE kullanarak kolonlarý veri tipleri deðiþtirebilmektedirler. Karma (composite) 
+veri tipleri ile kolonlarýn belirtilmesi SQL standartlarý çerçevesinde desteklemektedir. Tüm veritabaný nesneleri CHANGE OWNER desteklemektedir.
+    * Veri aktarma: COPY komutu artýk çok yaygýn olan CSV (Comma separated value) biçimini desteklemektedir. Bu da veri aktarma iþlemlerini daha 
+kolay hale getirmektedir.
+    * Optimizer geliþtirmesi: Sorgu planlayýcýsý ve çalýþtýrýcýsý artýk uyumlu veri tipleri için index kullanacaktýr; böylece açýktan sabit verilerin 
+cast edilme gereksinimi çok büyük oranda azalacaktýr. Bu sürüm ayný zamanda geliþmiþ index kullanýmý, OR tümceciklerinin daha iyi optimizasyonu, 
+ANALYZE için geliþmiþ örnekleme, daha hýzlý TRUNCATE ve prepared sorgularýn daha iyi oluþturulmasýný ve burada belirtilmeyecek bir çok küçük 
+geliþtirmeler ile birlikte gelmektedir.
+    * Kayýt tutma: Yöneticiler artýk postgresql.conf dosyasý içindeki bir ayar ile PostgreSQL kayýtlarýnýn otomatik olarak rotasyonunu 
+saðlayabilirler. PostgreSQL kayýt tutulmasý daha önce olmadýðý kadar yapýlandýrýlabilir olmuþtur: Yönetici tarafýndan biçimlendirilebilir satýr 
+önekleri, belirli tipteki SQL ifadelerinin kaydedilmesi ve kesilen baðlantýlarýn kaydedilmesi gibi.
+    * Yedekleme:PostgreSQL'in taþýnabilir yedekleme aracý pg_dump kapsamlý bir þekilde yeniden yazýlmýþtýr. Bu sürüm baþlama ve bitiþ zamanlarýnýn 
+ayarlanabilmesi ve yedek dosyalarýndaki baðýmlýlýk konularýnýn çözülmesi gibi yeni yetenekleri de barýndýrmaktadýr.
+
+Tabii ki, daha da fazla geliþme ve deðiþiklik bulunmaktadýr. Tam liste için sürüm notlarýna gözatabilirsiniz.
+Alýntýlarýn tam metni
+
+"Fujitsu, PostgreSQL 8.0 ile gelen yeni özelliklerden çok memnun. Bu kurumsal özellikler PostgreSQL'in çok daha fazla kullanýcýsý olmasýný 
+saðlayacaktýr" dedi ve ekledi: Fujitsu PostgreSQL'e sponsor olmaktan ve çalýþmalarýnýn PostgreSQL topluluðu il paylaþmaktan dolayý gururludur. 
+PostgreSQL'i lider Veritabaný Yönetim Sistemi yapmakta kararlýyýz."
+
+Hyperic LLC'nin þef mimarý olan Javier Soltero, "PostgreSQL 8.0 bize HQ izleme ürünü için gereksinim duyduðumuz süreklilik ve üretim imkanýný 
+sunmaktadýr. Takýmýmýz çoklu-platformda çalýþan ticari ve açýk kaynak kodlu Jave veritabanlarýný denedi hangisinin gereksinimlerimize yanýt 
+verebileceðini bulamadý. PostgreSQL 8.0'ýn Windows üzerinde doðal olarak çalýþmasý, PostgreSQL'i ürünümüz ile paketleyebileceðimiz anlamýna geliyor. 
+Ayrýca, kanýtlanmýþ ölçeklenebilirliði ile baþarýmýndan faydalanabileceðimiz ve de ticari sýnýrlamalardan uzak olarak daðýtýmýmýzýn içine ücretsiz 
+olarak yerleþtirmemize izin veren lisansý ile de tüm özelliklerinden tam olarak yararlanmamýza izin veriyor.PostgreSQL grubu kalite konusunda, bizim 
+için ilk 8.0 betasýný gözden geçirdiðimizden beri ortada olan ve hakettiði bir üne sahip "
+PostgreSQL 8.0'ýn indirilebileceði adresler:
+
+    * FTP Yansýlarýnýn Listesi
+    * Bittorrent
+    * Windows Kurulum Programý (Bittorrent ile de indirilebilir)
+    * SourceForge (Windows Kurulum Programý dahil)
+
+Daha fazla bilgi için lütfen bizimle baðlantý kurun
+
+Devrim GÜNDÜZ
+PostgreSQL Türkiye
+0.533.735.6202 - 0.312.428.1900
+devrim at PostgreSQL.org
+
+...ya da Ýngilizce için:
+
+Josh Berkus
+PostgreSQL Project
++1-415-752-2500
+press at postgresql.org
+Diðer PostgreSQL kaynaklarýna baðlantý
+Belgeler
+
+    * Resmi belgeler
+    * TechDocs
+    * General Bits
+
+Sürücüler
+
+    * JDBC
+    * ODBC
+    * .Net
+
+Grafiksel Kullanýcý Arabirimleri
+
+    * pgAdminIII
+    * phpPgAdmin
+    * pgAccess
+    * Diðer grafik arabirimlerin listesi
+
+Replikasyon
+
+    * Slony-I
+    * pgPool
+    * eRServer
+
+Ýlgili Projeler
+
+    * pgFoundry
+    * GBorg
+
+Alýntý yapýlmýþ þirketler hakkýnda bilgi
+
+Fujitsu Hakkýnda:: Fujitsu, global pazarda iletiþim ve biliþim sektöründe müþteri odaklý çözümler sunan lider bir firmadýr. Pace-setting 
+technologies, highly reliable computing and communications platforms, and a worldwide corps of systems and services experts uniquely position Fujitsu 
+to deliver comprehensive solutions that open up infinite possibilities for its customers' success. Merkezi Tokyo'da bulunan Fujitsu Limited (TSE: 
+6702), 31 Mart 2004'te biten mali yýldaki konsolide karlarýnýn 4.7 trilyon yen (~62 Milyar YTL). Fujitsu hakkýndaki gelen bilgiye, www.fujitsu.com 
+adresinden eriþilebilir. White Paper tartýþma belgesi de içeren Fujitsu Supported PostgreSQL (FSP) hakkýndaki bilgilerin ayrýntýlara FASTWare 
+sayfasýndan ulaþabilirsiniz. Lütfen direk sorularýnýzý Fujitsu Australia Software Technology'ye, Liam O'Duibhir'e ve telefonla iletin (61-2) 9452 
+9068 (Sadece Ýngilizce)
+
+Hyperic hakkýnda: Hyperic, LLC açýk kaynak kodlu ve ticari biliþim altyapýsýný yönetebilmek için çözümler sunmaya odaklanmýþ bir teknoloji 
+saðlayýcýsýdýr. Þirketin amiral gemisi ürünü olan HQ, bugün biliþim sektöründe kullanýlan günü geçmiþ yönetim frameworkleri için, açýk ve bu 
+teknolojilere etraflý destek saðlayan ölçeklenebilir ve web tabanlý platformlar sunmaktadýr. Daha fazla bilgi için, press at hyperic.net adresi ile 
+baðlantý kurabilirsiniz (Ýngilizce, Ýspanyolca)

@@ -1,0 +1,107 @@
+Wydano PostgreSQL 9.3
+======================
+
+9 września 2013: The PostgreSQL Global Development Group ogłosiła wydanie
+wersji 9.3 bazy PostgreSQL, lidera wśród baz danych open source.
+Wydanie to zwiększa dostępność i niezawodność oraz zdolność do integracji
+z innymi bazami danych. Użytkownicy zauważają, że używając wersji 9.3 mogą
+budować swoje aplikacje na sposoby, które nie były do tej pory dostępne.
+
+„PostgreSQL 9.3 posiada cechy, z których jako programista, mogę od razu
+skorzystać: lepsze wsparcie typu JSON, indeksowanie wyrażeń regularnych
+oraz dzięki opakowaniu danych zewnętrznych (Foreign Data Wrapper - FDW)
+łatwo osiągalne bazy federacyjne. Nie mam pojęcia jak ukończyłbym projekty
+bez wersji 9.3” - Jonathan S. Katz, CTO VenueBook.
+
+Zapisywalne dane zewnętrzne
+---------------------------
+
+Wersja 9.3 umożliwia zapisywanie danych zewnętrznych poprzez Foreign Data
+Wrappers, co umożliwia dwustronną wymianę danych pomiędzy systemami.
+Dzisiejsze skomplikowane systemy IT łączą wiele baz danych i częściowo
+zestrukturyzowane źródła danych, a PostgreSQL pozwala zintegrować je
+w spójną całość. Projekt również dostarcza postgres_fdw, wysoce wydajny
+mechanizm bazy federacyjnej PostgreSQL-PostgreSQL, który umożliwia zapis
+i odczyt.
+
+„Zapisywalne FDW umożliwiają podpięcie i bezproblemowe testowane różnych
+alternatywnych backendów, pozwalając nam na szybkie sprostanie różnym
+potrzebom i inteligentne prototypowanie” - Lee Holloway, współzałożyciel
+oraz Lead Engineer w Cloud Flare. „To jest ekscytujące wyobrazić sobie
+wrzucenie razem różnych zbiorów danych (włączając w to nasze własne
+eksperymentalne rozwiązania napisane w Go) i potem obserwowanie jak nawzajem
+się odczytują, zapisują, nawet w ramach transakcji.”.
+
+Ulepszona niezawodność i dostępność
+-----------------------------------
+
+„Postgres jest moją preferowaną bazą ze względu na swoją znaną stabilność,
+solidność, silną spójność, bezpieczeństwo ACID i zgodność z SQLem”
+- Pascal Bouchareine, dyrektor R&D w Gandi.net. „Szczególnie jestem
+zadowolony z szybkiego przełączania się w przypadku awarii, które będzie
+w wersji 9.3.”.
+
+Nowe wydanie bazy zawiera cechy, które poprawiają i rozszerzają szeroko
+znaną niezawodność i dostępność bazy PostgreSQL:
+
+* Sumy Kontrolne Danych (Data Page Checksums): pomagają administratorom
+  szybko wykryć wadliwe dyski oraz popsuty sprzęt, który uszkadza dane
+* Szybkie Awaryjne Przełączanie Baz (Fast Failover): umożliwia szybkie
+  awaryjne przełączanie się z bazy master na replikę, wspierając najwyższą
+  dostępność bazy
+* Streaming-Only Remastering: łatwiejsza i szybsza rekonfiguracja kaskadowej
+  replikacji po przełączeniu awaryjnym
+
+Cechy przyjazne programistom
+-----------------------------
+
+Jak z każdym wydaniem, PostgreSQL 9.3 zawiera wiele cech, które ułatwiają
+i uelestaczniają pracę z PostgreSQLem zarówno dla programistów, jak też dla
+administratorów i architektów. Pośród tych cech są m.in.:
+
+* Dodatkowe konstruktory i ekstraktory dla typu JSON
+* Automatycznie aktualizowane widoki
+* Równoległe działanie programu pg_dump, co przyspiesza tworzenie kopii
+  dużych baz danych
+* LATERAL JOIN
+
+Dodatkowo definiowane przez użytkownika procesy działające w tle
+(Background Workers) umożliwiają programistom pisanie managerów zadań,
+obsługę żądań, wykorzystanie równoległego wielu procesorów, narzędzi do
+kolejkowania i innych programów, które umożliwią użycie Postgresa jako
+koordynatora działań. Jednym z przykładów jest Mongres, proces działający
+w tle, który przyjmuje zapytania MongoDB, interpretuje je i przesyła
+z wykorzystaniem Postgresa.
+
+Kontakt
+-------
+
+Szymon Guz
+pl@postgresql.org
+
+Linki
+-----
+
+* Pliki do ściągnięcia:
+  http://www.postgresql.org/downloads
+* Informacje dla prasy:
+  http://www.postgresql.org/about/press/presskit93/pl/
+* Informacje o wydaniu 9.3 (po angielsku):
+  http://www.postgresql.org/docs/current/static/release-9-3.html
+* Co nowego w PostgreSQL 9.3 (po angielsku):
+  https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.3
+
+O PostgreSQL
+-------------
+
+O PostgreSQL: PostgreSQL jest czołowym systemem baz danych o otwartym
+kodzie, ze społecznością liczoną w tysiącach użytkowników i współtwórców,
+włączając w to wiele firm i organizacji. Rozwój bazy PostgreSQL rozpoczął
+się na Uniwersytecie w Berkeley w Kaliforni ponad dwadzieścia pięć lat temu
+i, w dużym tempie, jest nadal kontynuowany. Dojrzałe cechy PostgreSQLa
+nie tylko stawiają go na równi z głównymi bazami danych o zamkniętym kodzie,
+ale przewyższają je zaawansowanymi funkcjami bazy danych, możliwościami
+rozszerzania, bezpieczeństwem i stabilnością. Więcej o projekcie PostgreSQL,
+a także dołączeniu do społeczności, można znaleźć
+pod adresem: http://www.postgresql.org.
+

@@ -1,0 +1,242 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.0 - informacje dla prasy
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.0 - informacje dla prasy</h1>
+
+<p>Nowy Jork, NY: 19 stycznia 2004 - Grupa PostgreSQL Global Development
+wydała wersję 8.0 obiektowo-relacyjnego systemu zarządzania bazą danych
+PostgreSQL wzmacniając swoją pozycję jako najbardziej zaawansowana baza
+danych open source na świecie. To wydanie zawiera rozwiązania wcześniej
+dostępne tylko w najdroższych komercyjnych systemach baz danych, co powinno
+zaowocować szerszym przyjęciem PostgreSQL-a zarówno wśród użytkowników jak
+również producentów i dystrybutorów oprogramowania.</p>
+
+<p>Poza znacznymi ulepszeniami w skalowalności, rozwiązaniach i wydajności,
+PostgreSQL 8.0 demonstruje niezrównaną szybkość rozwoju w modelu open source.
+Ponad tuzin przedsiębiorstw, włączając w to Red Hat, Fujitsu, Afilias, Software
+Research Associates, Inc., 2nd Quadrant i Command Prompt Inc. jak również setki
+niezależnych programistów przyczyniło się do wprowadzenia większej liczby
+znaczących ulepszeń i nowych rozwiązań niż w którejkolwiek z wersji
+poprzedzających 8.0.</p>
+
+<p>&bdquo;Jesteśmy pewni iż te przemysłowe rozwiązania przyciągną wielką liczbę nowych
+użytkowników PostgreSQL-a.&rdquo;, powiedział pan Takayuki Nakazawa, dyrektor oddziału
+Baz Danych OSS w Grupie Software'owej Fujitsu. &bdquo;Fujitsu jest dumna ze sponsorowania
+ulepszeń w PostgreSQL-u jak również ze swojej współpracy ze społecznością
+PostgreSQL-a. Chcemy pomóc sprawić by PostgreSQL-a stał się wiodącym Systemem
+Zarządzania Bazą Danych.&rdquo;</p>
+
+<p>Nowe rozwiązania to między innymi:</p>
+
+<ul>
+<li><b>Natywne wsparcie dla Windows</b>: PostgreSQL działa teraz natywnie
+z systemem Windows i nie wymaga już warstwy emulacyjnej. Daje to znaczącą
+poprawę wydajności w stosunku do poprzednich wersji oraz oferuje przekonywującą
+alternatywę dla komercyjnego oprogramowania bazodanowego zarówno dla niezależnych
+producentów oprogramowania, użytkowników korporacyjnych jak i samodzielnych
+programistów Windows.</li>
+<li><b>Punkty powrotu (Savepoints)</b>: To rozwiązanie wzięte ze standardu
+SQL pozwala bazie danych na cofnięcie pewnych fragmentów transakcji bez
+przerywania całej operacji. Daje to wiele możliwości programistom aplikacji
+biznesowych którzy potrzebują skomplikowanych transakcji z obsługą błędów.</li>
+<li><b>Naprawa do punktu w czasie (Point in Time Recovery)</b>: To rozwiązanie
+pozwala na pełne odtworzenie danych z automatycznie i stale archiwizowanych
+logów transakcji. Daje to długo oczekiwaną alternatywę dla wykonywania godzinnych
+bądź dziennych kopii zapasowych systemów z krytycznymi danymi przechowywanymi
+w PostgreSQL-u.</li>
+<li><b>Przestrzenie tablic (Tablespaces)</b>: Kluczowe dla administratorów
+wielogigabajtowych systemów przechowywania danych, przestrzenie tablic pozwalają
+na umieszczenie obszernych tablic i indeksów na osobnych dyskach bądź macierzach,
+poprawiając w ten sposób wydajność zapytań.</li>
+<li><b>Ulepszone I/O i pamięć</b>:
+Wykorzystanie dysku i pamięci zostało zoptymalizowane dzięki użyciu algorytmu
+Adaptive Replacement Cache, nowego systemu zapisu w tle (background writer) oraz
+nowego rozwiązania polegającego na opóźnianiu operacji czyszczenia (vacuum delay).
+Pozwoli to na skuteczniejsze przewidywanie obciążeń i stabilniejszą wydajność
+podczas okresów szczytowego wykorzystania.</li>
+
+</ul>
+
+<p>Javier Soltero, główny architekt w Hyperic LLC, powiedział &bdquo;PostgreSQL
+8.0 daje nam wysoki stopień współbieżności i przepustowości, wymagany przez
+nasz system monitorujący HQ. Fakt iż PostgreSQL natywnie wspiera Windows
+oznacza, że możemy dołączać PostgreSQL-a do naszego produktu i czerpać
+korzyści z udowodnionej skalowalności i wydajności PostgreSQL-a, jak również
+z jego licencji, która pozwala na dołączenie go do naszej dystrybucji bez
+komercyjnych zobowiązań względem innych.&rdquo;</p>
+
+
+<p>Poza wieloma nowymi rozwiązaniami zawartymi w tym wydaniu, PostgreSQL
+w ciągu ostatniego roku zyskał również dzięki przyspieszonemu rozwojowi
+tworzonych niezależnie dodatków i opcjonalnych składników.  Zarówno system
+do replikacji Slony-I jak i narzędzie do utrzymywania i rozdzielania połączeń
+pgPool są już wykorzystywane przez zespoły serwerów o wysokiej dostępności.
+Dodano bądź znacznie rozwinięto proceduralne języki składowane, włączając
+w to PL/Java, PL/PHP i PL/perl, natomiast dostarczyciele danych Npgsql
+i PGsqlClient .NET zostały rozwinięte by służyć wielu nowym użytkowników
+wersji dla Windows.</p>
+
+<p>Aby uzyskać pełną listę z opisami nowych rozwiązań w wersji 8.0, proszę zajrzeć na naszą stronę z <a href="http://pgfoundry.org/about/press">informacjami dla prasy</a>.</p>
+
+<p><b>O PostgreSQL-u</b>: PostgreSQL to kolektywna praca setek programistów,
+opierająca się na prawie dwudziestu latach rozwoju, mającego swoje początki
+na Uniwersytecie Kalifornii w Berkeley (UCB).  Wraz z długo wspieranymi
+rozwiązaniami na poziomie przemysłowym włączając w to transakcje, funkcje,
+triggery i podzapytania, PostgreSQL używany jest dziś przez wiele najbardziej
+wymagających biznesowych i rządowych agencji. PostgreSQL jest rozpowszechniany
+na licencji BSD, która pozwala na używanie i dystrybucję bez opłat zarówno dla
+komercyjnych i niekomercyjnych zastosowań.</p>
+
+<p>By dowiedzieć się więcej o PostgreSQL-u bądź go ściągnąć, odwiedź: <a href="http://www.postgresql.org/">http://www.postgresql.org/</a> (po angielsku)</p>
+
+<h2>Inne nowości w tej wersji</h2>
+
+<p>Poza rozwiązaniami podanymi powyżej, wprowadzono wiele innych
+rozwiązań i poprawek które będą bardzo interesujące dla aktualnych
+użytkowników PostgreSQL-a.</p>
+
+<ul>
+<li><b>Funkcje</b>: PostgreSQL pozwala teraz na wygodne wprowadzanie
+funkcji dzięki cytowaniu za pomocą znaków dolara, pozwalając tym samym
+na uniknięcie problemów związanych z zagnieżdżonymi znakami cytowania.
+Ponadto dzięki punktom powrotu (Savepoints), funkcje PL/pgSQL korzystając
+z mechanizmu <code>EXCEPTION</code> mają ograniczoną możliwość obsługi błędów.</li>
+<li><b>Projektowanie bazy danych</b>: Administratorzy bazy danych mogą
+teraz zmieniać typ danych w kolumnach za pomocą <code>ALTER TABLE</code>.
+Deklaracja kolumn ze złożonymi typami danych jest teraz obsługiwana zgodnie
+ze standardem SQL. Wszelkie obiekty bazy danych pozwalają na wykonanie
+<code>CHANGE OWNER</code>.</li>
+<li><b>Import/Eksport danych</b>: Polecenie <code>COPY</code> obsługuje
+teraz bardzo popularny format pliku z wartościami oddzielonymi przecinkami
+(CSV), czyniąc tym samym import i eksport pomiędzy innymi programami łatwiejszym.</li>
+<li><b>Ulepszenia optymalizatora</b>: Planer zapytań wykorzystuje teraz
+indeksy kompatybilnych typów danych, znacznie zmniejszając potrzebę wymuszania
+stałym wartościom konkretnych typów danych. Ta wersja zawiera również ulepszenia
+w wykorzystaniu indeksów, lepszą optymizację wyrażeń typu OR, poprawione pobieranie
+próbek dla <code>ANALYZE</code>, szybsze <code>TRUNCATE</code> i ulepszone
+generowanie przygotowanych planów zapytań, jak również wiele pomniejszych poprawek
+zbyt licznych by je tu wymieniać.</li>
+<li><b>Logowanie</b>: Administratorzy mogą ustawić automatyczną rotację logów
+PostgreSQL-a za pomocą parametrów w pliku postgresql.conf. Logowanie PostgreSQL-a
+ma również znacznie elastyczniejszą konfigurację niż wcześniej, włączając w to
+możliwość ustawienia przez administratora prefiksów linii, logowanie konkretnych
+typów poleceń SQL oraz logowanie zerwań połączenia.</li>
+<li><b>Kopia bezpieczeństwa</b>: Narzędzie do sporządzania kopii zapasowych pg_dump
+zostało w znacznej mierze przepisane.  Ta wersja dodaje nowe możliwości, takie jak
+czas rozpoczęcia i zatrzymania, równocześnie eliminując poprzednie problemy związane
+z uprawnieniami i zależnościami w plikach kopii zapasowych.</li>
+</ul>
+
+<p>Oczywiście jest jeszcze wiele innych zmian i ulepszeń.  Pełna lista znajduje się w <a href="http://pgfoundry.org/docs/8.0/static/release.htm">Release Notes</a>.</p>
+
+<h2>Pełne teksty cytatów.</h2>
+
+<p>&bdquo;Fujitsu jest bardzo zadowolone z nowych rozwiązań w PostgreSQL-u 8.0.
+Jesteśmy pewni iż te przemysłowe rozwiązania przyciągną wielką liczbę nowych
+użytkowników PostgreSQL-a.&rdquo;, powiedział pan Takayuki Nakazawa, dyrektor
+oddziału Baz Danych OSS w Grupie Software'owej Fujitsu. &bdquo;Fujitsu jest dumna
+z sponsorowania ulepszeń w PostgreSQL-u jak również ze swojej współpracy
+z społecznością PostgreSQL-a.  Chcemy pomóc sprawić by PostgreSQL-a stał
+się wiodącym Systemem Zarządzania Bazą Danych.&rdquo;</p>
+
+<p>Javier Soltero, główny architekt w Hyperic LLC, powiedział &bdquo;PostgreSQL
+8.0 daje nam wysoki stopień współbieżności i przepustowości, wymagany
+przez nasz system monitorujący HQ. Nasz zespół porównywał wieloplatformowe
+komercyjne i open source'owe bazy danych i nie udało się znaleźć takiej,
+która odpowiadałaby naszym wymaganiom. Fakt iż PostgreSQL natywnie wspiera
+Windows oznacza, że możemy dołączać PostgreSQL-a do naszego produktu
+i czerpać korzyści z udowodnionej skalowalności i wydajności PostgreSQL-a,
+jak również z jego licencji, która pozwala na dołączenie go do naszej
+dystrybucji bez komercyjnych zobowiązań względem innych. Grupa PostgreSQL
+posiada zasłużoną reputację za jakość, która była dla nas oczywista od
+pierwszej, wypróbowanej przez nas publicznej wersji beta 8.0&rdquo;</p>
+
+<h2>Skąd ściągnąć wersję 8.0</h2>
+
+<ul>
+<li><a href="http://pgfoundry.org/download/mirrors-ftp">Lista mirrorów FTP</a></li>
+<li><a href="http://pgfoundry.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://pgfoundry.org/projects/pginstaller/">Instalator wersji dla Windows</a> (dostępny również przez Bittorrenta)</li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (włącznie z instalatorem wersji dla Windows)</li>
+</ul>
+
+<h2>Kontakt dla uzyskania dalszych informacji</h2>
+
+	<p>W języku polskim:<br>
+		Dawid Kuroczko<br>
+		+48-603-776391<br>
+		<a href="mailto:pl%20at%20postgresql.org">pl at postgresql.org</a></p>
+
+
+	<p>Lub po angielsku:<br>
+		Josh Berkus<br>
+		PostgreSQL Project<br>
+		+1-415-752-2500<br>
+		<a href="mailto:josh%20at%20postgresql.org">josh at postgresql.org</a></p>
+
+<h2>Linki do innych zasobów PostgreSQL</h2>
+
+<h3>Dokumentacja</h3>
+
+<ul>
+<li><a href="http://pgfoundry.org/docs">Oficjalna dokumentacja</a></li>
+<li><a href="http://techdocs.postgresql.org/">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li>
+</ul>
+
+<h3>Sterowniki</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/psqlodbc/projdisplay.php">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+</ul>
+
+<h3>Interfejsy graficzne (GUI)</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdminIII</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">Lista innych GUI</a></li>
+</ul>
+
+<h3>Replikacja</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://www.erserver.com/">eRServer</a></li>
+</ul>
+
+<h3>Projekty pokrewne</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org/">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org/">GBorg</a></li>
+</ul>
+
+<h2>Informacje na temat cytowanych przedsiębiorstw</h2>
+
+<p><b>O Fujitsu</b>: Fujitsu to wiodący dostawca ukierunkowanych
+na użytkownika rozwiązań IT i komunikacyjnych na rynku międzynarodowym.
+Technologie wyznaczające nowe kierunki, wysoce niezawodne platformy
+obliczeniowe i komunikacyjne oraz rozsiane po świecie zespoły ekspertów
+systemowych i specjalistów od usług plasują Fujitsu w unikalnej pozycji
+do dostarczania spójnych rozwiązań, które otwierają nieskończone możliwości
+dla zaspokojenia potrzeb klientów. Fujitsu Limited (TSE:6702), mająca główną
+siedzibę w Tokio, zgłosiła skonsolidowany przychód 4700 miliardów jenów (45 miliardów
+dolarów) za rok podatkowy kończący się 31 marca 2004.  Ogólne informacje
+o Fujitsu dostępne są pod adresem: <a href="http://www.fujitsu.com/">http://www.fujitsu.com</a>.
+Szczegóły inicjatywy Fujitsu Supported PostgreSQL (FSP) włączając w to dokumentację dostępne są na: <a href="http://fastware.com.au/postgresql.html">http://fastware.com.au//postgresql.html</a>. Zapytania prosimy kierować do Liama O'Duihira, Fujitsu Australia Software Technology, <a href="mailto:liamod%20at%20fast.fujitsu.com.au">liamod at fast.fujitsu.com.au</a>, telefon +61-2-9452-9068 (tylko w języku angielskim)</p>
+
+<p><b>O Hyperic</b>: Hyperic LLC jest twórcą technologii
+zorientowanym na rozwiązania do zarządzania komercyjnymi i Open
+Source'owymi systemami IT. Jej flagowy produkt HQ ma na celu
+dostarczenie alternatywy dla kosztownych, nieaktualnych systemów
+zarządzania oferując otwartą, skalowalną, opartą o WWW platformę
+która daje kompleksowe wsparcie dla wszystkich technologii
+używanych dziś w IT. Aby uzyskać dalsze informacje, proszę
+kontaktować się z <a href="mailto:press%20at%20hyperic.net">press at hyperic.net</a> (w języku angielskim bądź hiszpańskim)</p>
+

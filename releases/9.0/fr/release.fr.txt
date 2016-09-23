@@ -1,0 +1,34 @@
+10 septembre 2010 : Le « PostgreSQL Global Development Group » annonce la publication de PostgreSQL 9.0, la dernière version en date du système de gestion de bases de données OpenSource leader. 
+
+Cette version majeure apporte des avancées considérables dans le domaines de la sécurité, du support des applications, de la supervision, de la performance et du stockage de données spécialisées. Les utilisateurs se montrent particulièrement intéressés par les capacités nouvelles de réplication et de reprise à chaud de PostgreSQL 9.0. Ces capacités accélèreront son adoption dans l'hébergement en nuage et les applications extensibles.
+
+« Le réplication interne de la version 9.0 et la possibilité d'interroger un serveur de reprise sont les fonctionnalités les plus demandées depuis de nombreuses années, » déclare Simon Riggs, CTO de 2ndQuadrant et chef du projet « reprise à chaud » (« hot standby » en VO). « Une réplication continue efficace, et à faible latence, offre une meilleure protection de vos données, tandis que la reprise à chaud réduit le coût total de possession (« TCO » ou « Total Cost of Ownership » en VO). Au sein des produits propriétaires, cette possibilité, optionnelle, coûte plusieurs milliers de dollars. »
+
+PostgreSQL 9.0 inclut plus d'une douzaine d'autres améliorations majeures qui embellissent chaque aspects de la conception et de la performance des applications qui s'appuient sur une base de données. Cela inclut : le support de Windows 64 bit, les déclencheurs conditionnels et par colonne, la mise-à-jour sur site (« upgrade-in-place » en VO) à partir des version 8.3 et 8.4, les contraintes d'unicité retardées, et la messagerie d'événements performante. Pour la liste complète des nouvelles fonctionnalités, on pourra se reporter à la page d'informations relative à la version.
+
+« Étant l'un des plus gros opérateurs de registres de l'infrastructure d'Internet, Afilias est satisfait de voir que PostgreSQL intègre les mises-à-jour sur site pour effectuer les montées de version du système de gestion des bases de données avec une interruption minimale de notre base de 16 millions de noms de domaine, » déclare le CTO d'Afilias, Ram Mohan.
+
+« Nous sommes enchantés par les nouvelles fonctionnalités... en particulier, nous envisageons les contraintes d'unicité retardées comme une opportunité d'accélérer les actualisations et mises à jours pour nos clients, » annonce Paolo Juvara, CTO d'OpenBravo.
+
+Marc Balmer, fondateur de Micro Systems, en Suisse, est particulièrement intéressé par les améliorations des capacités de messagerie d'événements LISTEN/NOTIFY : « La nouvelle option de charge des notifications asynchrones va motoriser la prochaine version de nos programmes d'affichages des données déportées. »
+
+Grâce aux contributions de développeurs et compagnies à travers le monde, telles que NTT Open Source, EnterpriseDB, 2ndQuadrant, Red Hat, entre autres, l'adoption par les utilisateurs et "development momentum" est plus forte que jamais.
+Thanks to the contributions of developers and companies around the world, such as NTT Open Source, EnterpriseDB, 2ndQuadrant, Red Hat and many others, user adoption and development momentum is greater than ever.
+
+« À la CAIXA bank, nous utilisons PostgreSQL dans des environnements financiers critiques parce qu'il a la qualité nécessaire à nos applications », insiste Clarice Coppetti, vice-président IT, CAIXA Bank, Brésil. « La nouvelle version montre que PostgreSQL s'améliore avec la rapidité nécessaire pour rester en phase avec nos besoins professionnels. »
+
+* Press Kit : http://www.postgresql.org/about/press/presskit90
+* Notes de version : http://www.postgresql.org/documentation/current/static/release-9-0
+* Téléchargements : http://www.postgresql.org/downloads
+
+Pour plus d'informations, contacter :
+Stéphane SCHILDKNECHT
++33 617 11 37 42
+fr@postgresql.org
+http://www.postgresql.fr
+
+À propos de PostgreSQL : 
+PostgreSQL est le système de gestion de bases de données OpenSource de référence. Sa communauté, mondiale, est composée de milliers d'utilisateurs et contributeurs, et de plusieurs dizaines de compagnies et institutions.
+Le projet PostgreSQL, démarré il y a plus de 20 ans, à l'université de Californie, à Berkeley, a atteint aujourd'hui un rythme de développement sans pareil.
+L'ensemble des fonctionnalités matures a, non seulement, rejoint celui de systèmes commerciaux leaders, mais le dépasse même dans les fonctionnalités avancées, les extensions, la sécurité et la stabilité.
+Pour en savoir plus, et prendre part à la communauté, se rendre sur www.postgresql.org.

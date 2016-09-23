@@ -1,0 +1,164 @@
+{%extends "base/page.html"%}
+{%block title%}PostgreSQL 9.5 Pressemappe{%endblock%}
+{%block contents%}
+
+<h1>PostgreSQL 9.5 Pressemappe</h1>
+
+<h2>Inhalte</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Originaler Text der Ver&ouml;ffentlichung</a><br />
+ &nbsp; <a href="#features">Mehr &uuml;ber die Features</a><br />
+ &nbsp; <a href="#download">Download</a><br />
+ &nbsp; <a href="#docs">Dokumentation</a><br />
+ &nbsp; <a href="#license">Lizenz</a><br />
+ &nbsp; <a href="#contact">Kontakt</a><br />
+ &nbsp; <a href="#graphics">Bilder und Logos</a><br />
+ &nbsp; <a href="#about">&Uuml;ber PostgreSQL</a><br />
+ &nbsp; <a href="#quoted_companies">Zitierte Unternehmen und kompletter Text der Zitate</a><br />
+ &nbsp; <a href="#companies">Professioneller Support</a><br />
+</p>
+
+<img src="http://www.postgresql.org/media/img/about/press/elephant64.png" />
+
+<a name="original_release"></a><h2>Originaler Text der Ver&ouml;ffentlichung</h2>
+
+<h2>PostgreSQL 9.5: UPSERT, Row Level Security, und Big Data Features</h2>
+<p>
+7. Januar 2016: Die PostgreSQL Global Development Group k&uuml;ndigt die Ver&ouml;ffentlichung von PostgreSQL 9.5 an. Diese Version f&uuml;gt UPSERT F&auml;higkeiten, Row Level Security und verschiedene Big Data Features hinzu, welche die Nutzerbasis der weltweit f&uuml;hrenden Datenbank verbreitern werden. Mit diesen neuen F&auml;higkeiten wird PostgreSQL die beste Wahl f&uuml;r viel mehr Anwendungen f&uuml;r Startups, gro&szlig;e Unternehmen und Beh&ouml;rden sein.
+</p><p>
+Annie Prévot, CIO von CNAF, dem franz&ouml;sischen Kindergeldb&uuml;ro, sagt: "Die CNAF stellt Leistungen f&uuml;r 11 Millionen Personen bereit und verteilt 73 Milliarden Euro jedes Jahr, durch &uuml;ber 26 verschiedene Sozialleistungssysteme. Diese Dienstleistungen sind essentiell f&uuml;r die Bev&ouml;lkerung und st&uuml;tzen sich auf ein Informationssystem welches absolut effizient und verf&uuml;gbar sein muss. Das DNAF informationssystem basiert zufriedenstellend auf der PostgreSQL Datenbank."
+</p><p>
+<b>UPSERT</b>
+</p><p>
+Eines der von Anwendungsentwicklern am h&auml;ufigsten gew&uuml;nschten Features, "UPSERT" ist eine Abk&uuml;rzung f&uuml;r "INSERT, ON CONFLICT UPDATE" und erlaubt die Gleichbehandlung neu hinzugef&uuml;gter und existierender Datens&auml;tze. Es vereinfacht die Entwicklung von mobilen und Webanwendungen durch korrekte Behandlung von Konflikten bei simultanen &Auml;nderungen an Datens&auml;tzen. UPSERT beseitigt eine der letzten wesentlichen H&uuml;rden f&uuml;r eine Migration typischer MySQL-basierter Anwendungen auf PostgreSQL.
+</p><p>
+Die in den letzten zwei Jahren durch den Heroku-Programmierer Peter Geoghegan entwickelte Implementation von UPSERT ist dabei deutlich flexibler als die anderer relationaler Datenbanken. Die neue ON CONFLICT Erweiterung erlaubt das Ignorieren neuer Daten ebenso wie das Aktualisieren anderer Spalten oder Tabellen und erlaubt damit das Abbilden komplexer ETL (Extract, Transform, Load) Abl&auml;ufe f&uuml;r das Laden gro&szlig;er Datenmengen. Nat&uuml;rlich ist es (so wie alle Postgres Features) absolut ACID konform und selbstverst&auml;ndlich kompatibel mit allen anderen PostgreSQL Features wie logischer Replikation.
+</p><p>
+<b>Row Level Security</b>
+</p><p>
+PostgreSQL erweitert auch weiterhin die M&ouml;glichkeiten im Bereich Datenbanksicherheit durch das neue Feature Row Level Security ("RLS"). RLS implementiert Zugriffskontrolle auf Zeilen- und Spaltenebene, voll integriert mit label-basierten Sicherheitsl&ouml;sungen wie SELinux. PostgreSQL gilt schon jetzt als "im Auslieferungszustand sicherste Datenbank". RLS festigt diese Position als erste Wahl f&uuml;r Applikationen mit hohen Anforderungen an die Datensicherheit, z.B. PCI-Compliance, die Europ&auml;ische Datenschutzrichtlinie und Datenschutzstandards im Gesundheitswesen.
+</p><p>
+RLS ist der kr&ouml;nende Abschluss zahlreicher neuer Sicherheits-Features, die in den letzten f&uuml;nf Jahren durch unerm&uuml;dliches Arbeiten von u.a. KaiGai Kohei (NEC), Stephen Frost (Crunchy Data) und Dean Rasheed zu PostgreSQL hinzugef&uuml;gt wurden. Es erm&ouml;glicht Datenbankadministratoren, Sicherheits-"Policies" zu erstellen, die klar regeln, welche Benutzer welche Zeilen einer Tabelle einsehen oder aktualisieren d&uuml;rfen. Solcherma&szlig;en umgesetzte Sicherheitsregeln sind immun gegen SQL-Injection- und andere Sicherleitsl&ouml;cher auf Applikationsebene.
+</p><p>
+<b>Big Data Features</b>
+</p><p>
+PostgreSQL 9.5 enth&auml;lt viele Verbesserungen f&uuml;r gro&szlig;e Datenbanken und zur Integration mit anderen "Big Data" Systemen. Diese Features sorgen daf&uuml;r, dass PostgreSQL weiterhin eine wichtige Rolle im rapide wachsenden "Big Data"-Markt haben wird. Unter anderem bringt PostgreSQL 9.5 diese neuen M&ouml;glichkeiten:
+</p><p>
+<b>BRIN Indexes</b>: Dieser neue Index-Typ erm&ouml;glicht es, sehr kleine, aber trotzdem effektive Indexe auf sehr gro&szlig;e, "nat&uuml;rlich" geordnete Datenbest&auml;nde anzulegen. So k&ouml;nnen zum Beispiel Tabellen mit Milliarden von Log-Datens&auml;tzen mit nur 5% des Zeit- und Platzbedarfs (im Vergleich zu BTree) indexiert werden.
+</p><p>
+<b>Schnellere Sortierung</b>: PostgreSQL sortiert durch die Nutzung einer "abbreviated keys" genannten Technik Text- und NUMERIC-Daten schneller. Dies beschleunigt einige Abfragen um den Faktor zwei bis zw&ouml;lf, und die Erstellung von Indexen kann bis zu zwanzigfach beschleunigt werden.
+</p><p>
+<b>CUBE, ROLLUP und GROUPING SETS</b>: Diese neuen Standard-SQL-Klauseln erlauben es Benutzern, &uuml;ber mehrere Ebenen gleichzeitig aufzusummieren, was bisher mehrere Durchl&auml;ufe erforderte. "CUBE" erlaubt auch eine wesentlich engere Integration von PostgreSQL mit existierenden Online Analytic Processing (OLAP) Reporting Werkzeugen wie Tableau.
+</p><p>
+<b>Foreign Data Wrappers (FDWs)</b>: FDWs erlaubten schon bisher die Nutzung von PostgreSQL als vorgeschaltete Abfrageinstanz zu "Big Data"-Systemen wie Hadoop und Cassandra. Version 9.5 f&uuml;gt "IMPORT FOREIGN SCHEMA" und "JOIN pushdowns" hinzu, was das Abfragen externer Datenquellen sowohl leicher und angenehmer als auch effizienter macht.
+</p><p>
+<b>TABLESAMPLE</b>: Diese SQL-Klausel erm&ouml;glicht es, mit geringem Aufwand repr&auml;sentative Stichproben gro&szlig;er Datenbest&auml;nde ohne aufw&auml;ndiges Sortieren zu erstellen.
+</p><p>
+Boyan Botev, Lead Database Administrator, Premier, Inc.: "Der neue BRIN-Index in PostgreSQL 9.5 ist ein m&auml;chtiges neues Feature, das es PostgreSQL erlaubt, Datenmengen zu verwalten und zu indexieren, die so in der Vergangenheit nicht mehr praktikabel oder gar unm&ouml;glich waren. Er erm&ouml;glicht Skalierbarkeit und Performance weit oberhalb dessen, was bisher als f&uuml;r relationale Datenbanken als sinnvoll erachtet wurde, und macht PostgreSQL zu einer perfekten L&ouml;sung f&uuml;r Big Data Analytics." 
+</p>
+<a name="features"></a><h2>Mehr &uuml;ber die Features</h2>
+<p>
+F&uuml;r Erl&auml;uterungen zu den oben genannten, sowie weiteren Features, besuchen Sie bitte die folgenden Links:
+</p>
+<ul>
+<li><a href="/docs/9.5/static/release-9.5.html">Release Notes</a></li>
+<li><a href="/docs/9.5/static/index.html">9.5 Dokumentation</a></li>
+<li><a href="https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.5">Was ist neu in PostgreSQL 9.5 (Englisch)</a></li>
+<li><a href="/about/featurematrix">Feature matrix (nur auf Englisch)</a></li>
+<li><a href="https://momjian.us/main/writings/pgsql/features.pdf">Major Features slide deck</a></li>
+<li><a href="https://www.youtube.com/watch?v=ubR3AN6kaGA">Pr&auml;sentation: Was ist neu in PostgreSQL 9.5</a></li>
+<li><a href="https://www.youtube.com/watch?v=xsVxexMp1PU">PostgreSQL 9.5 Performance Pr&auml;sentation</a></li>
+</ul>
+
+<a name="download"></a><h2>Download</h2>
+<ul>
+<li><a href="/download">Downloads Seite</a> mit Links zu Windows, Linux, OSX, BSD und Solaris Installern, sowie Tools.</li>
+<li><a href="/ftp/source/v9.5.0">Source Code</a></li>
+<li><a href="http://pgxn.org">PostgreSQL Extension Network</a></li>
+<li><a href="/download/product-categories">Zugeh&ouml;rige und kommerzielle Software</a></li>
+</ul>
+
+<a name="docs"></a><h2>Dokumentation</h2>
+
+<p>
+HTML Dokumentation und Manpages werden mit PostgreSQL installiert, aber Sie k&ouml;nnen jederzeit die umfangreiche, interaktive <a href="/docs/9.5/interactive">Online Dokumentation</a> nutzen, durchsuchen und kommentieren.
+</p>
+
+<a name="license"></a><h2>Lizenz</h2>
+<p>
+
+PostgreSQL nutzt die <a href="/about/licence">PostgreSQL Lizenz</a>, eine BSD-artige "permissive" Lizenz. Diese
+<a href="http://www.opensource.org/licenses/postgresql">OSI-zertifizierte Lizenz</a> wird als sehr flexibel und Unternehmens-freundlich angesehen, da diese die Nutzung von PostgreSQL f&uuml;r kommerzielle und propriet&auml;re Anwendungen nicht einschr&auml;nkt. Zusammen mit Support von verschiedenen Firmen und dem Source Code in der Hand der Community, macht diese Lizenz PostgreSQL sehr popul&auml;r f&uuml;r Hersteller die eine Datenbank in ihr Produkt integrieren m&ouml;chten, ohne Angst um Geb&uuml;hren, Vendor Lock-in oder &Auml;nderungen in den Lizenzbestimmungen haben zu m&uuml;ssen.
+</p>
+
+<a name="contact"></a><h2>Kontakt</h2>
+
+<p>Webseiten</p>
+
+<ul>
+<li><a href="http://www.postgresql.org">PostgreSQL Webseite</a></li>
+<li><a href="http://www.pgug.de">Deutschsprachige PostgreSQL Anwendergruppe</a></li>
+</ul>
+
+<p>Presseanfragen</p>
+
+<p>USA, Kanada und generelle Anfragen (auf Englisch)<br />
+PostgreSQL Press Team<br />
+<a href="mailto:press@postgresql.org">press@postgresql.org</a><br />
+Phone: +1 (347) 674-7759</p>
+
+<p>Deutschland<br />
+Andreas Scherbaum<br />
+<a href="mailto:de@postgresql.org">de@postgresql.org</a><br />
++49 33056 406869</p>
+
+<p>Schweiz<br />
+Markus Wanner<br />
+<a href="ch@postgresql.org">ch@postgresql.org</a><br />
++41 78 715 11 31</p>
+
+<p>F&uuml;r Kontaktinformationen aus anderen L&auml;ndern pflegen wir eine <a href="/about/press/contact">internationale Kontaktliste</a>.</p>
+
+<a name="graphics"><h2>Bilder und Logos</h2></a>
+
+<img src="http://www.postgresql.org/media/img/about/press/elephant64.png" >
+
+<ul>
+<li><a href="http://www.postgresql.org/media/img/about/press/elephant.png">PostgreSQL Elefant Logo, PNG Format</a></li>
+<li><a href="http://www.postgresql.org/media/img/about/press/elephant64.jpg">PostgreSQL Elefant Icon</a></li>
+<li><a href="http://www.postgresql.org/media/img/about/press/slonik_with_black_text_and_tagline.gif">PostgreSQL Banner mit Logo, Elefant und Slogan</a></li>
+</ul>
+<p>
+Alle Logos sind f&uuml;r Bearbeitung und Weiterverbreitung under der PostgreSQL Lizenz verf&uuml;gbar. Der PostgreSQL Name und das Logo sind Trademark der "The PostgreSQL Community Association of Canada".
+</p>
+
+<a name="about"></a><h2>&Uuml;ber PostgreSQL</h2>
+<p>
+PostgreSQL ist das f&uuml;hrende Datenbanksystem, mit einer weltweiten Community bestehend aus Tausenden von Nutzern und Mitwirkenden sowie Dutzenden von Firmen und Organisationen. Das PostgreSQL Projekt baut auf &uuml;ber 25 Jahre Erfahrung auf, beginnend an der University of California, Berkeley, und hat heute eine nicht zu vergleichende Performance bei der Entwicklung. PostgreSQL's ausgereiftes Feature Set ist nicht nur mit den f&uuml;hrenden propriet&auml;ren Datenbanksystemen vergleichbar, sondern &uuml;bertrifft diese in erweiterten Datenbankfunktionen, Erweiterbarkeit, Sicherheit und Stabilit&auml;t. Lerne mehr &uuml;ber PostgreSQL und nimm an unserer Community teil, unter: <a href="http://www.postgresql.org">PostgreSQL.org</a>.
+</p>
+
+<a name="quoted_companies"></a><h2>Zitierte Unternehmen und kompletter Text der Zitate</h2>
+<p>
+Annie Prévot,  DSI de la CNAF, déclare, "La CNAF sert 11 millions d'allocataires , elle verse 73 milliards d'euros par an , au travers de 26 types de prestations , ce service essentiel à la population s'appuie sur un système d'information qui se doit d'être absolument performant et fiable . Le système d'information de la CNAF s'appuie avec satisfaction sur le gestionnaire de Base de données PostgreSQL . En utilisation sur la moitié des systèmes , ce logiciel open source offre toutes les garanties de fonctionnement et de fiabilité et est en phase de déploiement sur l'ensemble des systèmes."
+</p>
+<p>(Deutsche Version) Annie Prévot, CIO von CNAF, dem franz&ouml;sischen Kindergeldb&uuml;ro, sagt: "Die CNAF stellt Leistungen f&uuml;r 11 Millionen Personen bereit und verteilt 73 Milliarden Euro jedes Jahr, durch &uuml;ber 26 verschiedene Sozialleistungssysteme. Diese Dienstleistungen sind essentiell f&uuml;r die Bev&ouml;lkerung und st&uuml;tzen sich auf ein Informationssystem welches absolut effizient und verf&uuml;gbar sein muss. Das DNAF informationssystem basiert zufriedenstellend auf der PostgreSQL Datenbank."
+</p>
+<p>
+Boyan Botev, Lead Database Administrator, Premier, Inc.:
+"Der neue BRIN-Index in PostgreSQL 9.5 ist ein m&auml;chtiges neues Feature, das es PostgreSQL erlaubt, Datenmengen zu verwalten und zu indexieren, die so in der Vergangenheit nicht mehr praktikabel oder gar unm&ouml;glich waren. Er erm&ouml;glicht Skalierbarkeit und Performance weit oberhalb dessen, was bisher als f&uuml;r relationale Datenbanken als sinnvoll erachtet wurde, und macht PostgreSQL zu einer perfekten L&ouml;sung f&uuml;r Big Data Analytics."
+</p>
+<p>
+<a href="https://www.premierinc.com">Premier, Inc.</a> (Nasdaq: PINC) ist eine Allianz von rund 3.600 US-Krankenh&auml;usern und 120.000 weiteren Anbietern, die die Leistungen im Gesundheitswesen verbessern. Unsere Mission ist einfach: Verbesserung der Gesundheit der Gemeinschaft. Als Branchenf&uuml;hrer hat die Premier Allianz eine der umfangreichsten Datenbanken f&uuml;r verwertbare Daten, Best Practices und Kostensenkungsstrategien erstellt. Kontaktiere Premier, Inc. &uuml;ber <a href="https://www.premierinc.com/contact-premier/">ihre Webseite</a>.
+</p>
+
+<a name="companies"></a><h2>Professioneller Suppor</h2>
+
+<p>Postgresql erfreut sich der Unterst&uuml;tzung einer Reihe von Unternehmen, die Entwickler sponsern, Hosting Resourcen anbieten oder uns finanziell unterst&uuml;tzen. Auf unserer <a href="http://www.postgresql.org/about/sponsors/">Sponsorenseite</a> f&uuml;hren wir einige dieser Unternehmen auf.</p>
+
+<p>Eine gro&szlig;e Anzahl an Unternehmen bietet <a href="/support/professional_support">professionellen Support</a> an - von Einzelfirmen bis zum internationalen Unternehmen.</p>
+
+<p><a href="/about/donate">Spenden</a> sind werden jederzeit gerne entgegengenommen.</p>
+<p>Sie k&ouml;nnen ebenfalls Merchandise von unserem <li><a href="http://www.zazzle.com/postgresql">Zazzle PostgreSQL Shop</a> beziehen.</li>
+
+{% endblock %}

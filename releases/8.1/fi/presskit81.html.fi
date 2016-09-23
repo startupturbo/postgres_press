@@ -1,0 +1,248 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.1 lehdistömateriaali
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.1 lehdistömateriaali</h1>
+
+<h2>Contents</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Alkuperäinen lehdistötiedoite</a><br />
+ &nbsp; <a href="#additional_features">Muita uusia ominaisuuksia</a><br />
+ &nbsp; <a href="#quoted_companies">Tietoa yrityksistä, joita on lainattu tekstissä</a><br />
+ &nbsp; <a href="#download">PostgreSQL 8.1 löytyy</a><br />
+ &nbsp;	<a href="#docs">Dokumentaatio</a><br />
+ &nbsp; <a href="#license">Lisenssi</a><br />
+ &nbsp; <a href="#contact">Yhteystiedot</a><br />
+ &nbsp; <a href="#companies">Yrityksiä</a><br />
+ &nbsp; <a href="#additional_software">Muita työkaluja</a><br />
+</p>
+
+<a name="original_release"></a><h2>Alkuperäinen lehdistötiedoite</h2>
+<p>
+8. Marraskuuta 2005, Frankfurt, Saksa (OpenDBCon): PostgreSQL Global Development -ryhmä 
+on julkistanut PostgreSQL tietokantaohjelmiston version 8.1, joka edelleen
+parantaa PostgreSQL:n johtoa maailman edistyksellisimpänä avoimen lähdekoodin tietokantana.
+Uuden version on suunnitellut, rakentanut ja testannut entistä suurempi yhteisö,
+jota on tukenut entistä useampi yritys. Versio 8.1 laajentaa PostgreSQL:n käyttömahdollisuuksia.
+Uusi versio on tehokkaampi ja sisältää SQL ominaisuuksia, jotka tukevat entistä laajempia
+tietovarastoja, suurempia transaktiomääriä, sekä hajautetumpaa ympäristöä.
+</p><p>
+Nämä ominaisuudet tukevat PostgreSQL:n kasvu-uraa, joka pohjautuu edelliseen versioon. 
+Versiota 8.0 on ladattu PostgreSQL:n sivuilta miljoona kertaa ensimmäisten seitsemän kuukauden
+aikana. Vastaavassa ajassa, edellistä versiota oli ladattu 300 000 kertaa. 
+</p><p>
+"Projekti on selvästi saamassa entistä enemmän tilaa tietokantakäyttäjien mielessä.",
+totesi Lance Obermeyer, Pervasive Softwaren tuotejohtaja, yksi PostgreSQL:n yritystukijoista.
+"Huomioiden yleisen kiinnostuksen kasvun avoimen lähdekoodin ohjelmistoihin, odotamme PostgreSQL:n
+kasvavan vielä lisää."
+</p>
+<h3>Uusia ominaisuuksia</h3>
+<p>
+<b>Roolit:</b> PostgreSQL tukee nyt rooleja tietokannassa, jonka ansiosta
+on entistä helpompi hallita suuria käyttäjämääriä, joilla on monimutkaisia oikeuksia.
+</p><p>
+<b>IN/OUT Parametrit:</b> PostgreSQL funktiot tukevat nyt IN, OUT and INOUT
+parameterejä, jotka merkittävästi helpottavat monimutkaisten J2EE and .NET järjestelmien 
+toteutusta.
+</p><p>
+<b>Two-Phase Commit (kaksivaiheinen commit)</b> (2PC): Kauan PostgreSQL:ään kaivattu ominaisuus, joka mahdollistaa 
+ACID-yhteensopivat transaktiot laajalti hajautetujen järjestelmien välillä.
+</p>
+<h3>Tehokkuus</h3>
+<p>
+<b>Parannettu moniprosessori (SMP) tehokkuus:</b> Version 8.1 puskurin hallintaa
+on parannettu, ja se skaalautuu melkein lineaarisesti prosessorien suhteen. Tästä 
+saadaan merkittävää hyötyä, sekä 8 että 16 ja dual ja multicore prosessorisissa palvelimissa.
+</p><p>
+<b>Bittikartta skannaus:</b> indeksit muutetaan tarvittaessa bittikartoiksi 
+muistissa, jolla saadaan jopa 20 kertaa nopeampi indeksointi monimutkaisissa, suuria
+tauluja koskevissa kyselyissä. Tämä myös yksinkertaistaa tietokannan hallintaa vähentämällä
+tarvetta useiden sarakkeiden indekseille.
+</p><p>
+<b>Taulujen partitiointi:</b> Suunnittelija pystyy nyt välttämään suurien taulujen kokonaisten
+osioiden skannauksen käyttämällä tekniikkaa, joka tunnetaan nimellä "Constraint Exclusion". 
+Vastaavasti, kuten joissain tietokantajärjestelmissä käytetty taulujen partitiointi, tämä ominaisuus
+parantaa sekä tietojen hallintaa, että tehokkuutta, useiden gigatavujen tauluissa.
+</p><p>
+<b>Jaetut rivilukot:</b> PostgreSQL:n "parempi kuin rivilukko", on nyt vielä entistä rinnakkaisempi
+uusien vieraiden avainten jaettujen lukkojen ansiosta. Jaetut lukot parantavat lisäyksien ja päivitysten 
+tehokkuutta monissa OLTP aplikaatioissa, joissa on suuret volyymit.
+</p><p>
+"PostgreSQL 8.1 on entistä paljon tehokkaampi lähes kaikessa, käyttämissämme tupla-prosessori Opteron
+tuotantoservereissä.", totesi Merlin Moncure, Reliable Computer Solutionsin tietokanta administraattori.
+"Erityisesti olen huomannut, että yksinkertaisiin kyselyihin menee 20% aikaisempaa vähemmän aikaa ja samalla CPU 
+kuorma on 20% entistä pienempi. Tästä seuraa 20-40% vähemmän kuormaa serverille."
+</p><p>
+Versiossa 8.1 on yli 120 parannusta, joista vain osa on mainittu tässä.
+</p>
+<h3>PostgreSQL</h3>
+<p>
+PostgreSQL on satojen kehittäjien yhteistyön tulos. Melkein 20 vuoden kehityksen tulos, 
+joka sai alkunsa Californian Berkeleyn yliopistossa. PostgreSQL on pitkään tukenut enterprise 
+luokan ominaisuuksia, kuten transaktioita, funktioita, triggereitä ja alikyselyjä, ja on siksi 
+käytetty monissa vaativissa yrityskohteissa ja valtion virastoissa. PostgreSQL on lisensioitu BSD 
+lisenssillä, jonka ansiosta sitä saa vapaasti käyttää ja jakaa ilmaiseksi sekä kaupallisiin, 
+että ei kaupallisiin tarkoituksiin.
+</p>
+
+<a name="additional_features"></a><h2>Muita uusia ominaisuuksia</h2>
+Sen lisäksi, mitä lehdistötiedotteessa on mainittu, 8.1 versiossa on 
+yli 120 uutta ominaisuutta ja parannusta, joita on ollut tekemässä
+melkein 200 kehittäjää. Näiden ominaisuuksien joukossa on mm.
+<ul>
+<li><b>GiST:</b> PostgreSQL's Generalised Search Tree (GiST) liitettävä
+indeksointimekanismi, joka on nyt nopea ja rinnakkainen, tukee palautettavuutta ja 
+nopeita päivityksiä, jotka aiemmin olivat mahdollisia ainoastaan B-puu indekseissä.
+GiST on PostgreSQL:n teksti-indeksoinnin (TSearch2), geospatiaalin (GIS) ja puu-struktuuri
+indeksoinnin tukijalka. Tämän parannuksen ansiosta, monimutkaiset tietotyypit toimivat 
+tehokkaasti myös suurimmissa suuren toimintavarmuuden tietojärjestelmissä.</li>
+<li><b>COPY uudistus:</b> COPY on muutettu, ja se on yli 30% nopeampi bulkkitiedon lataamisessa.
+Yhdessä CSV latauksen parannusten kanssa, tämä tekee isojen tietokantojen lataamisen PostgreSQL
+tietokantaan nopeammaksi, kuin koskaan.
+</li>
+<li><b>64-bit jaettu muisti:</b> puskurin hallinta voi nyt käyttää maksimissaan 2 teratavua muistia
+64-bitin järjestelmissä. Tulevaisuudessa servereissä on paljon muistia, ja tämän ominaisuuden myötä PostgreSQL
+voi tuota muistia hyödyntää.
+</li>
+<li><b>Integroitu automaattinen siivous:</b> PostgreSQL tietokannan huolto-ohjelmaa on parannettu ja se 
+on integroitu osaksi pääohjelmaa. Tämän ansiosta PostgreSQL serverit ovat entistä helpompia asentaa ja hoitaa.
+</li>
+<li><b>Nopeampi ryhmittely:</b> Ryhmittely funktioita on parannettu, ja sen ansiosta raportit ovat entistä
+nopeampia. PostgreSQL kehittäjät ovat kirjoittaneet uudelleen ryhmittelyjen muistinkäsittelyn, sekä lisänneet 
+indeksointiin tuen MIN() ja MAX() funktioille.</li>
+<li><b>Ylläpito funktiot:</b> On lisätty uusia funktioita, joiden avulla saadaan tietoa järjestelmästä,
+sekä voidaan hoitaa ylläpitoa PSQL komentoriviltä.</li>
+<li><b>Yhteensopivuus funktioita:</b> lastval(), greatest() ja least() funktiot on lisätty. Tämän ansiosta 
+siirtyminen MySQL ja Oracle tietokannoista PostgreSQL:ään on entistä helpompaa.</li>
+</ul>
+<p>
+<a href="/docs/current/static/release.html">Voit lukea lisää uusista 8.1 parannuksista.</a>
+</p>
+
+<a name="quoted_companies"></a><h2>Tietoa yrityksistä, joita on lainattu tekstissä</h2>
+
+<p>
+<b>Pervasive Software</b> (NASDQ: PVSW) tuottaa järjestelmä ohjelmistoja, jotka auttavat 
+yrityksiä saamaan enemmän tietojärjestelmäinvestoinneistaan. Yli kahden vuosikymmenen ajan, Pervasive
+on toimittanut Pervasivella on kymmeniä tuhansia asiakkaita, jotka toimivat käytännössä kaikilla 
+aloilla, yli 150 maassa. Enemmän tietoa, <a href="http://www.pervasive.com/company">www.pervasive.com</a>.
+</p>
+<p>
+<b>Reliable Computer Solutions</b> tuottaa ERP ohjelmistoja ja konsultointipalveluja. Erikoistunut 
+kokonaisiin IT järjestelmiin matkailuauto ja talonrakennuspakettien alalla. Päätuote, ESP, ohjaa Yhdysvalloissa 
+yli miljardin dollarin arvosta tuotantoa. Lisää informaatiota, Merlin Moncure (vain englanniksi): merlin.moncure@rcsonline.com,
+puhelin: +1 269-483-1234 x304.
+</p>
+
+<a name="download"></a><h2>PostgreSQL8.1 löytyy</h2>
+
+<ul>
+<li><a href="http://www.postgresql.org/ftp/latest/">FTP Mirrorit</a></li>
+<li><a href="http://www.postgresql.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/win32/">Windows
+asennus</a> (myös Bittorrent)</li>
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/">Muut binäärit,
+Linux, Mac OSX and Solaris</a></li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (sisältää
+Windows asennuksen)</li>
+</ul>
+
+<a name="docs"></a><h2>Dokumentaatio (englanniksi)</h2>
+
+<ul>
+<li><a href="/docs/current/static/">Virallinen
+Dokumentaatio</a></li>
+<li><a href="http://techdocs.postgresql.org">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General
+Bits</a></li>
+</ul>
+
+<a name="license"></a><h2>Lisenssi</h2>
+<p>
+PostgreSQL käyttää <a href="/about/licence">BSD lisenssiä</a>,
+joka vaatii ainoastaan, että lisensoitu lähdekoodi sisältää 
+copyright ja lisenssi-informaation. Tämä 
+<a href="http://www.opensource.org/licenses/bsd-license.php">OSI-sertifioitu
+lisenssi</a> on laajalti arvostettu joustavana ja yritysystävällisenä, sillä se ei 
+rajoita ohjelman käyttöä kaupallisissa tai suljetuissa sovelluksissa. Yhdessä 
+monien yritysten antaman tuen ja julkisen koodin omistuksen kanssa, BSD lisenssi
+tekee PostgreSQL:stä erittäin suositun erityisesti niiden yritysten keskuudessa, 
+jotka haluavat liittää sovellukseensa tietokannan ilman pelkoa maksuista, toimittajan
+tekemistä päätöksistä, tai lisenssimuutoksista.
+</p>
+
+<a name="contact"></a><h2>Yhteystiedot</h2>
+
+<p><a href="http://www.postgresql.org">Englanninkielinen kotisivu</a></p>
+
+<p>Kyselyt:<br />
+Jussi Mikkola<br />
+PostgreSQL Regional Contact<br />
++358 40 830 7561<br />
+<a href="mailto:fi@postgresql.org">fi@postgresql.org</a></p>
+
+<p>Muut alueet, kuin Suomi, katso <a
+href="/about/press/contact">kansainväliset yhteystiedot</a></p>
+
+<a name="companies"></a><h2>Yritysten antama tuki</h2>
+
+Monet yritykset antavat tukea PostgreSQL yhteisölle sekä tukemalla
+kehittäjiä, antamalla palvelinhotellipalveluja että rahallisesti.
+Suurimmat pitkäaikaiset tukijat on listattu 
+<a href="/about/sponsors">sponsorit
+sivulla.</a>
+
+On olemassa myös suuri joukko <a
+href="/support/professional_support"> yrityksiä, jotka antavat 
+PostgreSQL tukea.</a>, yksittäisistä konsulteista, isoihin yrityksiin.
+
+<a name="additional_software"></a><h2>Linkkejä</h2>
+<p>
+PostgreSQL projektia tukee yli 100 aktiivista aliprojektia, jotka
+tuottavat korkealaatuisia ratkaisuja muun muassa replikointiin, 
+migraatioon, yhteensopivuuteen, sekä käyttöliittymä-  että suunnittelutyökaluja.
+</p>
+
+<h3>Läheisiä projekteja</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>Ohjaimet</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+<li><a href="http://search.cpan.org/~rudy/DBD-Pg-1.32/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<h3>Muita ohjelmisto kokonaisuuksia</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Geographic Information Server (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Full Text Search (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Business Intelligence/Data Warehousing (Bizgres)</a></li>
+</ul>
+
+<h3>Graafinen käyttöliittymä</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin III</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">Muita 
+</a></li>
+</ul>
+
+<h3>Replikointi</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>

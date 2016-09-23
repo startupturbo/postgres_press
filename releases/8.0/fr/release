@@ -1,0 +1,32 @@
+PARAGRAPH PREMIER:
+NewYork: ## Novembre/Décembre 2004 - Le groupe de Développement Global de PostgreSQL vient de produire la version 8.0 du système de gestion de bases de données PostgreSQL, confortant sa place de système de bases de données open source le plus avancé du monde. Cette version, en proposant des fonctionnalités qui n'étaient alors présentes que dans les systèmes de bases de données propriétaires les plus coûteux, devrait largement favoriser l'adoption de PosgreSQL par les utilisateurs et les éditeurs de solutions informatiques.
+
+En plus des améliorations significatives sur l'extensibilité, les fonctionnalités et la performances, PostgreSQL 8.0 fait la preuve del'efficacité sans égal du développement open source . Plus d'une douzaine de compagnies, incluant Red Hat, Fujitsu, Afilias, Software Research Associates,inc., 2nd Quadrant, et Command Prompt Inc., ainsi que des centaines de développeurs individuels ont contribué à l'ajout des fonctionnalités majeures de la 8.0 comme celà a été le cas dans les versions précédentes.
+
+M. Takyuki Nakazawa, Directeur du groupe base de données open source s'exprime en ces termes : « Nous sommes certains que les fonctionnalités d'entreprise attirent un grand nombre de nouveaux utilisateurs de PostgreSQL. » . « Fujitsu est fier du soutien apporté aux contributions de PostgreSQL et de son travail avec la communauté PostgreSQL. »
+
+Les nouvelles fonctionnalités comprennent:
+
+Support natif de Windows : PostgreSQL fonctionne maintenant de manière native avec les systèmes Windows et ne nécessite aucune couche d'émulation. Ceci améliore de façon considérable les performances du logiciel par rapport à la version précédente et constitue une alternative très séduisante aux logiciels de base de données propriétaires pour les fournisseurs indépendants de logiciels, les utilisateurs professionnels et les développeurs individuels sous Windows.
+
+Points de retournement: Cette fonction standard de SQL permet des retours sur des points spécifiques d'une transaction sur la base de données sans que l'ensemble de l'opération soit annulée. Ceci est un avantage pourles développeurs d'applications métiers qui ont besoin de pouvoir effectuer des transactions complexes utilisant des reprises sur erreur.
+
+Récupération par rapport à un point dans le temps: Cette fonctionnalité permet la restauration compléte des données à partir d'une sauvegarde automatique et continue des transactions effectuées. Ceci est une alternative longuement murie aux sauvegardes horaires ou journalières pour les services utilisant PostgreSQL pour des données critiques.
+
+Espaces de tables: Cruciaux pour les administrateurs de systèmes de data warehouse de multiples-gigaoctets, les espaces de tables permettent le placement des grandes tables et index sur leur propre disque ou grappe, afin d'améliorer les performances.
+
+Améliorations de la gestion de la mémoire et des entrées sorties: Les consommations disque et mémoire ont été optimiséies au travers de l'emploi de l'algorithme de Cache à Remplacement Adaptatif, d'un nouveau système d'écriture en arrière plan et d'une nouvelle fonctionnalité permettant d'effectuer des vacuum sur intervalle.
+
+Javier Soltero, architecte en chef chez Hyperic LLC, a dit « PostgreSQL 8.0 nous apporte un haut niveau de concurrence et le débit nécessaire pour notre produit de surveillance HQ. Disposer du support natif de Windows grâce à PostgreSQL 8.0 signifie que nous pouvons maintenant inclure PostgreSQL dans nos produits et bénéficier de l'extensibilité et de la performance d'hores et déjà prouvée de PostgreSQL. Sa licence nous permet de de l'inclure dans notre distribution en restant libre de redevance commerciales. »
+
+En plus de toutes les fonctionnalités incluses dans cette version, PostgreSQL a été étendu par le développement accéléré de composants additifs et optionnels tout au long de l'année passée. L'outil de réplication Slony-I et l'utilitaire de pooling/brokering de connection pgPool sont d'ores et déjà utilisés pour des ensemble de serveurs haute disponibilité. Plusieurs langages de procédures stockées ont été ajoutés ou largement étendus comme PL/Java, PL/PHP et PL/Perl. Les sources de données Npgsql et PGsqlClient .NET ont été améliorées afin de fournir un support aux nouveaux utilisateurs de Windows.
+
+Pour obtenir la liste complète et la descriptions de toutes les nouvelles fonctionnalités de la 8.0, référez vous à notre page presse.
+
+A propos de PostgreSQL: PostgreSQL est le fruit du travail collectif de centaines de développeurs, s'appuyant sur un développement entrepris presque vingt auparavant à l'Université de Californie à Berkeley. Avec son support de longue date des fonctionnalités nécessaires dans l'entreprise telles que les transactions, les fonctions, les triggers, les sous requêtes, PostgreSQL est utilisé dans les branches métiers ou les agences gouvernementales les plus exigentes. PostgreSQL est distribué sous licence BSD, permettant l'utilisation et la distribution sans rétribution pour les utilisations commerciales et non
+commerciales.
+
+Pour plus d'information concernant PostgreSQL ou pour le télécharger, visitez:
+http://www.postgresql.org ou http://www.postgresqlfr.org
+
+Pour toute information concernant Fujitsu ou Hyperic LLC, consultez notre page presse.

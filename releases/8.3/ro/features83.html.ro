@@ -1,0 +1,200 @@
+<!-- BEGIN page_title_block -->
+Lista facilităţilor PostgreSQL 8.3
+<!-- END page_title_block -->
+
+<h1>Lista facilităţilor PostgreSQL 8.3</h1>
+
+<p>Lista de mai jos cuprinde cea mai mare parte, dar nu toate, dintre noutăţile introduse
+de versiunea 8.3.  Deoarece există multe facilitati noi, acestea au fost grupate
+în categorii, iar descrierile sunt relativ scurte.  Pentru mai multe detalii puteţi consulta
+documentaţia PostgreSQL şi documentul release notes.  De asemenea, există
+<a href="/about/featurematrix">matricea facilităţilor</a> (numai în engleză).</p>
+
+<h2>Upgrade Warning</h2>
+
+<p>În conformitate cu standardele înalte cu privire la integritatea datelor ale proiectului PostgreSQL ,
+în versiunea 8.3 au fost revizuite unele dintre conversiile implicite de date. Această refactorizare
+poate crea dificultăţi utilizatorilor care efectuează upgrade pentru aplicaţii mai vechi care nu sunt
+scrise riguros în ceea ce priveşte tipurile datelor comparate, în special aplicaţiile scrise iniţial pentru
+versiuni de PostgreSQL mai vechi de doi ani. Testarea riguroasă, înainte de utilizarea în producţie a
+versiunii 8.3, este recomandată în special utilizatorilor care fac upgrade pentru aplicaţii foarte vechi
+sau care bănuiesc că pot avea cod în aplicaţie sau în procedurile stocate ce ar putea fi afectat de
+eliminarea conversiilor implicite. Pentru mai multe informaţii puteţi
+consulta <a href="/docs/8.3/static/release-8-3.html">release notes</a> .
+</p>
+
+<h2>Performanţă</h2>
+
+<h3>Consistenţa Performanţelor</h3>
+
+<p>Facilităţile următoare îmbunatăţesc capacitatea PostgreSQL de a menţine timpi de răspuns consistenţi indiferent de încărcarea ala un moment dat asupra serverului :</p>
+
+<dl>
+<dt>HOT</dt>
+<dd>Heap Only Tuple (HOT) reduce în mod dramatic necesitatea operaţiunilor de mentenanţă
+asociate tabelelor modificate frecvent: se reduce necesitatea de a face vacuum şi se
+îmbunatăţesc substanţial peformanţele în cazul anumitor tipuri de aplicaţii.</dd>
+<dt>Asynchronous Commit</dt>
+<dd>Permite executarea comenzii COMMIT fără a aştepta terminarea scrierii fizice pe disc.
+Astfel utilizatorii au posibilitatea de a decide ca, pentru a obţine un timp de răspuns mai bun, să îşi asume
+riscul de pierde câteva tranzacţii în cazul unei potenţiale căderi de sistem.
+</dd>
+<dt>Spread Checkpoints</dt>
+<dd>Reprezintă autoreglarea checkpoint-urilor : checkpoint-urile sunt amânate sau temporizate
+astfel incât să se reducă impactul acestora asupra timpilor de răspuns.</dd>
+<dt>Strategia just-in-time background writing </dt>
+<dd>Autoreglarea componentei background writer, care pe baza activităţii recente estimează
+singur câte buffere trebuie să încerce să cureţe.</dd>
+</dl>
+
+<h3>Viteză sporită</h3>
+
+<p>Multe dintre noile facilităţi au drept scop îmbunătăţirea vitezei de execuţie a anumitor operaţii, de exemplu:</p>
+
+<dl>
+<dt>Timpul de recovery îmbunătăţit</dt>
+<dd>În perioada de recovery, a fost înjumătăţit volumul de operaţii de intrare/ieşire asociate Write Ahead Log.</dd>
+<dt>Circular Buffer in Tuplestore</dt>
+<dd>Join-urile de tip merge asupra unor seturi mici de date sunt rapidizate dramatic prin evitarea utilizării discului.</dd>
+<dt>Comparaţii LIKE/ILIKE mai rapide</dt>
+<dd>A fost îmbunătăţită viteza acestor tipuri de comparaţii, în special pentru seturile de caractere multibyte.</dd>
+<dt>Sortare Top-N</dt>
+<dd>Căutări mult mai rapide în cazul căutărilor care folosesc LIMIT.</dd>
+<dt>Lazy XID Assignment</dt>
+<dd>Permite PostgreSQL să evite asignarea de transaction ID-uri în cazul anumitor cereri
+read-only, ceea ce îmbunătăţeşte considerabil performanţele în cazul bazelor de date care
+sunt prepondedent citite.</dd>
+<dt>Function Costing</dt>
+<dd>Permite utilizatorilor să informeze planner-ul cu privire la costul de execuţie şi datele
+returnate ale funcţiilor , rezultînd în planuri de execuţie mai bune.</dd>
+</dl>
+
+<h3>Baze de date mari</h3>
+
+<p>Facilităţile următoare se adresează utilizatorilor care folosesc PostgreSQL pentru baze de date mari de tip data warehouse:</p>
+<dl>
+<dt>Synchronized Scans</dt>
+<dd>Permite reducerea semnificativă a operaţiilor de intrare/ieşire deoarece acum este posibil ca, dacă mai mulţi utilizatori efectuează concomitent căutări pe acelaşi set mare de date, acele date să fie citite de pe disc o singură dată .</dd>
+<dt>L2 Cache Scan Protection</dt>
+<dd>Constă în noi optimizări de cod care previn fenomenul "CPU thrashing" care încetineşte cererile concurente.</dd>
+<dt>Comprimarea header-ului pentru tipurile de date Varlena</dt>
+<dd>A fost redus header-ul pentru majoritatea tipurilor de date cu dimensiune variabilă.  Dimensiunea totală a unei baze de date se poate micşora cu până la 20%.</dd>
+</dl>
+
+<h3>Performanţele sub Windows</h3>
+
+<p>Utilizatorii sistemului de operare Windows n-au fost uitaţi. Următoarele noutăţi aduse de versiunea 8.3 aduc un plus de maturitate variantei Windows a PostgreSQL:</p>
+<dl>
+<dt>Suport pentru MS Visual C++ </dt>
+<dd>Codul sursă PostgreSQL poate fi acum compilat cu compilatorul Microsoft C++
+(până acum nu era posibil decât cu MinGW) . Aceasta îmbunătăţeşte perfoemanţa şi
+stabilitatea atunci când PostgreSQL este rulat pe platforma Windows. </dd>
+<dt>Rescrierea codului de pornire a serverului</dt>
+<dd>A fost redusă drastic dimensiunea memoriei necesare pentru postmaster, ceea ce permite ca mai multe instanţe PostgreSQL să ruleze concomitent sub Windows.</dd>
+</dl>
+
+<h2>Administrare</h2>
+
+<p>PostgreSQL depăşeşte deja bazele de date comerciale în ceea ce priveşte uşurinţa
+administrării, dar este întotdeauna loc de mai bine.  Versiunea 8.3 include o
+serie de noi facilităţi menite să uşureze administrarea serverelor de baze de date
+şi să ofere mai multe informaţii administratorilor de baze de date: </p>
+<dl>
+<dt>CSV Log Output</dt>
+<dd>Mesajele de log pot fi salvate într-un fişier CSV. Acesta poate fi ulterior încarcat într-o tabelă pentru a putea uşor căuta informaţii în scopul analizării activităţii şi a performanţelor serverului de baze de date.</dd>
+<dt>Suport pentru SSPI şi GSSAPI</dt>
+<dd>Autentificarea de tip Kerberos la serverul PostgreSQL suportă acum API-urile standard
+SSPI (pentru Windows) şi GSSAPI (pentru Unix şi Linux), ceea ce uşurează integrarea
+în cadrul reţelelor mari din categoria enterprise . </dd>
+<dt>Stabilirea setărilor GUC la nivel de funcţie</dt>
+<dd>Permite specificarea valorilor pentru setările GUC cu ocazia creării funcţiilor. Facilitatea
+este utilă în special pentru definirea search path-ului utilizat de o funcţie la momentul
+creării - ceea ce întăreşte securitatea.</dd>
+<dt>Multiple Autovacuum Workers</dt>
+<dd>Permite programului Autovacuum să ruleze în paralel a mai multe sub-procese, ceea ce face ca
+autovacuum să devină fezabil şi pentru aplicaţiile cu mii de tabele.</dd>
+<dt>pg_standby</dt>
+<dd>Unealtă de administrare cu ajutorul căreia se pot configura mult mai uşor servere de tip Warm Standby . </dd>
+<dt>ORDER BY Nulls First/Last</dt>
+<dd>Permite să să se specifice dacă înregistrarile cu valoarea NULL în coloana dupa care se face sortarea să apară primele sau ultimele în cadrul setului de înregistrari regăsite.</dd>
+</dl>
+
+<h2>Dezvoltare</h2>
+
+<h3>Dezvoltarea de aplicaţii</h3>
+
+<p>Următoarele îmbunătăţiri permit PostgreSQL 8.3 să rivalizeze cu bazele de date comerciale de top
+în ceea ce priveşte realizarea de aplicaţii complexe :</p>
+<dl>
+<dt>Full Text Search</dt>
+<dd>TSearch2, componenta PostgreSQL pentru căutări de tip full text, a fost integrată
+în nucleul PostgreSQL şi are acum un API revizuit.  TSearch2 este acum mai uşor de folosit
+şi de extins cu noi limbi, dicţionare şi sisteme de weighting.
+</dd>
+<dt>Invalidarea planurilor de execuţie</dt>
+<dd>Permite concomitent păstrarea într-un cache a planurilor de execuţie utilizate de aplicaţii şi invalidarea planurilor în momentul în care tabela a fost modificată.</dd>
+<dt>Cursoare modificabile</dt>
+<dd>Cursoarele suportă acum WHERE CURRENT OF, ceea ce uşurează scrierea de aplicaţii care utilizează cursoare.</dd>
+</dl>
+
+<h3>Noi tipuri de date</h3>
+
+<dl>
+<dt>Suport XML</dt>
+<dd>Noul tip de date XML este o implementare a specificaţiilor SQL/XML din standardul ANSI
+SQL:2003, incluzînd verificari de validitate, operaţiuni de asigurare a tipurilor corecte de date,
+publicare SQL/XML şi cereri XPath .  Versiunea 8.3 include de asemenea funcţii de
+export în format XML.</dd>
+<dt>UUID</dt>
+<dd>Acest nou tip de date pe 128 biţi este compatibil cu cela mai cumune generatoare de GUID şi UUID , utile pentru realizarea de aplicaţii distribuite.</dd>
+<dt>Array-uri de tipuri compuse</dt>
+<dd>Array-urile pot fi acum utilizate pentru a stoca şiruri de tipuri compuse (tipuri de date care returnează mai multe
+coloane, cum sunt tipul table sau tipurile de date custom).</dd>
+<dt>ENUM</dt>
+<dd>PostgreSQL suportă coloane de tip ENUM avînd o listă predeterminată de valori
+posibile. Această facilitate va uşura migrarea aplicaţiilor de la MySQL la
+PostgreSQL.</dd>
+</dl>
+
+<h3>Proceduri stocate</h3>
+
+<p>Următoarele două noi facilitaţi sunt extensii ale limbajului PL/pgSQL, cel mai popular dintre limbajele procedurale suportate de PostgreSQL:</p>
+<dl>
+<dt>Suport pentru Table Functions</dt>
+<dd>PL/pgSQL, cel mai popular dintre limbajele procedurale, suportă o sintaxă simplificată pentru funcţiile care returnează tuple.</dd>
+<dt>Cursoare scroll-abile in PL/pgSQL</dt>
+<dd>PL/pgSQL suportă acum cursoare scroll-abile, permiţînd procedurilor PL/pgSQL să realizeze manipulări complexe asupra datelor.</dd>
+</dl>
+
+<h2>Accesorii</h2>
+
+<p>Multe componente importante nu sunt distribuite împreună cu nucleul PostgreSQL pentru a păstra
+distribuţia mică şi uşor de întreţinut.  Acestea fac parte dintr-o colecţie
+de câteva sute de componente opţionale care oferă replicare, interfeţe cu diferite limabje,
+integrare de aplicaţii şi facilităţi experimentale - multe dintre acestea fiind accesibile
+prin <a href="http://www.pgfoundry.org">pgFoundry</a>.   Lista următoare cuprinde unelte şi
+componente care au fost lansate pentru PostgreSQL 8.3  sau au ajuns la maturitate concomitent
+cu realizarea versiunii 8.3, inclusiv câteva sisteme de replicare care au fost modificate pentru
+a folosi noile replication hooks din PostgreSQL 8.3 :</p>
+<dl>
+<dt><a href="https://developer.skype.com/SkypeGarage/DbProjects/PgBouncer">pgBouncer</a></dt>
+<dd>Permite unei singure baze de date PostgreSQL să deservească până la 100,000 conexiuni
+simultane.</dd>
+<dt><a href="https://developer.skype.com/SkypeGarage/DbProjects/PlProxy">PL/Proxy</a></dt>
+<dd>Permite apelul de proceduri din alte baze de date aflate la distanţă şi partiţionarea datelor în mai multe baze de date.</dd>
+<dt><a href="http://pgsnmpd.projects.postgresql.org/">pgSNMP</a></dt>
+<dd>Interfaţă SNMP pentru PostgreSQL, simplifică integrarea cu reţelele mari de monitorizare a serverelor.</dd>
+<dt><a href="http://code.google.com/p/sepgsql/downloads/list">SEpgsql</a></dt>
+<dd>Extensie de securizată bazată pe arhitectura SELinux, permite aplicarea unei politici de securitate unificate asupra sistemului de operare şi bazei de date.</dd>
+<dt><a href="http://pgfoundry.org/projects/edb-debugger/">PL/pgSQL Debugger</a></dt>
+<dd>Unealtă grafică de debugging şi executare pas-cu-pas a procedurilor PL/pgSQL.</dd>
+<dt><a href="http://pgfoundry.org/projects/pgpool/">pgPool-II</a></dt>
+<dd>Noua versiune a popularului pgPool, care introduce partiţionarea datelor.</dd>
+<dt><a href="http://bucardo.org/">Bucardo</a></dt>
+<dd>Primul sistem de replicare asincronă pentru PostgreSQL este acum disponibil.</dd>
+<dt><a href="http://www.postgresql.at/english/pr_cybercluster_e.html">CyberCluster</a></dt>
+<dd>Acest proiect devenit recent open-source integrează şi extinde câteva unelte de clustering deja existente,
+cum sunt pgCluster şi pgPool. </dd>
+<dt><a href="http://www.slony.info/">Slony-I</a></dt>
+<dd>Slony-I versiunea 2.0, cel mai popular dintre sistemele de replicare pentru PostgreSQL, foloseşte acum noile replication hooks introduse în PostgreSQL 8.3.</dd>
+</dl>

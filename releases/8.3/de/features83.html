@@ -1,0 +1,149 @@
+<!-- BEGIN page_title_block -->
+Neue Leistungsmerkmale in PostgreSQL 8.3
+<!-- END page_title_block -->
+
+<h1>Neue Leistungsmerkmale in PostgreSQL 8.3</h1>
+
+<p>In dieser Liste sind die meisten neuen Leistungsmerkmale der Version 8.3 aufgeführt, jedoch nicht alle. Da PostgreSQL 8.3 mit einer großen Anzahl neuer Fähigkeiten kommt, fassen wir sie nach Aufgabengebieten zusammen und beschreiben sie kurz. Ausführlichere Informationen erhalten Sie in der Dokumentation zu PostgreSQL und in den Release Notes. Eine noch kompaktere Übersicht bieten wir Ihnen in der <a href="/about/featurematrix">Feature Matrix</a> (nur in Englisch).</p>
+
+<h2>Bitte beachten, falls Sie upgraden</h2>
+
+<p>Damit die sehr hohen Standards bezüglich der Datenintegrität und Verlässlichkeit des PostgreSQL-Projeks erhalten bleiben, haben wir in der Version 8.3 einige Datenkonvertierungen ("casts") bereinigt. Für manche Benutzer kann diese Überarbeitung bei der Aktualisierung älterer Anwendungen, in denen Vergleiche zwischen Datentypen vernachlässigt wurden, Probleme verursachen, besonders dann, wenn von PostgreSQL-Versionen hochgestuft wird, die schon einige Jahre alt sind. Wenn sehr alte Anwendungen aktualisiert werden sollen oder wenn befürchtet werden muss, dass eine Anwendung oder benutzerdefinierte Funktionen darin nachlässig kodiert sind, sollten extra Tests durchgeführt werden, bevor sie in einem Produktivsystem eingesetzt werden. Lesen Sie dazu die Informationen in den <a href="/docs/8.3/static/release-8-3.html">Release Notes</a>.</p>
+
+<h2>Leistungsverhalten</h2>
+
+<h3>Gleichmäßiger Datendurchsatz</h3>
+
+<p>Diese Funktionalitäten verbessern PostgreSQL's Fähigkeit, konsistente Antwortzeiten einzuhalten, unabhängig von der Serverlast:</p>
+
+<dl>
+<dt>HOT</dt>
+<dd>Heap Only Tuple (HOT) reduziert den Verwaltungsaufwand der Datenbank für häufig aktualisierte Daten dramatisch. Die Notwendigkeit eines VACUUM wird reduziert und der Durchsatz entsprechender Anwendungen wesentlich erhöht.</dd>
+<dt>Asynchroner Commit</dt>
+<dd>Nach einem COMMIT kann weitergearbeitet werden, ohne warten zu müssen, bis alle Daten physikalisch auf die Platte geschrieben wurden. Damit werden bessere Antwortzeiten erreicht, allerdings muß ein potenzieller Verlust der Daten der zuletzt ausgeführten Transaktionen in Kauf genommen werden, falls das System ausfällt.</dd>
+<dt>Verteilte Checkpoints</dt>
+<dd>Selbstjustierung bei Checkpoints: Daten der Checkpoints können verzögert und über eine Zeitspanne verteilt auf die Platte geschrieben werden. Dadurch werden die Auswirkungen eines Checkpoints auf die Antwortzeiten abgeschwächt.</dd>
+<dt>Bedarfsorientierte Hintergrund-Schreibaktivitäten</dt>
+<dd>Der Background-Writer schätzt aufgrund der jüngsten Statistiken über die Systemausnutzung eigenständig ab, wieviele Puffer er versuchen soll zu leeren.</dd>
+</dl>
+
+<h3>Steigerung der Verarbeitungsgeschwindigkeit</h3>
+
+<p>Viele neue Leistungsmerkmale steigern die Geschwindigkeit bestimmter Operationen erheblich, wie etwa:</p>
+
+<dl>
+<dt>Kürzere Zeiten bei der Wiederherstellung</dt>
+<dd>Die Anzahl der I/O-Operationen aus dem Transaktionslog bei der Wiederherstellung einer Datenbank wurde halbiert. Die Wiederherstellung wird dadurch wesentlich effizienter.</dd>
+<dt>Ringpuffer im Tuplestore</dt>
+<dd>Kleine Merge-Joins werden außerordentlich beschleunigt, weil es nicht mehr notwendig ist, die Daten auf die Platte auszulagern.</dd>
+<dt>Schnellere Vergleiche mit LIKE/ILIKE</dt>
+<dd>Partielle Übereinstimmungen, speziell in Multibyte-Codierungen, werden schneller gefunden.</dd>
+<dt>Sortierungen auf begrenzten Abfrageergebnissen</dt>
+<dd>In Ergebnissen, die mit LIMIT begrenzt wurden, kann wesentlich schneller gesucht werden.</dd>
+<dt>Bedingte Zuweisung von Transaktions-IDs</dt>
+<dd>Bei einigen lesenden Abfragen vergibt PostgreSQL keine Transaktions-IDs mehr, was den Durchsatz in Datenbanken, die hauptsächlich gelesen werden, bemerkenswert beschleunigt.</dd>
+<dt>Komplexität von Funktionen</dt>
+<dd>Benutzer können den Abfrageplaner über die voraussichtlichen Ausführungskosten einer Funktion sowie die ungefähre Anzahl zurückgegebener Datensätze informieren und so bessere Abfragepläne erzielen.</dd>
+</dl>
+
+<h3>Große Datenbanken</h3>
+
+<p>Einige der Verbesserungen erlauben auch den Betrieb von größeren Data-Warehouses mit PostgreSQL:</p>
+<dl>
+<dt>Synchronisierte Scans</dt>
+<dd>Sequenzielle Scans auf großen Tabellen können von mehreren Benutzern gleichzeitig benutzt werden, wodurch die sonst nötigen I/O-Operationen gewaltig reduziert werden.</dd>
+<dt>L2 Cache Schutzmechanismen</dt>
+<dd>Neue Optimierungen des Codes sorgen dafür, dass die Betriebssystem-Caches nicht überlastet werden, was konkurrierende Abfragen verlangsamen würde.</dd>
+<dt>Verkürzung des Headers für Datentypen variabler Länge ("Var-Varlena")</dt>
+<dd>Für die meisten Datentypen variabler Länge wurden die Header verkürzt. Dies kann zu einer bis zu 20%-igen Reduzierung der Datenbankgröße führen.</dd>
+</dl>
+
+<h3>Leistung unter Windows</h3>
+
+<p>Nein, wir haben unsere Windows-Benutzer nicht vergessen. Mit der Version 8.3 wird auch Windows endlich zu einer erstklassigen Basis für PostgreSQL:</p>
+<dl>
+<dt>Unterstützung von MS Visual C++</dt>
+<dd>Der Quellcode von PostgreSQL kann außer mit den MinGW-Werkzeugen nun auch mit Microsoft's C++-Compiler kompiliert werden. Damit wird die Leistung und Stabilität von PostgreSQL auf MS-Betriebssystemen erhöht.</dd>
+<dt>Mit der Überarbeitung des Codes für das Backend wurde begonnen</dt>
+<dd>Der Speicherverbrauch des Postmasters wurde drastisch reduziert, sodass es auch unter Windows möglich ist, mehrere Backends parallel zu betreiben.</dd>
+</dl>
+
+<h2>Administration</h2>
+
+<p>Obwohl PostgreSQL in der Einfachheit seiner Administration bereits einige proprietäre Datenbanken übertrifft, sind in diesem Bereich immer noch Verbesserungen möglich. Deshalb haben wir die Version 8.3 mit ein paar Eigenschaften ausgestattet, mit denen die Verwaltung von Datenbankservern einfacher wird und zugleich den Administratoren mehr Informationen zur Verfügung stellen:</p>
+<dl>
+<dt>Ausgabe der Logs im CSV-Format</dt>
+<dd>Logeinträge werden in eine Datei geschrieben, die in die Datenbank geladen werden kann. Das vereinfacht die Entwicklung von Werkzeugen zur ad-hoc-Revision und Leistungsanalyse.</dd>
+<dt>Unterstützung von SSPI und GSSAPI</dt>
+<dd>Kerberos-Authentifizierung in PostgreSQL unterstützt nun die in der Industrie üblichen sicheren APIs: SSPI unter Windows und GSSAPI unter Unix und Linux. Damit wird die Integration in große Unternehmensnetzwerke einfacher.</dd>
+<dt>GUC-Einstellungen für Funktionen</dt>
+<dd>Funktionen können bei ihrer Erstellung GUC-Einstellungen (Global User Configuration) einbinden. Dies ist besonders hilfreich, um beispielsweise die Definition des Suchpfads einer Funktion bei ihrer Definition festzulegen und damit die Sicherheit zu erhöhen.</dd>
+<dt>Mehrere Autovacuum-Prozesse</dt>
+<dd>Der PostgreSQL Dämon zur Wartung der Datenbank kann so konfiguriert werden, dass mehrere parallele Autovacuum-Prozesse eine Datenbank bearbeiten. Damit ist Autovacuum auch für Anwendungen mit vielen tausend Tabellen sinnvoll einsetzbar.</dd>
+<dt>pg_standby</dt>
+<dd>Ein Administrationswekzeug, mit der die Konfiguration von Warm-Standby-Servern erheblich vereinfacht wird.</dd>
+<dt>ORDER BY NullS First/Last</dt>
+<dd>Damit können Indexe erzeugt werden, bei denen Nullwerte entweder am Anfang oder am Ende des Index einsortiert werden.</dd>
+</dl>
+
+<h2>Entwickler</h2>
+
+<h3>Anwendungsentwicklung</h3>
+
+<p>Viele Erweiterungen tragen dazu bei, dass PostgreSQL 8.3 in komplexen, vielschichtigen Datenbankanwendungen mit den wichtigsten, proprietären Datenbanken gleichzieht. Dazu gehören:</p>
+
+<dl>
+<dt>Volltextsuche</dt>
+<dd>TSearch2, unsere innovative Volltextsuche wurde vollständig in den PostgreSQL-Code integriert und hat auch eine übersichtlichere Schnittstelle bekommen. Damit wird sowohl die Benutzung von Tsearch2 einfacher als auch die Erweiterung um neue Sprachen, Wörterbücher und Gewichtungsmechanismen.</dd>
+<dt>Annullierung von Ausführungsplänen</dt>
+<dd>Gecachte Ausführungspläne können entweder durch einen Aufruf in einer Anwendung oder automatisch bei einem UPDATE einer Tabelle gelöscht werden.</dd>
+<dt>Aktualisierbare Cursors</dt>
+<dd>Cursors unterstützen nun WHERE CURRENT OF, wodurch der Entwurf von Cursor-gestützten Anwendungen viel flexibler wird.</dd>
+</dl>
+
+<h3>Neue Datentypen</h3>
+
+<dl>
+<dt>XML-Unterstützung</dt>
+<dd>Die neuen XML-Datentypen unterstützen die SQL/XML-Spezifikation von ANSI SQL:2003 vollständig. Überprüft werden die korrekte Syntax, die Typsicherheit von Operationen sowie die Veröffentlichung von SQL/XML oder XPath-Abfragen. Die Version 8.3 enthält außerdem zusätzliche Funktionen für den XML-Datenexport.</dd>
+<dt>UUID</dt>
+<dd>Dieser neue 128-Bit-Datentyp ist mit den meisten GUID- und UUID-Generatoren kompatibel und unterstützt so den Entwurf verteilter Anwendungen.</dd>
+<dt>Arrays aus zusammengesetzten Datentypen</dt>
+<dd>Arrays können nun aus zusammengesetzten Datentypen erzeugt werden. (Das sind Typen, die aus mehreren Spalten bestehen, wie beispielsweise eine Tabelle oder ein benutzerdefinierter Datentyp).</dd>
+<dt>ENUM</dt>
+<dd>Auch PostgreSQL unterstützt in seiner neuen Version Spalten vom Datentyp ENUM, der eine definierte, geordnete Liste von Alternativen enthält. Die Migration von MySQL-Anwendungen zu PostgreSQL wird dadurch erleichtert.</dd>
+</dl>
+
+<h3>Benutzerdefinierte Funktionen</h3>
+
+<p>PL/pgSQL, PostgreSQL's beliebteste Sprache für benutzerdefinierte Funktionen wird durch zwei Eigenschaften erweitert:</p>
+<dl>
+<dt>Unterstützung von RETURN QUERIES</dt>
+<dd>Unsere beliebteste prozedurale Sprache, PL/pgSQL, unterstützt nun eine vereinfachte Syntax für Funktionen, die Zeilen zurückgeben.</dd>
+<dt>Scrollbare Cursors in PL/pgSQL</dt>
+<dd>Cursors, in denen man vor und zurückblättern kann, werden in PL/pgSQL unterstützt. Damit sind komplexe Zeilenmanipulationen innerhalb von PL/pgSQL-Funktionen möglich.</dd>
+</dl>
+
+<h2>Zubehör</h2>
+
+<p>Viele wichtige Werkzeuge werden nicht mit dem Kerncode von PostgreSQL ausgeliefert. So bleibt die Distribution klein und ist umso leichter zu pflegen. Diese Werkzeuge sind Teil einer Sammlung von über hundert optionalen PostgreSQL-Komponenten, die Replikation, Hochverfügbarkeit, Schnittstellen zu Programmiersprachen, Integration von Anwendungen sowie experimentelle, innovative Eigenschaften zur Verfügung stellen. Die meisten davon stehen auf <a href="http://www.pgfoundry.org">pgFoundry</a> zur Verfügung. Die folgenden PostgreSQL-Werkzeuge wurden eigens für die Version 8.3 freigegeben oder wurden   während des 8.3-Zyklus vervollständigt. Dazu gehören auch einige Replikationssysteme, die sich nahtlos in die neuen Replikations-Schnittstellen des PostgreSQL-8.3-Servers einklinken:</p>
+<dl>
+<dt><a href="https://developer.skype.com/SkypeGarage/DbProjects/PgBouncer">pgBouncer</a></dt>
+<dd>Dieser Verbindungs-Pooler ist multi-threaded und kann bis zu 100.000 Verbindungen zu einer einzigen PostgreSQL Datenbank verwalten.</dd>
+<dt><a href="https://developer.skype.com/SkypeGarage/DbProjects/PlProxy">PL/Proxy</a></dt>
+<dd>Ein Partitionierungssystem für Datenbanken, das als prozedurale Sprache implementiert ist.</dd>
+<dt><a href="http://pgsnmpd.projects.postgresql.org/">pgSNMP</a></dt>
+<dd>Eine standardkonforme SNMP-Schnittstelle für PostgreSQL, die die Integration in große Datenbank-Monitoring-Netzwerke erleichtert.</dd>
+<dt><a href="http://code.google.com/p/sepgsql/downloads/list">SEpgsql</a></dt>
+<dd>Eine Erweiterung zur Systemsicherheit, das auf dem SELinux-Modell und seinen Richtlinien basiert. Damit sind die einheitlichen Sicherheitsrichtlinien von SELinux sowohl auf das Betriebsssystem als auch auf die Datenbank anwendbar.</dd>
+<dt><a href="http://pgfoundry.org/projects/edb-debugger/">PL/pgSQL Debugger</a></dt>
+<dd>Eine neue grafische Benutzerschnittstelle, die interaktives Debuggen und Schritt-für-Schritt-Ausführung von PL/pgSQL-Funktionen ermöglicht.</dd>
+<dt><a href="http://pgfoundry.org/projects/pgpool/">pgPool-II</a></dt>
+<dd>Aufbauend auf den Erfolg von pgPool fügt die neue Replikations-Middleware für PostgreSQL Datenpartionierung hinzu.</dd>
+<dt><a href="http://bucardo.org/">Bucardo</a></dt>
+<dd>Das erste asynchrone Multi-Master Replikationssystem für PostgreSQL steht hiermit zur Verfügung.</dd>
+<dt><a href="http://www.postgresql.at/english/pr_cybercluster_e.html">CyberCluster</a></dt>
+<dd>Dieses kürzlich unter eine Open-Source-Lizent gestellte Projekt integriert und erweitert mehrere vorhandene Replikationslösungen für PostgreSQL, wie etwa pgCluster und pgPool.</dd>
+<dt><a href="http://www.slony.info/">Slony-I</a></dt>
+<dd>Die Version 2.0 von Slony-I, unserem bekanntesten Replikationssystem, verwendet die neuen Replikations-Schnittstellen des PostgreSQL-8.3-Servers.</dd>
+</dl>

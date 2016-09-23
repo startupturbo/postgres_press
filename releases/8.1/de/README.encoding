@@ -1,0 +1,6 @@
+The files are currently encoded in UTF-8.
+
+How to convert the character set using iconv:
+
+iconv --from-code=UTF-8 --to-code=ISO-8859-1 < release.txt > release.latin1.txt
+iconv --from-code=ISO-8859-1 --to-code=UTF-8 < release.latin1.txt > release.utf8.txt

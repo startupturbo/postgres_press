@@ -1,0 +1,40 @@
+10 SEPTEMBER 2012: Die PostgreSQL Global Development Group kündigt die Veröffentlichung von PostgreSQL 9.2 an, die neuste Version des führenden Open-Source Datenbank-Systems. Seit der Ankündigung der Beta-Version im Mai dieses Jahres preisen sowohl Entwickler als auch Nutzer diese Version als großen Sprung vorwärts in Sachen Leistung, Skalierbarkeit und Flexibilität. Es ist abzusehen, dass Nutzer in großer Zahl auf die neue Version umsteigen werden.
+
+"PostgreSQL 9.2 wird mit JSON-Unterstützung ausgeliefert, welche Indizes und Replikation abdeckt und verbesserte Leistung sowie viele neue Eigenschaften mitbringt. Wir warten mit Spannung auf diese Version und werden diese in unserem "Early Access" Programm sofort nach Veröffentlichung verfügbar machen", sagt Ines Sombra, führende Daten-Ingenieurin bei Engine Yard.
+
+
+Verbesserte Leistung und Skalierbarkeit
+
+Verbesserungen in der vertikalen Skalierbarkeit erhöhen PostgreSQLs Fähigkeit, die Hardware-Ressourcen auf größeren Servern effizient zu nutzen. Fortschritte in der Lock-Verwaltung, verbesserte Schreibeffizienz, Datenzugriffe nur über Indizes und andere Optimierungen in Untersystemen ermöglichen es PostgreSQL noch größere Workloads zu verarbeiten. In Zahlen ausgedrückt:
+
+* Bis zu 350.000 lesende Queries pro Sekunde (mehr als 4x so schnell)
+* Index-only Scans für Data-Warehousing Queries (bis zu 20x schneller)
+* Bis zu 14.000 Schreibvorgänge für Daten per Sekunde (5x schneller)
+* Bis zu 30% Einsparungen im Stromverbrauch
+
+Außerdem ermöglicht die Nutzung von kaskadierenden Replikas noch größere Verbünde von horizontal skalierten Servern die unter PostgreSQL 9.2 laufen.
+
+"NewsBlur, ein Nachrichtendienst für soziale Netzwerke, setzt auf Postgres zum Speichern von Millionen von Websites und Subskriptionen. Solide und zuverlässig seit Jahren", sagt Samuel Clay, Gründer von NewsBlur.com. "Wir setzen konsequenterweise auf neueste Features (derzeit 9.1, baldiger Umzug zu 9.2, für die kaskadierende Replikation), und es ist ein Vergnügen seit 8.4."
+
+Flexible Entwicklerunterstützung
+
+Die Flexibilität von PostgreSQL zeigt sich in der Vielfalt von Organisationen, die diese Datenbank verwenden. Zum Beispiel die NASA, die FAA, Chicago Mercantile Exchange und Instagram verlassen sich in ihren Unternehmenskritischen Anwendungen auf PostgreSQL. Version 9.2 erweitert diese Flexibilität noch weiter, indem Unterstützung für Range-Typen und JSON hinzugefügt wurde, so dass Entwickler PostgreSQL in völlig neuer Weise nutzen können.
+
+Range Types erlauben Entwicklern bessere Anwendungen in den Bereichen Kalender, Wissenschaft und Finanzen zu realisieren.  Keine andere ernstzunehmende Datenbank kennt dieses Feature, welches intelligente Handhabung von Zeit- und Nummernbereichen ermöglicht.
+
+Mit PostgreSQL 9.2 können Abfrageergebnisse als JSON-Datentypen zurückgegeben werden. Kombiniert mit dem neuen PL/V8 Javascript und der PL/Coffee Datenbankerweiterung sowie dem optionalen hstore Schlüssel-Wert-Speicher können Anwender jetzt PostgreSQL wie eine "NoSQL" Dokumenten-Datenbank nutzen, unter Beibehaltung von PostgreSQLs Zuverlässigkeit, Flexibilität und Leistung.
+
+"Native JSON-Unterstützung in PostgreSQL bietet einen effizienten Mechanismus für die Erstellung und Speicherung von Dokumenten für Web-APIs. Wir verwenden Front-End-Bibliotheken wie jQuery, um tabellarische und Baum-strukturierte Daten abzufragen; und die neuen Features machen es bequem und bieten Performance-Vorteile beim Abrufen der Daten als JSON ", sagt Taras Mitran, Senior Architect, IVC Inc.
+
+- Pressemappe: http://www.postgresql.org/about/press/presskit92
+- Release Notes: http://www.postgresql.org/docs/9.2/static/release-9-2.html
+- Downloads: http://www.postgresql.org/downloads
+
+Für weitere Informationen kontaktieren Sie bitte:
+Für Deutschland
+Andreas Scherbaum
++49 391 5596779
+ads@pgug.de
+http://www.pgug.de/
+
+Über PostgreSQL: PostgreSQL ist das führende Open-Source-Datenbank-System, mit einer globalen Community von Tausenden von Benutzern und Mitwirkenden und Dutzenden von Unternehmen und Organisationen. Das PostgreSQL-Projekt baut auf über 25 Jahre Engineering, beginnend an der University of California, Berkeley, und hat heute eine unübertroffene Geschwindigkeit der Entwicklung. PostgreSQL fortgeschrittenes Feature-Set ist nicht nur vergleichbar mit den führenden proprietären Datenbank-Systemen, sondern übertrifft diese in erweiterten Datenbank-Funktionen, Erweiterbarkeit, Sicherheit und Stabilität. Erfahren Sie mehr über PostgreSQL und beteiligen sich an unserer Gemeinschaft auf http://www.postgresql.org.

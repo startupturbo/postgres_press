@@ -1,0 +1,151 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.3 版特性列表
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.3 版特性列表</h1>
+
+<p>
+下列列表包括了8.3版本的大部分但不是全部的新特性。由于有大量的新特性，根据用途进行了分组，说明比较简洁。如想了解详细情况，可以浏览PostgreSQL文档和发布声明。想要浏览一个简洁紧凑的格式，可浏览 <a href="/about/featurematrix">特性阵列表</a> （仅英文）。
+</p>
+
+<h2>升级提醒</h2>
+
+<p>为了保持PostgreSQL项目很高标准的数据完整性和可靠性，在8.3版本中我们清理了一些数据类型转换功能。部分用户在升级一些版本很老的且在开发时对数据类型比较不关注的应用时，特别是那些几年前发布的版本，这个更改可能会导致一些问题的发生。对要升级老的应用或是对他们的应用或是存储过程代码觉得繁杂的用户应该在升级前多做一些测试后再升级他们生产系统。请浏览 <a href="/docs/8.3/static/release-8-3.html">发布声明</a> 以获得更多信息。</p>
+
+<h2>性能</h2>
+
+<h3>性能一致性</h3>
+
+<p>这些特性保证了PostgreSQL在负载变化时均能提供一致的响应时间：</p>
+
+<dl>
+<dt>HOT</dt>
+<dd>堆内索引技术(HOT)对频繁更新的数据表极大地减少了数据库维护的开销，减少了需Vacuum清理的次数，提高了应用程序的处理能力。</dd>
+<dt>异步事务提交</dt>
+<dd>允许COMMIT指令不必等待物理磁盘写入后就返回控制的能力，这有助于在系统出现问题时可能会丢失一些事务时会更快地做出响应。</dd>
+<dt>负载分布式的检查点功能</dt>
+<dd>检查点的自调节功能：延迟或分散检查点功能将减少执行检查点功能对系统响应时间的影响。</dd>
+<dt>即时后台写入策略</dt>
+<dd>后台写入程序可以根据最近的数据库运行情况统计来预测有多少缓冲需进行清理然后进行自动调节。</dd>
+</dl>
+
+<h3>速度提升</h3>
+
+<p>许多新特性对一些特定的操作大大地提高了速度，包括：</p>
+
+<dl>
+<dt>提高恢复时间</dt>
+<dd>通过有效的改进，预写式日志在恢复时的Ｉ／Ｏ次数减少一半以上。</dd>
+<dt>记录存储时的环形缓冲</dt>
+<dd>通过减少缓冲写入磁盘的次数提高组合查询的速度。</dd>
+<dt>快速的LIKE/ILIKE比较</dt>
+<dd>提高了部分内容匹配的比较速度，尤其是在多字节编码的内容情况下。</dd>
+<dt>Top-N 排序</dt>
+<dd>极大地提高了查询中含LIMIT时对结果的搜索速度。</dd>
+<dt>延迟XID赋值</dt>
+<dd>允许PostgreSQL不再给只读查询分配事务ID，这样对主要为读操作或是只读数据库的处理能力有显著提高。</dd>
+<dt>函数的开销</dt>
+<dd>允许用户通知查询规划器预测函数的执行开销和返回的记录行，这样来达到更合理查询规划。</dd>
+</dl>
+
+<h3>大型数据库</h3>
+
+<p>部分改进允许用户使用PostgreSQL运行很大型的数据仓库应用：</p>
+<dl>
+<dt>同步扫描</dt>
+<dd>允许多个用户对含大数据量的表进行同步检索，极大地减少了总的Ｉ／Ｏ次数。</dd>
+<dt>L2级缓冲扫描保护</dt>
+<dd>对CPU中的缓冲过度清理会导致并发查询的变慢，新的代码对此进行了优化。</dd>
+<dt>可变大小字段辅助字节的减少</dt>
+<dd>对大多数可变大小的字段减少了辅助控制字节，这最多可减少20%的数据库大小。</dd>
+</dl>
+
+<h3>Windows平台的性能</h3>
+
+<p>是的，我们没有忘记Windows平台下的用户。8.3版本也最终允许Windows成为一个第一类别的平台：</p>
+<dl>
+<dt>MS Visual C++ 编译支持</dt>
+<dd>允许PostgreSQL的源代码直接使用微软公司的C++编译器，不必再使用第三方的MinGW工具集。这提升了Windows平台下PostgreSQL的性能和稳定性。</dd>
+<dt>后台启动代码重新设计</dt>
+<dd>大大减少了postmaster程序对内存空间的需求，允许在Windows下更多进程同时运行。</dd>
+</dl>
+
+<h2>管理</h2>
+
+<p>虽然PostgreSQL在管理的易用性方面已超过不少商业化数据库，当然总还是有提升的空间。因此，我们又为8.3版本增加了一些可使管理变得更简单容易的功能，也可使数据库管理员可获得更多的信息：
+</p>
+<dl>
+<dt>CSV格式的日志输出</dt>
+<dd>将日志输出至一个可以加载至数据库的文件中可以使得创建特别审计以及性能分析工具变得很容易。</dd>
+<dt>SSPI和GSSAPI支持</dt>
+<dd>Kerberos认证现支持工业级安全API：Windows平台下的SSPI和Unix和Linux平台下的GSSAPI，使得将PostgreSQL集成至一个大型企业网络中更容易。</dd>
+<dt>函数中GUC 设置</dt>
+<dd>允许在函数创建时嵌入GUC设置。这对类似函数在创建时定义搜索路径尤其有帮助，这也加强的安全性。</dd>
+<dt>多个自动清理程序</dt>
+<dd>允许配置PostgreSQL的同时运行清理维护进程数，这使得对有上千个数据表的应用其自动清理进程变得可行。</dd>
+<dt>pg_standby</dt>
+<dd>一个管理工具使得配置即时待命的服务器（热备份）更加简单。</dd>
+<dt>ORDER BY Nulls First/Last</dt>
+<dd>允许创建含有NULL值并且可指定NULL在前或是在后的索引。</dd>
+</dl>
+
+<h2>开发人员</h2>
+
+<h3>应用程序开发</h3>
+
+<p>很多的改进帮助PostgreSQL 8.3版本可与很多领先的商业化数据库相媲美，尤其是在支持复杂、多层的数据库应用，包括：</p>
+<dl>
+<dt>全文搜索</dt>
+<dd>TSearch2作为领先的全文检索工具，现在已集成至系统核心代码中，并且有了一个更简洁的API。这也使TSearch2更加易于使用和扩展至新的语言、字典和权重分析系统。</dd>
+<dt>规划失效处理</dt>
+<dd>在数据表被更新后，允许通过应用程序调用来主动清理规划器的查询规划，也可以由系统自动丢弃当前的查询规划。</dd>
+<dt>可更新的游标</dt>
+<dd>游标现在支持WHERE CURRENT OF关键字，这使得基于游标的应用设计更加具有弹性。</dd>
+</dl>
+
+<h3>新的数据类型</h3>
+
+<dl>
+<dt>XML支持</dt>
+<dd>新的XML数据类型全面支持SQL/XML的ANSI SQL:2003规范，包括格式检查、数据类型操作、SQL/XML发布和XPath查询。8.3版本也包括一些用于XML数据输出的附加功能：</dd>
+<dt>UUID</dt>
+<dd>这个新的128 位数据类型与最常用的GUID和UUID生成器相兼容，主要用于分布式应用程序设计。</dd>
+<dt>复合类型数组</dt>
+<dd>现在的版本中可以创建复合类型数组（即单个类型返回多列内容，例如一个表类型或是一个用户自定义类型）。</dd>
+<dt>枚举</dt>
+<dd>PostgreSQL现在支持可预定义的一系列的可能数值的枚举字段。这使得从MySQL向PostgreSQL迁移更加容易。</dd>
+</dl>
+
+<h3>存储过程</h3>
+
+<p>两个新的特性扩大了PostgreSQL中最流行的存储过程语言PL/pgSQL的用途：</p>
+<dl>
+<dt>表功能支持</dt>
+<dd>PL/pgSQL这个最流行的存储过程语言现在支持一个简化的记录行返回功能的语法。</dd>
+<dt>PL/pgSQL中可前后滚动游标的使用</dt>
+<dd>PL/pgSQL现在支持滚动游标，这样就可以在PL/pgSQL存储过程中执行复杂的记录修改功能。</dd>
+</dl>
+
+<h2>附加软件</h2>
+
+<p>为了保持PostgreSQL主程序在发布时不至于变得很大，且便于维护，很多重要的工具软件没有随着PostgreSQL核心代码同时发布，在这几百个PostgreSQL的附加模块中，一部分是支持数据复制、提高可用性、提供不同编程语言接口、应用程序集成或是一些正在实验中的领先功能，它们中的大多数都可从<a href="http://www.pgfoundry.org">pgFoundry网站</a>浏览到。下面所列的一些软件是与PostgreSQL 8.3版本一道发布的，或是在8.3版本发布时达到专业水准，包括几个数据复制系统，它们根据8.3版本的变化也修改了它们的复制接口： </p>
+<dl>
+<dt><a href="https://developer.skype.com/SkypeGarage/DbProjects/PgBouncer">pgBouncer</a></dt>
+<dd>这个多线程的连接池允许单个PostgreSQL数据库服务器支持最多100,000个应用程序连接。</dd>
+<dt><a href="https://developer.skype.com/SkypeGarage/DbProjects/PlProxy">PL/Proxy</a></dt>
+<dd>一个分布式的、可伸缩的表接口。</dd>
+<dt><a href="http://pgsnmpd.projects.postgresql.org/">pgSNMP</a></dt>
+<dd>一个与标准兼容PostgreSQL的SNMP接口，简化了与监控网络的大型服务器的集成。</dd>
+<dt><a href="http://code.google.com/p/sepgsql/downloads/list">SEpgsql</a></dt>
+<dd>一个基于SELinux模型和策略开发的安全扩展软件，它允许应用统一的SELinux策略来运行操作系统和数据库软件。</dd>
+<dt><a href="http://pgfoundry.org/projects/edb-debugger/">PL/pgSQL Debugger</a></dt>
+<dd>一个新的图形化的接口软件，它支持交互式调试或是单步执行PL/pgSQL存储过程。</dd>
+<dt><a href="http://pgfoundry.org/projects/pgpool/">pgPool-II</a></dt>
+<dd>基于pgPool上开发的新的数据复制查询代理软件，增加了数据分区功能。</dd>
+<dt><a href="http://bucardo.org/">Bucardo</a></dt>
+<dd>这是PostgreSQL第一个多主异步数据复制系统，现在已可使用。</dd>
+<dt><a href="http://www.postgresql.at/english/pr_cybercluster_e.html">CyberCluster</a></dt>
+<dd>这个新的开源项目集成并改进了几个已存在的PostgreSQL集群工具软件，如pgCluster 和pgPool 。</dd>
+<dt><a href="http://www.slony.info/">Slony-I</a></dt>
+<dd>2.0版本的Slony-I是我们最流行的数据复制系统，现在使用PostgreSQL 8.3版本中新的复制函数接口。</dd>
+</dl>

@@ -1,0 +1,229 @@
+<!-- BEGIN page_title_block -->
+<body>PostgreSQL 8.0 Pressinformation
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.0 Pressinformation</h1>
+
+<p>NY, NY: 19 Januari 2004 - PostgreSQL Global Developent Group har släppt 
+version 8.0 av objekt-relationsdatabasservern PostgreSQL, som bygger vidare
+på världens mest avancerade öppen källkodsdatabas. Den nya versionen innehåller
+funktioner som tidigare endast fanns i de dyraste proprietära databassystemen,
+vilket gör att användningen av PostgreSQL förväntas öka både bland användare
+och bland mjukvaruutvecklare.</p>
+
+<p>Förutom signifikanta förbättringar inom skalbarhet, funktioner och prestanda visar
+PostgreSQL 8.0 en oöverträffad utvecklingshastighet för öppen källkod. Mer än ett dussin
+företag, inklusive Red Hat, Fujitsu, Afilias, Software Research Associates, Inc., 2nd
+Quadrant och Command Prompt Inc. liksom hundratals individuella utvecklare bidrog med fler
+viktiga funktioner i version 8.0 än i någon tidigare version.</p>
+
+<p>"Vi är säkra på att dessa funktioner kommer att locka ett stort antal nya 
+PostgreSQL-användare", sade Hr. Takayuki Nakazawa, Chef för Fujitus OSS Database in Software
+Group. "Fujitsu är stolta över att ha sponsrat av bidrag till PostgreSQL och över sitt
+arbete inom PostgreSQL-gemenskapen. Vi lägger stor vikt vid att hjälpa PostgreSQL att bli
+den ledande databashanteraren."</p>
+
+<p>Nya funktioner är bland annat:</p>
+
+<ul>
+<li><b>Äkta Windows-stöd</b>: PostgreSQL fungerar nu direkt på Windows-system och behöver inget 
+emuleringslager. Det innebär markant ökad prestanda jämfört med tidigare versioner och utgör
+ett intressant alternativ till proprietära databasmotorer för oberoende programutvecklare,
+företagsanvändare och individuella Windows-utvecklare.</li>
+<li><b>Savepoints</b>: Denna standard-SQL-funktionalitet tillåter att man rullar tillbaka delar av en 
+transaktion utan att man behöver starta om hela transaktionen. Detta underlättar för
+applikationsutvecklare som behöver komplexa transaktioner med felhantering.</li>
+<li><b>Point in Time Recovery</b>: Denna funktion möjliggör fullt återskapande av data från en
+automatisk och kontinuerligt arkiverande transaktionslogg. Detta är ett mycket efterlängtat
+alternativ till att ta säkerhetskopior varje dag eller timme och blir till stor hjälp för
+datakritiska tjänster i PostgreSQL.</li>
+<li><b>Tabellutrymmen</b>: Tabellutrymmen gör det möjligt att placera stora tabeller och index på 
+individuella diskar eller arrayer för ökad prestanda, något som är mycket viktigt för
+användare av stora system för datalagring.</li>
+<li><b>Förbättrad minneshantering och I/O</b>: Disk och minnesanvändning har optimerats genom 
+användning av algoritmen Adaptive Replacement Cache, den nya bakgrundsskrivaren och den nya
+vacuum-delay funktionen. Detta resulterar i mer förutsägbara lastnivåer och betydligt
+stabilare prestanda under hög last.</li>
+</ul>
+
+<p>Javier Soltero, Chefsarkitekt på Hyperic LLC säger: "PostgreSQL 8.0 ger oss den höga nivå av 
+parallellism och prestanda som krävs för vår övervakningsprodukt. Att PostgreSQL 8.0 nu
+fungerar direkt på Windows innebär att vi nu kan inkludera PostgreSQL i vår produkt och dra
+nytta av den beprövade skalbarheten och prestandan i PostgreSQL samt av licensen som ger oss
+möjlighet att inkludera den i vår distribution utan kommersiella skyldigheter."</p>
+
+<p>Utöver de många nya funktionerna har PostgreSQL förbättrats genom ständigt ökad utveckling 
+av tillbehör och valfria komponenter under det senaste året. Replikeringsverktyget Slony-I
+och uppkopplingshanteraren pgPool används redan idag för att åstadkomma server-pooler för
+hög tillgänglighet. Flera språk för lagrade procedurer har lagts till eller utvecklats,
+inklusive PL/Java, PL/PHP och PL/Perl. Databasdrivrutinerna Npgsql och PGsqlClient för .Net
+har utökats med bättre stöd för de många nya Windowsanvändarna.</p>
+
+<p>För en fullständig lista och beskrivningar av de många nya funktionerna i version 8.0, se
+PostgreSQLs <a href="http://pgfoundry.org/about/press">press-sida</a>.</p>
+
+<p><b>Om PostgreSQL</b>: PostgreSQL är det gemensamma resultatet av hundratals utvecklares arbete och 
+bygger på nästan tjugo års utveckling sedan starten vid University of California at
+Berkeley. Med det stöd som sedan lång tid funnits för viktiga funktioner såsom
+transaktioner, funktioner, trigger-funktioner, subfrågor används PostgreSQL av många av
+dagens mest krävande företag och myndigheter. PostgreSQL distribueras under BSD-licensen
+vilket tillåter alla distributionstyper utan avgifter både för kommersiella och
+icke-kommersiella applikationer.</p>
+
+<p>För mer information om PostgreSQL eller för att ladda hem den senaste versionen, gå till:
+<a href="http://www.postgresql.org/">http://www.postgresql.org/</a></p>
+
+<h2>Ytterligare funktioner i version 8.0</h2>
+
+<p>
+Utöver de stora funktionerna ovan finns ett stort antal ytterligare funktioner och
+förbättringar av stort intresse för nuvarande användare av PostgreSQL.</p>
+
+<ul>
+<li><b>Funktioner</b>: PostgreSQL-funktioner stöder nu dollar-citering,
+vilket innebär att man kan slippa röriga inbäddade citattecken. Tack var den nya 
+Savepoint-funktionen kan PL/pgSQL-funktioner nu använda sig av en enkel 
+avbrottshantering med det nya <code>EXCEPTION</code>-kommandot.</li>
+<li><b>Databasdesign:</b>: Databasadministratörer kan nu byta datatyp på en kolumn 
+direkt i tabellen med <code>ALTER TABLE</code>. Kolumner med komposita datatyper
+fungerar nu enligt SQL-standarden. Samtliga objekt i databasen stöder nu 
+<code>CHANGE OWNER</code>.
+</li>
+<li><b>Dataimport/export</b>: <code>COPY</code>-kommandot stöder nu det vanliga
+kommaseparerade filformatet CSV vilket underlättar import och export mot andra 
+programvaror.</li>
+<li><b>Förbättrad optimerare</b>:  Frågeplaneraren och exekveraren använder nu 
+index för alla kompatibla datatyper vilket minskar behovet av att explicit 
+ange datatyper på konstanter. Den nya versionen innehåller också förbättrad 
+indexanvändning, bättre optimering av OR-uttryck, förbättrad <code>ANALYZE</code>,
+snabbare <code>TRUNCATE</code>, bättre hantering av förberedda frågeplaner samt 
+stora mängder mindre förbättringar.</li>
+<li><b>Loggning</b>: Administratörer kan nu konfigurera automatisk rotation av
+PostgreSQL-loggen genom inställningar i postgresql.conf. Loggningen kan också
+konfigureras på betydligt fler sätt än tidigare, bland annat genom konfigurerbara 
+prefix, loggning av vissa specifika typer av SQL-anrop och loggning av nedkopplingar.</li>
+<li><b>Säkerhetskopiering</b>: PostgreSQLs portabla säkerhetskopieringsverktyg,
+pg_dump, har till stora delar skrivits om. Den nya versionen innehåller bland 
+annat funktioner för att ange start- och stopp-tider samt tar bort de 
+kvarvarande problemen med rättigheter och beroenden i backupfiler.</li>
+</ul>
+
+<p>
+Det finns naturligtvis många andra förändringar och förbättringar. Se 
+<a href="http://pgfoundry.org/docs/8.0/static/release.htm">Releaseinformation</a> 
+för en fullständig lista.
+
+
+<h2>Fullständig text för citaten (återges på originalspråket engelska)</h2>
+
+<p>"Fujitsu is very pleased with the new features in PostgreSQL 8.0. We
+are confident that these enterprise features will attract a great
+number of new PostgreSQL users.", said Mr. Takayuki Nakazawa, Director
+of Fujitsu's OSS Database in Software Group. "Fujitsu is proud of its
+sponsorship of contributions to PostgreSQL and of its work with the
+PostgreSQL community. We are committed to helping make PostgreSQL the
+leading Database Management System."</p>
+
+<p>Javier Soltero, Chief Architect at Hyperic LLC, said, "PostgreSQL
+8.0 gives us the high degree of concurrency and throughput required by
+our HQ monitoring product. Our team evaluated multi-platform commercial
+and open source Java databases and were unable to find one which met
+our needs. Having PostgreSQL 8.0 supported natively on Windows means we
+can now bundle PostgreSQL in our product and benefit from the proven
+scalability and performance of PostgreSQL, as well as its license,
+which allows us to include it in our distribution free of commercial
+obligations. The PostgreSQL group has a well deserved reputation for
+quality which has been evident to us since the very first public 8.0
+beta we reviewed."</p>
+
+<h2>Ladda hem version 8.0</h2>
+
+<ul>
+<li><a href="http://pgfoundry.org/download/mirrors-ftp">Lista på FTP-servrar</a></li>
+<li><a href="http://pgfoundry.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://pgfoundry.org/projects/pginstaller/">Windows installationsprogram</a> (finns också tillgängligt via Bittorrent)</li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (inklusive Windows installationsprogram)</li>
+</ul>
+
+<h2>Kontakta oss för mer information</h2>
+
+	<p>På svenska<br>
+		Dennis Björklund<br>
+		PostgreSQL Project<br>
+		+46-73-636 51 79<br>
+<br>
+		eller Magnus Hagander<br>
+		PostgreSQL Project<br>
+<br>
+		se@postgresql.org
+	</p>
+
+	<p>På engelska:<br>
+		Josh Berkus<br>
+		PostgreSQL Project<br>
+		+1-415-752-2500<br>
+		<a href="mailto:josh%20at%20postgresql.org">josh at postgresql.org</a></p>
+
+<h2>Länkar till andra PostgreSQL-resurser (på engelska)</h2>
+
+<h3>Dokumentation</h3>
+
+<ul>
+<li><a href="http://pgfoundry.org/docs">Officiell dokumentation</a></li>
+<li><a href="http://techdocs.postgresql.org/">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li>
+</ul>
+
+<h3>Drivrutiner</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/psqlodbc/projdisplay.php">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+</ul>
+
+<h3>Grafiska gränssnitt</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdminIII</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">Lista på övriga gränssnitt</a></li>
+</ul>
+
+<h3>Replikering</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://www.erserver.com/">eRServer</a></li>
+</ul>
+
+<h3>Relaterade projekt</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org/">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org/">GBorg</a></li>
+</ul>
+
+<h2>Information om citerade företag (på originalspråket engelska)</h2>
+
+<p><b>About Fujitsu</b>: Fujitsu is a leading provider of
+customer-focused IT and communications solutions for the global
+marketplace. Pace-setting technologies, highly reliable computing and
+communications platforms, and a worldwide corps of systems and services
+experts uniquely position Fujitsu to deliver comprehensive solutions
+that open up infinite possibilities for its customers' success.
+Headquartered in Tokyo, Fujitsu Limited (TSE: 6702) reported
+consolidated revenues of 4.7 trillion yen (US$45 billion) for the
+fiscal year ended March 31, 2004. General information on Fujitsu is
+available at: <a href="http://www.fujitsu.com/">http://www.fujitsu.com</a>. Details of the Fujitsu Supported PostgreSQL (FSP) initiative, including a White Paper discussion document, are available at: <a href="http://fastware.com.au/postgresql.html">http://fastware.com.au/postgresql.html</a>. Please direct enquiries to Liam O'Duibhir, Fujitsu Australia Software Technology, <a href="mailto:liamod%20at%20fast.fujitsu.com.au">liamod at fast.fujitsu.com.au</a>, phone (61-2) 9452 9068 (English only)</p>
+
+<p><b>About Hyperic</b>: Hyperic, LLC is a technology provider focused
+on delivering solutions for managing Open Source and commercial IT
+Infrastructure. Its flagship HQ product is aimed at providing an
+alternative to costly, outdated management frameworks by delivering an
+open, scalable, web-based platform which provides comprehensive support
+for all the technologies used in IT today. For more information,
+contact <a href="mailto:press%20at%20hyperic.net">press at hyperic.net</a>
+(English, Spanish)</p>

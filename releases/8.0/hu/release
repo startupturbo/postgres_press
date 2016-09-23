@@ -1,0 +1,30 @@
+NY, NY: 2005 január 10.  - A Nemzetközi PostgreSQL Fejlesztőcsoport kiadta a PostgreSQL objektum-relációs adatbázis rendszer 8.0 rendszerét, biztosítva vezető helyét a nyilt forráskódú adatbázisok világában. Az új verzió olyan képességeket rejt magában, amellyek eddig csak a legdrágább kereskedelmi adatbázisszoftverek, és várhatóan lényegesen növeli majd a PostgreSQL népszerűségét mind felhasználók, mind a szoftver szolgáltatók körében.
+
+A jelentős teljesítménynövekedés és az új lehetőségek mellett a PostgreSQL demonstrálja a nyilt forráskód páratlanul gyors fejlődését. Több olyan nagycég mint a Red Hat, a Fujitsu, az Afilias, a Software Research Associates, a 2nd Quadrant és a Command Prompt és többezer egyedi fejlesztő működött közre a 8.0 verzió kifejlesztésében, hogy több újdonság kaphasson helyet mint bármelyik előző verzióban.
+
+"Biztosak vagyunk abban, hogy sok új PostgreSQL felhasználónak fog tetszeni." - mondta Takayuki Nakazawa, a Fujitsu OSS Adatbázis szoftvercsoportjának igazgatója. "A Fujitsu büszke arra hogy a PostgreSQL támogató szerepére és munkájára a PostgreSQL közösségben. Segítünk a PostgreSQLt a vezető adatbázis rendszerré fejleszteni."
+
+Az új tulajdonságok:
+
+Natív Windows támogatás: A PostgreSQL most emulációs réteg használata nélkül fut Windows rendszereken. Ez lényegesen növeli sebességét a régebbi verziókhoz képest és kedvező alternatívát nyújt a független szoftvergyártóknak, vállalati felhasználóknak és Windows felhasználóknak.
+
+Savepoint támogatás: Ez az SQL-szabvány utasítás lehetővé teszi hogy a tranzakció bizonyos részét visszagörgessük annélkül hogy a teljes tranzakciót elvetnénk. Ez a lehetőség segíti az üzleti alkalmazásfejlesztőket, akiknek komplex tranzakciókra van szükségük.
+
+Point in Time Recovery: Ez a lehetőség teljes adatbázis helyreállítást tesz lehetővé a folyamatosan archivált tranzakció logokból. Ez alternatívát nyújt a hosszas óránkénti vagy napi mentésekre.
+
+Tablespace támogatás:  Több gigabyte-os adatbázisrendszerek adminisztátorainak alapvető fontosságú eszköz. A tablespace-k használatával a nagy táblák és indexek külön merevlemezekre kerülhetnek, növelve a lekérdezés teljesítményét.
+
+Jobb memória és I/O használat:  A lemez és a memóriahasználat optimalizálva lett az Adaptive Replacement Cache algoritmus használatával. Az új háttér író folyamat és a vákum késleletetési lehetőség. Ez jobban tervezhető terhelést tesz lehetővé és lényegesen elfogadhatóbb teljesítményt eredményez nagy terhelés esetén.
+
+Javier Soltero, a Hyperic vezető szoftvertervezője: "A PostgreSQL 8.0 adja azt a magas átviteli sebességet, amelyre cégünk HQ monitorozó termékének szüksége van. A csapatunk értékelte több többplatformos kereskedelmi és nyílt forráskódú adatbázist, és nem talátunk olyat ami megfelelt volna igényeinknek. A PostgreSQL 8.0 nativ Windows támogatásával most a PostgreSQL-t a saját termékünkkel együtt adhatjuk anna skálázhatóságával és teljesítményével. A PostgreSQL liszensze mindezt  lehetővé teszi kereskedelmi kötöttségek nélkül. A PostgreSQL csapat elkötelezett a minőség irént, ami egyértelmű volt számunkra miőta az első 8.0 bétát megvizsgáltuk."
+
+A sok új képességgel együtt, az utúbbi évben a PostgreSQL-hez számos kiegészítő készült. A Slony-I replikációs eszköz és a pgPoolm kapcsolat menedzsment eszköz már magas rendelkezésreállású szerver klasztereken is fut. Számos tárolt eljárás nyelv készült, például a PL/Java és a PL-J, a PL/Perl és a PL/PHP, míg a Npgsql és a PGsqlClient .NET adat szolgáltatók is fejlődtek hogy még több a Windows felhasználó igényeinek megfelejenek.
+
+A 8.0 verzió újításainak és teljes listája és leírása a sajtóközleményben található.
+
+A PostgreSQL-ről: A PostgreSQL fejlesztők ezreinek munkája, akik majdnem tizenkét éve folytatják a Kaliforniai Berkley Egyetemen indított fejlesztést. Szinte a kezdetektől fogva támogatja az olyan vállalati szintű lehetőségeket, mint a tranzakciók, SQL funkciók, triggerek és al-lekérdezések, így a PostgreSQL mára már sok üzleti és kormányzati rendszerben fut. A PostgreSQL BSD liszensz alatt érhető el, amely lehetővé teszi a használatát és továbbadását költségmentesen kereskedelmi és magáncélú felhasználásra egyaránt.
+
+További információk:
+	http://www.postgresql.org/ (angol)
+	
+További információval a Fujitsu-ról és a Hyperic-ről a sajtóközlemény szolgál.

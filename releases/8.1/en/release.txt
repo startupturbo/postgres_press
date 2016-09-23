@@ -1,0 +1,88 @@
+Bruce Momjian				Josh Berkus
+press@postgresql.org			press@postgresql.org
+610-359-1001				415-752-2500
+
+
+8 November 2005, Frankfurt, Germany (OpenDBCon):  The PostgreSQL Global Development
+Group proudly announces the release of PostgreSQL 8.1, further extending
+PostgreSQL's lead as the most advanced open source database management
+system. Designed, built, and tested by a large and thriving
+community and backed by a growing number of corporate sponsors and support
+companies, version 8.1 will expand the scope of PostgreSQL application
+development.  The new release includes performance improvements and advanced
+SQL features which will support bigger data warehouses, higher-volume
+transaction processing, and more complex distributed enterprise software.
+
+These features will continue the adoption trend established by the previous
+release. Version 8.0 has been downloaded one million times in its first seven
+months, which compares with about 300,000 over a similar period for the prior
+release.
+
+"The project is clearly accelerating in the minds of database users," 
+said Lance Obermeyer, Director of Products at Pervasive Software, 
+one of PostgreSQL's corporate sponsors. "Given the growing interest
+in open source infrastructure software, we're expecting PostgreSQL
+to pick up even more steam."
+
+New Advanced Database Features
+-------------------------------
+
+Roles: PostgreSQL now supports database roles, which simplify
+the management of large numbers of users with complex overlapping
+database rights.
+
+IN/OUT Parameters: PostgreSQL functions now support IN, OUT and INOUT
+parameters, which substantially improves support of complex business logic for
+J2EE and .NET applications.
+
+Two-Phase Commit (2PC): long in demand for WAN applications and 
+heterogeneous data centers using PostgreSQL, this feature allows 
+ACID-compliant transactions across widely separated servers.
+
+Performance Enhancements
+--------------------------
+
+Improved Multiprocessor (SMP) Performance: the buffer manager
+for 8.1 has been enhanced to scale almost linearly with the
+number of processors, leading to significant performance gains
+on 8-way, 16-way, dual-core, and multi-core CPU servers.
+
+Bitmap Scan: indexes will be dynamically converted to
+bitmaps in memory when appropriate, giving up to twenty times
+faster index performance on complex queries against very 
+large tables. This also helps simplify database management
+by greatly reducing the need for multi-column indexes.
+
+Table Partitioning: the query planner is now able to avoid 
+scanning whole sections of a large table using a technique known
+as Constraint Exclusion. Similar to the Table Partitioning found
+in other database management systems, this feature improves both
+performance and data management for multi-gigabyte tables.
+
+Shared Row Locking: PostgreSQL's "better than row-level
+locking" now supports even higher levels of concurrency through the
+addition of shared row locks for foreign keys.  Shared locks will improve
+insert and update performance on many high-volume OLTP applications.
+
+"PostgreSQL 8.1 offers a huge performance increase pretty much
+across the board, [on our] dual processor Opteron production
+servers," said Merlin Moncure, Database Administrator for 
+Reliable Computer Solutions. "More specifically, I'm seeing 
+around 20% reduction in run times for simple queries and 
+an additional 20% reduction in CPU load, for a staggering 20-40% 
+improvement in server load characteristics."  
+
+There are more than 120 other enhancements, some of which are detailed on our
+8.1 presskit:
+http://www.postgresql.org/about/press/presskit81.html.en
+
+About PostgreSQL
+------------------
+PostgreSQL is the collective work of hundreds of developers,
+building on twenty years of development which started at the University
+of California at Berkeley. With its long-time support of an enterprise level
+feature set including transactions, functions, triggers, and subqueries,
+PostgreSQL is being used by many of today's most demanding businesses and
+government agencies. PostgreSQL is distributed under a BSD license, which
+allows use and distribution without fees for both commercial and
+non-commercial applications.

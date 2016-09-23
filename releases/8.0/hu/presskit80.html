@@ -1,0 +1,286 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.0 Press Kit
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.0 Press Kit</h1>
+<p>NY, NY: 2005 janu&aacute;r 19. - A Nemzetk&ouml;zi PostgreSQL
+Fejleszt&#337;csoport kiadta a PostgreSQL objektum-rel&aacute;ci&oacute;s
+adatb&aacute;zis rendszer 8.0 rendszer&eacute;t, biztos&iacute;tva
+vezet&#337; hely&eacute;t a nyilt forr&aacute;sk&oacute;d&uacute;
+adatb&aacute;zisok vil&aacute;g&aacute;ban. Az &uacute;j verzi&oacute;
+olyan k&eacute;pess&eacute;geket rejt mag&aacute;ban, amellyek eddig
+csak a legdr&aacute;g&aacute;bb kereskedelmi
+adatb&aacute;zisszoftverek, &eacute;s v&aacute;rhat&oacute;an
+l&eacute;nyegesen n&ouml;veli majd a PostgreSQL
+n&eacute;pszer&#369;s&eacute;g&eacute;t mind felhaszn&aacute;l&oacute;k,
+mind a szoftver szolg&aacute;ltat&oacute;k k&ouml;r&eacute;ben.</p>
+<p>A jelent&#337;s teljes&iacute;tm&eacute;nyn&ouml;veked&eacute;s &eacute;s
+az &uacute;j lehet&#337;s&eacute;gek mellett a PostgreSQL
+demonstr&aacute;lja a nyilt forr&aacute;sk&oacute;d p&aacute;ratlanul
+gyors fejl&#337;d&eacute;s&eacute;t. T&ouml;bb olyan nagyc&eacute;g mint a
+Red Hat, a Fujitsu, az Afilias, a Software Research Associates, a 2nd
+Quadrant &eacute;s a Command Prompt &eacute;s t&ouml;bbezer egyedi
+fejleszt&#337; m&#369;k&ouml;d&ouml;tt k&ouml;zre a 8.0 verzi&oacute;
+kifejleszt&eacute;s&eacute;ben, hogy t&ouml;bb &uacute;jdons&aacute;g
+kaphasson helyet mint b&aacute;rmelyik el&#337;z&#337; verzi&oacute;ban.</p>
+<p>"Biztosak vagyunk abban, hogy sok &uacute;j PostgreSQL
+felhaszn&aacute;l&oacute;nak fog tetszeni." - mondta Takayuki Nakazawa,
+a Fujitsu OSS Adatb&aacute;zis szoftvercsoportj&aacute;nak
+igazgat&oacute;ja. "A Fujitsu b&uuml;szke arra hogy a PostgreSQL
+t&aacute;mogat&oacute; szerep&eacute;re &eacute;s
+munk&aacute;j&aacute;ra a PostgreSQL k&ouml;z&ouml;ss&eacute;gben.
+Seg&iacute;t&uuml;nk a PostgreSQLt a vezet&#337; adatb&aacute;zis
+rendszerr&eacute; fejleszteni."</p>
+<p>Az &uacute;j tulajdons&aacute;gok:</p>
+<ul>
+  <li><b>Nat&iacute;v Windows t&aacute;mogat&aacute;s</b>: A PostgreSQL
+most emul&aacute;ci&oacute;s r&eacute;teg haszn&aacute;lata
+n&eacute;lk&uuml;l fut Windows rendszereken. Ez l&eacute;nyegesen
+n&ouml;veli sebess&eacute;g&eacute;t a r&eacute;gebbi verzi&oacute;khoz
+k&eacute;pest &eacute;s kedvez&#337; alternat&iacute;v&aacute;t ny&uacute;jt
+a f&uuml;ggetlen szoftvergy&aacute;rt&oacute;knak, v&aacute;llalati
+felhaszn&aacute;l&oacute;knak &eacute;s Windows
+felhaszn&aacute;l&oacute;knak.</li>
+  <li><b>Savepoint-ok</b>: Ez az SQL-szabv&aacute;ny
+utas&iacute;t&aacute;s lehet&#337;v&eacute; teszi hogy a tranzakci&oacute;
+bizonyos r&eacute;sz&eacute;t visszag&ouml;rgess&uuml;k
+ann&eacute;lk&uuml;l hogy a teljes tranzakci&oacute;t elvetn&eacute;nk.
+Ez a lehet&#337;s&eacute;g seg&iacute;ti az &uuml;zleti
+alkalmaz&aacute;sfejleszt&#337;ket, akiknek komplex tranzakci&oacute;kra van
+sz&uuml;ks&eacute;g&uuml;k.</li>
+  <li><b>Point in Time Recovery</b>: Ez a lehet&#337;s&eacute;g teljes
+adatb&aacute;zis helyre&aacute;ll&iacute;t&aacute;st tesz
+lehet&#337;v&eacute; a folyamatosan archiv&aacute;lt tranzakci&oacute;
+logokb&oacute;l. Ez alternat&iacute;v&aacute;t ny&uacute;jt a hosszas
+&oacute;r&aacute;nk&eacute;nti vagy napi ment&eacute;sekre.</li>
+  <li><b>Tablespace t&aacute;mogat&aacute;s</b>: T&ouml;bb gigabyte-os
+adatb&aacute;zisrendszerek adminiszt&aacute;torainak alapvet&#337;
+fontoss&aacute;g&uacute; eszk&ouml;z. A tablespace-k
+haszn&aacute;lat&aacute;val a nagy t&aacute;bl&aacute;k &eacute;s
+indexek k&uuml;l&ouml;n merevlemezekre ker&uuml;lhetnek, n&ouml;velve a
+lek&eacute;rdez&eacute;s teljes&iacute;tm&eacute;ny&eacute;t.</li>
+  <li><b>Jobb mem&oacute;ria &eacute;s I/O haszn&aacute;lat</b>: A
+lemez &eacute;s a mem&oacute;riahaszn&aacute;lat optimaliz&aacute;lva
+lett az Adaptive Replacement Cache algoritmus
+haszn&aacute;lat&aacute;val. Az &uacute;j h&aacute;tt&eacute;r
+&iacute;r&oacute; folyamat &eacute;s a v&aacute;kum
+k&eacute;sleletet&eacute;si lehet&#337;s&eacute;g. Ez jobban tervezhet&#337;
+terhel&eacute;st tesz lehet&#337;v&eacute; &eacute;s l&eacute;nyegesen
+elfogadhat&oacute;bb teljes&iacute;tm&eacute;nyt eredm&eacute;nyez nagy
+terhel&eacute;s eset&eacute;n.</li>
+</ul>
+<p>Javier Soltero, a Hyperic vezet&#337; szoftvertervez&#337;je: "A PostgreSQL
+8.0 adja azt a magas &aacute;tviteli sebess&eacute;get, amelyre
+c&eacute;g&uuml;nk HQ monitoroz&oacute; term&eacute;k&eacute;nek
+sz&uuml;ks&eacute;ge van. A csapatunk &eacute;rt&eacute;kelte t&ouml;bb
+t&ouml;bbplatformos kereskedelmi &eacute;s ny&iacute;lt
+forr&aacute;sk&oacute;d&uacute; adatb&aacute;zist, &eacute;s nem
+tal&aacute;tunk olyat ami megfelelt volna ig&eacute;nyeinknek. A
+PostgreSQL 8.0 nativ Windows t&aacute;mogat&aacute;s&aacute;val most a
+PostgreSQL-t a saj&aacute;t term&eacute;k&uuml;nkkel egy&uuml;tt
+adhatjuk anna sk&aacute;l&aacute;zhat&oacute;s&aacute;g&aacute;val
+&eacute;s teljes&iacute;tm&eacute;ny&eacute;vel. A PostgreSQL liszensze
+mindezt lehet&#337;v&eacute; teszi kereskedelmi k&ouml;t&ouml;tts&eacute;gek
+n&eacute;lk&uuml;l. A PostgreSQL csapat elk&ouml;telezett a
+min&#337;s&eacute;g ir&eacute;nt, ami egy&eacute;rtelm&#369; volt
+sz&aacute;munkra mi&#337;ta az els&#337; 8.0 b&eacute;t&aacute;t
+megvizsg&aacute;ltuk."</p>
+<p>A sok &uacute;j k&eacute;pess&eacute;ggel egy&uuml;tt, az
+ut&uacute;bbi &eacute;vben a PostgreSQL-hez sz&aacute;mos
+kieg&eacute;sz&iacute;t&#337; k&eacute;sz&uuml;lt. A Slony-I
+replik&aacute;ci&oacute;s eszk&ouml;z &eacute;s a pgPoolm kapcsolat
+menedzsment eszk&ouml;z m&aacute;r magas
+rendelkez&eacute;sre&aacute;ll&aacute;s&uacute; szerver klasztereken is
+fut. Sz&aacute;mos t&aacute;rolt elj&aacute;r&aacute;s nyelv
+k&eacute;sz&uuml;lt, p&eacute;ld&aacute;ul a PL/Java &eacute;s a PL-J,
+a PL/Perl &eacute;s a PL/PHP, m&iacute;g a Npgsql &eacute;s a
+PGsqlClient .NET adat szolg&aacute;ltat&oacute;k is fejl&#337;dtek hogy
+m&eacute;g t&ouml;bb a Windows felhaszn&aacute;l&oacute;
+ig&eacute;nyeinek megfelejenek.</p>
+<p>A 8.0 verzi&oacute; &uacute;j&iacute;t&aacute;sainak &eacute;s
+teljes list&aacute;ja &eacute;s le&iacute;r&aacute;sa a <a
+ href="http://pgfoundry.org/about/press">sajt&oacute;k&ouml;zlem&eacute;nyben</a>
+tal&aacute;lhat&oacute;.</p>
+<p><b>A PostgreSQL-r&#337;l</b>: A PostgreSQL fejleszt&#337;k ezreinek
+munk&aacute;ja, akik majdnem tizenk&eacute;t &eacute;ve
+folytatj&aacute;k a Kaliforniai Berkley Egyetemen ind&iacute;tott
+fejleszt&eacute;st. Szinte a kezdetekt&#337;l fogva t&aacute;mogatja az
+olyan v&aacute;llalati szint&#369; lehet&#337;s&eacute;geket, mint a
+tranzakci&oacute;k, SQL funkci&oacute;k, triggerek &eacute;s
+al-lek&eacute;rdez&eacute;sek, &iacute;gy a PostgreSQL m&aacute;ra
+m&aacute;r sok &uuml;zleti &eacute;s korm&aacute;nyzati rendszerben
+fut. A PostgreSQL BSD liszensz alatt &eacute;rhet&#337; el, amely
+lehet&#337;v&eacute; teszi a haszn&aacute;lat&aacute;t &eacute;s
+tov&aacute;bbad&aacute;s&aacute;t k&ouml;lts&eacute;gmentesen
+kereskedelmi &eacute;s mag&aacute;nc&eacute;l&uacute;
+felhaszn&aacute;l&aacute;sra egyar&aacute;nt.</p>
+<p>Tov&aacute;bbi inform&aacute;ci&oacute;k: <a
+ href="http://www.postgresql.org/">http://www.postgresql.org/</a></p>
+<h2> &Uacute;j lehet&otilde;s&eacute;gek a jelenlegi verzi&oacute;ban</h2>
+<p>A fenti nagyobb v&aacute;ltoztat&aacute;sokon t&uacute;l
+sz&aacute;mos olyan &uacute;jdons&aacute;g kapott helyet a
+verzi&oacute;ban, amelyek nagy &eacute;rdekl&otilde;d&eacute;sre
+tarthatnak sz&aacute;mot a PostgreSQL felhaszn&aacute;l&oacute;k
+k&ouml;r&eacute;ben.</p>
+<ul>
+  <li><b>Funkci&oacute;k</b>: A PostgreSQL funkci&oacute;k most
+t&aacute;mogatnak egy &uacute;j id&eacute;z&otilde;jel
+haszn&aacute;latot amivel elker&uuml;lhet&otilde; a r&eacute;gi
+neh&eacute;zkes id&eacute;z&otilde;jelez&eacute;s.
+Tov&aacute;bb&aacute; a Savepoint-ok mellett a PL/pgSQL funkci&oacute;k
+t&aacute;mogatj&aacute;k az EXCEPTION blokkokat is, amellyel
+korl&aacute;tozott kiv&eacute;telkezel&eacute;si
+k&eacute;pess&eacute;get adnak.</li>
+  <li><b>Adatb&aacute;zis tervez&eacute;s</b>: Az adatb&aacute;zis
+adminisztr&aacute;torok mostant&oacute;l helyben
+megv&aacute;ltoztathatj&aacute;k az oszlopok adatt&iacute;pus&aacute;t
+ALTER TABLE kifejez&eacute;ssel. Az SQL szabv&aacute;nynak
+megfelel&otilde; kompozit adatt&iacute;pusok is t&aacute;mogatottak.
+Tov&aacute;bb&aacute; minden adatb&aacute;zis objektumra
+&eacute;rtelmezhet&Otilde; CHANGE OWNER.</li>
+  <li><b>Adat import/export</b>: A COPY parancs mostantol
+t&aacute;mogatja az elterjedt CSV adatform&aacute;tumot,
+k&ouml;nnyeb&eacute; t&eacute;ve m&aacute;s szoftverek fel&eacute; az
+adatok import&aacute;l&aacute;s&aacute;t &eacute;s
+export&aacute;l&aacute;s&aacute;t.</li>
+  <li><b>Optimalizal&oacute; fejleszt&eacute;sek</b>: A
+lek&eacute;rdez&eacute;s optimaliz&aacute;l&oacute; &eacute;s
+v&eacute;grehajt&oacute; mostant&oacute;l haszn&aacute;lni fogja a
+kompatibilis adatt&iacute;pusokra k&eacute;sz&iacute;tett indexeket,
+amivel nagyban cs&ouml;kken az explicit
+tipusk&eacute;nyszer&iacute;t&eacute;sek sz&aacute;ma konstans
+&eacute;rt&eacute;keken. Az &uacute;j verzi&oacute; fejleszt az index
+haszn&aacute;laton is, jobb optimaliz&aacute;ci&oacute;t ny&uacute;jt
+az OR m&ucirc;veletekhez, fejleszt az ANALYZE parancs
+mintav&eacute;tel&eacute;n, a TRUNCATE is gyorsabb &eacute;s jobban
+gener&aacute;l&oacute;dnak a lek&eacute;rdez&eacute;sek tervei
+(prepared statement) valamint rengeteg apr&oacute;bb fejleszt&eacute;s.</li>
+  <li><b>Logol&aacute;s</b>: Az adminisztr&aacute;torok
+mostant&oacute;l automatikus log &aacute;llom&aacute;ny
+rot&aacute;ci&oacute;t &aacute;ll&iacute;thatnak be a
+postgresql.conf-ban. A log form&aacute;tum is sokkal
+konfigur&aacute;lhat&oacute;bb mint ezel&ouml;tt, ide tartozik a
+be&aacute;ll&iacute;thato sor-prefix, adott t&iacute;pus&uacute; SQL
+kifejez&eacute;sek logol&aacute;sa &eacute;s kapcsolat bont&aacute;sok
+logol&aacute;sa.</li>
+  <li><b>Biztons&aacute;gi ment&eacute;s</b>: A PostgreSQL
+portolhat&oacute; biztons&aacute;gi ment&otilde; seg&eacute;dprogramja,
+a pg_dump alapos &aacute;t&iacute;r&aacute;son esett &aacute;t. Az
+&uacute;j verzi&oacute; l&eacute;nyegesen cs&ouml;kkenti a
+verzi&oacute;k k&ouml;z&ouml;tti adatment&eacute;sek lehets&eacute;ges
+probl&eacute;m&aacute;inak sz&aacute;m&aacute;t.</li>
+</ul>
+<p>Term&eacute;szetesen sz&aacute;mos m&aacute;s
+v&aacute;ltoztat&aacute;st &eacute;s fejleszt&eacute;st tartalmaz az
+&uacute;j verzi&oacute;. Teljes lista a <a
+ href="http://pgfoundry.org/docs/8.0/static/release.htm">Release Notes</a>ban
+tal&aacute;lhat&oacute;.
+</p>
+<h2>Teljes id&eacute;zetek</h2>
+<p>"A Fujitsu nagyon el&eacute;gedett a PostgreSQL 8.0
+&uacute;jdons&aacute;gaival. Biztosak vagyunk abban, hogy sok &uacute;j
+PostgreSQL felhaszn&aacute;l&oacute;nak fog tetszeni." - mondta
+Takayuki Nakazawa, a Fujitsu OSS Adatb&aacute;zis
+szoftvercsoportj&aacute;nak igazgat&oacute;ja. "A Fujitsu b&uuml;szke
+arra hogy a PostgreSQL t&aacute;mogat&oacute; szerep&eacute;re
+&eacute;s munk&aacute;j&aacute;ra a PostgreSQL
+k&ouml;z&ouml;ss&eacute;gben. Seg&iacute;t&uuml;nk a PostgreSQLt a
+vezet&otilde; adatb&aacute;zis rendszerr&eacute; fejleszteni."</p>
+<p>Javier Soltero, a Hyperic vezet&otilde; szoftvertervez&otilde;je: "A
+PostgreSQL 8.0 adja azt a magas &aacute;tviteli sebess&eacute;get,
+amelyre c&eacute;g&uuml;nk HQ monitoroz&oacute;
+term&eacute;k&eacute;nek sz&uuml;ks&eacute;ge van. A csapatunk
+&eacute;rt&eacute;kelte t&ouml;bb t&ouml;bbplatformos kereskedelmi
+&eacute;s ny&iacute;lt forr&aacute;sk&oacute;d&uacute;
+adatb&aacute;zist, &eacute;s nem tal&aacute;tunk olyat ami megfelelt
+volna ig&eacute;nyeinknek. A PostgreSQL 8.0 nativ Windows
+t&aacute;mogat&aacute;s&aacute;val most a PostgreSQL-t a saj&aacute;t
+term&eacute;k&uuml;nkkel egy&uuml;tt adhatjuk annak
+sk&aacute;l&aacute;zhat&oacute;s&aacute;g&aacute;val &eacute;s
+teljes&iacute;tm&eacute;ny&eacute;vel. A PostgreSQL liszensze mindezt
+lehet&otilde;v&eacute; teszi kereskedelmi k&ouml;t&ouml;tts&eacute;gek
+n&eacute;lk&uuml;l. A PostgreSQL csapat elk&ouml;telezett a
+min&otilde;s&eacute;g ir&aacute;nt, ami egy&eacute;rtelm&ucirc; volt
+sz&aacute;munkra mi&oacute;ta az els&otilde; 8.0 b&eacute;t&aacute;t
+megvizsg&aacute;ltuk."</p>
+<h2>A 8.0 verzi&oacute; let&ouml;lt&eacute;se:</h2>
+<ul>
+  <li><a href="http://pgfoundry.org/download/mirrors-ftp">FTP
+t&uuml;k&ouml;rszerverek list&aacute;ja</a></li>
+  <li><a href="http://pgfoundry.org/download/bittorrent">Bittorrent</a></li>
+  <li><a href="http://pgfoundry.org/projects/pginstaller/">Windows
+telep&iacute;t&otilde;</a> (Bittorrent-en is)</li>
+  <li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a>(A
+Windows telep&iacute;t&otilde; is el&eacute;rhet&otilde;)</li>
+</ul>
+<h2>Tov&aacute;bbi inform&aacute;ci&oacute;&eacute;rt:</h2>
+<p>Magyarul:</p>
+Horny&aacute;k L&aacute;szl&oacute;<br>
++36-(70)-368-3901<br>
+hu@postgresql.org<br>
+<p>Angolul:<br>
+Josh Berkus<br>
+PostgreSQL Project<br>
++1-415-752-2500<br>
+<a href="mailto:josh%20at%20postgresql.org">josh at postgresql.org</a></p>
+<h2>PostgreSQL inform&aacute;ci&oacute;k</h2>
+<h3>Document&aacute;ci&oacute;</h3>
+<ul>
+  <li><a href="http://pgfoundry.org/docs">Hivatalos
+dokument&aacute;ci&oacute;</a></li>
+  <li><a href="http://techdocs.postgresql.org/">Technikai
+dokument&aacute;ci&oacute;k (angol)</a></li>
+  <li><a href="http://www.varlena.com/GeneralBits">General Bits (angol)</a></li>
+</ul>
+<h3>Csatol&oacute; programok:</h3>
+<ul>
+  <li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+  <li><a
+ href="http://gborg.postgresql.org/project/psqlodbc/projdisplay.php">ODBC</a></li>
+  <li><a
+ href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+</ul>
+<h3>Grafikus felhaszn&aacute;l&oacute;i fel&uuml;letek</h3>
+<ul>
+  <li><a href="http://www.pgadmin.org/">pgAdminIII</a></li>
+  <li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+  <li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+  <li><a href="http://techdocs.postgresql.org/guides/GUITools">Egy&eacute;b
+grafikus fel&uuml;letek</a></li>
+</ul>
+<h3>Replik&aacute;ci&oacute;</h3>
+<ul>
+  <li><a href="http://www.slony.info/">Slony-I</a></li>
+  <li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+  <li><a href="http://www.erserver.com/">eRServer</a></li>
+</ul>
+<h3>Kapcsol&oacute;d&oacute; projectek</h3>
+<ul>
+  <li><a href="http://projects.postgresql.org/">pgFoundry</a></li>
+  <li><a href="http://gborg.postgresql.org/">GBorg</a></li>
+</ul>
+<h2>Information About Quoted Companies</h2>
+<p><b>A Fujitsu</b>:
+A Fujitsu a &uuml;gyf&eacute;lorient&aacute;lt IT &eacute;s
+telekommunik&aacute;ci&oacute;s megold&aacute;sok vezet&otilde;
+szolg&aacute;ltat&oacute;ja a nemzetk&ouml;zi piacon. Magas
+megb&iacute;zhat&oacute;s&aacute;g&uacute;
+sz&aacute;m&iacute;t&aacute;si &eacute;s kommunik&aacute;ci&oacute;s
+rendszereivel &eacute;s vil&aacute;gm&eacute;ret&ucirc;
+szolgltat&oacute; &eacute;s szak&eacute;rt&otilde;
+h&aacute;l&oacute;zat&aacute;val a Fujitsu olyan megold&aacute;sokat
+sz&aacute;l&iacute;t, amelyek v&eacute;gtelen
+lehet&otilde;s&eacute;geket nyitnak.
+</p>
+<p><b>A Hyperic</b>:
+A Hyperic a kereskedelmi &eacute;s a nyilt
+forr&aacute;sk&oacute;d&uacute; rendszerek
+ir&aacute;ny&iacute;t&aacute;s&aacute;ra f&oacute;kusz&aacute;l.
+Vezet&iquest; term&eacute;ke alternat&iacute;va a k&ouml;lts&eacute;ges
+&eacute;s elavult rendszerekre, amely ny&iacute;lt,
+sk&aacute;l&aacute;zhat&oacute;, web-alap&uacute; platform az IT
+iparban haszn&aacute;lt minden technol&oacute;gia
+t&aacute;mogat&aacute;s&aacute;val.
+Tov&aacute;bbi inform&aacute;ci&oacute;&eacute;rt: press@hyperic.net
+(angol &eacute;s spanyol)
+</p>

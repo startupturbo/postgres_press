@@ -1,0 +1,93 @@
+5. Dezember 2006, Washington D.C., USA (LISA Conference): Die weltweite PostgreSQL-
+Entwicklergruppe gibt die Veröffentlichung der Version 8.2 des 
+objekt-relationalen Datenbank-Managementsystems PostgreSQL bekannt. 
+Mit neuen Leistungsmerkmalen und erheblichen Performanzsteigerungen erfüllt
+diese 14. Version Anforderungen von Unternehmensanwendern. PostgreSQL
+8.2 bietet eine verbesserte Bedienbarkeit, die einem Vergleich mit
+anderen führenden Unternehmens-Datenbanksystemen standhält. Die PostgreSQL
+Community geht davon aus, dass die Version 8.2 noch mehr Migrationen hin zu
+PostgreSQL initiieren wird.
+
+"Diese Version wirkt sich auf fast alle Kommandos und Möglichkeiten 
+der Datenbank aus.", so Bruce Momjian, Mitglied im Kernteam von PostgreSQL
+und Datenbank-Architekt von EnterpriseDB. "Sie fügt erweiterte, 
+standard-konforme Syntax und Schnittstellen hinzu, welche von unserer 
+Community gefordert wurden. Damit wird es besonders für neue
+Datenbank-Administratoren einfacher, selbst die fortschrittlichen
+PostgreSQL-Funktionalitäten in vollem Umfang zu nutzen."
+
+"Unisys nimmt erfreut zur Kenntnis, dass die Skalierbarkeit und 
+Geschwindigkeit von PostgreSQL auf großen Multiprozessor-Systemen 
+deutlich verbessert wurde", äußert sich Ali Shadman, Vizepräsident und
+Generaldirektor bei Unisys, zuständig für Open-Source-Lösungen, 
+-Systeme und -Technologien. "Die jetzt veröffentlichte Version
+setzt den Entwicklungsprozess fort, der PostgreSQL zu einem ausgereiften
+Datenbank-Managementsystem für den Unternehmenseinsatz gemacht hat."
+
+Neue Merkmale und Werkzeuge zur einfacheren Verwaltung und Entwicklung
+von Datenbanken sind unter anderem:
+
+Performanz-Steigerungen: Version 8.2 steigert die 
+Verarbeitungsgeschwindigkeit insgesamt um ca. 20% bei Systemtests
+mit High-end OLTP (Online Transaction Processing). Noch stärker profitieren
+Anwender sogar beim Betrieb von Data-Warehouse-Lösungen. 
+Die Verbesserungen betreffen Sortiervorgänge, sowohl im Arbeitsspeicher 
+als auch auf Festplatten wird schneller sortiert, bessere
+Multi-Prozessor-Skalierung, bessere Planung von Abfragen auf 
+partitionierten Tabellen, schnellere Bulk Loads und erheblich 
+beschleunigte Outer-Join-Abfragen.
+
+Warm-Standby Datenbanken: Durch eine Erweiterung des in der Version 8.0
+eingeführten "Point in Time Recovery" können Administratoren jetzt 
+auf einfache Weise eine Kopie ihrer Datenbank-Cluster als Ausfallsicherung
+einrichten.
+
+Online Index Erstellung: Tabellen können jetzt auch indiziert werden, 
+während Anwendungen in Datenbank-Tabellen schreiben, was ein 
+Datenbank-Tuning ohne Ausfallzeiten ermöglicht.
+
+SQL:2003 Funktionalitäten: PostgreSQL, bekannt für seine 
+Standard-Kompatibilität, wurde um Syntax für weitere Elemente der
+ANSI-Spezifikation SQL:2003 ergänzt. Unter anderem: Aggregatfunktionen 
+für statistische Auswertungen, VALUE-Zuweisungen für mehrere Zeilen 
+zugleich, UPDATE RETURNING und Aggregate über mehreren Spalten.
+
+
+Fortgeschrittene Datenbank-Merkmale, die PostgreSQL 8.2 vor 
+allen anderen großen Datenbank-Systemen anbietet, sind u. a.:
+
+Generalisierte Invertierte Indizes: bieten einen besser skalier-
+und programmierbaren Weg zur Indizierung semi-strukturierter und
+Volltext-Daten.
+
+DTrace: PostgreSQL erhielt Schnittstellen für Solaris DTrace und andere
+fortgeschrittene Werkzeuge zur Ablaufverfolgung mittels des generischen 
+Monitoring-Frameworks.
+
+"Wir betreiben zahlreiche geschäftskritische PostgreSQL-Systeme auf 
+Solaris 10. Bei Data-Warehouse-Instanzen mit Milliarden von Datenbank-Zeilen
+und einem Datenvolumen von mehreren Terabytes sind Online-Index-Erstellung 
+und Hot-Standby-Fähigkeiten von größter Wichtigkeit", erläutert Theo 
+Schlossnagle, Gesellschafter der OmniTI Computer Consulting. 
+"Wir sind begeistert, dass PostgreSQL jetzt auch beim DTrace in der
+ersten Reihe steht. Dies bedeutet für uns, dass unsere regulären 
+Systemanalysen jetzt auch datenbank-spezifische Informationen 
+einschließen und somit viel aussagekräftigere Resultate liefern."
+
+Es gibt darüber hinaus in der Version 8.2 noch Dutzende neuer Merkmale 
+und Verbesserungen, die PostgreSQL-Administratoren noch produktiver machen. 
+In der Pressemappe sind diese näher beschrieben 
+(siehe http://www.postgresql.org/about/press/presskit82.html.de). 
+PostgreSQL kann von unseren Download-Seiten (http://www.postgresql.org/download) 
+herunter geladen werden.
+
+Über PostgreSQL: PostgreSQL ist das gemeinsame Werk von hunderten
+Software-Entwicklern und baut auf eine 21-jährige Entwicklung, welche 
+an der University of California in Berkeley begann. Aufgrund der 
+langjährigen Unterstützung von umfangreichen Leistungsmerkmalen im 
+Enterprise-Bereich, unter anderem Transaktionen, Funktionen, Trigger und 
+Sub-Queries, wird PostgreSQL heute von vielen der anspruchsvollsten 
+Unternehmen und Behörden eingesetzt. PostgreSQL steht unter der 
+BSD-Lizenz, welche die Nutzung und Distribution ohne Lizenzgebühren 
+erlaubt, sowohl für kommerzielle als auch für nicht-kommerzielle 
+Anwendungen.

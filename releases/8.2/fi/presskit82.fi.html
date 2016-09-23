@@ -1,0 +1,239 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.2 Press Kit
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.2 Press Kit</h1>
+
+<h2>Sisällys</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Alkuperäinen julkistus</a><br />
+ &nbsp; <a href="#additional_features">Lisäominaisuuksia</a><br />
+ &nbsp; <a href="#download">Lataa PostgreSQL</a><br />
+ &nbsp;	<a href="#docs">Dokumentaatio</a><br />
+ &nbsp; <a href="#license">Lisenssi</a><br />
+ &nbsp; <a href="#contact">Yhteystiedot</a><br />
+ &nbsp; <a href="#quoted_companies">Tiedot yrityksistä, joita on lainattu</a><br />
+ &nbsp; <a href="#companies">Yrityksiä, jotka antavat tukea</a><br />
+ &nbsp; <a href="#additional_software">Lisää ohjelmia</a><br />
+ &nbsp; <a href="#translations">Englanninkielinen versio</a><br />
+</p>
+
+<a name="original_release"></a><h2>Alkuperäinen julkistus</h2>
+<p><b>2. marraskuuta 2006:</b> PostgreSQL:n kehitysryhmä julkaisee 
+tänään PostgreSQL objektirelaatiotietokantajärjestelmän version 8.2.
+Tämä neljästoista versio lisää uusia ominaisuuksia ja on entistä kypsempi ja nopeampi. 
+Järjestelmän hallinta on entistä parempi ja vertailukelpoinen 
+johtavien enterprise tietokantojen kanssa. Version 8.2 odotetaan tuovan entistä 
+enemmän uusia migraatioita PostgreSQL:ään.</p>
+
+<p>"Tämä versio koskettaa lähes jokaista käskyä ja tietokannan ominaisuutta.", sanoi
+PostgreSQL ydintiimin jäsen ja EnterpriseDB:n tietokanta-arkkitehti
+Bruce Momjian. "Se lisää laajennettuja, yhteensopivia syntakseja ja rajapintoja, joita
+yhteisömme on kaivannut. Se tekee helpommaksi uusille tietokanta-arkkitehdeille 
+PostgreSQL:n edistyneiden ominaisuuksien käytön."</p>
+
+<p>"Unisys on tyytyväinen, sillä olemme huomanneet merkittävää parannusta isojen multi-prosessorijärjestelmien
+skaalautuvuudessa ja suorituskyvyssä.", totesi Ali Shadman, Unisysin Open Source Solutions -osaston johtaja. 
+"Vasta julkistettu 8.2 versio on entistä kypsempi laajoihin enterprise-tason ratkaisuihin."
+
+<p>
+Uudet työkalut ja ominaisuudet, jotka tekevät tietokantajärjestelmien hallinnan ja kehittämisen 
+entistä helpommaksi, ovat muun muassa:</p>
+
+<p><b>Suorituskykyparannukset:</b> versio 8.2 on noin 20% parempi yleisesti high-end OLTP-testeissä.
+Tietovarastoinnissa käyttäjät voivat saada jopa suurempaa hyötyä. Muutokset sisältävät muun 
+muassa nopeamman muistissa ja levyllä tapahtuvan järjestyksen, paremman moniprosessorituen, 
+paremman partitioitujen hakujen suunnittelun, nopeammat bulkkilataukset ja huomattavasti 
+nopeammat ulkoiset liitokset (Outer join).</p>
+
+<p><b>Lämpimät varatietokannat:</b> Aikaan palautuksen (point in time recovery, 
+joka esiteltiin versiossa 8.0) laajennus, ylläpitäjät voivat nyt helposti luoda 
+varmuuskopion tietokantaklusterista.</p>
+
+<p><b>Indeksien luonti lennossa:</b> Indeksien luonti voi nyt tapahtua samaan aikaan, 
+kun sovellukset kirjoittavat tietokantatauluihin, mikä mahdollistaa järjestelmän 
+nopeuden virittämisen ilman downtimea.</p>
+
+<p><b>SQL 2003 ominaisuuksia:</b>  PostgreSQL, joka on tunnettu hyvästä standardien 
+tuestaan, on lisännyt tuen monille ominaisuuksille, jotka sisältyvät ANSI SQL 2003 
+-määrittelyyn. Näitä ovat muun muassa tilastolliset ryhmittelyt, moniriviset VALUE-lauseet, 
+PDATE RETURNING ja monisarakkeiset rakenteet.</p>
+
+<p>Edistyneitä ominaisuuksia, jotka ovat tarjolla PostgreSQL 8.2 versiossa 
+ennen muita merkittäviä tietokantajärjestelmiä, ovat muun muassa:</p>
+
+<p><b>Yleistetyt käännetut indeksit:</b> tukee entistä skaalautuvampia ja 
+ohjelmoitavampia tapoja indeksoida puolirakenteista ja tekstitietoa.</p>
+
+<p><b>DTrace:</b>  PostgreSQL myös tukee Solariksen DTraceä ja muita kehittyneitä 
+seurantatyökaluja yleisen monitorointirakenteen kautta.</p>
+
+<p>"
+Tietovarastoilla, joissa on miljardirivisiä tauluja ja monia teratavuja dataa,
+indeksien luonti lennossa ja lämmin varatietokanta ovat elintärkeitä.", totesi
+Theo Schlossnagle, OmniTI Computer Consultingista. "Olemme myös erittäin innostuneita 
+siitä, että PostgreSQL on nyt ensiluokkainen Dtrace-kansalainen. Tämä tarkoittaa, 
+että meidän normaalit järjestelmäanalysointityökalumme voivat antaa 
+tietokantakohtaista tietoa, joka tuo entistä tarkoituksenmukaisempia tuloksia."</p>
+
+<p>8.2 versio sisältää vielä paljon muita uusia ominaisuuksia ja parannuksia, jotka 
+tekevät PostgreSQL-tietokanta-arkkitehdeistä entistä tuottavampia. Katso lehdistömateriaalista 
+lisää. Lataa PostgreSQL <a href="/download">lataussivultamme.</a></p>
+
+<p><b>PostgreSQL</b>: PostgreSQL on satojen kehittäjien lähes 20 vuoden
+yhteistyön tulos, joka sai alkunsa Californian Berkeleyn yliopistossa.
+PostgreSQL on pitkään tukenut enterprise-luokan ominaisuuksia, kuten
+transaktioita, funktioita, herättimiä ja alikyselyjä, minkä takia se on käytössä
+monissa vaativissa yrityskohteissa ja valtion virastoissa. PostgreSQL on
+lisensioitu BSD-lisenssillä, minkä ansiosta sitä saa vapaasti käyttää ja jakaa
+ilmaiseksi sekä kaupallisiin että ei-kaupallisiin tarkoituksiin.</p>
+
+
+<a name="additional_features"></a><h2>Lisää tämän version ominaisuuksia</h2>
+Aiemmin mainittujen ominaisuuksien lisäksi tässä versiossa on yli 200 uutta ominaisuutta ja parannusta, joita kymmenet kehittäjät ovat tehneet. Näitä ovat muun muassa:
+<ul>
+<li>Ohjeistetut lukot: tarjoaa ohjelmistotasolle mahdollisuuden kontrolloida tietokantaobjekteja PostgreSQL:n nopean lukitusjärjestelmän kautta.</li>
+<li>Valikoiva pg_dump: sallii transaktioeheiden dumppien teon siten, että voit valita/poistaa valinnasta relaatioita käyttäen säännöllisiä lausekkeita. **** Tarkista ****</li>
+<li>Valmistellut komennot: sisältää uuden ylläpitorajapinnan sekä parannuksia valmistelluille komennoille.</li>
+<li>ISN/ISBN: moduuli, joka sisältää ISN-tuotetietoja varasto- ja jälleenmyyntijärjestelmissä tukevia tietotyyppejä, on päivitetty viimeisten standardien mukaiseksi.</li>
+<li>Salaus: pgcrypto-moduuli, joka tukee tietokannan sisäistä salausta, on päivitetty viimeisimmillä algoritmeillä.</li>
+<li>SQL-parannukset: sisältää uusia rakenteita, kuten UPDATE RETURNING, DROP IF EXISTS, ON COMMIT sekä uusia omistus- ja oikeuskomentoja, joiden ansiosta tietokantaobjektien hallinta komentoriviltä on entistä helpompaa.</li>
+<li>PSQL-koostevalinta: tukee rivien palauttamista konsolille koosteina sen sijaan, että palautettaisiin kaikki kerralla.</li>
+<li>ECPG-uudelleenorganisointi: sisäänrakennettu PostgreSQL C -rajapinta on kirjoitettu suurelta osin uudestaan ja uusia rajapintoja on lisätty.</li>
+<li>Merkittäviä TSearch2-parannuksia: UTF-8 -tuki, thesaurus, kyselyiden uudelleenkirjoitustuki sekä GIN-indeksointi.</li>
+<li>PL/Python: tukee nyt nimettyjä parametreja ja joukkoja palauttavia funktioita.</li>
+</ul>
+<p>PostgreSQL:n laajennettavan arkkitehtuurin ansiosta on olemassa monia lisäyksiä, kuten proseduraalisia kieliä, rajapintoja ulkopuolisiin järjestelmiin, uusia indeksityyppejä, replikaatio ja korkean saatavuuden työkaluja. Näitä löydät <a href="http://www.pgfoundry.org">viralliselta PostgreSQL-projektisivustolta.</a>
+Yhteisöprojekteja, jotka ovat tehneet merkittävää edistystä 8.2 version aikana, ovat muun muassa:</p>
+<ul>
+<li>
+Täydet epäyliitokset (Full disjunctions): Google-koodauskesän ansiosta PostgreSQL on ensimmäinen tietokanta, joka on toteuttanut tämän uuden radikaalin liitosalgoritmin.</li>
+<li>PGPoolII: Japanin valtion tukemana PGPool on lisännyt uusia kuormantasaus- ja partitiointimahdollisuuksia.</li>
+<li>PL/Java: toinen Java-kielistämme on saanut täyden tuotantostatuksen. Tämän ansiosta Java on täysin tuettu tietokannan sisällä.</li>
+</ul>
+
+<p>
+Voit lukea kymmenistä muista parannuksista joita on 8.2 versiossa <a href="/docs/current/static/release.html">Release
+Notes (kattava lista muutoksista englanniksi).</a>
+</p>
+
+<a name="download"></a><h2>Lataa PostgreSQL</h2>
+
+<ul>
+<li><a href="/ftp/latest/">FTP-mirroreita</a></li>
+<li><a href="/download/bittorrent">Bittorrent</a></li>
+<li><a href="/ftp/binary/v8.2.0/win32/">Windows-asennus</a> (saatavissa myös Bittorrentin kautta)</li>
+<li><a href="/ftp/binary/v8.2.0/">Muita binäärejä,
+kuten Linux, Mac OSX ja Solaris</a></li>
+<li><a href="/projects/pgsql/">SourceForge</a> (sisältää
+Windows-asennuksen)</li>
+</ul>
+
+<a name="docs"></a><h2>Dokumentaatio</h2>
+
+<ul>
+<li><a href="/docs">Virallinen dokumentaatio
+</a></li>
+<li><a href="/docs/techdocs">TechDocs</a></li>
+<li><a href="/about/press/faq">Usein kysyttyjä kysymyksiä</a></li>
+</ul>
+
+<a name="license"></a><h2>Lisenssi</h2>
+<p>
+PostgreSQL on lisensoitu <a href="/about/licence">BSD-lisenssillä</a>,
+joka vaatii ainoastaan, että lisensoidun lähdekoodin copyright ja lisenssitiedot säilyvät. Tämä
+<a href="http://www.opensource.org/licenses/bsd-license.php">OSI-sertifioitu
+lisenssi</a> on laajalti arvostettu joustavana ja yritysystävällisenä, sillä se ei rajoita PostgreSQL:n käyttöä kaupallisten tai suljettujen ohjelmistojen kanssa. Tämä yhdistettynä monien yritysten antamaan tukeen ja julkiseen koodin omistamiseen tekee PostgreSQL:stä erittäin suositun niiden yritysten joukossa, jotka haluavat sulauttaa tietokannan omiin tuotteisiinsa ja välttää kustannuksia, lukittumista yhteen toimittajaan tai lisenssimuutoksia.
+</p>
+
+<a name="contact"></a><h2>Yhteystietoja</h2>
+
+<p><a href="http://www.postgresql.org">PostgreSQL-kotisivu (englanninkielinen)</a></p>
+
+<p>Kyselyt:<br />
+Jussi Mikkola<br />
++358408307561<br />
+<a href="mailto:fi@postgresql.org">fi@postgresql.org</a></p>
+
+<p>Kontaktit muilla alueilla: <a
+href="/about/press/contact">kansainvälinen kontaktilista</a></p>
+
+<a name="quoted_companies"></a><h2>Tiedot yrityksistä, joita on lainattu</h2>
+<p>"Unisys on ilahtunut huomatessaan merkittäviä parannuksia PostgreSQL:n skaalautuvuudessa ja suorituskyvyssä suurten moniprosessorijärjestelmien kohdalla", sanoo Ali Shadman, Unisysin Open Source Solutions -osaston johtaja. "Vasta julkistettu versio 8.2 on entistä kypsempi ja sopii enterprise-tason tietokannanhallintajärjestelmiin. PostgreSQL on keskeinen komponentti Unisysin OASIS-järjestelmässä (Open and Secure Integrated Solution), valikoituja avoimen lähdekoodin ohjelmistoja käyttävässä Java EE -perustaisessa transaktioiden prosessoinnissa. Unisys suunnittelee jatkavansa aktiivisesti yhteisön tukemista, jotta PostgreSQL vahvistuisi enterprise-tasolla."</p>
+ 
+<p><b>Tietoa Unisys-yrityksestä</b> <a href="http://www.unisys.com/">Unisys</a> on maailmanlaajuinen teknologiapalveluihin ja -ratkaisuihin erikoistunut yritys. Asiantuntijamme soveltavat Unisys-asiantuntemustaan konsultoinnissa, järjestelmän integroinnissa, ulkoistamisessa, laitteistoasioissa ja palvelinteknologioissa auttaakseen asiakkaitamme saavuttamaan turvalliset yritystoiminnot. Rakennamme turvallisempia organisaatioita tuottamalla näkyvyyttä asiakkaidemme yritystoimintoihin. Unisys 3D Visible Enterprise -ratkaisun avulla teemme näkyviksi asiakkaamme päätösten seuraukset - tulevista sijoituksista, mahdollisuuksista ja riskeistä. 
+<a href="mailto:brian.daly@unisys.com">Ota yhteyttä Brian Dalyyn</a>, jos sinulla on kysymyksiä tästä releasesta: +1 215-986-2214 (vain englanniksi)</p>
+
+<p>"Hallinnoimme useita kriittisiä PostgreSQL-järjestelmiä Solaris 10 -käyttöjärjestelmässä.
+Miljardirivisillä tietovarastoilla, joissa on useita teratavuja dataa, indeksien luonti lennossa ja lämmin varatietokanta ovat ratkaisevan tärkeitä", sanoo Theo Schlossnagle, OmniTI Computer Consulting -yrityksen johtaja.
+"Olemme innostuneita myös siitä, että PostgreSQL on nykyisin ensiluokkainen Dtrace-kansalainen. Näin normaalit järjestelmänanalysointityökalumme voivat käyttää tietokantakohtaista dataa, mikä johtaa tarkoituksenmukaisempiin tuloksiin."</p>
+
+
+<p><b>Tietoa OmniTI-yrityksestä:</b> <a href="http://omniti.com/home">OmniTI</a> on Columbian Marylandissa perustettu Internet-teknologioiden asiantuntijayritys. Sen asiakasjoukko on kuin Internet-toimijoiden "Kuka kukin on", ja OmniTI on osoittanut olevansa varteenotettava tekijä vaativissa skaalautuvuus-, suorituskyky- ja turvallisuuskysymyksissä, jotka koskevat tämän päivän suuria web-sovelluksia.
+
+
+Ota yhteyttä: +1 877-887-3031 tai info@omniti.com (English only).</p>
+
+<a name="companies"></a><h2>Yritysten tuki</h2>
+
+<p>PostgreSQL nauttii useiden yritysten tukea. Nämä sponsoroivat kehittäjiä, tarjoavat hosting-resursseja sekä antavat taloudellista tukea. Suurimmat pitkäaikaiset tukijamme on mainittu
+<a href="/about/sponsors">kehityssponsoreidemme sivulla.
+</a></p>
+
+<p>Suuri joukko <a
+href="/support/professional_support">yrityksiä tarjoaa myös PostgreSQL-tukea</a>. Joukossa on yksittäisiä konsultteja sekä monikansallisia yrityksiä.</p>
+
+<a href="/about/donate">Lahjoituksia</a> otetaan mielellään vastaan.
+
+<a name="additional_software"></a><h2>Linkkejä</h2>
+<p>
+PostgreSQL-projektia tukee yli 100 aktiivista aliprojektia, jotka tarjoavat tuotantolaatuisia 
+ratkaisuja replikointiin, migraatioihin, yhteensopivuuteen, yhteiskäyttöisyyteen, 
+suunnitteluun ja graafiseen järjestelmänhallintaan.
+</p>
+
+<h3>Läheisiä projekteja</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>Ohjaimia</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://pgfoundry.org/projects/npgsql">.Net</a></li>
+<li><a href="http://search.cpan.org/~dbdpg/DBD-Pg/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<h3>Kehittyneitä erikoistuneita järjestelmiä</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Maantieteellinen informaatiojärjestelmä (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Kokotekstin haku (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Yritystietojärjestelmä/Tietovarastointi (Bizgres)</a></li>
+</ul>
+
+<h3>Graafiset käyttöliittymät</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin3</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="/docs/techdocs.54">Lista muista graafisista käyttöliittymistä</a></li>
+</ul>
+
+<h3>Replikointi</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>
+
+<a name="translations"></a><h2>Virallinen englanninkielinen versio tästä dokumentista</h2>
+
+<p><a href="/about/press/presskit82.html.en">8.2 PressKit</a></p>

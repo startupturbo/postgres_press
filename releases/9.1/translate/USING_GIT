@@ -1,0 +1,75 @@
+HOW TO USE GIT FOR RELEASE TRANSLATION
+
+This year there are only two ways to submit your translations for the 9.1 Release: email, and Git on git.postgresql.org.  Of these two, Git is preferred because:
+
+- You can version-control your own work
+- You can use it to do version control between multiple translators
+- Your translated documents won't get mangled by email servers
+
+Also, since Git is now the version control system for developing PostgreSQL, you might as well learn it.
+
+1. Community Account
+--------------------
+In order to use the git repo, you need a PostgreSQL.org community account.  This is the same account you use on www.postgresql.org, planet.postgresql.org, and several other places (but not pgfoundry).  If you do not already have one, obtain one here:
+
+http://www.postgresql.org/community/signup
+
+In order to commit to git.postgresql.org, you will also need to add an SSH key to your community profile.  Do this by going to http://wwwmaster.postgresql.org/community/profile after you have established your community account.  You will need to log in to access your profile.
+
+Once you have a community account, email Josh Berkus (josh@agliodbs.com) so that he can grant you write access to git.postgresql.org/press.
+
+2. Install Git
+--------------
+While you're waiting for your community account with Git access, please install Git on your workstation/laptop if you don't already have it. On Linux or FreeBSD this is simple through your packaging system.  On Mac OSX, you should use Fink (http://www.finkproject.org/) or MacPorts (http://www.macports.org/) to install Git, or the DMG here: http://code.google.com/p/git-osx-installer/.  For Windows users, there is a list of suggested Git clients here: http://kylecordes.com/2010/git-gui-client-windows and a help guide here: http://help.github.com/win-set-up-git/
+
+3. Clone Git Repo
+-----------------
+From the command line, switch to a directory where you want to work with the PR files.  Then do:
+
+git clone ssh://git@git.postgresql.org/press.git
+
+This will make a full copy of the press repository, including the last several sets of release translations.  It make take a few minutes.
+
+4. Create Directories
+---------------------
+You will be adding your translated versions to the directory press/releases/9.1/xx, where "xx" is your two-letter ISO language code.   For example, if you're translating Portuguese, then add this directory:
+
+press/releases/9.1/pt
+
+5. Translate the Release
+------------------------
+Translate both files, presskit91.html and release.txt.  Create the translated versions as presskit91.html and release.txt in your language directory (not, for example, presskit91.html.pt).
+
+NOTE: last year we tried creating a git branch for each language.  This did not work well. So please make all of your edits on the "master" branch.  Also, please be careful to edit ONLY files in your language directory in order to prevent making conflicting edits.
+
+6. Commit and Push
+------------------
+First, from your language directory, do:
+
+git add *
+
+Then do:
+
+git commit -a
+
+This will bring up your default text editor to write a commit message.  Please indicate in the commit message whether or not this is the final completed translation of your release and presskit, so I know when you're done.
+
+Finally, you need to sync your local copy with the git.postgresql.org server, with:
+
+git push
+
+7. Repeat if Necessary
+----------------------
+If you are translating in several sessions, or coordinating with other volunteers with your same language, then you should do several commits and pushes.  Do these as often as you like.
+
+8. Final Commit & Push
+----------------------
+When you are completely done translating the presskit and release, then do a final commit and push with a commit message like:
+
+"Translation of release and presskit for DE completed."
+
+This will let me know when you're done translating.
+
+9. If you run into trouble
+--------------------------
+Ask for help on the translators@postgresql.org mailing list.

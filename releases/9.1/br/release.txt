@@ -1,0 +1,47 @@
+12 SETEMBRO 2011: O Grupo de Desenvolvimento Global do PostgreSQL anuncia o lançamento do PostgreSQL 9.1. A última versão do banco de dados de código aberto líder oferece tecnologia inovadora, extensibilidade ímpar, e novos recursos tais como replicação síncrona, indexação de K-vizinhos mais próximos e conectores para fontes de dados externas.  
+
+"O PostgreSQL 9.1 provê algumas das mais avançadas capacidades dentre os bancos de dados de código aberto, e é apoiado por uma comunidade inovadora e vibrante com sucesso comprovado no mercado. O PostgreSQL é uma ótima opção para construir e rodar aplicações na nuvem," disse Charles Fan, Sr. VP R&D, VMware.
+
+Respondendo a pedidos
+
+A versão 9.1 traz diversas melhorias que os usuários pediam há anos, removendo empecilhos para desenvolver novas ou portar aplicações para o PostgreSQL. Aquelas incluem:
+
+* Replicação Síncrona: habilita alta disponibilidade com consistência entre múltiplos servidores.
+* Colação por coluna: suporte a ordenamento linguisticamente correto por banco de dados, tabela ou coluna.
+* Tabelas sem log de transação: grande melhoria de performance para dados efêmeros.
+
+"O Heroku roda o maior banco-de-dados-como-serviço de PostgreSQL do mundo," disse James Lindenbaum, cofundador do Heroku. "O lançamento da replicação síncrona de dados com o 9.1 dá aos nossos clientes formas inovadoras de proteger dados de missão crítica, e confirma o PostgreSQL como uma das opções de armazenamento de dados de evolução mais rápida disponíveis."
+
+Avançando o estado da arte
+
+Nossa comunidade de desenvolvedores inova com recursos de ponta. A versão 9.1 inclui diversas novidades à indústria de bancos de dados, tais como:
+
+* Indexação de K-vizinhos mais próximos: índices sobre "distância" para buscas mais rápidas de locais e pesquisas de texto
+* Isolamento de Snapshot Serializável: mantém as transações concorrentes consistentes sem bloquear
+* Common Table Expressions para gravação: execute atualizações complexas em diversos estágios em um único comando
+* Security-Enhanced Postgres: instale controles de segurança com padrões militares e controle de acesso obrigatórios
+
+"O OpenERP sempre se apoiou nos recursos de nível corporativo do PostgreSQL para atingir uma base rápida confiável e escalável para as aplicações comerciais dando suporte às operações cotidianas de nossos clientes. Integridade de dados em ambientes transacionais de alta concorrência é um tópico importantíssimo para nós, e estamos muito entusiasmados com o novo Isolamento de Snapshot Serializável do PostgreSQL 9.1!"  disse Olivier Dony, Gerente de Comunidade OpenERP."
+
+Estendendo o Motor do Banco de Dados
+
+A extensibilidade do PostgreSQL possibilita aos usuários adicionar novos recursos a um banco de dados de produção em execução, e utilizá-los para tarefas que nenhum outro banco de dados poderia atender. A versão 9.1 adiciona novas ferramentas de extensibilidade, incluindo:
+
+* Foreign Data Wrappers: anexe e consulte outros bancos de dados do PostgreSQL
+* Extensões: crie, carregue e gerencie facilmente novos recursos no banco de dados
+
+Todos os recursos acima, e mais, estão detalhados na página do Wiki "What's New In 9.1" em inglês (http://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.1), assim como nossas notas de lançamento (http://www.postgresql.org/documentation/current/static/release-9-1).
+
+No vigésimo quinto ano de desenvolvimento do PostgreSQL, nossa comunidade continua avançando a tecnologia de bancos de dados a cada versão anual. Baixe a versão 9.1 agora e experiencie o sistema de bancos de dados de código aberto mais avançado do mundo.
+
+* Kit de imprensa: http://www.postgresql.org/about/press/presskit91
+* Notas de lançamento: http://www.postgresql.org/documentation/current/static/release-9-1
+* Downloads: http://www.postgresql.org/downloads
+
+Para mais informações por favor entre em contato:
+Diogo de Oliveira Biazus
+51 91858411
+br@postgresql.org
+http://www.postgresql.org.br
+
+Sobre o PostgreSQL: O PostgreSQL é o sistema de banco de dados de código aberto mais avançado do mundo, com uma comunidade global de milhares de usuários, desenvolvedores, dezenas de empresas e organizações. O projeto PostgreSQL tem 25 anos de engenharia, começando da Universidade da Califórnia, Berkeley, e uma velocidade de desenvolvimento sem igual hoje. O conjunto maduro de recursos do PostgreSQL não apenas se iguala ao dos sistemas de banco de dados proprietários mais avançados, mas os excede em recursos avançados, extensibilidade, segurança e estabilidade. Saiba mais sobre o PostgreSQL e participe da nossa comunidade em http://www.postgresql.org. 

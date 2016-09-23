@@ -1,0 +1,61 @@
+Oggetto: Rilascio di PosgreSQL 8.4
+
+Corpo email:
+
+PER RILASCIO IMMEDIATO
+
+1 luglio 2009: Il PostgreSQL Global Development Group ha rilasciato la versione 8.4, continuando il rapido sviluppo del database open source più avanzato al mondo. Questa versione contiene un elevato numero
+di miglioramenti che rendono più semplice che mai l'amministrazione, l'interrogazione e la programmazione dei database PostgreSQL. Grazie alle 293 tra migliorie e novità della versione 8.4,
+ci sono ancora più ragioni che suggeriscono di scegliere PostgreSQL per il vostro prossimo progetto.
+
+La maggior parte delle modifiche presenti in PostgreSQL 8.4 riguardano nuovi strumenti e nuovi comandi dedicati all'amministrazione o al monitoraggio, unitamente a nuove versioni di soluzioni
+già presenti nella versione 8.3. Ogni utente, indipendentemente dalle proprie caratteristiche preferite, troverà più facile e produttivo il lavoro quotidiano.
+
+"Usiamo PostgreSQL già da sette anni, e stiamo aspettando con trepidazione molte delle novità della versione 8.4, in particolare i permessi sulle colonne, la localizzazione a livello di singolo database, i 
+match parziali per gli indici GIN e le eccezioni definite dall'utente", afferma Jeffrey Webster, CTO di ZooLoo.com. "PostgreSQL ci ha permesso di crescere senza sacrificare l'integrità dei dati."
+
+Tra i miglioramenti più attesi troviamo:
+
+ * Restore del database in parallelo, per velocizzare fino ad 8 volte un ripristino da backup
+ * Permessi per singola colonna, per permettere un controllo più granulare dei dati sensibili
+ * Supporto alla collation per singolo database, per rendere PostgreSQL più utile in ambienti multilingua
+ * Aggiornamenti in loco tramite pg_migrator beta, per permettere aggiornamenti dalla 8.3 alla 8.4 senza lunghe interruzioni del servizio
+ * Nuovi strumenti per il monitoraggio delle interrogazioni, per dare agli amministratori maggiori informazioni sull'attività delle query
+
+La versione 8.4 rende più facile l'analisi dei dati tramite le funzioni avanzate dello standard ANSI SQL2003, quali le funzioni di windowing, le common table expression e le join ricorsive. "Queste strutture di query aumentano
+notevolmente l'espressività del dialetto SQL di PostgreSQL, permettendo agli utenti di formulare con una sola query delle domande interessanti che sarebbero state impossibili in precedenza", spiega Sailesh
+Krishnamurti, fondatore di Truviso. Le migliorie alle stored procedure, come i parametri di default ed i parametri variadici, rendono più semplice e compatta la programmazione del server di database.
+
+La nuova versione migliora le prestazioni delle applicazioni, come commenta Kevin Grittner, amministratore di database per il sistema giudiziario del Wisconsin: "PostgreSQL continua a migliorare le
+prestazioni ad ogni versione. La versione 8.4 ha aggiunto diverse ottimizzazioni, come le semi-join e le anti-join, le quali permettono una notevole riduzione dei tempi di esecuzione di alcune delle nostre
+query più intensive."
+
+Queste caratteristiche implicano che PostgreSQL coprirà un numero di utenze maggiore di prima, come ad esempio sta accadendo al progetto OpenStreetMap.
+"In fase di progettazione della nuova versione delle API di OpenStreetMap, emerse la necessità di affidarsi a un database di classe superiore che,
+oltre a coprire le funzionalità desiderate, risultasse adeguato alle dimensioni richieste dal progetto. Benché ci fossero molti database open source,
+la scelta ovvia è stata PostgreSQL.", dice Tom Hughes, amministratore di sistema per OpenStreetMap.
+
+Contatti per maggiori informazioni:
+  Stefano Reksten
+  it@postgresql.org
+  +39 347 4745979
+
+  Associazione Culturale ITPUG - Italian PostgreSQL Users Group
+  info@itpug.org
+  http://www.itpug.org/
+
+  PSQL.it
+  http://www.psql.it/
+
+* Scaricate PostgreSQL 8.4: http://www.postgresql.org/download/
+
+* Lista completa delle caratteristiche della versione 8.4 (inglese): http://www.postgresql.org/about/press/features84
+
+* Note di rilascio (inglese): http://www.postgresql.org/docs/8.4/static/release.html
+
+* Press release estesa: http://www.postgresql.org/about/press/presskit84.html
+
+Su PostgreSQL: PostgreSQL è il risultato del lavoro collettivo di centinaia di sviluppatori, costruito in più di venti anni di sviluppo iniziato all'Università della California a Berkeley.
+Grazie al suo supporto a lungo termine delle caratteristiche di livello enterprise per database transazionali e scalabilità, PostgreSQL viene oggi usato da molte tra le aziende o le agenzie governative più
+esigenti. PostgreSQL è distribuito sotto licenza BSD, che ne permette l'uso gratuito per applicazioni commerciali e non. Ulteriori informazioni sono disponibili sulla nostra home page:
+http://www.postgresql.org/.

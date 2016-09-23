@@ -1,0 +1,81 @@
+Zusätzliche Features in dieser Version
+
+Neben den oben genannten wichtigsten neuen Features gibt es noch unzählige andere neue Eigenschaften und Verbesserungen, die für die bisherigen PostgreSQL-Anwender von großem Interesse sind.
+
+Funktionen: PostgreSQL-Funktionen unterstützen das sogenannte Dollar-Quoting für unmaskierte Hochkommata und Anführungszeichen, was dem Anwender hilft, besser lesbaren und wartbaren Code zu schreiben. Weiterhin haben PL/pgSQL-Funktionen (als Vorteil durch die neuen Savepoints) eingeschränkte Fähigkeiten zum Exception-Handling (EXCEPTION-clause).
+
+Datenbank-Design: Datenbank-Administratoren können jetzt mit ALTER TABLE die Datentypen von Spalten ändern. Die Deklaration von Spalten mit zusammengesetzten Datentypen wird ebenfalls seit dieser Version gemäß dem SQL-Standard unterstützt. Außerdem kann mit CHANGE OWNER der Eigentümer aller Datenbank-Objekte verändert werden.
+
+Daten-Import/-Export: Der COPY-Befehl unterstützt nun das weit verbreitete Comma-Separated-Values (CSV) Datei-Format, was den Import von bzw. den Export in andere Software-Lösungen erleichtert.
+
+Verbesserungen des Abfrage-Optimierers: Abfrageplaner und Ausführungs-Einheit nutzen nun auch Indizes von kompatiblen Datentypen, daher sind explizite Typ-Umwandlungen von konstanten Werten wesentlich seltener notwendig. Diese Version beinhaltet außerdem eine verbesserte Index-Nutzung, stärkere Optimierung von Oder-Klauseln, verbessertes Sampling für ANALYZE, ein schnelleres TRUNCATE und eine bessere Generierung von vorbereiteten Abfrageplänen, sowie zahllose kleine Verbesserungen, deren Aufzählung hier den Rahmen sprengen würde.
+
+Logging: Administratoren können ab sofort auch eine automatische Rotation des PostgreSQL-Protokolls durch die postgresql.conf Datei aufsetzen. Das Logging von PostgreSQL kann noch individueller konfiguriert werden als bisher. Administratoren können unter anderem Zeilen-Präfixe definieren, einzelne Typen von SQL-Anweisungen für die Aufzeichnung auswählen, sowie Verbindungsabbrüche protokollieren.
+
+Datensicherung: Weitgehend neu programmiert wurde pg_dump, ein Backup-Utility, mit dem Datenbestände auch zwischen verschiedenen PostgreSQL-Installationen ausgetauscht werden können. Diese Version ergänzt einige neue Fähigkeiten, wie etwa das Setzen von Start- und Stopp-Zeiten, und entfernt die verbliebenen Portabilitäts- und Abhängigkeitsprobleme in den Backup-Dateien.
+
+Selbstverständlich gibt es noch viele weitere Änderungen und Verbesserungen. Bitte lesen Sie die (englischen) <a href="">Release Notes</a> für eine vollständige Liste.
+
+Vollständige Zitate aus der Pressemitteilung
+
+"Fujitsu ist sehr zufrieden mit den neuen Features in PostgreSQL 8.0. Wir sind überzeugt, dass diese Enterprise-Features eine große Zahl an neuen PostgreSQL-Anwendern anziehen werden.", so Takayuki Nakazawa, Direktor der OSS Datenbank-Gruppe von Fujitsu Software. "Fujitsu ist stolz auf seine finanzielle Förderung der PostgreSQL-Entwicklung und auf seine Zusammenarbeit mit der PostgreSQL-Community. Wir stehen hinter unseren Anstrengungen, PostgreSQL zum führenden Datenbankmanagementsystem zu machen."
+
+Javier Soltero, Chef-Architekt bei Hyperic LLC, meint hierzu: "PostgreSQL 8.0 gibt uns jenen hohen Grad an Parallelität und Durchsatz, den unsere HQ Monitoring-Produkte benötigen. Unser Team hat plattform-unabhängige Java-Datenbanken sowohl aus dem kommerziellen als auch dem Open-Source-Bereich evaluiert, aber wir konnten keine Datenbank finden, die unsere Anforderungen erfüllt hat. Mit der nativen Windows-Unterstützung von PostgreSQL 8.0 können wir PostgreSQL jetzt mit unseren Produkten bündeln und profitieren sowohl von der bewährten Skalierbarkeit und Performance von PostgreSQL, als auch von der Lizenz, die uns gestattet PostgreSQL ohne Lizenzgebühren in unseren Distributionen mitzuliefern. Die PostgreSQL-Gruppe hat sich einen guten Ruf für seine Qualität verdient, und dessen Berechtigung wurde uns sofort klar, als wir die allererste öffentliche 8.0 Betaversion begutachteten."
+
+Hier erhalten Sie PostgreSQL 8.0:
+	Liste mit FTP-Mirrors
+	Bittorrent
+	Windows-Installer (auch über Bittorrent)
+	SourceForge (inklusive Windows-Installer)
+
+Für weitere Informationen kontaktieren Sie bitte:
+
+	Im deutschsprachigen Raum (Deutschland, Schweiz):
+		Anastasios Hatzis
+		de@postgresql.org
+		DE +49-30-20005021
+
+	Im deutschsprachigen Raum (Österreich):
+		Ewald Geschwinde
+		at@postgresql.org
+		AT +43-66-44527844
+
+	Oder in Englisch:
+		Josh Berkus
+		PostgreSQL Project
+		+1-415-752-2500
+		josh@postgresql.org
+
+Verweise zu weiteren Informationen:
+
+Dokumentation:
+	Offizielle Dokumentation
+	Technische Dokumentation
+	General Bits
+
+Treiber:
+	JDBC
+	ODBC
+	.Net
+
+Grafische Bedienungsoberflächen (GUIs):
+	pgAdminIII
+	phpPgAdmin
+	pgAccess
+	Liste mit weiteren GUIs
+
+Replikation:
+	Slony-I
+	pgReplicator
+	eRServer
+
+Verwandte Projekte:
+	pgFoundry
+	GBorg
+
+Informationen über die zitierten Unternehmen
+
+Über Fujitsu: Fujitsu gehört zu den führenden Anbietern von kundenorientierten IT- und Kommunikationslösungen für den internationalen Markt. Dank der fortschrittlichen Technologien, der besten Plattformen für Computersysteme und Telekommunikationslösungen und seiner weltweit agierenden Teams von System- und Servicespezialisten ist Fujitsu in der einzigartigen Lage, die unendlichen Möglichkeiten, die das Internet bietet, freizusetzen und somit seinen Kunden zum Erfolg zu verhelfen. Mit Hauptsitz in Tokyo meldete Fujitsu Limited (TSE: 6702) einen konsolidierten Umsatz in Höhe von 4,7 Billionen Yen (37 Mrd. Euro) für das Geschäftsjahr, das am 31. März 2004 endete.
+Allgemeine Informationen über Fujitsu sind verfügbar unter: http://www.fujitsu.com. Details über die Fujitsu Supported PostgreSQL (FSP) Initiative, einschließlich White-Paper-Dokumente, sind verfügbar unter: http://fastware.com.au/postgresql.html. Bitte richten Sie Anfragen an Liam O'Duibhir, Fujitsu Australia Software Technology <liamod@fast.fujitsu.com.au>, Tel.: +61-2-9452 9068.
+
+Über Hyperic: Der Technologie-Anbieter Hyperic, LLC ist spezialisiert auf Lösungen für das Management von Open-Source- und kommerzieller IT-Infrastruktur. Flaggschiff unter seinen Produkten ist HQ, welches als Alternative zu kostspieligen, veralteten Management-Frameworks positioniert ist. HQ liefert eine offene, skalierbare und web-basierte Plattform, die alle heutzutage in der IT eingesetzten Technologien unterstützt. Für weitere Informationen kontaktieren Sie bitte press@hyperic.net.

@@ -1,0 +1,334 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.4 Feature List
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.4 Feature List</h1>
+
+<p>Each PostgreSQL release has more features than the previous one due to our ever-growing community of contributors.  Version 8.4 has 293 enhancements, from implementations of new functionality requiring hundreds of lines of code (such as Windowing Functions) to small patches which just make administrator's lives a bit easier (like improved column display in psql).  With that many improvements, we can't describe them all to you here, but many of them are listed below.</p>
+
+<p>For a quick-reference compact format, see the <a href="/about/featurematrix">Feature Matrix.</a></p>
+
+<h2>Contents</h2>
+
+<p>
+ &nbsp; <a href="#sql">SQL</a><br />
+ &nbsp; <a href="#administration">Administration</a><br />
+ &nbsp; <a href="#security">Security and Connections</a><br />
+ &nbsp; <a href="#monitoring">Monitoring</a><br />
+ &nbsp; <a href="#performance">Performance</a><br />
+ &nbsp; <a href="#procedures">Procedures</a><br />
+ &nbsp; <a href="#developer">Other Developer Features</a><br />
+ &nbsp; <a href="#tools">Tools</a><br />
+ &nbsp; <a href="#psql">psql Improvements</a><br />
+ &nbsp; <a href="#builtins">New Built-in Functions</a><br />
+</p>
+
+<a name="modules_note"><h2>Note on Additional Modules </h2>
+
+<p>Some of the features described below install with the core PostgreSQL code, and others are what are known as "Additional Modules."  These are not installed by default, but can be optionally installed using the One-Click installer, RPM packages, or the source code.  Historically, these were known as "contrib" or "contrib modules."  Items which are Additional Modules are marked with an (AM) below.</p>
+
+<a name="sql"><h2>SQL </h2>
+
+<p>With each version, the PostgreSQL implements both more advanced features in the ANSI SQL standards, and adds non-standard extensions to allow users to do more complex tasks through our object-relational features.</p>
+
+<dl>
+
+<dt>Windowing Functions</dt>
+<dd>Otherwise known as "windowing aggregates," these functions allow you to do aggregate operations, such as count, sum, and rank, over a subset of your data, and without grouping output rows.  This means that multilevel reports which would have taken 3 or 4 queries (and possibly procedural code) can now be generated with a single query.  It also broadens the number of Business Intelligence applications PostgreSQL can support.</dd>
+
+<dt>Common Table Expressions & Recursive Queries</dt>
+<dd>CTEs allow users to create "named subqueries" which can then be referenced in other clauses of the query to which they are attached.  In addition to removing the need to create temp tables for some operations, the most exciting use of CTEs is for recursive queries, in which you can transverse a tree or graph structure with a single query, efficiently.  This is extremely useful for the many applications which have tree-structured data, such as forums, file managers, and org charts.</dd>
+
+<dt>ALTER SEQUENCE RESTART and TRUNCATE TABLE RESTART IDENTITY</dt>
+<dd>More easily and safely start autonumber sequences back at 1 when you alter other objects in the database, or when you empty a table.</dd>
+
+<dt>ALTER VIEW add column</dt>
+<dd>Allows you to add columns to an existing view (at the end), without having to rebuild the view dependencies.  Modification or removal of columns still requires a dependency rebuild.</dd>
+
+<dt>ALTER VIEW rather than ALTER TABLE to act on views</dt>
+<dd>For historical reasons, ALTER TABLE was used to modify VIEWs.  That has now been corrected by creating an "ALTER VIEW" statement.</dd>
+
+<dt>ALTER DATABASE / SET TABLESPACE</dt>
+<dd>This command physically moves any tables or indexes in the database's old default tablespace to the new tablespace. Note that tables and indexes in non-default tablespaces are not affected.</dd>
+
+<dt>LIMIT (expression or subquery)</dt>
+<dd>You can now LIMIT the number of rows returned by a query using a calculated expression, or even a subquery, instead of having to use a constant.  This makes it easier for a single VIEW or stored procedure to support multiple dynamic page displays of your data.</dd>
+
+<dt>"AS" keyword optional</dt>
+<dd>Per SQL specification, using the "AS" keyword for column aliases is now optional.  This should help users migrating from MySQL.</dd>
+
+<dt>SQL Standard Interval handling</dt>
+<dd>In addition to our rich set of non-standard interval-handling operators and functions, 8.4 includes support for SQL Standard interval year-month intervals (like '1-2') and day-time intervals (like "select interval '1' day").</dd>
+
+<dt>TABLE command</dt>
+<dd>The command "TABLE tablename" is equivalent to "SELECT * FROM tablename," per the SQL standard.</dd>
+
+</dl>
+
+
+
+<a name="administration"><h2>Administration </h2>
+
+<p>Version 8.4 implements a laundry list of longstanding user requests and new ideas to make PostgreSQL easier to administer.</p>
+
+<dl>
+
+<dt>Database-level Collations</dt>
+<dd>Character collations (the order in which things sort) are now a database instead of an installation property.  This allows users to easily have multiple languages fully supported in the same PostgreSQL installation, as well as paving the way for per-column collations in a later version of PostgreSQL.</dd>
+
+<dt>Visibility Map</dt>
+<dd>This is a new register which tracks data pages dirtied by multiple transactions.  Most importantly, this allows VACUUM to only read the data pages which actually need vacuuming instead of the whole table, resulting in large decreases in required VACUUMing on large tables.  It also paves the way for future index-only access to infrequently updated tables.</dd>
+
+<dt>Auto-Tuning Free Space Map</dt>
+<dd>Didn't you love that max_fsm_pages setting?  Well, it's gone now.  The Free Space Map is now stored on disk, not shared memory, which means it always shows all free space in your tables and resizes dynamically.</dd>
+
+<dt>Autovacuum table configuration with ALTER TABLE / SET</dt>
+<dd>You no longer need to UPDATE into the pg_autovacuum system table to change per-table settings for autovacuum; you can use ALTER TABLE.  This makes it more user-friendly.  As a bonus, the values you set will now be saved by pg_dump.</dd>
+
+<dt>Warm Standby Usability</dt>
+<dd>Several modifications and improvements make Warm Standby databases easier to set up, administer, and fail over. If you were using it already, chances are you'll prefer its new default behavior, but double check the docs for API changes.</dd>
+
+<dt>pg_conf_load_time() function</dt>
+<dd>You won't ever have to guess if the postgresql.conf file has been modified since you restarted the server: compare its modification time against the result of pg_conf_load_time().</dd>
+
+<dt>Deadlocked Query Display</dt>
+<dd>No more log detective work to track down which operations deadlocked; the information is right there.</dd>
+
+<dt>pg_settings Now Shows Available Options</dt>
+<dd>Many settings accept a list of potential values. The pg_settings system table now displays this list for quick reference at runtime. </dd>
+
+<dt>Multi-column GIN Indexes</dt>
+<dd>GIN indexes, used for advanced indexing such as arrays and full text search, can now be created to cover multiple columns at once, removing the requirement to concatinate them before indexing.</dd>
+
+<dt>ON TRUNCATE Triggers</dt>
+<dd>Administrators can now create triggers which fire (per statement) when tables are TRUNCATEd.  As well as supporting data auditing, this enables trigger-based replication systems (such as Slony-I and Londiste) to support the TRUNCATE statement.</dd>
+
+<dt>pg_terminate_backend()</dt>
+<dd>This administration function allows you to safely terminate "idle in transaction" sessions on the command line or from scripts, eliminating database issues caused by hung client applications.</dd>
+
+</dl>
+
+
+
+<a name="security"><h2>Security & Connections </h2>
+
+<p>PostgreSQL is "the most secure by default" and part of that is making security tools easy to use.  8.4 makes our existing connection and access control more flexible and simpler to understand.</p>
+
+<dl>
+
+<dt>Column-Level Permissions</dt>
+<dd>DBAs can now grant permissions (SELECT, UPDATE) on specific columns as well as on entire tables.  This makes it easier to secure sensitive data in your database.</dd>
+
+<dt>SSL Authentication</dt>
+<dd>Users can now authenticate using SSL certificates, and DBAs can define access control for specific SSL certificates.  This makes SSL-based authentication schemes much more flexible and secure.</dd>
+
+<dt>TRUNCATE Privilege</dt>
+<dd>Administrators can now restrict users from TRUNCATE while granting them the ability to UPDATE and DELETE specific rows.</dd>
+
+<dt>pg_hba.conf Name=Value Syntax</dt>
+<dd>Makes all authentication options use one consistent syntax for their specific settings, and pg_hba.conf access-control files vastly more intuitively understandable.  <i>However, this change breaks backwards-compatibility: users of LDAP, PAM and Ident authentication will need to re-write their configuration files.</i></dd>
+
+<dt>pg_hba.conf Usermaps</dt>
+<dd>Allows the use of a mapping file which controls which shell or network user connects as which database user, for all authentication types instead of just IDENT.</dd>
+
+<dt>Check pg_hba.conf on Reload</dt>
+<dd>Checks the access control file before attempting to restart the database server, which prevents downtime due to mistakes editing the file.</dd>
+
+</dl>
+
+
+<a name="monitoring"><h2>Monitoring </h2>
+
+<p>8.4 adds several new monitoring features and tools to increase the suitability of PostgreSQL for large enterprise environments.</p>
+
+<dl>
+
+<dt>pg_stat_statements (AM)</dt>
+<dd>Allows real-time monitoring of summary query statistics, letting you see at a glance which of your normalized queries is executing the most often and using the most system time.  pg_stat_statement will speed up the process of "bad query" troubleshooting by an order of magnitude.</dd>
+
+<dt>auto_explain (AM)</dt>
+<dd>Lets you automatically log select EXPLAIN plans to the PostgreSQL log for later analysis.  Will help a great deal with troubleshooting slow stored procedures, as well as queries which perform differently between production and testing. Also allows logging of EXPLAIN plans for nested statements, that is, statements executed from within a function.</dd>
+
+<dt>pg_stat_user_functions</dt>
+<dd>This system view tracks how many times each of your functions is accessed, as well as aggregate execution times spent both inside the function and on nested function calls.  Administrators of stored procedure applications will now be able to definitively identify their slowest procedures.</dd>
+
+<dt>New Dtrace / SystemTap Probes</dt>
+<dd>43 new probes make tracing your server in real time to know what's happening inside the database engine and operating system even more informative and powerful.</dd>
+
+</dl>
+
+
+
+<a name="performance"><h2>Performance </h2>
+
+<p>"PostgreSQL continues to improve performance in every major release.  Version 8.4 has added several optimizations, such as semi-joins and anti-joins, which provide dramatic improvement in the run time of some of our most demanding queries," says Kevin Grittner, Wisconsin Court System.</p>
+
+<dl>
+
+<dt>Hash Methods for DISTINCT/UNION/INTERSECT/EXCEPTION queries</dt>
+<dd>Previously, operations like DISTINCT would require Postgres to sort and then eliminate data to achieve the distinct results. Now PostgreSQL can use hash based methods (similar to those used for GROUP BY) to achieve these results. This should make many of these queries much faster without needing any changes.   Note, however, that these kinds of queries will no longer produce sorted output without an ORDER BY clause.</dd>
+
+<dt>Semi-Joins and Anti-Joins</dt>
+<dd>This refactor of how we handle folding subqueries into the main query, such as IN() and EXISTS() clauses, now reliably chooses the best execution method for semantically equivalent subqueries rather than requiring the user to experiment with different query syntax.  It should accelerate existing complex reporting queries by executing them more intelligently.</dd>
+
+<dt>Improved Hash Indexes</dt>
+<dd>PostgreSQL's hash indexes now locate single rows faster than B-Tree indexes, and have become useful for indexing ID fields in some databases.  However, the 8.4 implementation of hash indexes has some data recovery limitations which will be corrected in later versions.</dd>
+
+<dt>Cursor_tuple_fraction GUC</dt>
+<dd>This setting tells the planner what fraction of a cursors results you expect to return for a given cursor query. This allows the planner to use plans that are more optimal, based on estimated percentage of rows you expect to return. </dd>
+
+<dt>default_statistics_target and column statistics changes</dt>
+<dd>After extensive testing, we've raised the default statistics sample size to 100 for planner statistics, which makes a better compromise between the statistics needed by simple queries and complex ones.  To support large data warehouses, we've also raised the upper limit of statistics to 10,000.</dd>
+
+<dt>Partial Match support for Full Text Search</dt>
+<dd>In addition to searching large bodies of text for word matches, full text search can now match the beginnings of words.  This does require upgrading users to rebuild their GIN indexes.</dd>
+
+<dt>Improved Statistics for Full Text Search</dt>
+<dd>The query planner now estimates selectivity of your full text searches more intelligently, so you get better query plans and often faster text search queries.  Produced by a Google Summer of Code project.</dd>
+
+<dt>EXPLAIN VERBOSE column level output</dt>
+<dd>This used to expose internal data that only a handful of people were able to benefit from reading. It's now telling you useful things such as which columns each node outputs to its parent, which will show you how bad SELECT * is.</dd>
+
+<dt>pgstat File Optimizaion</dt>
+<dd>The pgstat file tracks usage statistics in your database, and can generate a lot of I/O.  8.4 both reduces usage of this file, and makes relocatable, so you can put it on a faster disk resource or ramdrive.  This will be a performance boon to small databases with high data write volume.</dd>
+
+</dl>
+
+
+
+<a name="procedures"><h2>Procedures </h2>
+
+<p>Many PostgreSQL developers use PostgreSQL not just as a database, but as an entire middleware development environment.  These extensions to our stored procedure functionality make it possible to build even more sophisticated business logic inside the database.</p>  
+
+<dl>
+
+<dt>Variadic Parameters</dt>
+<dd>As a PostgreSQL-only feature, users can now create stored procedures and functions with a variable number of arguments.  This makes it easier and more natural to write stored procedures in interpreted languages (Perl, Python, Ruby, PHP, Tcl).  It also helps with change management of stored procedure based applications.</dd>
+
+<dt>Default Parameters</dt>
+<dd>Permits definition of default values for stored procedure parameters not supplied by the user. This makes stored procedure change management, and porting database applications from SQL Server and Sybase, significantly easier.</dd>
+
+<dt>CASE Control Structure in PL/pgSQL </dt>
+<dd>No more IF .. ELSIF .. ELSIF .. ELSIF in PL/pgSQL; we now have a proper switched CASE statement, which allows you to execute code based on comparing a value with a list of conditions.</dd>
+
+<dt>HINT, DETAIL, and SQLSTATE in RAISE command for PL/pgSQL</dt>
+<dd>Output additional error information for easier debugging of PL/pgSQL stored procedures, or enhanced error control in your application.</dd>
+
+<dt>RETURNS TABLE for PL/pgSQL functions</dt>
+<dd>A SQL-standard shortcut for RETURNS SETOF tabletype or complex OUT parameters.  Makes it faster to write stored procedures which behave like tables, returning a rowset.</dd>
+
+<dt>RETURN QUERY EXECUTE support in PL/pgSQL</dt>
+<dd>Makes it simpler to then return results from that query, by removing the requirement to loop over the result set.</dd>
+
+<dt>EXECUTE USING for PL/pgSQL</dt>
+<dd>Creates a new call syntax for PL/pgSQL functions calling other functions, which is similar to "placeholder" syntax for external languages.  This eliminates quoting steps which were previously needed for EXECUTE.</dd>
+
+<dt>Call Set-Returning Functions in the SELECT Clause</dt>
+<dd>Allows you to call functions which return rows in the SELECT clause as well as the FROM clause, which is handy when you want to call a function on the results of another function, e.g.: SELECT g(y) FROM (SELECT f(x) FROM t) as sub(y);</dd>
+
+</dl>
+
+
+
+<a name="developer"><h2>Other Developer Features </h2>
+
+<p>No new version of PostgreSQL would be complete without a few advanced features for application developers.</p>
+
+<dl>
+
+<dt>Foreign Data Wrapper support</dt>
+<dd>Paving the way to a full implementation of the SQL/MED (Management of External Data) standard in the next version, it's now possible to register foreign server and users mapping, enhancing remote procedure calls security when using cross-database connection tools like dblink.</dd>
+
+<dt>Case Insensitive Text Data Type (AM)</dt>
+<dd>This allows matching queries to match text whether it's UPPER case or lower case, which comes in very handy when managing emails for example.  This does require you to use the "citext" data type.</dd>
+
+<dt>B-Tree GIN Implementation (AM)</dt>
+<dd>Primarily as a demonstration of GIN index implementation, this module offers a B-Tree-on-GIN index example. </dd>
+
+</dl>
+
+
+
+<a name="tools"><h2>Tools </h2>
+
+<p>You can't run a production database without administration and testing tools.  The new version adds a major new tool and makes a few others more powerful.</p>
+
+<dl>
+
+<dt>Parallel Restore</dt>
+<dd>pg_restore can now be run in parallel process mode, loading data and creating database objects in several parallel streams.  Depending on your hardware and database design, this allows restore of database backup files two to eight times faster than single-process restore.  8.4's parallel restore can also be used to restore 8.3 or 8.2 databases.</dd>
+
+<dt>pg_Migrator (external tool)</dt>
+<dd>This <i>beta</i> tool allows in-place upgrade of databases from 8.3 to 8.4, without the downtime of dump and reload.  Currently has some limitations around full text indexing and certain Additional Modules.  This is a <a href="http://pgfoundry.org/projects/pg-migrator/">separate project on pgFoundry</a>; download it there.</dd>
+
+<dt>pgBench with Timed Execution (AM)</dt>
+<dd>You can now ask pgBench, our default micro-benchmark, how much PostgreSQL can do in a known amount of time, rather than how much time it'll take to do a set amount of transactions. This makes it more intuitive to compare results between runs or between servers.</dd>
+
+</dl>
+
+
+
+<a name="psql"><h2>psql Improvements </h2>
+
+<p>The most popular interface to PostgreSQL databases is our command-line shell, psql, possibly because it has so many features to let users administer their databases as fast as they can type.  Version 8.4 comes with a plethora of enhancements to psql.</p>
+
+<dl>
+
+<dt>Version-Awareness</dt>
+<dd>8.4's psql will be backwards-compatible with several earlier versions of PostgreSQL, including the informational commands.  This will allow users to upgrade to the latest version of psql without worrying about having full features with older servers.</dd>
+
+<dt>Function Editor</dt>
+<dd>\ef <functioname> will bring up a special function editor with placeholders for the parts of a function, making it simple to maintain functions directly in psql rather than needing to use text files.</dd>
+
+<dt>Table, Database, Tablespace Size Display</dt>
+<dd>Using \dt+ and \l will now tell you how much your disk space objects use.</dd>
+
+<dt>Display Referencing Tables in \dt+</dt>
+<dd>Knowing what foreign keys are pointing to the table you're seeing comes in handy!</dd>
+
+<dt>Improved handling of long lines and tab characters in psql </dt>
+<dd>Line wrapping and tabs are no longer a chronic annoyance in the psql shell, but behave the way most users expect.</dd>
+
+<dt>Improved Function Listing</dt>
+<dd>Functions now clearly show when they are regular, windowing or aggregate functions so that you know how to use them.</dd>
+
+<dt>\timing (on | off)</dt>
+<dd>The \timing switch which allows checking execution times is now scriptable with on and off parameters.</dd>
+
+<dt>Remove System Objects from \dX Commands</dt>
+<dd>The \d commands now hide built-in system objects by default, allowing you to just browse user-created database objects.</dd>
+
+</dl>
+
+
+
+<a name="builtins"><h2>New Built-in Functions </h2>
+
+<p>One of the things which makes PostgreSQL more than just a database is the vast host of built-in functions which perform mathematical, statistical, XML, array, timestamp, and text-manipulation operations for users.  With each release, we add a few more; version 8.4 is no exception.</p>
+
+<dl>
+
+<dt>Time based generate_series() Functions</dt>
+<dd>generate_series() is the swiss-army knife of SQL looping tricks, and now can loop between two dates rather than just two integers.</dd>
+
+<dt>generate_subscripts() Function</dt>
+<dd>Allows for easier array traversal. You used to be able to do this with generate_series and array_upper and array_lower, but this new version should be easier to use and faster as well. </dd>
+
+<dt>quote_nullable()</dt>
+<dd>Quotes and escapes strings in a way which is automatically suitable for inclusion in an EXECUTE SQL string.  Particularly, it quotes NULL strings as "NULL".</dd>
+
+<dt>suppress_redundent_updates() Trigger </dt>
+<dd>This carefully coded C trigger will detect when a tuple being UPDATEd didn't change at all, and when it's the case, it'll stop PostgreSQL from executing any other trigger. This allow your application to stop optimizing UPDATEs when you have costly triggers (or trigger based replication), as the system will do it for you.</dd>
+
+<dt>array_agg() Function</dt>
+<dd>This aggregate accumulates all of the values in a column into an array, functionality which is useful both for passing arrays to applications for processing, and for formatting lists of data for display.</dd>
+
+<dt>unnest() Function</dt>
+<dd>Now that you've accumulated rows into a single array, you want to do the reverse, that is seeing each element of an array as a single row. Unnest() is the standard function name for doing just that.</dd>
+
+</dl>
+
+
+
+
+

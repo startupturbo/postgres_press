@@ -1,0 +1,458 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.1 Press Kit
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.1 プレスキット</h1>
+
+<!--
+<h2>Contents</h2>
+-->
+<h2>目次</h2>
+
+<p>
+<!--
+ &nbsp; <a href="#original_release">Text of Original Release</a><br />
+ &nbsp; <a href="#additional_features">Additional Features</a><br />
+ &nbsp; <a href="#quoted_companies">Quoted Company Information</a><br />
+ &nbsp; <a href="#download">Where to Download</a><br />
+ &nbsp;	<a href="#docs">Documentation</a><br />
+ &nbsp; <a href="#license">License</a><br />
+ &nbsp; <a href="#contact">Contacts</a><br />
+ &nbsp; <a href="#companies">Corporate Support</a><br />
+ &nbsp; <a href="#additional_software">Additional Software</a><br />
+ &nbsp; <a href="#translations">Translations</a><br />
+-->
+ &nbsp; <a href="#original_release">プレスリリース</a><br />
+ &nbsp; <a href="#additional_features">追加機能に関する情報</a><br />
+ &nbsp; <a href="#quoted_companies">引用した企業の情報</a><br />
+ &nbsp; <a href="#download">ダウンロード先</a><br />
+ &nbsp;	<a href="#docs">文書</a><br />
+ &nbsp; <a href="#license">ライセンス</a><br />
+ &nbsp; <a href="#contact">問合せ先</a><br />
+ &nbsp; <a href="#companies">法人サポート</a><br />
+ &nbsp; <a href="#additional_software">追加ソフトウェア</a><br />
+ &nbsp; <a href="#translations">翻訳</a><br />
+</p>
+
+<!--
+<a name="original_release"></a><h2>Original Press Release</h2>
+-->
+<a name="original_release"></a><h2>プレスリリース</h2>
+<p>
+2005年11月8日ドイツフランクフルト発（OpenDBCon）：
+PostgreSQLグローバル開発グループは、PostgreSQLの最新バージョンである「PostgreSQL 8.1」のリリースを発表します。
+数多くの拡張により、最先端のオープンソース・データベース管理システムとして PostgreSQL はさらなるリードを広げます。
+増え続ける法人スポンサーと協賛企業に後押しされて、設計、開発、試験が大規模かつ健全なコミュニティによって行われました。
+バージョン8.1では、PostgreSQLアプリケーション開発の適用範囲が広がることになるでしょう。
+この新しいリリースには、性能の改善の他、大規模データウェアハウス、より多量のトランザクション処理、複雑に分散化されたエンタープライズソフトウェアをサポートするための先進的なSQL機能が導入されました。
+</p><p>
+これらの機能は、過去のリリースで確立した流れを引き継ぎながら行われました。
+バージョン8.0ではリリース後7ヶ月の間にダウンロードが100万件に達し、その前のバージョンの相当期間での30万件をはるかに上回りました。
+</p><p>
+PostgreSQL法人スポンサーであるPervasive SoftwareのプロダクツディレクタLance Obermeyerは次のように述べています。
+「このプロジェクトはデータベースユーザの声を明らかに加速しています。
+オープンソース基盤ソフトウェアへの関心が増大している中、我々はPostgreSQLがより強力になることを望んでいます。」
+</p>
+<h3>新しい、先進的データベース機能</h3>
+<p>
+<b>ロール：</b>PostgreSQLがデータベースロールをサポートするようになりました。
+ロールにより、データベース権限が複雑に関連し合うような大規模なユーザ管理が簡単に行うことができます。
+</p><p>
+<b>IN/OUTパラメータ：</b>PostgreSQLの関数がIN、OUT、INOUTパラメータをサポートするようになりました。
+これにより、J2EEや.NETアプリケーションにおける複雑なビジネスロジックのサポートが改良されました。
+</p><p>
+<b>2相コミット</b>(2PC:Two-Phase Commit)：2PCはWAN環境におけるアプリケーションで長い間待ち望まれていた機能です。
+広域ネットワーク上に分散したサーバ間でACID特性を持つトランザクション処理を可能にします。
+（訳注：「ACID」とは、Atomicity（原子性）、Consistency（一貫性）、Isolation（隔離性）、Durability（耐久性）の頭文字です。）
+</p>
+<h3>性能の改善</h3>
+<p>
+<b>マルチプロセッサ(SMP)環境における性能改善：</b>バージョン8.1におけるバッファ管理機構は、8-way、16-wayシステムやデュアルコア、マルチコアCPUのサーバにおいて、プロセッサ数に対してほぼリニアにスケールします。
+</p><p>
+<b>ビットマップスキャン：</b>インデックスは状況に応じて自動的にメモリ内部でビットマップに変換されます。
+この機能によって、大規模テーブルに対する複雑な問い合わせのインデックス検索が20倍以上高速化されます。
+また、複数列に対するインデックスを作成する必要性が減少し、データベース管理が簡単になります。
+</p><p>
+<b>テーブルパーティショニング：</b>バージョン8.1では、制約による排他といわれる技法を用いて、問い合わせプランナが大規模なテーブル全体をスキャンしないようになりました。
+他のデータベース管理システムにおけるテーブルパーティショニング同様、これにより数ギガバイトのテーブルに対する性能とデータ管理が改良されました。
+</p><p>
+<b>共有行ロック：</b>PostgreSQLの「行レベルロックよりも優れた方法」に、共有行ロックの機能を追加することで、より高い同時実行性をサポートできるようになりました。
+共有ロックにより、大量のOLTPを必要とするアプリケーションでの挿入・更新の性能が向上するはずです。
+</p><p>
+Reliable Computer Solutionsのデータベース管理者であるMerlin Moncureは次のように述べています。
+「PostgreSQL 8.1によって（私たちの）Opteron デュアルプロセッサ運用用サーバで非常に大きな性能向上が実現しました。
+具体的にいうと、CPU負荷において20%、サーバの負荷特性においては20から40％もの性能向上が見られました。」
+</p><p>
+この他にも120項目以上におよぶ改良が行なわれています。詳しくは8.1 プレスキットを参照してください。
+</p>
+<h3>PostgreSQLについて</h3>
+<p>
+PostgreSQLは数百人規模の開発者による作業の集大成です。
+カリフォルニア大学バークレー校で始まったPostgreSQLの開発は、およそ20年間続いています。
+トランザクション、関数、トリガ、副問い合わせなどエンタープライズレベルの機能群を長期間サポートし続けた結果、PostgreSQLは、現在のビジネス、行政機関でのほとんどの用途で使用できるようになりました。
+PostgreSQLはBSDライセンスの元で配布されていますので、商用、非商用アプリケーションを問わず、無料で使用、配布を行うことができます。
+</p>
+
+<!--
+<a name="additional_features"></a><h2>Additional Features in this Release</h2>
+-->
+<a name="additional_features"></a><h2>このリリースで追加された機能</h2>
+<!--
+As well as the major features listed in the press release, there
+are more than 120 new features and enhancements contributed by
+almost 200 developers for version 8.1. Among them are:
+-->
+プレスリリースで大きな機能を紹介しましたが、バージョン8.1では、およそ200人の開発者によって、120以上の新機能や改良がなされています。
+その中の一部を紹介します。
+<ul>
+<!--
+<li><b>GiST:</b> PostgreSQL's Generalised Search Tree (GiST) pluggable
+indexing mechanism has improved to support the high-speed
+concurrency, recoverability and update performance previously
+enjoyed only using B-Tree indexes.  GiST is the backbone of
+PostgreSQL's full-text indexing (TSearch2), geospatial (GIS) and
+tree-structure indexing.  With this enhancement, complex
+data types will perform well even on the largest high-availability
+applications.</li>
+-->
+<li><b>GiST:</b> 
+PostgreSQLの汎用探索ツリー（GiST）というプラグイン可能なインデックス作成機構を改良し、これまではB-Treeインデックスを利用した場合にのみ可能だった高速な同時実行、リカバリ性、更新性能をサポートします。
+GiSTはPostgreSQLの全文検索インデックス（TSearch2）、地理情報（GIS）、ツリー構造のインデックスの骨格となるものです。
+この改良により、巨大かつ高可用性が必要なアプリケーションであっても、複雑なデータ型の性能が向上します。
+</li>
+<!--
+<li><b>COPY Refactoring:</b> COPY has been refactored for up to 30%
+faster processing of bulk load data.  Along with CSV load
+improvements, this makes loading large databases into
+PostgreSQL faster than ever.</li>
+-->
+<li>
+<b>COPYコードのリファクタリング:</b>
+COPY処理部分のコードを見直した結果、バルクデータのロード処理が30%高速になりました。
+CSVロードの改良に関しては、これまでよりも高速に巨大なデータベースのロードができるようになりました。
+</li>
+<!--
+<li><b>64-bit Shared Memory:</b> the buffer manager has been enhanced
+to utilize up to two terabytes of RAM on 64-bit platforms,
+preparing PostgreSQL for the high-memory servers of the
+future.</li>
+-->
+<li>
+<b>64ビット共有メモリ:</b>
+64ビットプラットフォーム上で2テラバイトまで使用できるようにバッファマネージャを改良し、将来の大容量メモリを持つサーバに対応できるようにしました。
+</li>
+<!--
+<li><b>Integrated Autovacuum:</b> PostgreSQL's database maintenance
+daemon has been improved and integrated into the main server
+program, making PostgreSQL servers simpler to set up and
+administer.</li>
+-->
+<li>
+<b>Autovacuumの統合:</b>
+PostgreSQLのデータベース管理デーモンが改良され、また、PostgreSQLサーバの設定と管理が簡単になるように主サーバプログラムに統合されました。
+</li>
+<!--
+<li><b>Faster Aggregates:</b> aggregate functions have been
+improved to make reporting queries even
+faster.  The PostgreSQL developers both rewritten memory
+management for aggregates and added indexing optimizations for
+MIN() and MAX().</li>
+-->
+<li>
+<b>集約の高速化:</b>
+集約関数の改良により、レポート作成用の問い合わせが高速になりました。
+PostgreSQL開発者は、集約のメモリ管理のコードを書き直し、また、MIN()およびMAX()に対するインデックスによる最適化を追加しました。
+</li>
+<!--
+<li><b>Adminstration Functions:</b> new functions have been added for
+obtaining server information and performing basic DBA tasks
+from the PSQL command line.</li>
+-->
+<li>
+<b>管理用関数:</b>
+PSQLコマンドラインからサーバ情報を入手し、基本的なDBA作業を行うことができるように、新しい関数を追加しました。
+</li>
+<!--
+<li><b>Compatibility Functions:</b> lastval(), greatest() and least() functions have been added,
+making porting applications from MySQL and Oracle easier.</li>
+-->
+<li>
+<b>互換性のための関数:</b>
+MySQLとOracleからのアプリケーションの移植が簡単になるように、lastval()、greatest()、least()関数が追加されました。
+</li>
+</ul>
+<p>
+<!--
+You can read about the dozens more improvements to 8.1 in
+the <a href="/docs/current/static/release.html">Release
+Notes.</a>
+-->
+この他多くの改良に関しては<a href="/docs/current/static/release.html">リリースノート</a>を参照してください。
+</p>
+
+<!--
+<a name="quoted_companies"></a><h2>Quoted Companies</h2>
+-->
+<a name="quoted_companies"></a><h2>引用した企業</h2>
+
+<p>
+<!--
+<b>Pervasive Software</b> (NASDQ: PVSW) provides data
+infrastructure software that helps companies unleash the value of their data
+investments. For more than two decades, Pervasive has delivered an enduring
+value proposition and the best combination of performance, reliability,
+functionality, and connectivity. Tens of thousands of customers in virtually
+every industry, in more than 150 countries around the world, rely on Pervasive
+to manage, integrate, analyze and secure their critical data. For more
+information, <a href="http://www.pervasive.com/company">check our web page</a>.
+-->
+<b>Pervasive Software</b> (NASDQ: PVSW)は、企業のデータ投資の価値を明確にする手助けを行う、データ基盤ソフトウェアを提供します。
+Pervasive社は、20年以上にわたり、価値を持続するために提案すると同時に、性能、信頼性、機能性、接続性を最適に組み合わせて提供しています。
+全世界150以上の国で、実質すべての工業分野における数万人の顧客が重要なデータの管理・統合・解析・セキュリティをPervasive社に依頼しています。
+詳細は、<a href="http://www.pervasive.com/company">Webページ</a>を参照してください。
+</p>
+<p>
+<!--
+<b>Reliable Computer Solutions</b> provides ERP software and consulting
+services for regional manufacturing interests. We specialize in
+complete IT solutions for the Recreational Vehicle and Manufactured
+Homes industries. Our flagship product, ESP, drives more than a billion
+dollars of manufacturing in the United States.  For more information,
+contact Merlin Moncure (English only): merlin.moncure@rcsonline.com,
+phone: (01) 269-483-1234 x304.
+-->
+<b>Reliable Computer Solutions</b>は、地域の製造業者に対して、ERPソフトウェアとコンサルティングサービスを提供しています。
+レクリエーション用車両（RV）およびプレハブ住宅工業向けのITソリューションに特化しています。
+主力商品であるESPは、米国内で数百万ドル以上の製造業への採用実績があります。
+詳細はMerlin Moncure（merlin.moncure@rcsonline.comphone: (01) 269-483-1234 x304）まで連絡してください（英語のみです）。
+</p>
+
+<!--
+<a name="download"></a><h2>Where to Download</h2>
+-->
+<a name="download"></a><h2>ダウンロード先</h2>
+
+<ul>
+<!--
+<li><a href="http://www.postgresql.org/ftp/latest/">List of FTP Mirrors</a></li>
+-->
+<li><a href="http://www.postgresql.org/ftp/latest/">FTPミラーの一覧</a></li>
+<li><a href="http://www.postgresql.org/download/bittorrent">Bittorrent</a></li>
+<!--
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/win32/">Windows
+Installer</a> (also available via Bittorrent)</li>
+-->
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/win32/">Windows版インストーラ</a> (Bittorrentからも入手できます)</li>
+
+<!--
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/">Other Binaries,
+including Linux, Mac OSX and Solaris</a></li>
+-->
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/">Linux用、Mac OSX用、Solaris用など、その他のバイナリ</a></li>
+
+<!--
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (including
+Windows installer)</li>
+-->
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (Windows版インストーラを含みます)</li>
+</ul>
+
+<a name="docs"></a><h2>Documentation</h2>
+<!--
+<a name="docs"></a><h2>文書</h2>
+-->
+
+<ul>
+<!--
+<li><a href="http://www.postgresql.org/docs">Official
+Documentation</a></li>
+-->
+<li><a href="http://www.postgresql.org/docs">オフィシャルドキュメント</a></li>
+<li><a href="http://techdocs.postgresql.org">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General
+Bits</a></li>
+</ul>
+
+<!--
+<a name="license"></a><h2>License</h2>
+-->
+<a name="license"></a><h2>ライセンス</h2>
+<p>
+<!--
+PostgreSQL uses the <a href="/about/licence">BSD license</a>,
+which only requires that the licensed source code maintain its
+copyright and licensing information. This <a
+href="http://www.opensource.org/licenses/bsd-license.php">OSI-certified
+license</a> is widely appreciated as flexible
+and business-friendly, since it does not restrict the use 
+of PostgreSQL with commercial and proprietary applications. Together with
+multi-company support and public ownership of the code,
+the BSD license makes PostgreSQL very popular with vendors wanting to embed a database in
+their own products without fear of fees, vendor lock-in, or changes in licensing terms.
+-->
+PostgreSQLは<a href="/about/licence">BSD ライセンス</a>を使用しています。
+このライセンスでは、ライセンスを受けるソースコードがそのコピーライトとライセンス情報を含有することのみを要求します。
+この<a href="http://www.opensource.org/licenses/bsd-license.php">OSI認証ライセンス</a>は、柔軟かつビジネスに利用しやすいため広く評価されています。
+このため、商用アプリケーションや私有アプリケーションにおけるPostgreSQLの使用は制限されていません。
+複数企業のサポートとソースコードの公的所有もありますが、このBSDライセンスにより、料金・ベンダ独占化・ライセンス条項の変更などの心配をすることなく製品への組み込み用データベースを求めるベンダにPostgreSQLは非常に人気があります。
+</p>
+
+<!--
+<a name="contact"></a><h2>Contacts</h2>
+-->
+<a name="contact"></a><h2>問合せ先</h2>
+
+<p><a href="http://www.postgresql.org">PostgreSQL ホームページ</a></p>
+
+<!--
+<p>General Inquiries:<br />
+-->
+<p>一般的な問い合わせ:<br />
+Josh Berkus<br />
+PostgreSQL Project<br />
++1-415-752-2500<br />
+<a href="mailto:press@postgresql.org">press@postgresql.org</a></p>
+
+<p><!--
+For contacts in specific regions, see <a
+href="/about/press/contact">our international contact
+list.</a>-->
+特定地域における問い合わせ先に関しては、<a href="/about/press/contact">国際的な問い合わせ先一覧</a>を参照してください。
+</p>
+
+<!--
+<a name="companies"></a><h2>Corporate Support</h2>
+-->
+<a name="companies"></a><h2>法人サポート</h2>
+
+
+<!--
+PostgreSQL enjoys the support of numerous companies, who
+sponsor developers, provide hosting resources, and give us
+financial support.  The largest long-term sponsors are listed
+on our <a href="/about/sponsors">development sponsors
+page.</a>-->
+PostgreSQLは、スポンサー企業による多くサポートを受けています。これらスポンサー企業はホスティングリソースの提供や金銭的なサポートを行います。
+大規模、長期のスポンサーの一覧は<a href="/about/sponsors">開発スポンサーページ</a>にあります。
+
+<!--
+There is also a large community of <a
+href="/support/professional_support">companies offering
+PostgreSQL Support</a>, from individual consultants to
+multinational companies.
+-->
+また、個別のコンサルティングから多国企業まで、<a href="/support/professional_support">PostgreSQLサポートを提供する企業</a>という大規模なコミュニティもあります。
+
+<!--
+<a name="additional_software"></a><h2>Links</h2>
+-->
+<a name="additional_software"></a><h2>リンク</h2>
+<p>
+<!--
+The main PostgreSQL project is enhanced by more than 100 active
+sub-projects that provide production-quality solutions for
+replication, migration, compatibility, interoperability, design
+and graphical administration tools.
+-->
+PostgreSQLの主プロジェクトは、100以上のサブプロジェクトから促進されています。
+これらサブプロジェクトは、レプリケーション、移行、互換性、相互運用性、設計、グラフィカル管理ツールなど製品レベルのソリューションを提供します。
+</p>
+
+<!--
+<h3>Related Projects</h3>
+-->
+<h3>関連するプロジェクト</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<!--
+<h3>Drivers</h3>
+-->
+<h3>ドライバ</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+<li><a href="http://search.cpan.org/~rudy/DBD-Pg-1.32/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<!--
+<h3>Advanced Feature Packages</h3>
+-->
+<h3>先進機能に関するパッケージ</h3>
+
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Geographic Information Server (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Full Text Search (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Business Intelligence/Data Warehousing (Bizgres)</a></li>
+</ul>
+
+<!--
+<h3>Graphical User Interfaces</h3>
+-->
+<h3>グラフィカルユーザインタフェース</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin III</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">List of other
+GUIs</a></li>
+</ul>
+
+<!--
+<h3>Replication</h3>
+-->
+<h3>レプリケーション</h3>
+
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>
+
+<!--
+<a name="translations"></a><h2>Official Translations of This
+Document</h2>
+-->
+<a name="translations"></a><h2>公式な本書の翻訳</h2>
+
+<ul>
+<li><a href="/about/press/presskit81.html.br">Brazillian Portuguese</a></li>
+
+<li><a href="/about/press/presskit81.html.fi">Finnish</a></li>
+
+<li><a href="/about/press/presskit81.html.fr">French</a></li>
+
+<li><a href="/about/press/presskit81.html.de">German</a></li>
+
+<li><a href="/about/press/presskit81.html.el">Greek</a></li>
+
+<li><a href="/about/press/presskit81.html.hu">Hungarian</a></li>
+
+<li><a href="/about/press/presskit81.html.it">Italian</a></li>
+
+<li><a href="/about/press/presskit81.html.ja">Japanese</a></li>
+
+<li><a href="/about/press/presskit81.html.pl">Polish</a></li>
+
+<li><a href="/about/press/presskit81.html.ro">Romanian</a></li>
+
+<li><a href="/about/press/presskit81.html.ru">Russian</a></li>
+
+<li><a href="/about/press/presskit81.html.sl">Slovenian</a></li>
+
+<li><a href="/about/press/presskit81.html.es">Spanish</a></li>
+
+<li><a href="/about/press/presskit81.html.se">Swedish</a></li>
+
+<li><a href="/about/press/presskit81.html.tr">Turkish</a></li>
+</ul>
+

@@ -1,0 +1,77 @@
+Lisää tämän version ominaisuuksia
+
+Aiemmin mainittujen ominaisuuksien lisäksi, tässä versiossa on uusia ominaisuuksia ja parannuksia, joista nykyiset PostgreSQL käyttäjät ilahtuvat.
+
+Funktiot:PostgreSQL funktiot tukevat nyt "tähän-dokumentti-tyyliin dollari-lainausta", jonka avulla voi välttää ikävät sisäiset lainaukset. Lisäksi, uusien tallennuspisteiden mukana tuli uusi ominaisuus, eli PL/pgSQL funktioilla on nyt rajoitettu poikkeusten käsittely EXCEPTION lauseella.
+
+Tietokannan suunnittelu: Tietokannan ylläpitäjät voivat nyt muuttaa taulujen sarakkeita toisen tyyppisiksi käyttäen ALTER TABLE lausetta. Sarakkeiden määrittely komposiittitietotyypeillä on nyt tuettu SQL standardien mukaisesti. Kaikki tietokannan objektit tukevat nyt CHANGE OWNER lausetta.
+
+Tiedon import/export: COPY komento tukee nyt pilkkueroteltua CVS tiedostotyyppiä, mikä tekee tiedon lataamisen ja eksporttaamisen toisiin ohjelmiin helpommaksi.
+Optimoijan parannukset: Kyselyn suunnittelija ja toteuttaja käyttää nyt hyväksi yhteensopivien tietotyyppien indeksejä, mikä vähentää tarvetta explisiittisesti muuttaa vakioiden tietotyyppiä. Tämä versio sisältää myös paremman indeksien käytön ja paremmin optimoidun OR lauseiden käytön. ANALYZE:n käyttämät otokset ovat entistä edustavampia ja TRUNCATE on entistä nopeampi. Sen lisäksi parannuksia valmistelluissa hakusuunnitelmissa, sekä paljon pienempiä parannuksia.
+
+Logit: Ylläpitäjät voivat määritellä automaattisen logien kierrätyksen postgresql.conf tiedostossa. PostgreSQL:n logit ovat myös entistä huomattavasti kofiguroitavampia. Nyt ylläpitäjät voivat määritellä riveille haluamansa alun, tallentaa tiettyjä SQL komentoja sekä järjestelmästä poistumisia.
+
+Varmuuskopiointi: PostgreSQL:n varmuuskopionti ohjelma, pg_dump, on suurelta osin kirjoitettu uudestaan. Uusi versio tuo mukanaan uusia ominaisuuksia, kuten määritellyt alku ja loppu ajat, sekä ratkaisee aiemmat käyttäjäoikeuksiin ja riippuvuuksiin liittyneet ongelmat varmuuskopiossa.
+
+Tietysti, muutoksia ja parannuksia on vielä huomattavasti lisää. <a href="">Release Notes</a> sisältää kattavan listan (englanniksi).
+
+Kokonaiset lainaukset
+
+"Fujitsu on erittäin tyytyväinen PostgreSQL 8.0:n sisältämiin uusiin ominaisuuksiin. Me olemme varmoja, että nämä yritystason ominaisuudet houkuttelevat lukuisia uusia PostgreSQL käyttäjiä." sanoi  Takayuki Nakazawa Fujitsun OSS tietokantaohjelmisto ryhmän johtaja. "Fujitsu on ylpeä siitä avusta, jota se on voinut antaa PostgreSQL:n kehittämiseen, sekä toiminnastaa PostgeSQL yhteisössä. Me autamme PostgreSQL yhteisöä tekemään PostgreSQL tietokannasta johtavan tietokantajärjestelmän."
+
+Javier Soltero, Hyperic LLC:n pääarkkitehti totesi, "PostgreSQL 8.0 antaa meille laadukkaan rinnakkaisen suorituskyvyn ja nopeuden, jota meidän HQ seurantajärjestelmämme kaipaa. Meidän tiimimme evaluoi sekä avoimen lähdekoodin että kaupallisia java-pohjaisia tietokantoja, jotka toimivat usealla alustalla, mutta emme löytäneet sellaista, joka olisi täyttänyt meidän tarpeemme. PostgreSQL:n windows tuki mahdollistaa, että voimme laittaa tietokannan tuotteemme mukaan, ja hyödyntää sen skaalautuvuutta ja tehokkuutta. Ja erityisesti PostgreSQL:n lisenssi mahdollistaa, että voimme liittää sen myös vapaasti jaettaviin tuotteisiimme ilman, että joutuisimme maksamaan siitä. PostgreSQL ryhmällä on hyvin ansaittu maine hyvästä laadusta, jonka olemme todenneet heti alusta asti tutkiessamme ensimmäistä 8.0 beta versiota."
+
+Mistä 8.0 löytyy_
+
+	List of FTP Mirrors
+	Bittorrent
+	Windows asennus (myös Bittorrent:n kautta)
+	SourceForge (myös Windows asennus)
+
+Lisäinformaatiota:
+	Suomeksi
+		Jussi Mikkola
+		+358 40 830 7561
+		fi@postgresql.org
+
+
+	Or in English:
+		Josh Berkus
+		PostgreSQL Project
+		+1-415-752-2500
+		josh@postgresql.org
+
+Linkkejä muihin PostgreSQL resursseihin:
+
+Dokumentaatio:
+	Official Documentation
+	TechDocs
+	General Bits
+
+Ajurit:
+	JDBC
+	ODBC
+	.Net
+
+Graaffisia käyttöliittymiä:
+	pgAdminIII
+	phpPgAdmin
+	pgAccess
+	List of other GUIs
+
+Replikointi:
+	Slony-I
+	pgReplicator
+	eRServer
+
+Muita projekteja:
+	pgFoundry
+	GBorg
+
+Tietoa yrityksistä, joita on lainattu tekstissä
+
+Fujitsu: Fujitsu on johtava maailmanlaajuinen asiakassuuntautuneiden tietojärjestelmien ja kommunikointijärjestelmien toimittaja. Johtavat teknologiat, erittäin luotettavat tietojenkäsittely- ja kommunikaatiojärjestelmät sekä maailmanlaajuinen ammattilaisten verkosto mahdollistavat, että Fujitsu voi toimittaa asiakkailleen järjestelmiä, jotka luovat näille uusia menestyksen mahdollisuuksia. Fujitsun pääkonttori on Tokiossa, ja yrityksen liikevaihto oli 31.3.2004 päättyneellä vuodella 4700 miljardia jeniä, eli 45 miljardia dollaria. Enemmän tietoa Fujitsusta http://www.fujitsu.com, tai suomessa http://fi.fujitsu.com. Lisätietoa Fujitsun PostgreSQL toiminnasta, sekä white paper,  http://fastware.com.au/postgresql.html. Suorat kyselyt Liam O'Duibhir, Fujitsu Australia Software Technology <liamod@fast.fujitsu.com.au>, puhelin (61-2) 9452 9068 (vain englanniksi).
+
+
+Hyperic: Hyperic, LLC on teknologiatoimittaja, joka on fokusoitunut toimittamaan järjestelmiä avoimenlähdekoodin ja kaupallisten tietojärjestelmien ylläpitoon. Sen tunnetuin tuote, HQ, on suunniteltu vaihtoehdoksi kalliille vanhoille valvontajärjestelmille, ja siihen kuuluu avoin, skaalautuva, web-pohjainen järjestelmä, joka tukee kaikkia tällä hetkellä käytössä olevia tietoteknisiä järjestelmiä. Lisää informaatiota englanniksi ja espanjaksi press@hyperic.net.
+

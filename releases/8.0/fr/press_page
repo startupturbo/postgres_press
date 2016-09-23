@@ -1,0 +1,90 @@
+A propos de PostgreSQL: PostgreSQL est le fruit du travail collectif de centaines de développeurs, s'appuyant sur un développement entamé il y a presque vingt ans à l'Université de Californie à Berkeley. Avec son support de longue date des fonctionnalités nécessaires dans l'entreprise telles que les transactions, les procédures et fonctions stockées, les triggers, les sous-requêtes, PostgreSQL est utilisé dans les branches métiers ou les agences gouvernementales les plus exigentes. PostgreSQL est distribué sous licence BSD, permettant l'utilisation et la distribution sans rétribution pour les utilisations commerciales et non
+commerciales.
+
+Pour plus d'information concernant PostgreSQL ou pour le télécharger, visitez: http://www.postgresqlfr.org/ ou http://www.postgresql.org/
+
+Pour toute information concernant Fujitsu ou Hyperic LLC, consultez notre dossier de presse.
+
+
+
+
+Fonctionnalités supplémentaires dans cette version
+
+En plus des fonctionnalités majeures décrites ci-dessus, d'autres fonctionnalités trés intéressantes pour les utilisateurs de PostgreSQL ont été soit ajoutées soit améliorées.
+
+Fonctions : les fonctions PostgreSQL disposent maintenant de la possibilité de placer une variable à l'intérieur d'une chaîne, permettant ainsi de limiter les erreurs dues à l'imbrication des apostrophes. Par ailleurs, grâce aux nouveaux points de sauvegarde (Savepoints), les fonctions PL/pgSQL sont capables d'une gestion limitée des exceptions grâce à l'utilisation de la clause EXCEPTION.
+
+Conception de base de données : l'administrateur de la base de données peut maintenant changer le type d'une colonne existante en utilisant ALTER TABLE. La déclaration de colonnes utilisant des types de données composites peut aussi être utilisée, comme il est prévu dans le standard SQL. Enfin, tous les objets de la base supportent CHANGE OWNER.
+
+Import/Export de données : La commande COPY permet maintenant l'utilisation du format de fichier texte très répandu CSV (valeurs séparées par des virgules). Ceci rend les imports et les exports vers d'autres logiciels plus faciles à réaliser.
+
+
+Amélioration de l'optimiseur de requêtes : le planificateur et l'exécuteur de requêtes utiliseront maintenant les index pour des types de données compatibles, réduisant grandement le recours aux transtypages de valeurs constantes. Cette version inclut également des améliorations dans l'utilisation des index, une optimisation des clauses OR, un échantillonnage amélioré pour ANALYZE, un TRUNCATE plus rapide, une meilleure génération des plans de requêtes préparées, plus un grand nombre d'améliorations mineures, trop nombreuses pour être citées.
+
+
+Journalisation : les administrateurs peuvent désormais configurer la rotation des fichiers de journalisation de PostgreSQL au travers du fichier postgresql.conf. Le fichier de journalisation de PostgreSQL est encore plus configurable que précédemment, grâce à l'inclusion de préfixes de lignes dont le format aura été défini par l'administrateur, le traçage de types de requêtes SQL particuliers et le traçage des déconnexions.
+
+Sauvegarde : l'utilitaire de sauvegarde portable, pg_dump, a été en grande partie réécrit. Cette version ajoute de nouvelles possibilités comme les heures de début et de fin, ainsi que l'élimination des problèmes résiduels concernant la portabilité et la dépendance entre les fichiers de sauvegardes.
+
+Bien sûr, d'autres changements et améliorations sont inclus dans cette version. Référez-vous à la page <a href="">Notes de version</a> pour une liste complète.
+
+
+Citations complètes
+
+M. Takyuki Nakazawa, Directeur du groupe base de données Open Source s'exprime en ces termes : "Nous sommes très satisfaits des nouvelles fonctionnalités de PostgreSQL 8.0. Nous sommes persuadés que ces fonctionnalités professionnelles attireront beaucoup de nouveaux utilisateurs vers PostgreSQL. Fujitsu est fier de financer le développement de nouvelles fonctions de PostgreSQL et de son travail avec la communauté PostgreSQL. Nous souhaitons aider PostgreSQL à devenir le SGBD dominant."
+
+Javier Soltero, architecte en chef chez Hyperic LLC, a dit: "PostgreSQL 8.0 nous apporte le haut niveau de simultanéité d'accès et le débit nécessaire à notre produit de surveillance HQ. Notre équipe a évalué des bases de données multi-plateformes commerciales et Open Source en Java, mais aucune ne remplissait nos attentes. PostgreSQL 8.0 disposant du support natif de Windows, nous pouvons maintenant inclure PostgreSQL dans nos produits et bénéficier de l'extensibilité et de la performance d'ores et déjà reconnues de PostgreSQL. Sa licence nous permet de l'inclure dans notre distribution sans souci de redevances commerciales. Le groupe de développement de PostgreSQL a une réputation de qualité largement méritée, qui nous a été confirmé dès notre évaluation de la première version beta publique."
+
+
+Sites de téléchargement pour PostgreSQL 8.0:
+    Liste des mirroirs FTP
+    Bittorrent
+    Installeur Windows (également disponible via Bittorrent)
+    Sourceforge (incluant l'installeur Windows)
+
+Contact pour plus d'informations:
+    En français:
+    François Suter
+    +41 22 777 01 50
+    fr@postgresql.org
+
+
+ Ou en anglais:
+    Josh Berkus
+    PostgreSQL Project
+    +1-415-752-2500
+    josh@postgresql.org
+
+
+Liens vers d'autres ressources concernant PostgreSQL:
+
+Documentation:
+    Documentation officielle
+    Documents techniques
+    General Bits
+
+Pilotes:
+    JDBC
+    ODBC
+    .NET
+
+Interfaces graphiques:
+    pgAdminIII
+    phpPgAdmin
+    pgAccess
+    Liste des autres IHM
+
+Réplication:
+    Slony-I
+    pgReplicatior
+    eRServer
+
+
+Projets relatifs à PostgreSQL:
+    pgFoundry
+    GBorg
+Informations concernant les sociétés citées:
+
+A propos de Fujitsu : Fujitsu est un des premiers fournisseurs de systèmes d'informations orientés clientèle et de solutions de communication pour le marché international. Des technologies de pointe, des plateformes de communication et de calculs particulièrement fiables, ainsi qu'un panel mondial d'experts en systèmes et en services permettent à Fujitsu de proposer des solutions globales qui apportent des possibilités infinies pour le succès de ses clients. Basée à Tokyo, Fujitsu Limited (TSE: 6702) a publié son chiffre d'affaire consolidé de 4700 milliards de yen (soit 45 milliards de dollars) pour l'année fiscale se terminant au 31 mars 2004. Vous pourrez trouver des informations complémentaires sur Fujitsu sur le site : http://www.fujitsu.com. Les détails concernant l'initiative Fujitsu Supported PosgreSQL (FSP) et un livre blanc à ce sujet sont disponibles sur le site : http://fastware.com.au.postgresql.html. Veuillez envoyer vos questions à Liam O'Douibhir, Fujitsu Australia Software Technology <liamod@fast.fujitsu.com.au>, téléphone (61-2) 9452 9068.
+
+A propos d'Hyperic : Hyperic LLC est un fournisseur de solutions pour la gestion d'infrastructures de technologies de l'information Open Source et commerciales. Son produit phare se présente comme une alternative aux outils de gestion coûteux et dépassés en fournissant une plate-forme ouverte et extensible basée sur le web, apportant ainsi un support complet pour toutes les technologies utilisée de nos jours. Pour plus d'informations, contactez press@hyperic.net.

@@ -1,0 +1,237 @@
+<!-- BEGIN page_title_block --> 
+PostgreSQL 8.1 版发布宣传资料
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.1版发布宣传资料</h1>
+
+<h2>目录</h2>
+
+<p>
+
+&nbsp; <a href="#original_release">新版本发布说明的原文</a><br />
+&nbsp; <a href="#additional_features">其他附加特性</a> <br />
+&nbsp; <a href="#quoted_companies">相关商业公司</a><br />
+&nbsp; <a href="#download">下载地址</a><br />
+&nbsp; <a href="#docs">文档</a><br />
+&nbsp; <a href="#license">版权声明</a><br />
+&nbsp; <a href="#contact">联系方式</a><br />
+&nbsp; <a href="#companies">企业支持</a><br />
+&nbsp; <a href="#additional_software">其他相关软件</a>
+
+</p>
+
+<a name="original_release"></a>
+<h2>新版本发布说明的原文</h2>
+<p>2005年11月8日，在德国法兰克福的开源数据库大会上，PostgreSQL全球开发组自豪地宣布了PostgreSQL8.1版本的发布，
+新版本进一步地提升了PostgreSQL作为最先进的开源数据库管理系统的领先地位。经过庞大且十分活跃的社区及数量
+不断增长的合作公司伙伴的共同设计、打包及测试，8.1版本将扩大PostgreSQL应用程序开发的范围。新的版本包括大
+量的性能改进和提升，同时增强了在大型数据仓库、高容量事务处理以及更复杂的分布式企业应用中的所必须支持的高级SQL特性。
+</p>
+
+<p>这些特性将继续强化老版本就已建立起来的（被广泛）应用的趋势，8.0版本在其发布的前七月中就已被下载约100万次，
+而同比以前的老版本在相同的时间内只被下载了约30万次。
+</p>
+
+<p>“PostgreSQL这个项目现在明显地深深地留在了数据库用户的脑海中”，Pervasive软件公司（该公司也是PostgreSQL社区的赞助商）的产品主管Lance Obermeyer说道，
+“它进一步地提升了用户采用开源架构软件的兴趣，我们期望PostgreSQL会变得越来越火，越来越来流行”。
+</p>
+
+<h3>新增的高级数据库特性</h3>
+<p>
+<b>角色：</b> PostgreSQL现在支持数据库角色功能，该功能简化了数据库中有大量用户且用户权限有复杂交叉情况下的管理功能。
+</p>
+
+<p>
+<b>IN/OUT 输入/输出参数：</b> PostgreSQL函数现在支持IN，OUT和INOUT参数，该功能进一步提高了对JAVA和.NET应用程序中复杂商业逻辑的支持。
+</p>
+
+<p>
+<b>2段式提交(2PC)：</b> 该特性是广域网应用和不同种类的数据中心使用PostgreSQL时一直提出的要求，它也允许ACID兼容的事务跨服务器执行。
+</p>
+
+<h3>性能的改进和增强</h3>
+
+<p>
+<b>提升多处理器（SMP）架构的性能：</b> 8.1版本的缓冲管理已强化为可随处理器的数量而线性变化，由此对8路、16路、双核及多核处理器的服务器极大地提高的性能。
+</p>
+
+<p>
+<b>位图扫描：</b>索引将会在适当的时候动态地转化为内存中的位图，由此对非常大的数据表在进行复杂查询时最多可提高近二十倍的索引性能。
+这也有助于通过大幅减少多列的索引而简化数据库的管理功能。
+</p>
+
+<p>
+<b>表分区：</b> 查询优化器现在可以通过对数据表使用名为排除约束的技术而避免扫描一个大表的全部内容。类似于其他数据库系统的表分区技术，这个特性提高了性能
+同时也优化了也对多达数G字节的数据表的管理。
+</p>
+
+<p>
+<b>共享行级锁：</b> PostgreSQL的“更佳的行级锁”现在通过附加对外键的共享锁而支持更高级别的并发处理，共享锁也将提高很多大容量的OLTP应用程序的数据录入和更新的性能。
+</p>
+
+<p>“PostgreSQL 8.1版本极大地优化了的性能，在我们的双Opteron处理的服务器上”，Reliable Computer Solutions公司的数据库管理员Merlin Moncure说道，“更明确地来说，
+我发现简单查询的运行时间大约减少20%，CPU负载降低20%，服务器的负载提升了让人惊奇的20-40%”。
+</p>
+
+<p>
+另外还有超过120多处其他方面的改进，部分详细情况可参见8.1版本的presskit文档。
+</p>
+
+<h3>关于PostgreSQL</h3>
+
+<p>
+PostgreSQL是几百名开发人员的集体工作成果，它最早是起源位于伯克利的加利福尼亚大学，至今已有二十年的开发历史。
+它一直以来就支持一些常见的企业级功能如事务处理、函数、触发器以及子查询。PostgreSQL 一直以来被用于一些要求极端苛刻的
+商业环境及政府部门。PostgreSQL是以BSD的版权协议发布，它允许在商业或非商业应用的两种环境下免费使用。
+</p>
+
+<a name="additional_features"></a>
+<h2>新版本中的其他特性</h2>
+除了在新闻发布稿中所列的主要特性外，还有另外由200多位开发人员
+为8.1版贡献的超过120处的新特性和改进，其中包括：
+
+<ul>
+
+<li><b>GiST：</b> PostgreSQL的GiST功能加上索引机制提升了对高速并发能力、可复原性的支持，同时也改进了以前只在使用B-Tree索引才有较好性能的更新功能，
+GiST也是PostgreSQL全文索引(TSearch2)、空间地理数据(GIS) 和树状结构索引的后台核心。通过这个改进，复杂数据类型在大型高可靠性要求的应用程序中也会表现出色。
+</li>
+  
+<li><b>COPY功能重构：</b> COPY经重新开发优化后，对批量加载数据可提高处理速度30%。另外通过
+  	对加载CSV格式数据的改进， 这也使得迁移其他大型数据库至PostgreSQL比以前更加快捷。
+</li>
+
+<li><b>64位共享内存：</b> 在64位系统平台上，PostgreSQL的缓冲管理器最大可使用2TB内存，这也使PostgreSQL在将来的大容量内存的服务器上使用打下基础。
+</li>
+
+<li><b>内部集成自动清理功能（Autovacuum）：</b> PostgreSQL的数据库维护进程进行了改进并集成到主服务程序中，这使得PostgreSQL服务器的安装及维护更加简单。
+</li>
+
+<li><b>更快的聚合功能：</b> 聚合功能进行了改进，使得报表类的查询更快。PostgreSQL的开发人员重写了聚合功能的内存管理部分，增加了对MIN()和MAX()功能的索引优化。
+</li>
+  
+<li><b>管理功能：</b> 为了方便地获得PostgreSQL服务器自身的信息而增加了一些管理功能，另外从PSQL命令行程序中也可以基本的DBA（数据库管理员）管理功能。
+</li>
+
+<li><b>兼容功能：</b> 新增了lastval()，greatest() 和 least() 等函数，使得应用程序从MySQL和Oracle向PostgreSQL迁移更简单。
+</li>
+  
+</ul>
+
+<p>
+你也可以阅读到8.1版本一系列的改进，详情可浏览：<a href="/docs/current/static/release.html">发布说明。</a> 
+</p>
+
+<a name="quoted_companies"></a>
+
+<h2>相关商业公司</h2>
+<p>
+<b>Pervasive 软件公司</b> (纳斯达克股票代码：PVSW)提供数据架构软件以帮助商业公司发掘他们在信息投入方面的价值。
+二十多年以来，Pervasive公司一直提供了有价值同时结合最好的性能、可靠性、功能及连接性的软件和服务。
+事实上，在超过150个国家的各个行业有成千上万的用户使
+用Pervasive软件管理、集成、分析和保护他们的核心关键数据。
+欲了解更多信息，<a href="http://www.pervasive.com/company">按此浏览我们的网址</a>。
+</p>
+
+<p>
+<b>Reliable Computer Solutions软件公司</b> 为当地制造业提供ERP软件和咨询服务。 我们的专业是不完全的 IT解决方案，主要给运动汽车和房屋制造业服务。
+我们的旗舰产品是ESP，它帮助和支持了美国创造十亿美元的制造业。  
+欲了解更多信息，请联系Merlin Moncure (仅限英语): merlin.moncure@rcsonline.com，电话：(01) 269-483-1234 x304。
+</p>
+
+<a name="download"></a>
+<h2>下载地址</h2>
+<ul>
+  <li><a href="http://www.postgresql.org/ftp/latest/">镜像FTP站点列表</a> </li>
+  <li><a href="http://www.postgresql.org/download/bittorrent">Bt种子文件</a> </li>
+  <li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/win32/">Windows安装包</a> （也可通过BT方式下载）</li>
+  <li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/">其他安装包，包括Linux，Mac OSX 和 Solaris</a> </li>
+  <li><a href="http://sourceforge.net/projects/pgsql/">SourceForge站点</a> （包括Windows安装包）</li>
+</ul>
+
+<a name="docs"></a>
+<h2>文档</h2>
+<ul>
+  <li><a href="/docs/current/static/">官方文档</a> </li>
+  <li><a href="http://techdocs.postgresql.org/">技术文章集</a> </li>
+  <li><a href="http://www.varlena.com/GeneralBits">技巧专栏</a> </li>
+</ul>
+  
+<a name="license"></a>
+<h2>版权声明</h2>
+<p>PostgreSQL 使用<a href="/about/licence">BSD版权</a>，它只要求对有版权的源代码保留其版权和授权的信息即可。
+由于这个经 <a href="http://www.opensource.org/licenses/bsd-license.php">OSI认证的版权</a>不限制PostgreSQL在商业环境和有版权的应用程序中使用，
+因此被公认为是非常有灵活性和对商业应用是友好的。加上有多个公司的支持和源代码归属公共所有，BSD的版权令PostgreSQL在那些希望在自己的产品里嵌入数据库的厂商里很
+时髦，因为他们不用担心费用，嵌入软件的版权锁，以及版权条款的改变。
+</p>
+
+<a name="contact"></a>
+<h2>联系地址</h2>
+<p><a href="http://www.pgsqldb.org/">PostgreSQL 文档(中文)</a></p>
+<p><a href="http://www.postgresql.org/">英文版主页</a></p>
+
+<p>联系人：
+<br />
+<br />WeiPing.He (Laser)
+<br /><a href="http://www.pgsqldb.org/">http://www.pgsqldb.org/</a>
+<br />
+<br />Daojing.Zhou
+<br /><a href="mailto:doudou586@gmail.com">doudou586@gmail.com</a>
+</p>
+
+<p>其他地区联系方式，详情可见<a href="/about/press/contact">全球联系表</a>。
+</p>
+
+<a name="companies"></a>
+<h2>企业支持</h2>
+<p>
+PostgreSQL获得了一大批公司的支持，他们资助开发人员，提供网上资源以及给予了资金上的支持。
+一些较大的且长期支持的公司名单列在我们的 <a href="/about/sponsors">开发支持页面</a>。
+还有<a href="/support/professional_support">大量的公司</a>提供从独立顾问到跨国公司的 PostgreSQL 支持。
+</p>
+
+
+<a name="additional_software"></a>
+
+<h2>相关链接</h2>
+<p>目前除了PostgreSQL自身这个主项目外，还有超过100多个与PostgreSQL相关的子项目，它们均高质量地提供了
+数据复制、数据迁移、兼容性、协同工作、数据库设计等方面的功能以及图形方式的管理工具。
+</p>
+
+<h3>相关开发项目</h3>
+<ul>
+  <li><a href="http://projects.postgresql.org/">pgFoundry</a> </li>
+  <li><a href="http://gborg.postgresql.org/">GBorg</a> </li>
+</ul>
+
+<h3>驱动程序</h3>
+<ul>
+  <li><a href="http://jdbc.postgresql.org/">JDBC</a> </li>
+  <li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a> </li>
+  <li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a> </li>
+  <li><a href="http://search.cpan.org/~rudy/DBD-Pg-1.32/Pg.pm">Perl DBI</a> </li>
+  <li><a href="http://initd.org/projects/psycopg1">Python</a> </li>
+</ul>
+
+<h3>含高级功能的扩展软件包</h3>
+<ul>
+  <li><a href="http://postgis.refractions.net/">地理信息服务器(PostGIS)</a> </li>
+  <li><a href="http://openfts.sourceforge.net/">全文搜索 (OpenFTS)</a> </li>
+  <li><a href="http://www.bizgres.org/">商业智能／数据仓库 (Bizgres)</a> </li>
+</ul>
+
+<h3>图形用户接口的客户端工具</h3>
+<ul>
+  <li><a href="http://www.pgadmin.org/">pgAdmin III</a> </li>
+  <li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a> </li>
+  <li><a href="http://www.pgaccess.org/">pgAccess</a> </li>
+  <li><a href="http://techdocs.postgresql.org/guides/GUITools">其他图形工具软件</a> </li>
+</ul>
+
+<h3>数据库复制软件</h3>
+<ul>
+  <li><a href="http://www.slony.info/">Slony-I</a> </li>
+  <li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a> </li>
+  <li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a> </li>
+
+</ul>
+

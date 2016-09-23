@@ -1,0 +1,59 @@
+PostgreSQL 9.4 Zwiększa Elastyczność, Skalowalność i Wydajność
+==================================================================
+
+18 grudnia 2014: PostgreSQL Global Development Group ogłosiła wydanie wersji 9.4 bazy PostgreSQL, lidera wśród baz danych open source. W tej wersji dodano wiele nowych cech, które zwiększają elastyczność, wydajność i skalowalność dla wielu różnych rodzajów użytkowników bazy danych, włączając w to ulepszenia obsługi typu JSON, replikacji i wydajności indeksów.
+
+
+Elastyczność
+------------
+
+Dzięki nowemu typowi danych JSONB użytkownicy nie muszą już dłużej wybierać pomiędzy bazami relacyjnymi i nierelacyjnymi: mogą ich używać jednocześnie. JSONB pozwala na szybsze wyszukiwanie oraz proste zapytania używając Generalized Inverted Indexes (Indeksy GIN). Wiele nowych funkcji pozwala użytkownikom na manipulację danymi w formacie JSON z podobną, albo większą, wydajnością w porównaniu z popularnymi bazami dokumentowymi. Dzięki typowi JSONB tabele mogą być łatwo zintegrowane z danymi z dokumentów, co pozwala na całkowicie zintegrowane środowisko bazodanowe. 
+
+"JSONB prowadza PostgreSQLa do środowiska programistów JavaScript dzięki wparciu przechowywania i wyszukiwania danych JSON. Node.js oraz inne serwerowe frameworki javascriptowe mogą skorzystać z bezpieczeństwa i możliwości PostgreSQLa, a jednocześnie mogą przechowywać dane w formacie bezschematowym, który preferują" - Matt Soldo, Product Manager, Heroku Postgres.
+
+Skalowalność
+------------ 
+
+W wersji 9.4 pojawiło się Logical Decoding, nowe API do odczytu, filtrowania i manipulacji strumieniem replikacji PostgreSQLa. Ten interfejs jest podstawą nowych narzędzi replikacji m.in. replikacji dwukierunkowej, która pozwala na tworzenie klastrów master-master. Inne zmiany, jak np. opóźniona czasowo replikacja, pozwalają na lepsze zarządzanie replikowanymi serwerami.
+ 
+"Główny powód naszego szybkiego przejścia na wersję 9.4 to Logical Decoding. Pozwala nam na pisanie własnych wtyczek, które zbierają zmiany z konkretnych tabel i replikują je gdzie tylko chcemy, dzięki temu możemy pozbyć się cięższych i trudniejszych do zarządzania rozwiązań replikacyjnych opartych na wyzwalaczach." - Marco Favale, Cartographic Production Manager, Navionics.
+
+"Zalando polega na stabilności i wydajności setek serwerów baz danych PostgreSQL stale obsługujących miliony klientów z całej Europy. Jesteśmy podekscytowani użyciem wbudowanej opóźnionej replikacji, przetestujemy też nowe narzędzia replikacji dwukierunkowej, gdy tylko pojawi się nowa wersja bazy danych." - Valentine Gogichashvili, Team Lead Database Operations w Zalando Technologies.
+
+
+Wydajność
+-----------
+
+Wersja 9.4 wprowadza również wiele ulepszeń wydajności, które pozwalą użytkownikom jeszcze lepiej wykorzystać serwer PostgreSQL m.in.:
+
+* Ulepszenie indeksów GIN, sprawiające, że są do 50% mniejsze i do 3 razy szybsze.
+* Równolegle aktualizowalne widoki zmaterializowane.
+* Szybkie załadowanie danych do pamięci podręcznej  podczas restartu przy użyciu pg_prewarm.
+* Szybsze równoległe zapisy do logu transakcyjnego PostgreSQLa.
+
+"Na pewno skorzystamy na równoległym odświeżaniu widoków zmaterializowanych, opóźnionej replikacji
+(która pozwoli na jeszcze lepsze naprawianie po awarii) jak również ulepszeniach wydajności, które
+pojawiają się w każdym nowym wydaniu bazy." - Marco Favale.
+
+Linki
+-----
+
+* Pliki do ściągnięcia: http://www.postgresql.org/downloads
+* Informacje dla prasy: http://www.postgresql.org/about/press/presskit94/pl
+* Informacje o wydaniu 9.4 (po angielsku): http://www.postgresql.org/documentation/current/static/release-9-4
+* Co nowego w wersji 9.4 (po angielsku): https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.4
+
+O PostgreSQL
+----------------
+
+PostgreSQL jest czołowym systemem baz danych o otwartym
+kodzie, ze społecznością liczoną w tysiącach użytkowników i współtwórców,
+włączając w to wiele firm i organizacji. Rozwój bazy PostgreSQL rozpoczął
+się na Uniwersytecie w Berkeley w Kaliforni ponad dwadzieścia pięć lat temu
+i, w dużym tempie, jest nadal kontynuowany. Dojrzałe cechy PostgreSQLa
+nie tylko stawiają go na równi z głównymi bazami danych o zamkniętym kodzie,
+ale przewyższają je zaawansowanymi funkcjami bazy danych, możliwościami
+rozszerzania, bezpieczeństwem i stabilnością. Więcej o projekcie PostgreSQL,
+a także dołączeniu do społeczności, można znaleźć
+pod adresem: http://www.postgresql.org.
+

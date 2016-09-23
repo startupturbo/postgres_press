@@ -1,0 +1,30 @@
+Nowy Jork, NY: 19 stycznia 2004 - Grupa PostgreSQL Global Development wyda³a wersjê 8.0 obiektowo-relacyjnego systemu zarz±dzania baz± danych PostgreSQL wzmacniaj±c swoj± pozycjê jako najbardziej zaawansowana baza danych open source na ¶wiecie. To wydanie zawiera rozwi±zania wcze¶niej dostêpne tylko w najdro¿szych komercyjnych systemach baz danych, co powinno zaowocowaæ szerszym przyjêciem PostgreSQL-a zarówno w¶ród u¿ytkowników jak równie¿ producentów i dystrybutorów oprogramowania.
+
+Poza znacznymi ulepszeniami w skalowalno¶ci, rozwi±zaniach i wydajno¶ci, PostgreSQL 8.0 demonstruje niezrównan± szybko¶æ rozwoju w modelu open source.  Ponad tuzin przedsiêbiorstw, w³±czaj±c w to Red Hat, Fujitsu, Afilias, Software Research Associates, Inc., 2nd Quadrant i Command Prompt Inc. jak równie¿ setki niezale¿nych programistów przyczyni³o siê do wprowadzenia wiêkszej liczby znacz±cych ulepszeñ i nowych rozwi±zañ ni¿ w którejkolwiek z wersji poprzedzaj±cych 8.0.
+
+&bdquo;Jeste¶my pewni i¿ te przemys³owe rozwi±zania przyci±gn± wielk± liczbê nowych u¿ytkowników PostgreSQL-a.&rdquo;, powiedzia³ pan Takayuki Nakazawa, dyrektor oddzia³u baz danych OSS w Grupie Software'owej Fujitsu. &bdquo;Fujitsu jest dumna z sponsorowania ulepszeñ w PostgreSQL-u jak równie¿ ze swojej wspó³pracy z spo³eczno¶ci± PostgreSQL-a. Chcemy pomóc sprawiæ by PostgreSQL-a sta³ siê wiod±cym Systemem Zarz±dzania Baz± Danych.&rdquo;
+
+Nowe rozwi±zania to miêdzy innymi:
+
+Natywne wsparcie dla Windows:  PostgreSQL dzia³a teraz natywnie z systemem Windows i nie wymaga ju¿ warstwy emulacyjnej.  Daje to znacz±c± poprawê wydajno¶ci w stosunku do poprzednich wersji oraz oferuje przekonywuj±c± alternatywê dla komercyjnego oprogramowania bazodanowego zarówno dla niezale¿nych producentów oprogramowania, u¿ytkowników korporacyjnych jak i samodzielnych programistów Windows.
+
+Punkty powrotu (Savepoints):  To rozwi±zanie wziête ze standardu SQL pozwala bazie danych na cofniêcie pewnych fragmentów transakcji bez przerywania ca³ej operacji.  Daje to wiele mo¿liwo¶ci programistom aplikacji biznesowych którzy potrzebuj± skomplikowanych transakcji z obs³ug± b³êdów.
+
+Naprawa do punktu w czasie (Point in Time Recovery): To rozwi±zanie pozwala na pe³ne odtworzenie danych z automatycznie i stale archiwizowanych logów transakcji.  Daje to d³ugo oczekiwan± alternatywê dla wykonywania godzinnych b±d¼ dziennych kopii zapasowych systemów z krytycznymi danymi przechowywanymi w PostgreSQL-u.
+
+Przestrzenie tablic (Tablespaces):  Kluczowe dla administratorów wielogigabajtowych systemów przechowywania danych, przestrzenie tablic pozwalaj± na umieszczenie obszernych tablic i indeksów na osobnych dyskach b±d¼ macierzach, poprawiaj±c w ten sposób wydajno¶æ zapytañ.
+
+Ulepszone I/O i pamiêæ:  Wykorzystanie dysku i pamiêci zosta³o zoptymalizowane dziêki u¿yciu algorytmu Adaptive Replacement Cache, nowego systemu zapisu w tle (background writer) oraz nowego rozwi±zania polegaj±cego na opó¼nianiu operacji czyszczenia (vacuum delay).  Pozwoli to na skuteczniejsze przewidywanie obci±¿eñ i stabilniejsz± wydajno¶æ podczas okresów szczytowego wykorzystania.
+
+Javier Soltero, g³ówny architekt w Hyperic LLC, powiedzia³ &bdquo;PostgreSQL 8.0 daje nam wysoki stopieñ wspó³bie¿no¶ci i przepustowo¶ci, wymagany przez nasz system monitoruj±cy HQ.  Fakt i¿ PostgreSQL natywnie wspiera Windows oznacza, ¿e mo¿emy do³±czaæ PostgreSQL-a do naszego produktu i czerpaæ korzy¶ci z udowodnionej skalowalno¶ci i wydajno¶ci PostgreSQL-a, jak równie¿ z jego licencji, która pozwala na do³±czenie go do naszej dystrybucji bez komercyjnych zobowi±zañ wzglêdem innych.&rdquo;
+
+Poza wieloma nowymi rozwi±zaniami zawartymi w tym wydaniu, PostgreSQL w ci±gu ostatniego roku zyska³ równie¿ dziêki przyspieszonemu rozwojowi tworzonych niezale¿nie dodatków i opcjonalnych sk³adników.  Zarówno system do replikacji Slony-I jak i narzêdzie do utrzymywania i rozdzielania po³±czeñ pgPool s± ju¿ wykorzystywane przez zespo³y serwerów o wysokiej dostêpno¶ci.  Dodano b±d¼ znacznie rozwiniêto proceduralne jêzyki sk³adowane, w³±czaj±c w to PL/Java, PL/PHP i PL/perl, natomiast dostarczyciele danych Npgsql i PGsqlClient .NET zosta³y rozwiniête by s³u¿yæ wielu nowym u¿ytkowników wersji dla Windows.
+
+Aby uzyskaæ pe³n± listê z opisami nowych rozwi±zañ w wersji 8.0, proszê zajrzeæ na nasz± stronê z informacjami dla prasy.
+
+O PostgreSQL-u: PostgreSQL to kolektywna praca setek programistów, opieraj±ca siê na prawie dwudziestu latach rozwoju, maj±cego swoje pocz±tki na Uniwersytecie Kalifornii w Berkeley (UCB).  Wraz z d³ugo wspieranymi rozwi±zaniami na poziomie przemys³owym w³±czaj±c w to transakcje, funkcje, triggery i podzapytania, PostgreSQL u¿ywany jest dzi¶ przez wiele najbardziej wymagaj±cych biznesowych i rz±dowych agencji. PostgreSQL jest rozpowszechniany na licencji BSD, która pozwala na u¿ywanie i dystrybucjê bez op³at zarówno dla komercyjnych i niekomercyjnych zastosowañ.
+
+By dowiedzieæ siê wiêcej o PostgreSQL-u b±d¼ go ¶ci±gn±æ, odwied¼:
+	Po angielsku: http://www.postgresql.org/
+
+Na naszych stronach dla prasy mo¿na znale¼æ dalsze informacje o Fujitsu i Hyperic LLC.

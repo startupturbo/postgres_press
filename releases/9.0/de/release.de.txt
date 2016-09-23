@@ -1,0 +1,27 @@
+20. September 2010: Die PostgreSQL Global Development Group gibt die Veröffentlichung von PostgreSQL 9.0 bekannt, die neueste Version der weltweit führenden relationalen Open Source Datenbank. Dieses Major Release enthält Verbesserungen in den Bereichen Sicherheit, Anwendungsunterstützung, Monitoring, Performance und beim Speichern von Spezialdaten. Anwender freuen sich besonders über die neue Replikation und die Hot Standby Möglichkeiten, welche die Verbreitung in Cloud Hosting und skalierenden Applikationen beschleunigen werden.
+
+"Die eingebaute Replikation in 9.0 und die Fähigkeit, einen Hot Standby für Anfragen zu nutzen, sind seit vielen Jahren die am meisten gewünschten Features" sagt Simon Riggs, CTO von 2ndQuadrant und hauptsächlich Mitwirkender an Hot Standby. "Effiziente Replikation mit geringer Latenz schützt Ihre Daten besser, während Hot Standby die TCO (Total Cost of Ownership) deutlich senkt. Bei proprietären Produkten sind diese Features nur optional verfügbar und kosten Tausende von Euros."
+
+PostgreSQL 9.0 enthält mehr als ein Dutzend zusätzlicher wichtiger Verbesserungen, die jeden Aspekt des Applikationsdesigns und der Performance verbessern. Zum Beispiel: Support für 64-Bit Windows, bedingte und spaltenbasierte Trigger, In-place Upgrades von 8.3 und 8.4, Deferrable Unique Constraints und ein hochperformantes Nachrichtensystem. Eine komplette Liste der neuen Features finden Sie in den Release Notes.
+
+"Als einer der weltweit größten Domain-Registrare und DNS-Betreiber ist Afilias erfreut über das In-Place Upgrade, welches ein Upgrade der Datenbank mit derzeit über 16 Millionen Domainnamen innerhalb eines minimalen Zeitfensters ermöglicht", sagt Afilias CTO Ram Mohan.
+
+"Wir sind sehr erfreut über die neuen Features ... im speziellen über Deferrable Unique Constraints als eine Gelegenheit um Updates und Upgrades für unsere Kunden zu beschleunigen", sagt Paolo Juvara, CTO von OpenBravo.
+
+Marc Balmer, Gründer und Inhaber der Firma Micro Systems in der Schweiz, ist an den Möglichkeiten des stark verbesserten LISTEN/NOTIFY Nachrichtensystems interessiert: "Die neue Payload Option für Daten in asynchronen Benachrichtigungen wird unsere nächste Version der Programme zur Datenvisualisierung wesentlich verbessern".
+
+Dank Beiträgen von Entwicklern und Unternehmen aus der ganzen Welt, unter anderem NTT Open Source, EnterpriseDB, 2ndQuadrant und vielen anderen, ist die Akzeptanz bei den Anwendern größer als je zuvor und noch nie haben sich so viele Firmen an der Weiterentwicklung beteiligt.
+
+"Hier bei der CAIXA Bank nutzen wir PostgreSQL für unternehmenskritische Finanzanwendungen da die Datenbank die Qualität hat, die wir für unseren Betrieb benötigen", sagt Clarice Coppetti, IT Vice President, CAIXA Bank, Brasilien. "Die neue Version zeigt das PostgreSQL sich zügig verbessert, um mit den Anforderungen unseres Geschäftsfelds Schritt zu halten".
+
+* Pressemappe: http://www.postgresql.org/about/press/presskit90
+* Release Notes: http://www.postgresql.org/documentation/current/static/release-9-0
+* Downloads: http://www.postgresql.org/downloads
+
+Kontaktinformationen:
+Andreas Scherbaum
++49 391 5596779
+ads@pgug.de
+http://www.pgug.de/
+
+Über PostgreSQL: PostgreSQL ist das führende Open Source Datenbanksystem, welches eine weltweite Community von Tausenden Anwendern und Mitwirkenden sowie Dutzenden von Unternehmen und Organisationen hat. Das PostgreSQL Projekt blickt auf 20 Jahre Entwicklungsgeschichte zurück, die an der Berkeley Universität von Kalifornien begann und heutzutage eine nie dagewesene Entwicklungsdynamik erreicht. PostgreSQLs robuste Features sind denen führender propriäteren Datenbanken nicht nur ebenbürtig, sondern in spezialisierten Datenbankfeatures sowie in den Bereichen der Erweiterbarkeit, Sicherheit und Stabilität sogar überlegen. Mehr Informationen über PostgreSQL und dessen Community finden Sie unter www.postgresql.org.

@@ -1,0 +1,58 @@
+PostgreSQL 9.5: UPSERT, Row Level Security, and Big Data
+========================================================
+
+**7 JANUARY 2016**: The PostgreSQL Global Development Group announces the release of PostgreSQL 9.5.  This release adds UPSERT capability, Row Level Security, and multiple Big Data features, which will broaden the user base for the world's most advanced database.  With these new capabilities, PostgreSQL will be the best choice for even more applications for startups, large corporations, and government agencies.
+
+Annie Prévot, CIO of the CNAF, the French Child Benefits Office, said, "The CNAF is providing services for 11 million persons and distributing 73 billion Euros every year, through 26 types of social benefit schemes. This service is essential to the population and it relies on an information system that must be absolutely efficient and reliable. The CNAF's information system is satisfyingly based on the PostgreSQL database management system."
+
+UPSERT
+------
+
+A most-requested feature by application developers for several years, "UPSERT" is shorthand for "INSERT, ON CONFLICT UPDATE", allowing new and updated rows to be treated the same.  UPSERT simplifies web and mobile application development by enabling the database to handle conflicts between concurrent data changes.  This feature also removes the last significant barrier to migrating legacy MySQL applications to PostgreSQL. 
+
+Developed over the last two years by Heroku programmer Peter Geoghegan, PostgreSQL's implementation of UPSERT is significantly more flexible and powerful than those offered by other relational databases.  The new ON CONFLICT clause permits ignoring the new data, or updating different columns or relations in ways which will support complex ETL (Extract, Transform, Load) toolchains for bulk data loading. And, like all of PostgreSQL, it is designed to be absolutely concurrency-safe and to integrate with all other PostgreSQL features, including Logical Replication.
+
+Row Level Security
+------------------
+
+PostgreSQL continues to expand database security capabilities with its new Row Level Security (RLS) feature.  RLS implements true per-row and per-column data access control which integrates with external label-based security stacks such as SE Linux.  PostgreSQL is already known as "the most secure by default." RLS cements its position as the best choice for applications with strong data security requirements, such as compliance with PCI, the European Data Protection Directive, and healthcare data protection standards.
+
+RLS is the culmination of five years of security features added to PostgreSQL, including extensive work by KaiGai Kohei of NEC, Stephen Frost of Crunchy Data, and Dean Rasheed.  Through it, database administrators can set security "policies" which filter which rows particular users are allowed to update or view.  Data security implemented this way is resistant to SQL injection exploits and other application-level security holes.
+
+Big Data Features
+-----------------
+
+PostgreSQL 9.5 includes multiple new features for bigger databases, and for integrating with other Big Data systems.  These features ensure that PostgreSQL continues to have a strong role in the rapidly growing open source Big Data marketplace. Among them are:
+
+**BRIN Indexing**: This new type of index supports creating tiny, but effective indexes for very large, "naturally ordered" tables.  For example, tables containing logging data with billions of rows could be indexed and searched in 5% of the time required by standard BTree indexes.
+
+**Faster Sorts**: PostgreSQL now sorts text and NUMERIC data faster, using an algorithm called "abbreviated keys".  This makes some queries which need to sort large amounts of data 2X to 12X faster, and can speed up index creation by 20X.
+
+**CUBE, ROLLUP and GROUPING SETS**: These new standard SQL clauses let users produce reports with multiple levels of summarization in one query instead of requiring several.  CUBE will also enable tightly integrating PostgreSQL with more Online Analytic Processing (OLAP) reporting tools such as Tableau.
+
+**Foreign Data Wrappers (FDWs)**: These already allow using PostgreSQL as a query engine for other Big Data systems such as Hadoop and Cassandra.  Version 9.5 adds IMPORT FOREIGN SCHEMA and JOIN pushdown making query connections to external databases both easier to set up and more efficient.
+
+**TABLESAMPLE**: This SQL clause allows grabbing a quick statistical sample of huge tables, without the need for expensive sorting.
+
+"The new BRIN index in PostgreSQL 9.5 is a powerful new feature which enables PostgreSQL to manage and index volumes of data that were impractical or impossible in the past. It allows scalability of data and performance beyond what was considered previously attainable with traditional relational databases and makes PostgreSQL a perfect solution for Big Data analytics," said Boyan Botev, Lead Database Administrator, Premier, Inc.
+
+Links
+-----
+
+* [Downloads](http://www.postgresql.org/downloads)
+* [Press Kit](http://www.postgresql.org/about/press/presskit95)
+* [Release Notes](http://www.postgresql.org/docs/current/static/release-9-5.html)
+* [What's New in 9.5](https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.5)
+
+Contact
+-------
+
+PostgreSQL Press Team
+press@postgresql.org
+Phone: +1 (347) 674-7759
+
+About PostgreSQL
+----------------
+
+PostgreSQL is the world's most advanced database system, with a global community of thousands of users and contributors and dozens of companies and organizations.  The PostgreSQL Project builds on over 25 years of engineering, starting at the University of California, Berkeley, and has an unmatched pace of development today. PostgreSQL's mature feature set not only matches top proprietary database systems, but exceeds them in advanced database features, extensibility, security and stability.  Learn more about PostgreSQL and participate in our community at: http://www.postgresql.org.
+

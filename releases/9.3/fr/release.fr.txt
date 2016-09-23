@@ -1,0 +1,119 @@
+PostgreSQL 9.3 publiée
+======================
+
+9 SEPTEMBRE 2013 : Le PostgreSQL Global Development Group annonce la publication
+de PostgreSQL 9.3, la dernière version du système de gestion de bases de données
+relationnelles OpenSource le plus évolué.
+Cette version étend la fiabilité, la disponibilité et la capacité de PostgreSQL 
+à s'interfacer avec d'autres bases de données.
+
+Les utilisateurs rapportent déjà des développements rendus possibles par cette
+version.
+
+« PostgreSQL 9.3 fournit des fonctionnalités qu'en tant que développeur d'applications
+je peux utiliser immédiatement : des fonctionnalités JSON améliorées, l'indexation
+d'expressions rationnelles, et la facilité à fédérer des bases de données grâce
+aux gestionnaires de données externes (« Foreign Data Wrapper », en anglais)
+de PostgreSQL. Je me demande réellement comment je pouvais mener à bien mes 
+projets avant cette version », déclare Jonathan S. Katz, CTO de VenueBook.
+
+Accès en écriture aux données externes
+--------------------------------------
+
+La version 9.3 de PostgreSQL permet l'écriture au travers des gestionnaires de 
+données externes (« Foreign Data Wrappers », en anglais). Cela permet les échanges
+bi-directionnels entre plusieurs systèmes. Les environnements informatiques 
+d'aujourd'hui intègrent plusieurs bases de données et des sources de données 
+semi-structurées. PostgreSQL permet de les intégrer dans un ensemble cohérent.
+L'équipe a également développé postgres_fdw, pilote hautement performant de 
+fédération PostgreSQL-PostgreSQL en lecture/écriture.
+
+« Les gestionnaires de données externes modifiables nous permettent de connecter
+et tester très facilement différentes alternatives. Divers besoins sont
+adressés rapidement et le prototypage devient intelligent, » explique Lee
+Holloway, Co-fondateur et directeur de l'ingéniérie chez CloudFlare. « Il
+est intéressant d'assembler de nouveaux moteurs de stockages de données
+(dont les nôtres, écrits en Go), de les mélanger et de les regarder lire,
+écrire, voire intéragir entre eux. »
+
+
+Fiabilité et disponibilité renforcées
+-------------------------------------
+
+« PostgreSQL a toujours eu ma préférence pour sa stabilité, sa robustesse,
+ses garanties de cohérence et de durabilité des données, son respect des
+propriétés ACID et de la norme SQL » affirme Pascal Bouchareine, directeur
+Recherche et Développement chez Gandi.net. « Je suis particulièrement
+impatient d'en apprendre plus sur le mécanisme de bascule rapide annoncé en
+9.3. »
+
+Cette nouvelle version inclut de nouvelles fonctionnalités qui étendent et 
+améliorent encore la fiabilité et la disponibilité de PostgreSQL :
+
+* Sommes de contrôle sur les pages de données : aide les administrateurs à détecter
+  rapidement tout disque ou composant matériel défectueux qui corrompt les données ;
+* Bascule rapide : bascule en moins d'une seconde entre le 
+  maître et le réplicat, offrant une disponibilité dite « carrier-grade » ;
+* Resynchronisation par streaming simple : reconfiguration plus simple, plus rapide
+  des réplicats en cascade après bascule.
+
+Fonctionnalités orientées développeurs
+--------------------------------------
+
+Comme toute nouvelle version, PostgreSQL 9.3 propose de nombreuses fonctionnalités 
+facilitant le travail avec PostgreSQL. Cela le rend plus flexible et plus agréable
+pour les développeurs, les administrateurs et les architectes.
+Parmi ces fonctionnalités, citons :
+
+* des méthodes additionnelles de constructeur et extracteur JSON ;
+* les vues matérialisées et les vues inscriptibles ;
+* la possibilité de paralléliser pg_dump pour accélerer les sauvegardes des bases
+  volumineuses ;
+* les LATERAL JOINs.
+
+De plus, avec PostgreSQL 9.3, la possibilité de définir ses propres processus
+autonomes intégrés (« Background Workers », en anglais) permet aux développeurs 
+d'écrire des gestionnaires de tâches, des gestionnaires de requêtes, des 
+traitements parallèles, des outils de « queueing » ou toute autre applications
+permettant d'utiliser PostgreSQL comme séquenceur de tâches.
+Un exemple concret est Mongres, un processus autonome intégré qui accepte les 
+requêtes MongoDB, les interprète et les transmet à PostgreSQL.
+
+
+Contact
+-------
+
+Stéphane SCHILDKNECHT
+fr@postgresql.org
++33 6 17 11 37 42
+http://www.postgresql.fr
+France et pays francophones
+
+
+Liens
+-----
+
+* Téléchargement :
+  http://www.postgresql.org/downloads
+* Dossier de presse :
+  http://www.postgresql.org/about/press/presskit93/fr
+* Notes de version :
+  http://www.postgresql.org/docs/current/static/release-9-3
+* What's New in 9.3 :
+  https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.3
+
+
+À propos de PostgreSQL
+----------------------
+
+PostgreSQL est le système de gestion de bases de données libre de référence. Sa 
+communauté mondiale est composée de milliers d'utilisateurs et contributeurs, 
+et de plusieurs dizaines d'entreprises et institutions.
+
+Le projet PostgreSQL, démarré il y a 25 ans, à l'université de Californie, à
+Berkeley, a atteint aujourd’hui un rythme de développement sans pareil.
+L'ensemble des fonctionnalités proposées est mature et plus riche que ceux
+des systèmes commerciaux leaders sur les fonctionnalités avancées, les
+extensions, la sécurité et la stabilité, offertes à un niveau que seul PostgreSQL 
+atteint.
+

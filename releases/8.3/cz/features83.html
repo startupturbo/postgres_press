@@ -1,0 +1,126 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.3 Feature List
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.3 Feature List</h1>
+<p>Tento seznam obsahuje popis většiny, nikoliv všech, nových funkcí verze 8.3. Pro přehlednost je tento popis rozčleněn do několika skupin podle účelu. Podrobnější informace jsou v dokumentaci PostgreSQL a v poznámkách k verzi (Release Notes). Skutečně kompaktní informace najdete v tabulce podporovaných funkcí (feature matrix), která je ovšem pouze v anglickém jazyce.
+</p>
+<h2>Upozornění na možné problémy při aktualizaci</h2>
+<p></p>V této verzi došlo k pročištění mechanismu zajišťujícím typové konverze a k odstranění několika problematických implicitních konverzí. Tyto změny mohou působit problémy ve starších aplikacích, ve kterých se nevěnovala dostatečná pozornost typové kontrole. Důkladné testování se doporučuje zvláště těm uživatelům, kteří provádí upgrade starších aplikací nebo kteří se mohou obávat, že jejich aplikace nebo uložené procedury jsou psány bez větších ohledů na
+kompatibilitu typů. Více informací naleznete v <a href="/docs/8.3/static/release-8-3.html">poznámkách k verzi (release notes)</a>.</p>
+<h2>Výkon</h2>
+<h3>Konzistentní výkon</h3>
+<p>Tyto funkce zvyšují schopnost PostgreSQL dodržet konzistentní časy odezvy bez ohledu na zatížení serveru.
+</p>
+<dl><dt>HOT
+</dt><dd>Heap Only Tuple (HOT) dramaticky snižuje problémy s údržbou databáze spojené s častými změnami dat, snižuje nutnost spouštění VACUUM a poskytuje znatelně vyšší výkon některých aplikací.
+</dd><dt>Asynchronní potvrzování
+</dt><dd>V tomto režimu COMMIT nečeká na potvrzení fyzického zápisu na disk. Za cenu rizika potenciální ztráty posledních transakcí, v případě výpadku systému, získáme lepší dobu odezvy. Přesto je jištěna integrita dat. Tento režim je určen pro operace, které lze bezpečně opakovat .. např. import databáze, import dat a je lokální (vztahuje se pouze na ty uživatele, kteří se do tohoto režimu přepnou).
+</dd><dt>Vyrovnání zátěže způsobené checkpointy (Spread Checkpoint)
+</dt><dd>V případě, že je server silně vytížen, dojde k pozdržení checkpointů a k utlumení jejich frekvence. Tím se snižuje negativní vliv checkpointů na dobu odezvy. 
+</dd><dt>Strategie Just-in-time zápisu na disk
+</dt><dd>Na základě statistik a aktuální aktivity je dynamicky odhadnuto, kolik čistých paměťových stránek bude potřeba a kolik jich bude nutné vyčistit (zapsat na disk).
+</dd></dl>
+<h3>Zrychlení</h3>
+<p>Díky řadě úprav se dosáhlo citelného zrychlení některých operací.
+</p>
+<dl><dt>Zkrácení času obnovy
+</dt><dd>Nutný čas pro obnovu databáze z Write Ahead logu se zkrátil redukcí počtu nutných I/O operací.
+</dd><dt>Cyklický buffer v meziúložišti řádků
+</dt><dd>Dramaticky urychluje menší spojení tabulek typu merge join tím, že lépe využívá paměť a nedochází tak k zápisům na disk. 
+</dd><dt>Rychlejší porovnávání v LIKE/ILIKE
+</dt><dd>Zrychlila se operace částečného porovnání (partial match) zejména v případech, kdy se používá vícebajtové kódování.
+</dd><dt>Top-N řazení
+</dt><dd>Dramaticky zrychluje řazení v případě, že výsledek dotazu je omezen klauzulí LIMIT.
+</dd><dt>Opožděné přidělování XID (Lazy XID Assignment)
+</dt><dd>Znatelně zvyšuje výkon těch databází, kde výrazně převažuje čtení nad zápisem (případně vůbec nedochází k zápisu) a to tak, že identifikační číslo transakce přiřadí pouze v případě potřeby (dojde k změně dat). 
+</dd><dt>Možnost určení ceny funkce
+</dt><dd>Nám dovolí připojit ke každé funkci odhad náročnosti funkce (cena) a počtu vrácených řádků, což v důsledku znamená reálnější (lepší) prováděcí plán. 
+</dd></dl>
+<h3>Rozsáhlé databáze</h3>
+<p>Nasledující funkce dovolí uživatelům provozovat i poměrně velké datové sklady v PostgreSQL.
+</p>
+<dl><dt>Synchronizované čtení
+</dt><dd>V originále tzv. piggybacking table scan, je synchronizované souběžné čtení jedné tabulky více uživateli (jeden přečtený blok se pošle více uživatelům). Tato technika významně redukuje celkovou potřebu IO operací (pozn. překladatele - piggyback se používá spolu se slovem jízda ve smyslu jízdy na nárazníku, rámu (přeneseně jízdy načerno nebo zadarmo). V tomto případě se data načítají z disku pro jednoho uživatele a okamžitě distribuují všem dalším uživatelům, kteří je v tu chvíli také potřebují. 
+</dd><dt>Ochrana L2 Cache
+</dt><dd>Nově optimalizovaný kód snižuje četnost zahození obsahu cache CPU, které způsobuje zpomalení současně zpracovávaných dotazů.
+</dd><dt>Zkrácení délky hlavičky typu Varlena
+</dt><dd>Úpravou formátu datového typu Varlena, který se v PostgreSQL používá pro uložení všech hodnot s proměnnou velikostí, dochází ke snížení velikosti databáze zhruba o 20%.
+</dd></dl>
+<h3>Výkon ve Windows</h3>
+<p>Nemůžeme zapomenout na naše uživatele, kteří používají Windows. PostgreSQL 8.3 posouvá Windows do první ligy podporovaných platforem.
+</p>
+<dl><dt>Podpora MS Visual C++
+</dt><dd>PostgreSQL lze přeložit nejen v MinGW (vývojové prostředí umožňující snažší portování aplikací z OS typu Unix), ale i v Microsoft Visual C++. Použití překladače fy. Microsoft by mělo zvýšit výkon a stabilitu na platformách této firmy.
+</dd><dt>Přepracování startovního kódu serveru
+</dt><dd>Drasticky snižuje spotřebu paměti procesu postmaster, což umožňuje paralelní běh více obslužných procesů (kteří obslouží více klientů).
+</dd></dl>
+<h2>Administrace</h2>
+<p>Administrace PostgreSQL je jednodušší než u proprietárních databází, nicméně vždy je další prostor pro zlepšení. PostgreSQL obsahuje řadu nových funkcí zjednodušujících správu a poskytujících administrátorovi databáze podrobnější a obsáhlejší diagnostiku.  
+</p>
+<dl><dt>CSV Log Output
+</dt></dl>
+<p>Volitelně lze zapisovat do logu v CSV formátu, což zjednodušuje tvorbu nástrojů na analýzu výkonu a ad-hoc auditů.
+</p>
+<dl><dt>Podpora SSPI GSSAPI
+</dt><dd>Podpora autentifikačního systému Kerberos v PostgreSQL byla rozšířena o možnost použít bezpečnostní API: SSPI je průmyslový standard na platformě Windows a GSSAPI je průmyslový standard v prostředí Unix a Linux. Podpora těchto API by měla zjednodušit integraci uvnitř velkých  vnitropodnikových sítí.
+</dd><dt>Lokální nastavení systémových proměnných
+</dt><dd>Pro každou uživatelskou funkci lze určit specifické nastavení systémových proměnných. Kromě jiného se tím řeší bezpečnostní problém s přenastavením systémové proměnné search_path.
+</dd><dt>Více procesové autovacuum
+</dt><dd>Umožňuje paralelní běh servisního procesu, díky čemuž je autovacuum použitelné i v aplikacích s tisíci tabulkami.
+</dd><dt>pgStandby
+</dt><dd>Administrativní rutina zjednodušující provoz serveru ve Warm Standby režimu.
+</dd><dt>ORDER BY Nulls First/Last
+</dt><dd>Umožňuje vytvářet indexy, kde jsou řádky obsahující NULL umístěny na začátek nebo na konec indexu.
+</dd></dl>
+<h2>Vývoj</h2>
+<h3>Vývoj aplikací</h3>
+<p>Díky  celé řady úprav se PostgreSQL 8.3 může měřit s nejlepšími proprietárními databázemi v podpoře komplexních více vrstvých databázových aplikací. 
+</p>
+<dl><dt>Fulltextové vyhledávání
+</dt><dd>TSearch2 byl plně integrován do kódu jádra. Také došlo k pročištění API. Díky tomu se fulltext jednodušeji používá a snáze rozšiřuje o podporu nových jazyků, slovníků a systémů určujících relevanci.
+</dd><dt>Odstranění neplatných plánů
+</dt><dd>Uložené prováděcí plány mohou být odstraněny jak samotnou aplikací, tak automaticky, když jsou tabulky aktualizovány.
+</dd><dt>Editovatelné kurzory (Updatable Cursors)
+</dt><dd>Kurzory nyní podporují WHERE CURRENT OF, což umožňuje flexibilnější návrh aplikací postavených na použití kurzorů.
+</dd></dl>
+<h3>Nové datové typy</h3>
+<dl><dt>Typ XML
+</dt><dd>Typ XML plně podporuje standard SQL/XML, který je součástí ANSI SQL:2003 včetně kontroly zápisu, typově bezpečných operací, funkcí generujících XML a XPath dotazů. Verze 8.3 obsahuje ještě další funkce umožňující export v XML.
+</dd><dt>Typ UUID
+</dt><dd>Typ UUID nese 128 bitovou unifikovaný (globální) jednoznačný identifikátor, který se uplatní zejména v distribuovaných aplikacích.
+</dd><dt>Pole hodnot kompozitního typu 
+</dt><dd>Pole nyní může být vytvořeno pro kompozitní (složené typy), které obsahují více sloupců v jedné hodnotě, jako je typ tabulka nebo zákaznický typ.
+</dd><dt>Výčtový typ
+</dt><dd>Výčtový typ je určen seřazeným seznamem alternativních hodnot. Díky tomuto typu bude snažší migrace z MySQL do PostgreSQL.
+</dd></dl>
+<h3>Uložené procedury</h3>
+<p>Tyto dvě nové funkce zvyšují použitelnost PL/pgSQL, což je náš nejpopulárnější jazyk pro tvorbu uložených procedur v PostgreSQL.
+</p>
+<dl><dt>RETURN QUERY
+</dt><dd>Nyní lze v PL/pgSQL ještě jednodušeji vrátit výsledek dotazu v SRF funkci.
+</dd><dt> Posuvné kurzory (Scrollable Cursors)
+</dt><dd>PL/pgSQL nyní také podporuje posuvné kurzory, umožňující v PL/pgSQL procedurách dynamický pohyb kurzoru (vpřed i vzad).
+</dd></dl>
+<h2>Příslušenství</h2>
+<p>Řada důležitých funkcí není podporována v základním kódu. Důvodem je snaha o udržení co nejmenšího jádra databáze, které se snáze udržuje. Existuje několik stovek volitelných doplňků, s kterými PostgreSQL umožňuje replikace, podporuje vysokou dostupnost, použití dalších programovacích jazyků, integraci aplikací a získává i některé další experimentální možnosti. Většina těchto doplňků je volně ke stažení z archivu <a href="http://www.pgfoundry.org">pgFoundry</a>. Část aplikací(modulů) z následujícího seznamu je již přepravena pro 8.3. Část modulů s 8.3 spolupracuje, ale ještě nevyužívá všechny možnosti, které jsou v 8.3. Tyto moduly se budou v následujícím období aktualizovat.
+</p>
+<dl><dt><a href="https://developer.skype.com/SkypeGarage/DbProjects/pgBouncer">pgBouncer</a>
+</dt><dd>Tento více vláknový connection pooler umožňuje jedné PostgreSQL databázi udržovat až 100,000 spojení mezi aplikacemi a serverem.
+</dd><dt><a href="https://developer.skype.com/SkypeGarage/DbProjects/PlProxy">PL/Proxy</a>
+</dt><dd>Interface pro distribuované horizontálně separované tabulky.
+</dd><dt><a href="http://pgsnmpd.projects.postgresql.org/">pgSNMP</a>
+</dt><dd>Standardní SNMP ovladač pro PostgreSQL zjednodušující monitorování serverů v síti.
+</dd><dt><a href="http://code.google.com/p/sepgsql/downloads/list">SEpgsql</a>
+</dt><dd>Bezpečnostní doplněk postavený nad modelem a metodikou SELinuxu, který dovoluje aplikovat unifikovaný postup SELinuxu jak na OS tak na DBMS.
+</dd><dt><a href="http://pgfoundry.org/projects/edb-debugger/">PL/pgSQL Debugger</a>
+</dt><dd>Nový grafický nástroj podporující interaktivní ladění a krokování PL/pgSQL procedur.
+</dd><dt><a href="http://pgfoundry.org/projects/pgpool/">pgPoolII</a>
+</dt><dd>PgPoolII staví na úspěchu předchozí verze. Pomocí inteligentní replikace dotazů umožňuje datový partitioning.
+</dd><dt><a href="http://bucardo.org/">Bucardo</a>
+</dt><dd>V případě PostgreSQL první dostupný systém podporující multi-master asynchronní replikaci.
+</dd><dt><a href="http://www.postgresql.at/english/pr_cybercluster_e.html">CyberCluster</a>
+</dt><dd>Nově otevřený open-source projekt integrující a rozšiřující několik stávajících nástrojů pro clustering, jako je pgCluster nebo pgPool.
+</dd><dt><a href="http://www.slony.info/">Slony-I</a>
+</dt><dd>Druhá verze Slony-I, našeho nejpopulárnějšího replikačního systému, nyní používá nové replikační API v PostgreSQL 8.3.
+</dd></dl>

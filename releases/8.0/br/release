@@ -1,0 +1,31 @@
+NY, NY: 19 de Janeiro 2005 - O Grupo Global de Desenvolvimento do PostgreSQL lançou a versão 8.0 do sistema gerenciador de banco de dados objeto-relacional PostgreSQL, reforçando sua posição de SGBD de código aberto mais avançado do mundo. Essa versão inclui recursos anteriormente exclusivos aos sistemas proprietários mais caros, e que provavelmente vão aumentar substancialmente a adoção do PostgreSQL.
+
+Além das melhorias significativas na escalabilidade, recursos e performance, o PostgreSQL 8.0 demonstra a incomparável velocidade de desenvolvimento no modelo de desenvolvimento de código aberto. Mais de uma dezena de empresas, incluindo Red Hat, Fujitsu, Afilias, Software Research Associates, PgSQL Inc., 2nd Quadrant, e Command Prompt Inc., bem como centenas de desenvolvedores independentes, contribuíram para incluir recursos importantes na versão 8.0 do que em qualquer versão anterior.
+
+"Nós estamos confiantes que esses novos recursos corporativos irão atrair um grande número de novo usuários para o PostgreSQL.", disse Takayuki Nakazawa, diretor do departamento de banco de dados de código aberto da Fujitsu. "A Fujitsu está orgulhosa de seu patrocínio em uma série de contribuições para o PostgreSQL e do seu trabalho com a comunidade. Nós estamos comprometidos em ajudar a tornar o PostgreSQL uma referência entre os SGBDs do mercado."
+
+Os novos recursos incluem:
+
+Suporte nativo a plataforma Windows: O PostgreSQL agora tem uma versão nativa para a plataforma Windows sem precisar de uma camada de emulação. Isso aumenta drasticamente a performance sobre as versões anteriores, e oferece uma alternativa a SGBDs proprietários para vendedores independentes de software, usuários corporativos e desenvolvedores em ambiente Windows.
+
+Pontos de Salvamento (Savepoints): Esse recurso do padrão SQL permite que apenas partes específicas de uma transação sejam canceladas sem abortar a operação inteira. Isto beneficia desenvolvedores de aplicações que precisam de transações complexas com tratamento de erro.
+
+Recuperação a Partir dos Logs de Transação (Point in Time Recovery): Agora é possível a recuperação total dos dados a partir dos logs gerados automaticamente a cada transação. Isto fornece uma alternativa muito esperada às cópias de segurança de hora em hora ou diárias para serviços de dados críticos.
+
+Tablespaces: Crucial para os administradores de sistemas com vários gigabytes de data warehousing, as "tablespaces" permitem a alocação de grandes tabelas e índices nos seus próprios discos ou conjuntos de discos, aumentando assim a performance das consultas.
+
+Otimizações no uso de memória e disco: A utilização de memória e dos dispositivos de armazenamento foram otimizadas através do algoritmo de Cache de Substituição Adaptativa, o novo programa para a escrita dos dados em segundo plano, e a nova característica de atraso do faxina (vacuum). O resultado é um comportamento mais previsível e uma performance mais consistente em períodos de pico de utilização.
+
+Javier Soltero, arquiteto chefe da Hyperic LLC, disse, "O PostgreSQL 8.0 nos dá o alto nível de concorrência e performance requerido pelo nosso produto de monitoramento HQ. Tendo o suporte nativo ao Windows na versão 8.0 nós podemos empacotar o PostgreSQL junto com o nosso produto e ainda nos beneficiar da sua escalabilidade e performance, assim como da sua licença, que nos permite incluí-lo na nossa distribuição sem compromissos comerciais."
+
+Além dos muitos novos recursos presentes na nova versão, o PostgreSQL também ficou melhor devido ao acelerado desenvolvimento de componentes adicionais no último ano. A ferramenta de replicação Slony-I e o pgPool para fazer gerenciamento de conexões e balanceamento de carga estão sendo usados para vários conjuntos de servidores de alta disponibilidade. Várias linguagens procedurais foram adicionadas ou muito expandidas, incluindo PL/Java, PL/PHP e PL/Perl, enquanto os conectores Npgsql e PGsqlClient para a plataforma .NET foram melhorados para suportar vários usuários na plataforma Windows.
+
+Para uma lista completa e uma descrição de vários novos recursos na versão 8.0, por favor, visite a nossa página dedicada a imprensa.
+
+Sobre o PostgreSQL: O PostgreSQL é o trabalho coletivo de centenas de desenvolvedores, sobre quase vinte anos de desenvolvimento, iniciado na Universidade de Berkley na Califórnia. Com suporte há muito tempo de recursos como transações, funções definidas pelo usuário, gatilhos, e subconsultas, o PostgreSQL está sendo utilizado por muitas das empresas mais exigentes e agências do governo. O PostgreSQL é desenvolvido sob a licença BSD, que permite o uso e distribuição sem nenhuma taxa para uso comercial ou não.
+
+Para descobrir mais sobre o PostgreSQL ou para obtê-lo por favor visite:
+	Em português: http://www.postgresql.org.br/
+	Ou em inglês: http://www.postgresql.org/
+
+Para informações sobre a Fujitsu e a Hyperic LLC pr favor veja a nossa página dedicada a imprensa.

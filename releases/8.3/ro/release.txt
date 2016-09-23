@@ -1,0 +1,85 @@
+4 Februarie 2008, New York, NY:  PostgreSQL Global Development Group anunţă
+lansarea versiunii 8.3 a sistemului obiectual-relaţional de baze de date
+PostgreSQL. Această versiune include un număr record de facilităţi noi şi
+îmbunătăţiri care vin în întâmpinarea în egala măsură a designerilor de
+aplicaţii, administratorilor de baze de date şi utilizatorilor. Noua versiune
+include peste 280 patch-uri realizate de voluntari PostgreSQL din peste 18 ţări.
+
+"Continua evoluţie a sistemului de baze de date open-source PostgreSQL le oferă
+utilizatorilor posibilitatea de a folosi o bază de date ne-proprietară, permiţînd
+reducerea cheltuielilor, creşterea performanţelor şi mărirea productivităţii.
+PostgreSQL 8.3 este o versiune impresionantă şi îi încurajăm pe toţi clienţii noştri
+să o exploreze" a spus Rich Green, executive vice president of software la Sun
+Microsystems.
+
+Versiunea 8.3 oferă o mai mare consistenţă a performanţelor comparativ cu versiunile
+anterioare : utilizatorii se pot baza că performanţele sporite demonstrate în testele
+recente se vor înregistra pentru toate tranzacţiile, indiferent dacă este o perioadă
+de încărcare sau nu .  Noutăţile principale referitoare la performanţă sunt:
+
+* Heap Only Tuples (HOT), care elimină până la 3/4 din operaţiile de mentenanţă
+  necesare pentru tabelele modificate frecvent
+* Spread checkpoints şi autoreglarea background writer-ului, care reduc impactul
+  operaţiilor de checkpoint asupra timpilor de răspuns
+* Asynchronous commit, care permite executarea mult mai rapidă anumitor tipuri
+  de tranzacţii
+
+Acestea accelerează în mod semnificativ timpii de procesare a tranzacţiilor,
+între 5% şi 30% în funcţie de gradul de încărcare.
+
+"PostgreSQL a devenit mai 'isteţ'" a declarat Bruce Momjian, membru al PostgreSQL Core Team.
+
+PostgreSQL este prima bază de date open-source care implementează Synchronized Scan,
+care reduce mult operaţiile de intrare/ieşire pentru data mining.  Acum este posibilă
+compilarea PostgreSQL cu Visual C++ , aducînd un plus de stabilitate şi peformanţe
+pe platforma Windows,  iar în plus face ca proiectul PostgreSQL să fie mai accesibil pentru
+dezvoltatorii Windows care doresc să contribuie. Au fost adăugate noi opţiuni de logging
+iar overhead-ul generat de colectorul de statistici a fost diminuat , ceea ce facilitează
+monitorizarea serverelor.
+
+Desigur, din noua versiune PostgreSQL nu pot să lipsească numeroase noi facilităţi 
+destinate dezvoltatorilor de aplicaţii, de exemplu:
+
+* Suport pentru standardul ANSI SQL/XML, inclusiv posibilitatea de export în format XML
+* TSearch2 , componentă avansata care permite căutări de tip full text, a fost integrat în
+nucleul PostgreSQL , avînd facilităţi mai bune de management, noi dicţionare şi noi limbi.
+* Suport pentru autentificare GSSAPI şi SSPI
+* Noi tipuri de date: UUID, ENUM şi array-uri de tipuri compozite
+
+"Serverele noastre PostgreSQL procesează peste 18,000 cereri pe secundă şi stochează
+peste 300GB de date, aceste numere crescînd de la lună la lună" a declarat Gavin Roy, 
+CTO al site-ului MyYearbook.com. "Suntem foarte încântaţi de HOT, de îmbunătăţirile 
+la nivelul shared buffer scan şi de integrarea indexării de tip tsearch .  Testele 
+preliminare indică faptul că versiunea 8.3 va îmbunătăţi tiparul de încărcare a bazei 
+de date concomitent cu scăderea timpilor de răspuns. Suntem nerăbdători să trecem la 
+noua versiune."
+
+Pe lângă noile facilităţi aduse motorului PostgreSQL, o serie de componente opţionale
+s-au maturizat şi au lansat versiuni 1.0 concomitent cu ciclul de dezvoltare PostgreSQL 8.3.
+Acestea sunt suportul pentru SNMP , soluţiile de scalabilitate orizontala precum PL/Proxy, pgPool2
+şi Bucardo, un debugger grafic pentru procedurile stocate, şi o soluţie scalabilă de connection
+pooling numită pgBouncer.  Componentele amintite se adaugă la bogatul set de componente
+adiţionale deja existente.
+
+Versiunea 8.3 aduce numeroase facilităţi şi îmbunătăţiri adiţionale care fac din PostgreSQL
+o platformă de baze de date din ce în ce mai puternică. Pentru detalii puteţi consulta:
+http://www.postgresql.org/about/press/presskit83
+
+Puteţi descărca PostgreSQL de aici : http://www.postgresql.org/download
+
+Date de contact:
+
+Adrian Maier
+ro@postgresql.org
++40-723-002-097
+Bucuresti
+
+
+Despre PostgreSQL: PostgreSQL este rezultatul muncii colective a sute de
+dezvoltatori, vreme de aproximativ douăzeci şi unu de ani, avîndu-şi originea
+la University of California din Berkeley. Datorită scalabilităţii şi a faptului
+că include de mult timp facilităţi avansate de nivel enterprise, PostgreSQL este
+utilizat de numeroase companii şi agenţii guvernamentale cu cerinţe înalte.
+PostgreSQL este distribuit sub licenţa BSD, ceea ce permite utilizarea şi
+distribuirea sa gratuită atât pentru aplicaţii comerciale cât şi necomerciale.
+Puteţi găsi mai multe informaţii pe http://www.postgresql.org

@@ -1,0 +1,254 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.3 - Comunicat de Presă
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.3 - Comunicat de Presă</h1>
+
+<h2>Cuprins</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Comunicatul de Presă</a><br />
+ &nbsp; <a href="#additional_features">Lista Facilităţilor</a><br />
+ &nbsp; <a href="#download">Download</a><br />
+ &nbsp; <a href="#docs">Documentaţie</a><br />
+ &nbsp; <a href="#license">Licenţiere</a><br />
+ &nbsp; <a href="#contact">Date de Contact</a><br />
+ &nbsp; <a href="#quoted_companies">Informaţii despre Companiile Citate</a><br />
+ &nbsp; <a href="#companies">Suport Tehnic Corporate</a><br />
+ &nbsp; <a href="#additional_software">Software Adiţional</a><br />
+ &nbsp; <a href="#translations">Traduceri</a><br />
+</p>
+
+<a name="original_release"></a><h2>Comunicatul de Presă</h2>
+
+<p><b>04 Februarie 2008, New York, NY:</b>  PostgreSQL Global Development Group anunţă
+lansarea versiunii 8.3 a sistemului obiectual-relaţional de baze de date
+PostgreSQL. Această versiune include un număr record de facilităţi noi şi
+îmbunătăţiri care vin în întâmpinarea în egala măsură a designerilor de
+aplicaţii, administratorilor de baze de date şi utilizatorilor. Noua versiune
+include peste 280 patch-uri realizate de voluntari PostgreSQL din peste 18 ţări.
+</p><p>
+"Continua evoluţie a sistemului de baze de date open-source PostgreSQL le oferă
+utilizatorilor posibilitatea de a folosi o bază de date ne-proprietară, permiţînd
+reducerea cheltuielilor, creşterea performanţelor şi mărirea productivităţii.
+PostgreSQL 8.3 este o versiune impresionantă şi îi încurajăm pe toţi clienţii noştri
+să o exploreze" a spus Rich Green, executive vice president of software la Sun
+Microsystems.
+</p><p>
+Versiunea 8.3 oferă o mai mare consistenţă a performanţelor comparativ cu versiunile
+anterioare : utilizatorii se pot baza că performanţele sporite demonstrate în testele
+recente se vor înregistra pentru toate tranzacţiile, indiferent dacă este o perioadă
+de încărcare sau nu .  Noutăţile principale referitoare la performanţă sunt:
+</p><ul>
+<li>Heap Only Tuples (HOT), care elimină până la 3/4 din operaţiile de mentenanţă necesare pentru tabelele modificate frecvent</li>
+<li>Spread checkpoints şi autoreglarea procesului background writer, care reduc impactul operaţiilor de checkpoint asupra timpilor de răspuns</li>
+<li>Asynchronous commit, care pemrite executarea mult mai rapidă a anumitor tipuri de tranzacţii</li>
+</ul><p>
+Acestea accelerează în mod semnificativ timpii de procesare a tranzacţiilor, între 5% şi 30% în funcţie de gradul de încărcare.
+</p><p>
+"PostgreSQL a devenit mai 'isteţ' " a declarat Bruce Momjian, membru al PostgreSQL Core Team.
+</p><p>
+PostgreSQL este prima bază de date open-source care implementează Synchronized Scan,
+care reduce mult operaţiile de intrare/ieşire pentru data mining.  Acum este posibilă
+compilarea PostgreSQL cu Visual C++ , aducînd un plus de stabilitate şi peformanţe
+pe platforma Windows,  iar în plus face ca proiectul PostgreSQL să fie mai accesibil pentru
+dezvoltatorii Windows care doresc să contribuie. Au fost adăugate noi opţiuni de logging
+iar overhead-ul generat de colectorul de statistici a fost diminuat , ceea ce facilitează
+monitorizarea serverelor.
+</p><p>
+Desigur, din noua versiune PostgreSQL nu pot să lipsească numeroase noi facilităţi destinate dezvoltatorilor de aplicaţii, de exemplu:
+</p><ul>
+<li>Suport pentru standardul ANSI SQL/XML, inclusiv posibilitatea de export în format XML</li>
+<li>TSearch2 , componentă avansata care permite căutări de tip full text, a fost integrat în
+nucleul PostgreSQL , avînd facilităţi mai bune de management, noi dicţionare şi noi limbi</li>
+<li>Suport pentru autentificare GSSAPI şi SSPI</li>
+<li>Noi tipuri de date: UUID, ENUM şi array-uri de tipuri compozite</li>
+</ul><p>
+"Serverele noastre PostgreSQL procesează peste 18,000 cereri pe secundă şi stochează
+peste 300GB de date, aceste numere crescînd de la lună la lună" a declarat Gavin Roy, CTO
+al site-ului MyYearbook.com. "Suntem foarte încântaţi de HOT, îmbunătăţirile la nivelul
+shared buffer scan şi integrarea indexării de tip tsearch .  Testele preliminare
+indică faptul că versiunea 8.3 va îmbunătăţi tiparul de încărcare a bazei de date
+concomitent cu scăderea timpilor de răspuns. Suntem nerăbdători să trecem la noua versiune."
+</p><p>
+Pe lângă noile facilităţi aduse motorului PostgreSQL, o serie de componente opţionale
+s-au maturizat şi au lansat versiuni 1.0 concomitent cu ciclul de dezvoltare PostgreSQL 8.3.
+Acestea sunt suportul pentru SNMP , soluţiile de scalabilitate orizontala precum PL/Proxy, pgPool2
+şi Bucardo, un debugger grafic pentru procedurile stocate, şi o soluţie scalabilă de connection
+pooling numită pgBouncer.  Componentele amintite se adaugă la bogatul set de componente
+adiţionale deja existente.
+</p><p>
+Versiunea 8.3 aduce numeroase facilităţi şi îmbunătăţiri adiţionale care fac din PostgreSQL
+o platformă de baze de date din ce în ce mai puternică.
+</p><p>
+Puteţi descărca PostgreSQL de <a href="http://www.postgresql.org/download">aici.</a>
+</p><p>
+Despre PostgreSQL: PostgreSQL este rezultatul muncii colective a sute de
+dezvoltatori, vreme de aproximativ douăzeci şi unu de ani, avîndu-şi originea
+la University of California din Berkeley. Datorită scalabilităţii şi a faptului
+că include de mult timp facilităţi avansate de nivel enterprise, PostgreSQL este
+utilizat de numeroase companii şi agenţii guvernamentale cu cerinţe înalte.
+PostgreSQL este distribuit sub licenţa BSD, ceea ce permite utilizarea şi
+distribuirea sa gratuită atât pentru aplicaţii comerciale cât şi necomerciale.
+Puteţi găsi mai multe informaţii pe <a href="http://www.postgresql.org">www.postgresql.org</a>.
+</p>
+
+<h2>Extended Release</h2>
+
+<a name="additional_features"></a><h2>Lista facilităţilor</h2>
+<p>
+Versiunea 8.3 aduce un număr fără precedent de facilităţi noi care sunt prezentate separat :
+<ul>
+<li><a href="/about/press/features83">Lista completă a facilităţilor</a></li>
+<li><a href="/about/featurematrix">Matricea facilităţilor (în engleză)</a></li>
+<li><a href="/docs/8.3/static/release-8-3.html">Release Notes</a></li>
+</ul>
+<a name=”downloads”></a><h2>Download</h2>
+<ul>
+<li><a href="/ftp/source/v8.3">Codul sursă</a></li>
+<li><a href="/ftp/binary/v8.3">Binare</a> pentru Windows, Red Hat Linux şi Solaris</li>
+<li><a href="http://www.pgfoundry.org">Componente opţionale</a></li>
+</ul>
+<a name="docs"></a><h2>Documentaţie</h2>
+
+Documentaţia în format HTML şi paginile de manual (man) sunt instalate împreună cu PostgreSQL.
+În plus, există <a href="/docs/8.3/interactive">documentaţia online</a> în cadrul căreia
+puteţi naviga, căuta şi scrie comentarii.
+
+<a name="license"></a><h2>Licenţiere</h2>
+<p>
+PostgreSQL utilizează <a href="/about/licence">licenţa BSD</a>,
+care necesită doar păstrarea în codul sursă informaţiile cu privire la copyright
+şi licenţiere. Această licenţă <a href="http://www.opensource.org/licenses/bsd-license.php">
+certificată OSI</a> este considerată ca fiind flexibilă şi
+avantajoasă din punctul de vedere al companiilor, deoarece nu restricţionează
+utilizarea PostgreSQL în combinaţie cu aplicaţiile comerciale sau
+proprietare. Datorită licenţei BSD, suportului tehnic oferit de către
+numeroase companii şi a faptului că sursele fac parte din proprietatea
+publică, PostgreSQL este foarte popular printre producătorii care doresc
+să înglobeze un motor de baze de date în cadrul propriilor produse
+software, deoarece nu au a se teme de tarife, de dependenţa de un alt
+producător sau de eventuale modificări ale termenilor licenţierii.
+</p>
+
+<a name="contact"></a><h2>Date de Contact</h2>
+
+<p><a href="http://www.postgresql.org">Site-ul PostgreSQL </a></p>
+
+<p>Pentru mai multe informa&#355;ii pute&#355;i contacta:<br />
+Adrian Maier<br />
+Bucureşti<br />
++40-723-002-097<br />
+<a href="mailto:ro@postgresql.org">ro@postgresql.org</a></p>
+
+<p>Puteţi găsi persoanele de contact pentru alte regiuni geografice <a href="/about/press/contact">aici.</a></p>
+
+
+<a name="quoted_companies"></a><h2>Informaţii despre Companiile Citate</h2>
+<p>
+"Continua evoluţie a sistemului de baze de date open-source PostgreSQL le oferă
+utilizatorilor posibilitatea de a folosi o bază de date ne-proprietară, permiţînd
+reducerea cheltuielilor, creşterea performanţelor şi mărirea productivităţii.
+Sun este dedicat în a asigura succesul PostgreSQL pe platforma OpenSolaris - rulînd
+pe toate tipurile de servere x64 şi Sun SPARC ale noastre, precum şi serverele Dell,
+HP şi IBM -  şi oferim cursuri de pregătire şi suport tehnic pentru clienţii noştri
+interesaţi să utilizeze PostgreSQL.
+PostgreSQL 8.3 este o versiune impresionantă şi îi încurajăm pe toţi clienţii noştri
+să o exploreze" a spus Rich Green, executive vice president of software la Sun
+Microsystems.
+</p><p>
+<b>Date de contact Sun Microsystems</b> (în engleză): Terri Molini, 01-408-404-4976, terri.molini@sun.com
+</p><p>
+"Serverele noastre PostgreSQL procesează peste 18,000 cereri pe secundă şi stochează
+peste 300GB de date, aceste numere crescînd de la lună la lună" a declarat Gavin Roy, CTO
+al site-ului MyYearbook.com. "Suntem foarte încântaţi de HOT, de îmbunătăţirile la nivelul
+shared buffer scan şi de integrarea indexării de tip tsearch .  Testele preliminare
+indică faptul că versiunea 8.3 va îmbunătăţi tiparul de încărcare a bazei de date
+concomitent cu scăderea timpilor de răspuns. Suntem nerăbdători să trecem la noua versiune."
+</p><p>
+<b>Despre MyYearbook.com</b>: myYearbook.com este unul dintre cele mai mari site-uri
+de socializare pentru adolescenţi din SUA. Cu o creştere de 500% în ceea ce priveşte
+numărul de membri şi numărul paginilor accesate, myYearbook a crescut de la o comunitate
+de mărimeau liceu la la o comunitate de peste 4.7 milioane de membri, la care se
+adaugă câte un milion la fiecare două luni. Adresa de contact: press@myyearbook.com (numai în engleză).
+</p>
+
+<a name="companies"></a><h2>Suport Tehnic Corporate</h2>
+
+<p>PostgreSQL este sprijinit de numeroase comapnii care sponsorizează dezvoltatorii,
+oferă găzduire pentru servere şi oferă finanţare.  Sponsorii care au ajutat proiectul
+timp îndelungat sunt menţionaţi <a href="/about/sponsors">aici</a>.
+</p>
+
+<p>Există de asemenea numeroase <a
+href="/support/professional_support">companii care oferă suport tehnic pentru PostgreSQL </a>:
+de la consultanţi individuali la companii multinaţionale.</p>
+
+Cei care doresc să sprijine PostgreSQL prin donaţii pot afla de <a href="/about/donate">aici</a> detalii despre cum pot proceda.
+
+<a name="additional_software"></a><h2>Link-uri</h2>
+<p>
+Înafară de proiectul PostgreSQL propriu-zis există peste 100 sub-proiecte
+active care oferă soluţii pentru replicare, migrare, compatibilitate,
+interoperabilitate, design şi administrare în manieră grafică. Cele mai
+multe dintre componentele opţionale sunt disponibile în <a
+href="http://projects.postgresql.org">pgFoundry</a> sau în <a
+href="/download">pagina download.</a>  Link-urile către componentele
+menţionate în acest document sunt următoarele :
+</p>
+<h3>Unelte de Dezvoltare</h3>
+<ul>
+<li><a href="http://pgsnmpd.projects.postgresql.org/">pgSNMP</a></li>
+<li><a href="http://pgfoundry.org/projects/edb-debugger/">PL/pgSQL Debugger</a></li>
+</ul>
+
+<h3>Replicare şi Scalabilitate Orizontală</h3>
+
+<ul>
+<li><a href="http://bucardo.org/">Bucardo</a></li>
+<li><a href="https://developer.skype.com/SkypeGarage/DbProjects/SkyTools">Skytools</a>,
+incluzînd <a href="https://developer.skype.com/SkypeGarage/DbProjects/PlProxy">PL/Proxy</a>
+şi <a href=https://developer.skype.com/SkypeGarage/DbProjects/pgbouncer">pgBouncer</a></li>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+<li><a href="http://www.postgresql.at/english/pr_cybercluster_e.html">CyberCluster</a></li>
+</ul>
+
+<a name="translations"></a><h2>Traduceri în alte limbi ale acestui document</h2>
+
+<ul>
+
+<li><a href="/about/press/presskit82.html.ar">Arabă</a></li>
+
+<li><a href="/about/press/presskit82.html.br">Braziliană Portugheză</a></li>
+
+<li><a href="/about/press/presskit82.html.zh_CN">Chineză</a></li>
+
+<li><a href="/about/press/presskit82.html.nl">Olandeză</a></li>
+
+<li><a href="/about/press/presskit82.html.fi">Finlandeză</a></li>
+
+<li><a href="/about/press/presskit82.html.fr">Franceză</a></li>
+
+<li><a href="/about/press/presskit82.html.de">Germană</a></li>
+
+<li><a href="/about/press/presskit82.html.el">Greacă</a></li>
+
+<li><a href="/about/press/presskit82.html.it">Italiană</a></li>
+
+<li><a href="/about/press/presskit82.html.ja">Japoneză</a></li>
+
+<li><a href="/about/press/presskit82.html.pl">Poloneză</a></li>
+
+<li><a href="/about/press/presskit82.html.ro">Română</a></li>
+
+<li><a href="/about/press/presskit82.html.ru">Rusă</a></li>
+
+<li><a href="/about/press/presskit82.html.es">Spaniolă</a></li>
+
+<li><a href="/about/press/presskit82.html.tr">Turcă</a></li>
+
+</ul>
+
+

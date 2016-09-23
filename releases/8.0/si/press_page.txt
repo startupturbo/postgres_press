@@ -1,0 +1,78 @@
+Dodatna funkcionalnost v tej različici
+
+Nove pa niso samo pomembne funkcije, naštete v zgornjih odstavkih, temveč tudi mnoge druge funkcije in izboljšave, ki bodo zagotovo vzbudile zanimanje pri obstoječih PostgreSQL uporabnikih.
+
+Funkcije:  PostgreSQL funkcije sedaj podpirajo "here-docs" stil navajanja z uporabo dolarskih znakov, s čimer se uporabniki lahko izognejo neprijetni uporabi gnezdenih narekovajev.  Zraven tega je v PL/pgSQL funkcijah, kot dodatna prednost savepoint funkcionalnosti, omogočeno obravnavanje izjem z uporabo EXCEPTION člena.
+
+Načrtovanje podatkovnih baz:  Administratorji lahko sedaj spremenijo tip stolpca z uporabo ukaza ALTER TABLE.  Deklaracija stolpcev s sestavljenimi podatkovnimi tipi je podprta v skladu z SQL standardom.  Vsem objektom v bazi je sedaj mogoče spremeniti lastnika z uporabo ukaza CHANGE OWNER.
+
+Uvoz in izvoz podatkov:  Ukaz COPY sedaj podpira zelo razširjeno obliko podatkov, ločenih z vejicami, znano tudi pod imenom "comma separated values" oziroma CSV.  Izmenjava podatkov z drugimi programi je sedaj tako še enostavnejša.
+
+Izboljšava optimizatorja:  Načrtovalec in izvrševalec poizvedb bosta sedaj samodejno uporabila indeks v primeru različnih, a med seboj kompatibilnih podatkovnih tipov, s čemer bo izginila potreba po eksplicitnem pretvarjanju konstantnih vrednosti.  Ta različica vsebuje tudi izboljšano uporabo indeksov, boljšo optimizacijo OR členov, izboljšano vzorčenje za ANALYZE, hitrejše izvajanje TRUNCATE ukaza in izboljšano generiranje pripravljenih načrtov poizvedb, kakor tudi mnogo manjših izboljšav, ki so preštevilne, da bi jih naštevali na tem mestu.
+
+Beleženje dogodkov:  Administratorji imajo sedaj možnost nastaviti samodejno rotiranje PostgreSQL dnevnikov preko parametra v datoteki postgresql.conf.  Pisanje dnevnika je postalo veliko bolj prilagodljivo kot poprej in vključuje poljubno oblikovane predpone vrstic, zapisovanje samo določenega tipa SQL izjav ter beleženje prekinitev povezav.
+
+Varovanje podatkov:  PostgreSQL-ovo orodje za izdelavo prenosljivih varnostnih kopij, pg_dump, je doživelo obširno prenovo.  Nova različica ob že znani funkcionalnosti prinaša še beleženje začetnega in končnega časa, odstranjuje pa še zadnje težave z dovoljenji in odvisnostjo med elementi v izvoženih datotekah.
+
+Seveda to še zdaleč ni vse. Popoln seznam novosti je na voljo v <a href="">Release Notes</a>.
+
+Celotno besedilo citatov
+
+"Pri Fujitsu smo zelo zadovoljni z novimi funkcijami v PostgreSQL 8.0. Prepričani smo, da bo nova funkcionalnost, namenjena poslovnim aplikacijam, pritegnila veliko novih uporabnikov sistema PostgreSQL", je dejal Takayuki Nakazawa, direktor Fujitsu-ve skupine OSS Database in Software Group. "Podjetje Fujitsu je ponosno na svoje sponzorstvo prispevkov k PostgreSQL-u in na svoje sodelovanje s PostgreSQL skupnostjo. Odločeni smo pomagati na poti, da PostgreSQL postane vodilni sistem za upravljanje z bazami podatkov."
+
+Javier Soltero, vodilni arhitekt pri Hyperic LLC, je dejal: "PostgreSQL 8.0 nam nudi visoko stopnjo zmogljivosti in vzporednosti, ki jo zahteva naša nadzorna rešitev HQ. Naša ekipa je ovrednotila večplatformne komercialne rešitve in odprtokodne Java podatkovne baze, a med njimi ni našla nobene, ki bi ustrezala našim potrebam. S tem, ko je različica 8.0 na voljo tudi za operacijski sistem Windows, jo lahko vključimo v našo rešitev in izkoristimo njeno dokazano skalabilnost in zmogljivost, kakor tudi prednosti licence, ki nam dovoljuje, da jo vključimo v našo distribucijo brez obveznosti do ponudnikov komercialnih rešitev. PostgreSQL razvojna skupina ima zaslužen sloves kvalitete, ki nam je postala očitna že ob prvi beta različici, ki smo si jo ogledali."
+
+Lokacije, od koder lahko prenesete različico 8.0:
+    Seznam FTP zrcalnih strežnikov
+    Bittorrent
+    Windows Installer (na voljo tudi preko Bittorrent protokola)
+    SourceForge (prav tako vključuje Windows installer)
+
+Kontakt za več informacij:
+    V slovenščini:
+        Aleksander Kmetec
+        +386-2-77-999-00 
+        si@postgresql.org
+    
+    
+    V angleščini:
+        Josh Berkus
+        PostgreSQL Project
+        +1-415-752-2500
+        josh@postgresql.org
+
+Povezave do drugih virov:
+
+Dokumentacija:
+    Uradna dokumentacija
+    TechDocs
+    General Bits
+
+Gonilniki:
+    JDBC
+    ODBC
+    .Net
+
+Grafični uporabniški vmesniki:
+    pgAdminIII
+    phpPgAdmin
+    pgAccess
+    Seznam ostalih vmesnikov
+
+Replikacija:
+    Slony-I
+    pgReplicator
+    eRServer
+
+Sorodni projekti:
+    pgFoundry
+    GBorg
+
+    
+Podatki o citiranih podjetjih
+
+O Fujitsu: Fujitsu je eden izmed vodilnih ponudnikov uporabniško usmerjenih IT in komunikacijskih rešitev na globalnem tržišču. Napredne tehnologije, visoko zanesljive računalniške in komunikacijske rešitve, kakor tudi množica sistemskih in storitvenih strokovnjakov po vsem svetu, omogočajo podjetju Fujitsu, da dostavi celovite rešitve, ki njihovim strankam odpirajo neomejene možnosti za uspeh. Fujitsu Limited (TSE: 6702), s sedežem v Tokyu, je za finančno leto s koncem 31. marca 2004, javil 4,7 bilijona jenov (37 milijard eurov) dohodka. Splošne informacije o podjetju Fujitsu so na voljo na naslovu http://www.fujitsu.com. Podrobnosti o iniciativi Fujitsu Supported PostgreSQL (FSP), vključno z "White Paper" dokumentom, so na voljo na naslovu http://fastware.com.au/postgresql.html. Prosimo, da morebitne poizvedbe naslovite na: Liam O'Duibhir, Fujitsu Australia Software Technology <liamod@fast.fujitsu.com.au>, telefon (61-2) 9452 9068
+
+O Hyperic: Hyperic LCC je ponudnik tehnoloških rešitev za upravljanje z odprtokodno in komercialno IT infrastrukturo. Njihov vodilni produkt, HQ, predstavlja alternativo dragim, zastarelim ogrodjem za upravljanje in dostavlja odprto in skalabilno platformo, zasnovano na spletnih tehnologijah, ki nudi celovito podporo vseh tehnologij, ki so danes prisotne v svetu IT. Za več informacij lahko kontaktirate press@hyperic.net.
+
+

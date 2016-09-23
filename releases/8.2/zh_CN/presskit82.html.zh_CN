@@ -1,0 +1,236 @@
+<!-- BEGIN page_title_block -->
+PostgreSQL 8.2 版发布宣传资料
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.2 版发布宣传资料</h1>
+
+<h2>目录</h2>
+
+<p>
+ &nbsp; <a href="#original_release">新版本发布说明的原文</a><br />
+ &nbsp; <a href="#additional_features">其他附加特性</a><br />
+ &nbsp; <a href="#download">下载地址</a><br />
+ &nbsp;	<a href="#docs">文档</a><br />
+ &nbsp; <a href="#license">版权声明</a><br />
+ &nbsp; <a href="#contact">联系方式</a><br />
+ &nbsp; <a href="#quoted_companies">相关商业公司信息</a><br />
+ &nbsp; <a href="#companies">企业支持</a><br />
+ &nbsp; <a href="#additional_software">其他相关软件</a><br />
+ &nbsp; <a href="#translations">本文的英文版本</a><br />
+</p>
+
+<a name="original_release"></a><h2>新版本发布说明的原文</h2>
+<p><b>2006/12/05:</b>PostgreSQL全球开发组宣布面向目标的数据库管理系统PostgreSQL8.2版发布。这是第14个公开发行的版本，
+它增加了很多由商业用户提出的功能、可靠性和性能要求，也提供了可与领先的企业数据库系统相媲美的可管理性能，8.2版的发布将
+会导致更多的其他数据库用户向PostgreSQL迁移。</p>
+
+<p>“这个版本几乎对每一个命令和数据库程序都进行了更新”，作为PostgreSQL核心开发组的成员和EnterpriseDB公司的架构师的
+Bruce Momjian先生说道，“根据社区的要求，增加了可扩充且兼容性良好的语法及编程接口，这使得数据库管理员充分利用PostgreSQL
+的高级功能变得更加简单”。</p>
+
+<p>“Unisys公司很高兴地注意到PostgreSQL在大规模多处理器系统中的可伸缩性和性能均有了很大的提高”，开源解决方案和系统及
+技术提供商Unisys公司的副经理Ali Shadman说道，“新发布的8.2版继续发扬了PostgreSQL在胜任企业应用时一个数据库管理系
+统应具有的成熟性”。</p>
+
+
+<p>新增的使数据库管理和开发更加容易的工具和功能包括：</p>
+
+<p><b>性能改进：</b>8.2版在高端OLTP（在线事务处理）系统测试中全面提升性能约20%，数据仓库的用户提升的效率更多。改进包括更快的内存
+中及磁盘上的排序，更好的多处理器伸缩性，对表分区数据有更好的查询规划，对大量数据的导入速度更快以及大大提速的外部连接。
+</p>
+
+<p><b>在线热备份：</b> 通过对8.0版就增加的PITR功能（时间点恢复）的扩展，管理员现在能很方便地对用户的数据库进行备份而不必中止服务器的运行。</p>
+
+<p><b>在线索引的创建：</b>可以在应用程序正在更新表的内容时也可以进行表索引，允许性能优化时而不必停机。</p>
+
+<p><b>SQL 2003标准兼容：</b>PostgreSQL一直以来就以与SQL标准兼容性高而著称，这次新版本也增加了在ANSI SQL 2003标准中包括的功能，
+如：静态聚合，多行VALUE插入功能，UPDATE RETURNING （更新时返回更新记录）和多列聚合功能。</p>
+
+<p>
+在8.2版中增加并早于其他主流数据库系统提供的高级功能，包括：
+</p>
+
+<p><b>GIN索引：</b> 对半结构化和全文本数据内容（TEXT类型）提供一个更加灵活和可编程处理的索引方式。</p>
+
+<p><b>DTrace动态跟踪：</b> PostgreSQL新版中现使用SUN公司的Solaris操作系统中所用的DTrace技术和其他高级跟踪工具监控系统。</p>
+
+<p>“就数据仓库应用来说，对十亿条以上记录的表以及多达几TB的数据进行在线索引的创建和在线热备功能是非常关键的”，OmniTI计算机
+咨询公司的主要负责人Theo Schlossnagle先生说道，“我们现在对PostgreSQL使用一流的DTrace技术跟踪监控系统也感到非常兴奋，这
+样我们平常的系统分析工作现在能得到与数据库操作更加相关且有明确内容的及直观的结果”。</p>
+
+<p>在8.2版中还有一系列其他新增辅助的功能和性能改进，这都将使PostgreSQL的数据库管理员的工作更加有效率，详情可浏览新闻发布稿，
+可从<a href="/download">PostgreSQL网站</a>下载最新版。</p>
+
+<p><b>关于POSTGRESQL：</b>PostgreSQL是几百名开发人员的集体工作成果，它最早起源位于伯克利的加利福尼亚大学，至今已有二十一年的开发历史。
+它一直以来就支持一些常见的企业级功能如事务处理、函数、触发器以及子查询。PostgreSQL一直以来被用于一些要求极端苛刻的商业环境及政府部门。
+PostgreSQL是以BSD的版权协议发布，它允许在商业或非商业应用的两种环境下完全免费地使用。
+</p>
+
+<a name="additional_features"></a><h2>其他附加特性</h2>
+<p>
+除了在新闻发布稿中所列的主要特性外，还有另外由众多开发人员为8.2版贡献的超过200多处的新特性和改进，其中包括：
+</p>
+
+<ul>
+
+<li>顾问锁：允许应用程序使用PostgreSQL的快速锁定引擎在应用程序级别控制数据库内的目标。</li>
+
+<li>可选择的pg_dump：允许导出满足事务安全的部分关系或表，或是通过使用正则表达式进行包含/排除某部分内容的导出。</li>
+
+<li>预处理查询：有一个新的可管理的接口，性能也进行了提升。</li>
+
+<li>ISN/ISBN：这个模块包含的数据类型支持用于仓储和零售系统中的ISN产品定位，现在升级后支持最新的国际标准。</li>
+
+<li>密码系统：支持在数据库内部进行加密的pgcrypto模块使用最新的运算法则进行了更新。</li>
+
+<li>SQL增强： 引入了新的语法，包括UPDATE RETURNING、DROP IF EXISTS、ON COMMIT 和新的权限命令，这也使得以命令行方式管理数据库更加简单。</li>
+
+<li>PSQL分批选择：支持数据集分批返回控制台而不是一次返回所有内容。</li>
+
+<li>ECPG的优化：嵌入式PostgreSQL的C接口的程序大部分内容进行了改写，同时增加了新的接口功能。</li>
+
+<li>TSearch2的较大改进：UTF-8编码支持，数据字典，查询改写支持以及GIN索引支持等功能。</li>
+
+<li>PL/Python语言：现在支持参数命名和返回数据集功能。</li>
+
+</ul>
+
+<p>PostgreSQL的高扩展性也导致了社区内其他项目的极大扩展，包括新增的过程语言，对外部系统的接口，新的索引类型，
+以及复制软件和其他很多的工具，都列在<a href="http://www.pgfoundry.org">PostgreSQL官方社区项目网站</a>，
+社区项目也使得8.2版本变得更加功能强大，部分功能包括：</p>
+<ul>
+<li>全分离技术(Full Disjunctions)：感谢 Google的夏季编程计划，PostgreSQL是第一个采用其最新的连接运算法则应用于数据库开发的系统。</li>
+<li>PGPool II：在日本政府的资助下，PGPool增加了新的负载平衡和分区能力。</li>
+<li>PL/Java：这是我们两个Java过程语言中的一个，它已完全达到可用于生产环境的状态，这也使得在PostgreSQL数据库内部能充分利用Java语言的强大功能。</li>
+</ul>
+
+<p>
+你也可以阅读到8.2版本一系列的改进，详情可浏览：<a href="/docs/current/static/release.html">发布说明。</a> 
+</p>
+
+<a name="download"></a><h2>下载地址</h2>
+
+<ul>
+<li><a href="/ftp/latest/">镜像FTP站点列表</a></li>
+<li><a href="/download/bittorrent">BT下载方式</a></li>
+<li><a href="/ftp/binary/v8.2.0/win32/">Windows安装包</a> （也可通过BT方式下载）</li>
+<li><a href="/ftp/binary/v8.2.0/">其他安装包，包括Linux，Mac OSX 和 Solaris</a></li>
+<li><a href="/projects/pgsql/">SourceForge站点</a> （包括Windows安装包）</li>
+</ul>
+
+<a name="docs"></a><h2>文档</h2>
+
+<ul>
+<li><a href="/docs">官方文档</a></li>
+<li><a href="/docs/techdocs">技术文章集</a></li>
+<li><a href="/about/press/faq">常见问题FAQ</a></li>
+</ul>
+
+<a name="license"></a><h2>版权声明</h2>
+<p>PostgreSQL 使用<a href="/about/licence">BSD版权</a>，它只要求对有版权的源代码保留其版权和授权的信息即可。
+由于这个经 <a href="http://www.opensource.org/licenses/bsd-license.php">OSI认证的版权</a>不限制PostgreSQL在商业环境和有版权的应用程序中使用，
+因此被公认为是非常有灵活性和对商业应用是友好的。加上有多个公司的支持和源代码归属公共所有，BSD的版权使得PostgreSQL在那些希望在自己的产品里嵌入数据库的厂商中很
+流行，因为他们不用担心费用、嵌入软件的版权锁以及版权条款的改变。
+</p>
+
+<a name="contact"></a><h2>联系地址</h2>
+
+<p><a href="http://www.pgsqldb.org/">PostgreSQL中文网站</a></p>
+<p><a href="http://www.postgresql.org">PostgreSQL官方网站(英文)</a></p>
+
+<p>联系人：<br />
+Weiping.He <br />
+Beijing <br />
+<a href="mailto:laserhenry@gmail.com">laserhenry@gmail.com</a><br />
+<br />
+Daojing.Zhou <br />
+Hefei<br />
+086013515513326<br />
+<a href="mailto:cn@postgresql.org">cn@postgresql.org</a></p>
+
+<p>其他地区的联系方式，可浏览<a href="/about/press/contact">全球联系表</a>。</p>
+
+<a name="quoted_companies"></a><h2>相关商业公司信息</h2>
+<p>“Unisys公司很高兴地注意到PostgreSQL在大规模多处理器系统中的可伸缩性和性能均有了很大的提高”，开源解决方案和系统及
+技术提供商Unisys公司的副经理Ali Shadman说道，“新发布的8.2版继续发扬了PostgreSQL在胜任企业应用时一个数据库管理系
+统应具有的成熟性。PostgreSQL是Unisys公司的开源及安全解决方案-- OASIS系统--的关键组件，该系统是一个使用开源技术并基于Java EE的事务处理系统。
+Unisys公司将继续积极地和社区一起推进PostgreSQL进入企业应用”。</p>
+
+<p><b>关于Unisys公司：</b> <a href="http://www.unisys.com/">Unisys公司</a>是一家世界范围的技术服务和解决方案提供商。
+
+我们的咨询人员使用Unisys的专门技术帮助我们的客户在系统集成、采购、基础架构以及服务器技术方面达到安全的商业操作。
+我们通过使客户的商业操作变得更加有可视性来创建更加安全的机构，通过Unisys 3D可视化系统企业版，我们使客户在做出
+投资、商机和风险等决定之前使他们的决定更加可视化。有关本系统的问题可联系
+<a href="mailto:brian.daly@unisys.com">Brian Daly</a> ，电话：215-986-2214 （只支持英文）。
+</p>
+
+<p>“我们管理很多在Solaris 10操作系统上使用PostgreSQL处理关键事务的系统。
+就数据仓库应用来说，对十亿条以上记录的表以及多达几TB的数据进行在线索引的创建和在线热备功能是非常关键的”，OmniTI计算机
+咨询公司的主要负责人Theo Schlossnagle先生说道，“我们现在对PostgreSQL使用一流的DTrace技术跟踪监控系统也感到非常兴奋，这
+样我们平常的系统分析工作现在能得到与数据库操作更加相关且有明确内容的及直观的结果”。</p>
+
+<p><b>关于OmniTI公司：</b> <a href="http://omniti.com/home">OmniTI公司</a>是一家位于马里兰州哥伦比亚的互联网技术咨询服务公司。
+它有一系列像who's who网站这样的与互联网相关的公司用户，在目前面向大规模web应用会遇到的可伸缩性、性能及安全等问题方面，OmniTI公司已经
+证明了它自己是一个本专业内的领先公司。可通过电话877-887-3031 或是邮箱： info@omniti.com 与他们联系（只支持英文）。
+</p>
+
+<a name="companies"></a><h2>企业支持</h2>
+<p>
+PostgreSQL获得了一大批公司的支持，他们资助开发人员，提供网上资源以及给予了资金上的支持。
+一些较大的且长期支持的公司名单列在我们的 <a href="/about/sponsors">开发支持页面</a>。
+还有<a href="/support/professional_support">大量的公司</a>提供从独立顾问到跨国公司的 PostgreSQL 支持。
+</p>
+<p>
+<a href="/about/donate">捐款资助</a>方式也会被很高兴地接受。
+</p>
+
+<a name="additional_software"></a><h2>相关链接</h2>
+<p>
+目前除了PostgreSQL自身这个主项目外，还有超过100多个与PostgreSQL相关的子项目，它们均高质量地提供了
+数据复制、数据迁移、兼容性、协同工作、数据库设计等方面的功能以及图形方式的管理工具，这些均增强了PostgreSQL的功能。
+</p>
+
+<h3>相关开发项目</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>驱动程序</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://pgfoundry.org/projects/npgsql">.Net</a></li>
+<li><a href="http://search.cpan.org/~dbdpg/DBD-Pg/Pg.pm">Perl DBI</a></li>
+<li><a href="http://www.initd.org/tracker/psycopg/wiki/PsycopgTwo">Python</a></li>
+</ul>
+
+<h3>含高级功能的扩展软件包</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">地理信息服务器(PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">全文搜索 (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">商业智能／数据仓库 (Bizgres)</a></li>
+</ul>
+
+<h3>图形用户接口的客户端工具</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin3</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="/docs/techdocs.54">其他图形工具软件</a></li>
+</ul>
+
+<h3>数据库复制软件</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>
+
+<a name="translations"></a><h2>本文的英文版本</h2>
+
+<p><a href="/about/press/presskit82.html.en">8.2版发布宣传资料英文版</a></p>

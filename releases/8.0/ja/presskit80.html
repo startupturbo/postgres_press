@@ -1,0 +1,240 @@
+<html><head><!-- BEGIN page_title_block --></head>
+<body>PostgreSQL 8.0 Press Kit
+<!-- END page_title_block -->
+
+<h1>PostgreSQL 8.0 Press Kit</h1>
+
+<p>米国ニューヨーク州ニューヨーク発：2005年1月19月 - PostgreSQL
+Global Development Groupはもっとも高機能なオープンソースデータベースと
+して認知されているPostgreSQL オブジェクト-リレーショナルデータベースの
+バージョン8.0をリリースしました．今回のリリースでは，もっとも高価な商
+用データベースでしか使えなかった機能が実装されており，ユーザとソフトウェ
+アベンダーの双方でPostgreSQLの利用が確実に進んでいくものと期待されます．</p>
+
+<p>PostgreSQL 8.0はスケーラビリティ，機能，性能において大きな進歩を遂げた
+だけでなく，オープンソースソフトウェアとしての比類のない開発速度を実証
+したといえます．Red Hat，富士通, Afilias, (株)SRA, 2nd Quadrant,
+Command Prompt Inc.などの10数社および数百人の個人開発者が，8.0に対して
+かつてないほどの大量の機能追加を行いました．</p>
+
+<p>富士通 ソフトウェア事業本部 ミドルウェアプラットフォーム事業部OSS
+データベース プロジェクト部長の仲沢孝之氏はこう述べています．「多くの
+PostgreSQLの新しいユーザにとって，こういった新しい機能が魅力的なものに
+写るに違いないと私たちは，考えています．富士通は，PostgreSQLの開発に費
+用面での貢献ができたこと，またPostgreSQLコミュニティと一緒に作業できた
+ことを誇りに思っています．これからも私たちはPostgreSQLを最先端のデータ
+ベース管理システムとして成長させる作業に協力していくことをお約束します」</p>
+
+<p>PostgreSQLの新機能:</p>
+
+<ul>
+<li><b>Windowsのネィティブサポート</b>: PostgreSQLはエミュレーションな
+しにそのままWindowsで動くようになり，性能面で以前に比べると大幅な改善
+がされています．このことにより，PostgreSQLはソフトウェア会社，企業ユー
+ザ，Windows開発者にとって商用データベースにとって代る非常に魅力的な代
+替候補となりました．</li>
+
+<li><b>セーブポイント</b>：SQL標準であるセーブポイントが実装され，トラ
+ンザクション全体ではなくその一部のみをロールバックできるようになりまし
+た．複雑で，エラー回復が伴うトランザクションを必要とするビジネスアプリ
+ケーションの開発者に恩恵をもたらす機能です．</li>
+
+<li><b>ポイント・イン・タイム・リカバリ</b>：ポイント・イン・タイム・
+リカバリにより，あらかじめ自動的かつ継続的に保存されたアーカイブ・トラ
+ンザクション・ログからデータを完全に復旧できるようになりました．毎時あ
+るいは日々のバックアップに頼ることなく，データの保全性に神経を使うよう
+な用途にもPostgreSQLがようやく使えるようになりました．</li>
+
+<li><b>テーブルスペース</b>：テーブルスペースは，ギガバイト級のデータ
+ウェアハウスシステムの管理者にとってなくてはならない機能です．テーブル
+スペースを使えば大きなテーブルやインデックスを別々のディスク装置やRAID
+装置に作成することができるので，問い合わせの性能が向上します．</li>
+
+<li><b>メモリとI/Oサブシステムの改善</b>：Adaptive Replacement Cache
+(ARC)アルゴリズム，バックグラウンド・ライター・プロセス，VACUUM遅延機
+能により，ディスクとメモリの利用方法が最適化されました．その結果、デー
+タベースへの負荷が突発的に高くなった時でも，負荷が予測しやすくなるとと
+もに安定した性能が得られるようになりました．</li>
+
+</ul>
+
+<p>Hyperic有限会社のチーフアーキテクトJavier Soltero氏はこう述べていま
+す．「PostgreSQL 8.0によって，我々のHQモニター製品に必要な高度の同時実
+行性能とスループットが得られました．PostgreSQL 8.0がWindowsをネィティ
+ブにサポートしたということは，我々にとってはPostgreSQLを製品に同梱でき
+るようになったことを意味します．その結果，スケーラビリティと性能で実績
+を持ち，かつ商用利用においても自由に使えるライセンスを持つPostgreSQLの
+メリットを我々の製品は享受できるようになりました．」</p>
+
+<p>PostgreSQLに追加された多くの機能に加え，PostgreSQLの利用環境は，こ
+こ1 年ほどの間にアドオンソフトやオプションソフトの開発が加速したことに
+よって改善されてきました．レプリケーションツールのSlony-Iとコネクショ
+ンプーリング/仲介ユーティリティpgpoolは，可用性を高めたサーバ群を構築
+するためにすでに使われています．PL/Java, PL/PHP, PL/Perlなどのストアド・
+プロシジャ言語が新規に開発あるいは拡張されています．一方，多数の
+WindowsユーザをサポートするためにNpgsqlやPGsqlClientといった.NETデータ
+プロバイダが改良されました．</p>
+
+<p>PostgreSQL 8.0の新機能の詳細なリストは<a href="http://pgfoundry.org/about/press">プレスリリースのページ</a>にあります．</p>
+
+<p><b>PostgreSQLについて</b>：PostgreSQLはカリフォルニア大学バークレー
+校で開発が始まり，その後約20年ほどの間に積み重ねられた数百人の開発者の
+成果を集大成したものです．トランザクション，関数，トリガ，副問い合わせ
+などのエンタープライズレベルの機能を長年にわたってサポートしてきた結果，
+PostgreSQLはビジネス規模の大きい多くの企業や政府機関で採用されています．
+PostgreSQL はBSDライセンスの下で配布されています．商用，非商用を問わず，
+無償での利用と配布が許可されています．</p>
+
+<p>PostgreSQLについてもっと詳しく知りたい，あるいはダウンロードしたい方は
+次のURLにアクセスしてください．
+<a href="http://www.postgresql.org/">http://www.postgresql.org/</a></p>
+
+<h2>このバージョンで追加された機能</h2>
+
+<p>上で説明したような大きな新機能の他に，PostgreSQLの既存ユーザが強い関心
+を持つと思われる多くの新機能や改良点があります．</p>
+
+<ul>
+<li><b>関数</b>：PostgreSQLの関数で，$記号を用いるヒアドキュメント形式がサポート
+されました．これにより，煩雑なネストした単一引用符を使う必要がなくなり
+ました．更に，新しいセーブポイント機能により，PL/pgSQL関数で<code>EXCEPTION</code>
+句を使用して限定的な例外を扱えるようになりました．</li>
+
+<li><b>データベース設計</b>：データベース管理者は<code>ALTER TABLE</code>を使って列のデータ型
+をその場で変更することができるようになりました．SQL標準にもとづいて複
+合データ型の列を定義できるようになりました．すべてのデータベースオブジェク
+トにおいて，<code>CHANGE OWNER</code>コマンドがサポートされました．</li>
+
+<li><b>データのインポートとエキスポート</b>：<code>COPY</code>コマンドにおいて，一般的なComma
+Separated Value(CSV)形式がサポートされました．その結果，ほかのソフトか
+らデータのインポート，エキスポートが容易になりました．</li>
+
+<li><b>オプティマイザの改良</b>：クエリ・プランナとエクゼキュータにおいて，互換性
+のあるデータ型の間で（値を比較する際に）インデックスが使用できるように
+なりました．これによって定数の明示的なキャストを行う必要性が減少してい
+ます．また，インデックスの効率的な利用，OR節のより良い最適化，<code>ANALYZE</code>
+で行われるサンプリングの改良，より高速な<code>TRUNCATE</code>，<code>PREPARED</code>問い合わせ用
+のクエリプランの改良が行われています．このほか，たくさんの細かな改良が
+行われていますが，スペースの関係で省略します．</li>
+
+<li><b>ログの取得</b>：postgresql.confの設定により，PostgreSQLのログの自動ローテー
+ションができるようになりました．また，管理者によるログの行接頭辞設定機
+能，特定の種類のSQL文をログする機能，接続の切断のログ機能など，
+PostgreSQLのログはより自由に設定できるようになりました．</li>
+
+<li><b>バックアップ</b>：可搬性のあるPostgreSQLのバックアップツールであるpg_dump
+は大幅に書き直されました．開始，終了時刻の記録機能，またバックアップファ
+イルにおけるパーミッションや依存関係の問題を解決しました．</li>
+</ul>
+
+<p>もちろん他にもたくさんの変更や改良があります．詳細については，<a href="http://pgfoundry.org/docs/8.0/static/release.htm">リリースノートRelease Notes</a>を参照してください．</p>
+
+
+<h2>引用の全文</h2>
+
+<p>富士通 ソフトウェア事業本部 ミドルウェアプラットフォーム事業部 ＯＳＳ
+データベース プロジェクト部長の仲沢孝之氏はこう述べています．「富士通
+はPostgreSQL 8.0の新しい機能に大変満足しています．多くのPostgreSQLの新
+しいユーザにとって，こういった新しい機能が魅力的なものに写るに違いない
+と私たちは，考えています．富士通は，PostgreSQL の開発に費用面での貢献
+ができたこと，またPostgreSQLコミュニティと一緒に作業できたことを誇りに
+思っています．これからも私たちはPostgreSQLを最先端のデータベース管理シ
+ステムとして成長させる作業に協力していくことをお約束します」</p>
+
+<p>Hyperic有限会社のチーフアーキテクトJavier Soltero氏はこう述べています．
+「PostgreSQL 8.0によって，我々のHQモニター製品に必要な高度の同時実行性
+能とスループットが得られました．我々のチームは，いろいろなプラットフォー
+ムで使用できる商用データベースとオープンソースJavaデータベースを評価し
+ました．その結果，私たちのニーズにはどの製品も適合していないことが分か
+りました．PostgreSQL 8.0がWindowsをネィティブにサポートしたということ
+は，我々にとってはPostgreSQLを製品に同梱できるようになったことを意味し
+ます．その結果，スケーラビリティと性能で実績を持ち，かつ商用利用におい
+ても自由に使えるライセンスを持つPostgreSQLのメリットを我々の製品は享受
+できるようになりました．」</p>
+
+<h2>PostgreSQL 8.0のダウンロード</h2>
+
+<ul>
+<li><a href="http://pgfoundry.org/download/mirrors-ftp">FTPミラーのリスト</a></li>
+<li><a href="http://pgfoundry.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://pgfoundry.org/projects/pginstaller/">Windowsインストーラ</a> (Bittorrentからも入手できます)</li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (Windowsインストーラも含む)</li>
+</ul>
+
+<h2>より詳細な情報の入手先</h2>
+
+<p>日本語：<br>
+	日本PostgreSQLユーザ会<br>
+	電話: +81-45-948-1609<br>
+	jpug-staff@postgresql.jp<br>
+	http://www.postgresql.jp<br>
+
+	<p>Or in English:<br>
+		Josh Berkus<br>
+		PostgreSQL Project<br>
+		+1-415-752-2500<br>
+		<a href="mailto:josh%20at%20postgresql.org">josh at postgresql.org</a></p>
+
+<h2>PostgreSQL関連情報へのリンク</h2>
+
+<h3>ドキュメント</h3>
+
+<ul>
+<li><a href="http://pgfoundry.org/docs">正式なドキュメント</a></li>
+<li><a href="http://techdocs.postgresql.org/">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General Bits</a></li>
+</ul>
+
+<h3>各種ドライバ</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/psqlodbc/projdisplay.php">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+</ul>
+
+<h3>グラフィカルユーザインターフェイス</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdminIII</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">そのほかのGUI</a></li>
+</ul>
+
+<h3>レプリケーション</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://www.erserver.com/">eRServer</a></li>
+</ul>
+
+<h3>関連プロジェクト</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org/">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org/">GBorg</a></li>
+</ul>
+
+<h2>引用した企業について</h2>
+
+<p><b>富士通について</b>：富士通はグローバルな市場向けに顧客に焦点を合わせた情報
+技術および通信分野のソリューションを提供する代表的な企業です．先端技術
+と高信頼性計算機/通信プラットフォーム，世界中のハードとソフトの専門家
+部隊によって，顧客が成功する無限の可能性を開くための完全なソリューショ
+ンを提供する企業というユニークな立場に富士通は立っています．東京に本社
+を置く富士通株式会社(TSE: 6702)は，連結営業利益を2004年3月31日までの1
+会計年度において，4.7兆円と報告しました．
+富士通についての一般的な情報は<a href="http://www.fujitsu.com/">http://www.fujitsu.com</a>から得られます．富
+士通がサポートするPostgreSQL(FSP)イニシアティブについての情報は
+<a href="http://fastware.com.au/postgresql.html">http://fastware.com.au/postgresql.html</a>から得られます，ここにはホワイト
+ペーパーなどの文書もあります，詳細は，<a href="mailto:liamod%20at%20fast.fujitsu.com.au">富士通オーストラリアソフトウエア技術部 Liam O'Duibhir</a>, 電話 (61-2) 9452 9068 までお問い合わせください（英語のみ）．</p>
+
+<p><b>Hypericについて</b>： Hyperic有限会社は，オープンソースおよび商
+用の情報技術基盤を管理するためのソリューションにフォーカスした技術を提
+供しています．Hyperic有限会社の代表的な製品であるHQは，高価で時代遅れ
+の管理基盤にとって代わって，今日のすべての情報技術をサポートするオープ
+ンかつスケーラブルなWebベースの製品です．詳細は<a href="mailto:press%20at%20hyperic.net">press@hyperic.net</a>までお問い
+合わせ下さい(英語またはスペイン語）．
+</p></body></html>

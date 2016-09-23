@@ -1,0 +1,47 @@
+2012/09/10: PostgreSQL全球开发组宣布业界领先的开源关系数据库PostgreSQL9.2版发布，由于Beta测试版本在5月即已发布，开发人员和软件厂商称赞该版本在性能、可扩展性和灵活性方面得到大的提升。大量的用户期待切换至新的版本。
+
+“PostgreSQL 9.2版提供了对JSON的原生支持、覆盖索引、数据复制以及性能提升等多方面的特性，我们热切地等待着PostgreSQL社区对新版本的发布，我们将在第一发布时间就使用它”，EngineYard公司的高级数据管理工程师Ines Sombra说道。
+
+性能提升和可扩展性
+
+垂直可扩展性的提升增加了PostgreSQL在大型服务器上有效利用硬件资源的能力，高级锁的管理、写性能、索引扫描以及其他对硬件的底层操作允许PostgreSQL处理海量负载，从数据上与PostgreSQL 9.1版本对比：
+
+* 最高可达每秒350,000次读查询 (相比以前快4倍)
+* 数据仓库中只使用索引扫描的查询(最高可比以前快20倍)
+* 最高可达每秒14,000次数据写操作(相比以前快5倍)
+
+另外，PostgreSQL9.2版本可进行数据级联复制，也允许用户对大型数据库进行水平扩展。
+
+“NewsBlur是一个建立在PostgreSQL基础上的社会新闻阅读器，它存储了上百万个地点的信息和订阅信息，这么多年来一直可靠、稳定”，NewsBlur.com网站的创始人Samuel Clay先生说道，“我们总是一直使用最新的版本（目前使用的是9.1版本，因为有级联复制的功能，我们很快就将迁移至9.2版本），自从8.4版本以来，我们使用PostgreSQL的感受一直都是很轻松的。”
+
+
+灵活的开发人员支持
+
+PostgreSQL的灵活性也反映在各种各样都采用了PostgreSQL的组织上。如NASA（美国宇航局）、FAA（联邦航空局）、 芝加哥商品交易中心和Instagram公司都使用PostgreSQL作为他们关键业务的数据支撑。PostgreSQL 9.2版本通过支持Range和JSON数据类型扩展了灵活性，这允许开发人员用更新更灵活的方式使用PostgreSQL。
+
+Range数据类型允许开发人员创建更好的日历功能、科学统计功能和财务方面的应用。目前还没有其他的主流数据库支撑这项功能，这项功能将使用开发人员更加智能地处理时间组和数字。
+
+在PostgreSQL 9.2版本中，查询结果可以转换为JSON数据类型后返回。通过新的PL/v8 Javascript脚本和PL/Coffee数据库编程扩展，再加上可选的HStore 键值对存储，用户可以将PostgreSQL当作一个“NoSQL”的文档数据库来使用，同时还保留PostgreSQL的可靠性、灵活性和性能优势。
+
+“PostgreSQL新版本中对原生的JSON支持对Web开发时创建和存储文档提供了一个有效的机制，我们可以使用jQuery作为前端库和向后端服务器申请表格类或是树结构类的数据，新的特性使得这样开发很方便，并且按这样的方式提取数据也有性能优势”，IVC公司的高级架构师Taras Mitran先生说道。
+
+
+- 新版本发布宣传资料: http://www.postgresql.org/about/press/presskit92/zh_cn
+- 新版本发布说明: http://www.postgresql.org/docs/9.2/static/release-9-2.html
+- 下载:  http://www.postgresql.org/downloads
+
+更多详细信息可联系:
+
+何伟平
+北京
+laserhenry@gmail.com
+
+周到京
+合肥
+13515513326
+doudou586@gmail.com
+http://www.pgsqldb.org:8079/
+
+
+关于PostgreSQL: PostgreSQL是业内领先的开源数据库系统，它的开发和支持来自于一个由数千名用户组成的全球社区和全球几十家公司或组织，PostgreSQL项目有25年以上的历史，起源于加利福利亚的伯克利大学，经历了无数次开发升级。PostgreSQL的专业特性不仅包含最高级的商业数据库系统的功能，还在高级数据库特性、扩展性、安全性和稳定性方面超越了它们，更多详情可浏览: http://www.postgresql.org/ .
+

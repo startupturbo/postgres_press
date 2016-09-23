@@ -1,0 +1,48 @@
+PostgreSQL 9.4 erhöht Flexibilität, Skalierbarkeit und Performance
+==================================================================
+
+18 DEZEMBER 2014: Die PostgreSQL Global Development Group ist hocherfreut, die Veröffentlichung von PostgreSQL 9.4, der jüngsten Version des weltweit führenden Open Source Datenbank-Systems, zu verkünden. Diese Version bringt viele neue Features, die PostgreSQLs Flexibilität, Skalierbarkeit und Performance für die unterschiedlichsten Datenbank-Anwendungszwecke verbessern, unter anderem im Bereich der JSON-Unterstützung, Replikation und Index-Performance.
+
+Flexibilität
+-----------
+
+Der neue Datentyp JSONB in PostgreSQL entbindet Benutzer ab sofort von der Wahl zwischen relationaler und non-relationaler Datenbank; mit JSONB bekommt man beides zur selben Zeit. JSONB bietet schnelle Suche mit einfacher Syntax, gestützt durch Generalized Inverted Indexe (GIN). Zahlreiche neue Funktionen ermöglichen es dem Benutzer, in JSON-Daten zu suchen und sie zu manipulieren, und das mit einer Geschwindigkeit, die auf Augenhöhe oder sogar über der populärer Dokument-Datenbanken liegt. Mit JSONB können strukturierte und unstrukturierte Daten einfach und vollintegriert miteinander kombiniert werden.
+
+"Mit JSONB geht PostgreSQL einen großen Schritt auf die Community der JavaScript-Entwickler zu, denn JSON-Daten können nun nativ gespeichert und abgefragt werden. Node.js wie auch andere serverseitige JavaScript-Frameworks können jetzt von der Sicherheit und Stabilität von PostgreSQL profitieren, während die Daten weiterhin unstrukturiert vorliegen dürfen." meint Matt Soldo, Produktmanager Heroku Postgres.
+
+
+Skalierbarkeit
+-----------
+
+Das 9.4-Release bringt mit Logical Decoding eine neue API mit, um den PostgreSQL-Replikationsstrom zu lesen, filtern und manipulieren. Diese Schnittstelle legt die Grundlage für aufregende neue Replikations-Werkzeuge wie bidirektionale Replikation, welche wiederum Multi-Master-Cluster ermöglicht. Weitere Verbesserungen im Replikationsmechanismus, wie Replikations-Slots und zeitverzögerte Replika-Server, bieten neue Möglichkeiten und verbessertes Management von replizierten Datenbanken.
+
+"Der Hauptgrund für die sofortige Adaption von PostgreSQL 9.4 in unserer Produktivumgebung ist das neue Logical decoding", sagt Marco Favale, Cartographic Production Manager bei Navionics. "Die Möglichkeit, kundenspezifische und flexible Output-Plugins zu schreiben erlaubt uns, Änderungen an bestimmten Tabellen transparent zu sammeln und zu replizieren, wann und wo immer wir möchten. Die komplexe und schwierig zu wartende trigger-basierte Replikationslösung können wir dadurch ablösen."
+
+"Zalando verlässt sich auf die Geschwindigkeit und Stabilität hunderter Datenbankserver, um kontinuierlich Millionen von Kunden überall in Europa zu bedienen." sagt Valentin Gogichashvili, Teamleiter Datenbankoperationen bei Zalando Technologies. "Wir freuen uns darauf, zeitverzögerte Standby Server, die sofort einsatzbereit sind, zu nutzen, und werden die neuen bidirektionalen Replikationsswerkzeuge evaluieren, sobald diese verfügbar sind"
+
+
+Performance
+-----------
+
+Version 9.4 bringt auch verschiedene Performance-Verbesserungen, die noch mehr aus jedem PostgreSQL-Server herausholen, so zum Beispiel:
+
+* Verbesserungen bei GIN indexes, mit bis zu 3X höherer Geschwindigkeit bei bis zu 50% weniger Platzbedarf.
+* Materialized Views können jetzt im Hintergrund aktualisiert werden, ohne laufende Abfragen zu blockieren, was schnellere und aktuellere Reports ermöglicht.
+* Schnelles Aufwärmen des Datenbank-Cache beim Neustart mit pg_prewarm.
+* Schnelleres paralleles Schreiben in das PostgreSQL Transaktions-Log.
+
+"Wir werden definitiv von im Hintergrund aktualisierten Materialized Views, verzögerten Standby Servern (die unser Disaster Recovery noch robuster machen werden) ebenso wie von den üblichen Verbesserungen der Geschwindigkeit, die mit jeder neuen Version kommen, profitieren" fügt Marco Favale hinzu.
+
+
+Links
+-----
+
+* Downloads: http://www.postgresql.org/downloads
+* Presse Kit: http://www.postgresql.org/about/press/presskit94
+* Release Notes: http://www.postgresql.org/documentation/current/static/release-9-4
+* Was ist neu in 9.4: https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.4
+
+Über PostgreSQL
+----------------
+
+PostgreSQL ist das führende Open Source Datenbanksystem, mit einer weltweiten Community bestehend aus Tausenden von Nutzern und Mitwirkenden sowie Dutzenden von Firmen und Organisationen. Das PostgreSQL Projekt baut auf über 25 Jahre Erfahrung auf, beginnend an der University of California, Berkeley, und hat heute eine nicht zu vergleichende Performance bei der Entwicklung. PostgreSQL's ausgereiftes Feature Set ist mit den führenden proprietären Datenbanksystemen vergleichbar, oder ist führend in Hinsicht auf hochentwickelte Datenbank Features, Erweiterbarkeit, Sicherheit und Stabilität. Lerne mehr über PostgreSQL und nimm an unserer Community teil, unter: http://www.postgresql.org.

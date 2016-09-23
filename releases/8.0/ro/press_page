@@ -1,0 +1,78 @@
+Facilitati Aditionale in Aceasta Versiune
+
+Alaturi de facilitatile majore descrise mai sus, exista numeroase imbunatatiri si facilitati de interes pentru utilizatorii PostgreSQL deja existenti.
+
+Functii:   Acum PostgreSQL permite definirea functiilor utilizand o noua modalitate de marcare a inceputului si sfarsitului functiei (dollar-quoting) care elimina necesitatea de a dubla caracterele apostroaf in cadrul functiei.  In plus, datorita existentei savepoint-urilor, functiile PL/pgSQL pot acum sa trateze anumite tipuri de exceptii cu ajutorul clauzei EXCEPTION.
+
+Database Design:  Administratorii de baze de date pot acum sa modifice tipul coloanelor din mers utilizand ALTER TABLE.  Acum este suportata declararea coloanelor folosind tipuri de date compozite - conform standardului SQL.  Toate obiectele bazei de date suporta acum CHANGE OWNER.
+
+Importul/Exportul Datelor:  Comanda COPY suporta acum formatul de fisiere CSV (comma separated values), facilitand importul si exportul catre alte produse software.
+
+Imbunatatiri ale Optimizatorului:  Query planner-ul si executor-ul pot utiliza acum indecsi pentru tipurile de date compatibile, reducand necesitatea de a face cast-uri explicite pentru valorile constante. Aceasta versiune include de asemenea imbunatatiri la utilizarea indecsilor, optimizare mai buna pentru clauzele OR, esantionare imbunatatita pentru ANALYZE, TRUNCATE mai rapid, si generare mai buna a planurilor de executie pregatite (prepared), la care se adauga multe imbunatatiri punctuale - prea numeroase pentru a le putea aminti pe toate.
+
+Logging:  Administratorii pot acum sa activeze reciclarea automata a log-urilor PostgreSQL cu ajutorul optiunilor din fisierul postgresql.conf.  Facilitatile de logging ale PostgreSQL sunt acum mult mai configurabile decat inainte, fiind posibile setarea de catre administrator a formatului prefixelor, scrierea in log a anumitor comenzi SQL si preluarea in log-uri a deconectarilor.
+
+Backup:  Utilitarul de backup al PostgreSQL, pg_dump, a fost in mare parte rescris.  Noua versiune aduce facilitati noi. Au fost adaugati timpii de start si de stop, si au fost eliminate o serie de dificultati la restaurarea datelor, dificultati legate de drepturile de acces si de dependinte legate de fisierele backup.
+
+Desigur exista multe alte modificari si imbunatatiri.  Lista completa a acestora este <a href="">Release Notes</a> .
+
+Textele Complete ale Citatelor
+
+"Fujitsu este incantat de noile facilitati ale PostgreSQL 8.0. Suntem increzatori ca aceste facilitati de nivel enterprise vor atrage un numar mare de utilizatori noi.", a spus domnul Takayuki Nakazawa, director al departamentului OSS Database in Software Group de la Fujitsu. "Fujitsu este mandru de sponsorizarea prin contributiile sale la PostgreSQL si de activitatea sa in cadrul comunitatii PostgreSQL. Suntem hotarati sa ajutam PostgreSQL sa devina cel mai bun sistem de gestiune al bazelor de bate."
+
+Javier Soltero, Arhitect Sef la Hyperic LLC, a declarat "PostgreSQL 8.0 ne ofera nivelul inalt de concurenta si de viteza necesar produsului nostru de monitorizare. Echipa noastra a evaluat mai multe sisteme de baze de date multiplatforma comerciale si open-source bazate pe Java, fara a gasi nici o varianta care sa raspunda nevoilor noastre. Acum cand PostgreSQL 8.0 este suportat nativ sub Windows putem sa il inglobam in produsul nostru si sa beneficiem de scalabilitatea si performantele sale dovedite, precum si de licenta sa care ne permite sa il includem impreuna cu produsul nostru fara a avea obligatii comerciale. Grupul PostgreSQL are o binemeritata reputatie in ceea ce priveste calitatea - ceea ce a fost evident pentru noi chiar de la prima versiune 8.0 beta evaluata."
+
+Download: PostgreSQL 8.0 poate fi descarcat prin:
+	Lista FTP Mirrors
+	Bittorrent
+	Windows Installer (disponibil si prin Bittorrent)
+	SourceForge (inclusiv Windows installer)
+
+Pentru mai multe informatii puteti contacta:
+	In romana:
+		Adrian Maier
+		+40-723-002-097
+		ro@postgresql.org
+
+	Sau in engleza:
+		Josh Berkus
+		PostgreSQL Project
+		+1-415-752-2500
+		josh@postgresql.org
+
+Link-uri catre alte resurse PostgreSQL:
+
+Documentatie:
+	Documentatia Oficiala
+	TechDocs
+	General Bits
+
+Driver-e:
+	JDBC
+	ODBC
+	.Net
+
+Interfete Utilizator Grafice (GUI):
+	pgAdminIII
+	phpPgAdmin
+	pgAccess
+	Lista altor GUI
+
+Replicare:
+	Slony-I
+	pgReplicator
+	eRServer
+
+Proiecte Legate de PostgreSQL:
+	pgFoundry
+	GBorg
+
+Informatii despre Companiile Citate
+
+Despre Fujitsu: Fujitsu este un furnizor international de solutii IT si comunicatii centrate pe necesitatile clientului. Datorita tehnologiilor, platformelor de calcul si de comunicatie robuste, si datorita echipei de experti raspandite in intreaga lume, Fujitsu reuseste sa asigure solutii complete care deschid noi posibilitati de dezvoltare pentru beneficiari. Cu sediul la Tokyo, Fujitsu Limited (TSE: 6702) a raportat venituri de 4700 miliarde yeni (45 miliarde $) pentru anul fiscal care s-a incheiat la 31 martie 2004. Puteti afla informatii despre Fujitsu accesand http://www.fujitsu.com. Puteti afla informatii despre initiativa Fujitsu Supported PostgreSQL (FSP) accesand http://fastware.com.au/postgresql.html. De asemenea puteti adresa intrebari (in engleza) catre Liam O'Duibhir, Fujitsu Australia Software Technology <liamod@fast.fujitsu.com.au>, telefon (61-2) 9452 9068. 
+
+Despre Hyperic: Hyperic, LLC este un furnizor de solutii pentru gestionarea infrastructurii IT open-source si comerciale. Produsul HQ principal al companiei are drept scop oferirea unei alternative la sistemele scumpe si invechite de management, prin oferirea unei platforme deschise, scalabile si bazate pe tehnologii web, platforma care are suport pentru toate tehnologiile IT utilizate in prezent. Pentru mai multe informatii puteti contacta press@hyperic.net.
+
+
+
+

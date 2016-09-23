@@ -1,0 +1,76 @@
+The PostgreSQL Global Development Group announces the release
+of PostgreSQL 9.3, the latest version of the world's leading open source
+relational database system.  This release expands PostgreSQL's reliability,
+availability, and ability to integrate with other databases.  Users are already
+finding that they can build applications using version 9.3 which would not have
+been possible before.
+
+"PostgreSQL 9.3 provides features that as an app developer I can use immediately:
+better JSON functionality, regular expression indexing, and easily federating
+databases with the Postgres foreign data wrapper. I have no idea how I completed
+projects without 9.3," said Jonathan S. Katz, CTO of VenueBook.
+
+Writable External Data
+-----------------------
+
+Version 9.3 makes PostgreSQL's Foreign Data Wrappers writable, enabling two-way
+data interchange between systems.  Today's complex IT environments involve
+multiple databases and semi-structured data sources, and PostgreSQL helps you
+integrate them into a coherent stack.  The project has also released postgres_fdw,
+a higher-performance, read/write PostgreSQL-to-PostgreSQL federation driver.
+
+"Writable foreign data wrappers enable us to plug in and seamlessly test various
+backend alternatives, allowing us to address different needs quickly and
+prototype intelligently," explained Lee Holloway, Co-founder and Lead Engineer
+at CloudFlare. "It is exciting to conceive and toss up new data stores
+(including our in-house experimental ones written in Go) and then watch them
+read, write, and even transact each other."
+
+Enhanced Reliability and Availability
+-------------------------------------
+
+"Postgres has been my favorite choice for its well known stability, robustness,
+strong coherency, safety, ACID, and SQL conformance," said Pascal Bouchareine,
+director of research and development at Gandi.net. "I'm especially excited to
+hear more about the fast failover coming in 9.3."
+
+This new release includes features to further improve and extend PostgreSQL's
+well-known reliability and availability:
+
+* Data Page Checksums: help administrators quickly detect failing disks
+  and bad hardware that corrupts data
+* Fast Failover: enables sub-second switchoffs from master to replica,
+  supporting "carrier-grade" availability
+* Streaming-Only Remastering: easier, faster reconfiguration of
+  cascading replicas after failover
+
+Developer-friendly Features
+---------------------------
+
+As with every annual release, PostgreSQL 9.3 includes many features to make
+working with PostgreSQL easier, more flexible and more fun for application
+developers, administrators and architects.  These features include:
+
+* Additional JSON constructor and extractor methods
+* Automatically updatable VIEWs
+* Parallel pg_dump to speed backups of large databases
+* LATERAL JOINs
+
+Further, PostgreSQL 9.3's User-Defined Background Workers allow developers to
+write task managers, request handlers, parallel processors, queuing tools and
+other helper applications to enable PostgreSQL as a workload coordinator.  One
+example of this already released is Mongres, a background worker which accepts
+MongoDB queries, interprets them and passes them on to PostgreSQL.
+
+Links
+-----
+
+* Downloads:
+  http://www.postgresql.org/downloads
+* Press Kit:
+  http://www.postgresql.org/about/press/presskit93
+* Release Notes:
+  http://www.postgresql.org/docs/9.3/static/release-9-3.html
+* What's New in 9.3:
+  https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.3
+

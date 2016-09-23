@@ -1,0 +1,36 @@
+NY, NY: 10. januar 2005 - Razvojna skupina "The PostgreSQL Global Development group" je izdala že osmo različico objektno-relacijskega sistema za upravljanje z bazami podatkov, imenovanega PostgreSQL, s čemer je ponovno potrdila svoje mesto najnaprednejše odprtokodne baze podatkov na svetu.  Ta izdaja vsebuje funkcionalnost, ki je do sedaj bila na voljo le v najdražjih komercialnih sistemih za delo z bazami podatkov in bo nedvomno občutno povečala razširjenost PostgreSQL-a, tako med uporabniki, kot tudi med proizvajalci programske opreme.
+
+PostgreSQL 8.0 ne prinaša le občutnega napredka v skalabilnosti, številu funkcij in hitrosti delovanja, temveč demonstrira tudi neprimerljivo hitrost razvoja v svetu odprte kode.  Po zaslugi prispevkov več kot ducata podjetij, med njimi so Red Hat, Fujitsu, Afilias, Software Research Associates Inc., 2nd Quadrant in Command Prompt Inc., kakor tudi po zaslugi več sto samostojnih razvijalcev, prinaša različica 8.0 več pomembnih novosti kot katera koli različica pred tem.
+
+"Prepričani smo, da bo nova funkcionalnost, namenjena poslovnim aplikacijam, pritegnila veliko novih uporabnikov sistema PostgreSQL", je dejal Takayuki Nakazawa, direktor Fujitsu-ve skupine OSS Database in Software Group. "Podjetje Fujitsu je ponosno na svoje sponzorstvo prispevkov k PostgreSQL-u in na sodelovanje s PostgreSQL skupnostjo. Odločeni smo pomagati na poti, da PostgreSQL postane vodilni sistem za upravljanje z bazami podatkov."
+
+Seznam novih funkcij med drugim vsebuje:
+
+Podpora za Windows:  PostgreSQL za delovanje na operacijskem sistemu Windows sedaj ne potrebuje več emulacijske plasti, posledica česar je dramatično izboljšanje hitrosti delovanja v primerjavi s starejšimi različicami.  Tako za neodvisne proizvajalce programske opreme, podjetja in samostojne razvijalce na sistemu Windows, predstavlja privlačno alternativo komercialnim rešitvam za delo s podatkovnimi bazami.
+
+Savepoints:  Ta funkcija, ki je del SQL standarda, omogoča razveljavitev izbranega dela transakcije, brez da bi pri tem morali preklicati celotno operacijo, kar je v največjo korist razvijalcem poslovnih rešitev, saj le-ti potrebujejo podporo za kompleksne transakcije z možnostjo razreševanja napak.
+
+Point in Time Recovery:  Omogoča popolno obnavljanje podatkov iz samodejno in nepretrgoma arhiviranih dnevnikov transakcij.  Nudi dolgo iskano alternativo za dnevno ali urno varovanje podatkov, v vseh situacijah, kjer so podatki kritičnega pomena.
+
+Podatkovni prostori (tablespaces):  So ključnega pomena za administratorje več gigabajtov obsegajočih podatkovnih skladišč, saj omogočajo postavitev velikih tabel na ločene trde diske ali diskovna polja, s čemer se poveča hitrost poizvedb.
+
+Pomnilnik in I/O:  Raba diska in pomnilnika sta bili izboljšani skozi uporabo "Adaptive Replacement Cache" algoritma, uvedbo zakasnitve v izvajanju vacuum ukaza in posebnega bgwriter procesa, ki opravlja zapisovanje podatkov.  To zagotavlja predvidljivejšo zasedenost strežnika in enakomernejšo zmogljivost v času najvišje obremenitve.
+
+Javier Soltero, vodilni arhitekt pri Hyperic LLC, je dejal: "PostgreSQL 8.0 nam nudi visoko stopnjo zmogljivosti in vzporednosti, ki jo zahteva naša nadzorna rešitev HQ. S tem, ko je različica 8.0 na voljo tudi za operacijski sistem Windows, jo lahko vključimo v našo rešitev in izkoristimo njeno dokazano skalabilnost in zmogljivost, kakor tudi prednosti licence, ki nam dovoljuje, da jo vključimo v našo distribucijo brez obveznosti do ponudnikov komercialnih rešitev."
+
+Kot dopolnilo mnogim funkcijam, ki so del glavnega paketa, smo v preteklem letu bili priča tudi pospešenemu razvoju dodatkov in izbirnih komponent za PostgreSQL.  Replikacijska rešitev Slony-I in pgPool, orodje za pooling/posredovanje povezav, sta že v uporabi v nekaterih visoko razpoložljivih strežniških centrih.
+
+Dodanih ali razširjenih je bilo tudi nekaj jezikov za pisanje shranjenih procedur, med drugim PL/Java, PL/PHP in PL/Perl, medtem ko sta za Windows uporabnike pripravljena tudi .NET podatkovna vira Npgsql in PGsqlClient.
+
+Za popoln seznam novih funkcij z njihovimi opisi si oglejte našo stran za tisk.
+
+O PostgreSQL-u:  PostgreSQL je rezultat skupnega dela na stotine razvijalcev in temelji na skoraj dveh desetletjih razvoja z začetki na kalifornijski univerzi Berkeley.  Po zaslugi dolgotrajne podpore naprednim funkcijam, ki vključuje transakcije, možnost kreiranja novih funkcij, prožilce in podpoizvedbe, uporabljajo PostgreSQL danes nekatera izmed najbolj zahtevnih podjetij in vladnih agencij.  PostgreSQL je na voljo pod pogoji BSD licence, kar dovoljuje uporabo in razširjanje brez kakršnega koli plačila, tako za komercialne, kot za nekomercialne namene.
+
+Če želite izvedeti več o PostgreSQL-u, ali ga prenesti na svoj računalnik, obiščite eno izmed naših strani:
+    V slovenščini: 
+    V angleščini: http://www.postgresql.org/
+
+Za več informacij o Fujitsu in Hyperic LLC, si oglejte stran za tisk.
+
+
+

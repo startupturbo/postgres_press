@@ -1,0 +1,289 @@
+﻿<!-- BEGIN page_title_block -->
+Nota de Lan&ccedil;amento do PostgreSQL
+<!-- END page_title_block -->
+
+<h1>Nota de Lan&ccedil;amento do PostgreSQL</h1>
+
+<h2>Conte&uacute;do</h2>
+
+<p>
+ &nbsp; <a href="#original_release">Texto da Vers&atilde;o Original</a><br />
+ &nbsp; <a href="#additional_features">Caracter&iacute;sticas Adicionais</a><br />
+ &nbsp; <a href="#quoted_companies">Informa&ccedil;&otilde;es das Companias Citadas</a><br />
+ &nbsp; <a href="#download">Onde Fazer o Download</a><br />
+ &nbsp;	<a href="#docs">Documenta&ccedil;&atilde;o</a><br />
+ &nbsp; <a href="#license">Licen&ccedil;a</a><br />
+ &nbsp; <a href="#contact">Contatos</a><br />
+ &nbsp; <a href="#companies">Suporte Corporativo</a><br />
+ &nbsp; <a href="#additional_software">Software Adicional</a><br />
+</p>
+
+<a name="original_release"></a><h2>Nota de Lan&ccedil;amento Original</h2>
+<p>
+8 Novembro de 2005, Frankfurt, Alemanha (OpenDBCon): O Grupo Global de Desenvolvimento
+do PostgreSQL tem o prazer de anunciar a vers&atilde;o 8.1 do PostgreSQL, refor&ccedil;ando sua
+lideran&ccedil;a como o mais avan&ccedil;ado Sistema Gerenciador de Bancos de Dados de c&oacute;digo aberto.
+Planejado, constru&iacute;do e testado por uma grande e crescente comunidade e apoiado por um
+n&uacute;mero cada vez maior de corpora&ccedil;&otilde;es patrocinadoras e companhias de suporte, a vers&atilde;o 8.1
+expandir&aacute; a gama de desenvolvimento de aplica&ccedil;&otilde;es para o PostgreSQL. A nova vers&atilde;o inclui
+melhorias de performance e caracter&iacute;sticas avan&ccedil;adas de SQL, que suportar&atilde;o maiores data
+warehouses, grande volume de processamento de transa&ccedil;&otilde;es, e software distribu&iacute;do corporativo
+mais complexo.
+</p><p>
+Essas caracter&iacute;sticas dar&atilde;o continuidade s tendncias estabelecidas na vers&atilde;o anterior. A
+vers&atilde;o 8.0 teve um milh&atilde;o de downloads nos seus primeiros sete meses, em compara&ccedil;&atilde;o com os
+aproximadamente 300.000 downloads da vers&atilde;o anterior, para o mesmo per&iacute;odo.
+</p><p>
+"O projeto est&aacute; claramente avan&ccedil;ando na mente dos usu&aacute;rios de bancos de dados," disse Lance
+Obermeyer, Diretor de Produtos da Pervasive Software, uma das corpora&ccedil;&otilde;es patrocinadoras do
+PostgreSQL. "Dado o crescente interesse na infra-estrutura de software de c&oacute;digo aberto,
+esperamos que o PostgreSQL ganhe ainda mais for&ccedil;a".
+</p>
+<h3>Novas Caracter&iacute;sticas Avan&ccedil;adas do Bancos de Dados</h3>
+<p>
+<b>Pap&eacute;is:</b> o PostgreSQL agora suporta pap&eacute;is de bancos de dados, os quais simplificam
+o gerenciamento de grande n&uacute;mero de usu&aacute;rios que tenham sobreposi&ccedil;&otilde;es de direitos de uso
+do banco de dados complexas.
+</p><p>
+<b>Parmetros IN/OUT:</b> as fun&ccedil;&otilde;es do PostgreSQL agora suportam os parmetros IN, OUT e
+INOUT, os quais melhoram substancialmente o suporte de l&oacute;gicas de neg&oacute;cios complexas para
+aplica&ccedil;&otilde;es J2EE e .NET.
+</p><p>
+<b>Commit em duas fases (Two-Phase Commit, ou 2PC):</b> demandada h&aacute; muito para aplica&ccedil;&otilde;es
+WAN (Wide-Area Network) e data centers heterogneos que utilizam o PostgreSQL, esse recurso
+permite transa&ccedil;&otilde;es compat&iacute;veis com o padr&atilde;o ACID atrav&eacute;s de servidores distantes entre si.
+</p>
+<h3>Melhorias na Performance</h3>
+<p>
+<b>Performance de Multiprocessadores (SMP) Melhorada:</b> o gerenciador de buffer da
+vers&atilde;o 8.1 foi aprimorado para escalonar de forma praticamente linear com o n&uacute;mero de
+processadores, resultando em ganhos significativos de performance em servidores
+de 8 vias, 16 vias, dual-core e multi-core.
+</p><p>
+<b>Bitmap Scan:</b> os &iacute;ndices ser&atilde;o convertidos dinamicamente para mapas de bits na
+mem&oacute;ria quando apropriado, resultando em uma performance de &iacute;ndices at&eacute; 20 vezes mais
+r&aacute;pida em consultas complexas em tabelas muito grandes. Isso tamb&eacute;m ajuda a simplificar
+o gerenciamento do banco de dados reduzindo enormemente a necessidade de &iacute;ndices
+multi-colunas.
+</p><p>
+<b>Particionamento de Tabelas:</b> o planejador de consultas agora &eacute; capaz de evitar a
+varredura em se&ccedil;&otilde;es inteiras de uma grande tabela usando uma t&eacute;cnica conhecida como
+Exclus&atilde;o por Restri&ccedil;&otilde;es. Similar ao Particionamento de Tabela encontrado em outros SGBDs,
+este recurso melhora tanto a performance quanto o gerenciamento de dados para tabelas
+com v&aacute;rios gigabytes.
+</p><p>
+<b>Bloqueio de Linhas Compartilhada:</b> o PostgreSQL, com seu mecanismo de bloqueio
+"melhor que o n&iacute;vel de bloqueio de linha", suporta agora n&iacute;veis de concorrncia ainda
+mais altos, atrav&eacute;s da adi&ccedil;&atilde;o de bloqueios de linhas compartilhadas para chaves
+estrangeiras. Este tipo de bloqueio melhorar&aacute; a performance de inser&ccedil;&otilde;es e altera&ccedil;&otilde;es em
+v&aacute;rias aplica&ccedil;&otilde;es que tem alto volume de processamento de transa&ccedil;&otilde;es em tempo real.
+</p><p>
+"O PostgreSQL 8.1 oferece um grande aumento de performance em nossos servidores de produ&ccedil;&atilde;o
+Opteron bi-processados", disse Merlin Moncure, DBA da Reliable Computer Solutions. "Mais
+especificamente, percebo uma redu&ccedil;&atilde;o em torno de 20% em tempo de execu&ccedil;&atilde;o de consultas simples
+e mais 20% de redu&ccedil;&atilde;o da carga do processador, para uma surpeeendente melhoria entre
+20% e 40% nas caracter&iacute;sticas de carga dos servidores."
+</p><p>
+Existem mais de 120 outras melhorias, algumas das quais detalhadas em nossa Nota de Lan&ccedil;amento
+da Vers&atilde;o 8.1.
+</p>
+<h3>Sobre o PostgreSQL</h3>
+<p>
+O PostgreSQL &eacute; o trabalho coletivo de centenas de desenvolvedores, constru&iacute;do em vinte anos de
+desenvolvimento que se iniciou na Universidade de Berkeley, na Calif&oacute;rnia. Com seu suporte maduro
+de caracter&iacute;sticas de n&iacute;vel empresarial como transa&ccedil;&otilde;es, fun&ccedil;&otilde;es, gatilhos e subconsultas, o
+PostgreSQL &eacute; utilizado por v&aacute;rias empresas e agncias do governo. O PostgreSQL &eacute; distribu&iacute;do sob a
+licen&ccedil;a BSD, que permite o uso e distribui&ccedil;&atilde;o sem custos para uso em aplica&ccedil;&otilde;es comerciais ou
+n&atilde;o comerciais.
+</p>
+
+<a name="additional_features"></a><h2>Caracter&iacute;sticas Adicionais desta Vers&atilde;o</h2>
+Assim como as principais caracter&iacute;sticas listadas na Nota
+de Lan&ccedil;amento, existem mais de 120 novos recursos e melhorias
+contribu&iacute;das por quase 200 desenvolvedores na vers&atilde;o
+8.1. Entre elas est&atilde;o:
+<ul>
+<li><b>GiST:</b> o mecanismo de indexa&ccedil;&atilde;o plug&aacute;vel de &Aacute;rvore de Busca
+Generalizada do PostgreSQL foi aprimorado para suportar a
+concorr&ecirc;ncia, a recupera&ccedil;&atilde;o e a atualiza&ccedil;&atilde;o
+com alta velocidade de performance, anteriormente observada apenas
+com o uso de &Aacute;rvores-B como &iacute;ndices. O GiST &eacute; a
+base dos mecanismos de indexa&ccedil;&atilde;o de texto completo
+(TSearch2), indexa&ccedil;&atilde;o georreferenciada (GIS) e
+indexa&ccedil;&atilde;o estruturada em &aacute;rvore do PostgreSQL.
+Com essa melhoria, tipos de dados complexos ter&atilde;o boa
+performance mesmo nas grandes aplica&ccedil;&otilde;es de alta
+disponibilidade.</li>
+<li><b>Revis&atilde;o do COPY:</b> o comando COPY foi reconstru&iacute;do para 
+processar o carregamento de volumes de dados at&eacute; 30% mais r&aacute;pido. 
+Junto com melhorias na carga de arquivos CSV (Comma-Separated Values, Valores
+Separador por V&iacute;rgula), isto torna o carregamento de grandes bancos de 
+dados no PostgreSQL muito mais r&aacute;pido.</li>
+<li><b>Mem&oacute;ria compartilhada em plataformas de 64 bits:</b> o gerenciador 
+de buffer foi aprimorado para utilizar at&eacute; dois terabytes de RAM em plataformas 
+de 64 bits, preparando o PostgreSQL para os servidores com grande capacidade de 
+mem&oacute;ria do futuro.</li>
+<li><b>Autovacuum integrado:</b> o daemon de manuten&ccedil;&atilde;o de banco de dados do PostgreSQL
+foi aperfei&ccedil;oado e integrado ao programa servidor principal, tornando os servidores PostgreSQL
+mais f&aacute;ceis de configurar e administrar.</li>
+<li><b>Agrega&ccedil;&otilde;es mais r&aacute;pidas:</b> as fun&ccedil;&otilde;es de agrega&ccedil;&atilde;o
+foram melhoradas para fazer relat&oacute;rios de consultas mais r&aacute;pidos. Os desenvolvedores do
+PostgreSQL reescreveram o gerenciador de mem&oacute;ria para agrega&ccedil;&otilde;es e adicionaram 
+otimiza&ccedil;&atilde;o de &iacute;ndices para as fun&ccedil;&otilde;es MIN() e MAX().</li>
+<li><b>Fun&ccedil;&otilde;es Administrativas:</b> foram adicionadas novas fun&ccedil;&otilde;es
+para obter informa&ccedil;&otilde;es do servidor e executar tarefas b&aacute;sicas de administra&ccedil;&atilde;o
+do banco de dados atrav&eacute;s da linha de comando do PSQL.</li>
+<li><b>Fun&ccedil;&otilde;es de Compatibilidade:</b> foram adicionadas as fun&ccedil;&otilde;es lastval(),
+greatest() e least(), facilitando o porte de aplica&ccedil;&otilde;es do MySQL e do Oracle.</li>
+</ul>
+<p>
+Voc&ecirc; pode ler sobre as d&uacute;zias de outras melhorias
+para a vers&atilde;o 8.1 na <a href="/docs/current/static/release.html">Nota de Lan&ccedil;amento.</a>
+</p>
+
+<a name="quoted_companies"></a><h2>Companhias Citadas</h2>
+
+<p>
+<b>Pervasive Software</b> (NASDQ: PVSW) fornece infraestrutura de
+software que ajuda companhias a recuperarem o valor de seus
+investimentos. H&aacute; mais de duas d&eacute;cadas, a Pervasive v&ecirc;m
+entregando propostas de valor duradouro e a melhor combina&ccedil;&atilde;o
+de performance, confiabilidade, funcionalidade, e conectividade.
+Dezenas de milhares de clientes em virtualmente toda e qualquer
+ind&uacute;stria, em mais de 150 pa&iacute;ses em todo do mundo,
+confiam na Pervasive para gerenciar, integrar, analisar e proteger
+suas informa&ccedil;&otilde;es cr&iacute;ticas. Para maiores
+informa&ccedil;&otilde;es, <a href="http://www.pervasive.com/company">visite
+nossa p&aacute;gina na web</a>.
+</p>
+<p>
+<b>Reliable Computer Solutions</b> fornece software de ERP e
+servi&ccedil;os de consultoria para administra&ccedil;&atilde;o do
+custo de produ&ccedil;&atilde;o. Somos especializados em solu&ccedil;&otilde;es
+completas na &aacute;rea de TI para as ind&uacute;strias de ve&iacute;culos
+recreacionais e casas pr&eacute;-fabricadas. Nosso produto principal,
+ESP, administra mais de um bilh&atilde;o de d&oacute;lares de
+produ&ccedil;&atilde;o nos Estados Unidos. Para maiores informa&ccedil;&otilde;es,
+entre em contato com Merlin Moncure (somente em Ingl&ecirc;s):
+merlin.moncure@rcsonline.com, telefone: (01) 269-483-1234 x304.
+</p>
+
+<a name="download"></a><h2>Onde Fazer o Download</h2>
+
+<ul>
+<li><a href="http://www.postgresql.org/ftp/latest/">Lista de Espelhos FTP</a></li>
+<li><a href="http://www.postgresql.org/download/bittorrent">Bittorrent</a></li>
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/win32/">Instalador para
+Windows</a> (tamb&eacute;m dispon&iacute;vel via Bittorrent)</li>
+<li><a href="http://www.postgresql.org/ftp/binary/v8.1.0/">Outros Bin&aacute;rios, 
+incluindo Linux, Mac OSX e Solaris</a></li>
+<li><a href="http://sourceforge.net/projects/pgsql/">SourceForge</a> (incluindo 
+o Instalador para Windows)</li>
+</ul>
+
+<a name="docs"></a><h2>Documenta&ccedil;&atilde;o</h2>
+
+<ul>
+<li><a href="/docs/current/static/">Documenta&ccedil;&atilde;o 
+Oficial</a></li>
+<li><a href="http://techdocs.postgresql.org">TechDocs</a></li>
+<li><a href="http://www.varlena.com/GeneralBits">General
+Bits</a></li>
+</ul>
+
+<a name="license"></a><h2>Licen&ccedil;a</h2>
+<p>
+
+
+
+O PostgreSQL utiliza a <a href="/about/licence">licen&ccedil;a BSD</a>, 
+a qual requer somente que o c&oacute;digo fonte licenciado
+mantenha as informa&ccedil;&otilde;es de licen&ccedil;a e copyright.
+Esta <a href="http://www.opensource.org/licenses/bsd-license.php">licen&ccedil;a
+certificada pela OSI</a> &eacute; largamente apreciada como flex&iacute;vel
+e amig&aacute;vel para os neg&oacute;cios, uma vez que n&atilde;o
+restringe o uso do PostgreSQL em aplica&ccedil;&otilde;es comerciais
+e propriet&aacute;rias. Junto com o suporte de v&aacute;rias empresas
+e o c&oacute;digo fonte de dom&iacute;nio p&uacute;blico, a licen&ccedil;a
+BSD faz o PostgreSQL muito popular entre os vendedores que querem
+agregar um banco de dados em seus pr&oacute;prios produtos sem
+preocupa&ccedil;&atilde;o com taxas, venda casada, ou mudan&ccedil;as
+nos termos de licenciamento.
+</p>
+
+<a name="contact"></a><h2>Contatos</h2>
+
+<p><a href="http://www.postgresql.org.br">PostgreSQL em Portugus</a></p>
+<p><a href="http://www.postgresql.org">PostgreSQL em Ingls</a></p>
+
+<p>Contato:<br />
+Diogo de Oliveira Biazus<br />
+PostgreSQL Brasil<br />
+(51) 9141 0130<br />
+<a href="mailto:br@postgresql.org">br@postgresql.org</a></p>
+
+<p>Para contatos em outras regi&otilde;es, veja nossa <a
+href="/about/press/contact">lista de contatos internacionais.</a></p>
+
+<a name="companies"></a><h2>Suporte Corporativo</h2>
+
+O PostgreSQL conta com o suporte de v&aacute;rias companhias, que
+patrocinam desenvolvedores, fornecem recursos de hospedagem, e d&atilde;o
+suporte financeiro. Os maiores patrocinadores de longo prazo s&atilde;o
+listados em nossa <a href="/about/sponsors">p&aacute;gina de
+patrocinadores do desenvolvimento.</a>
+
+Existe tamb&eacute;m uma grande comunidade de <a href="/support/professional_support">companhias
+oferecendo suporte para o PostgreSQL</a>, de consultores individuais
+a companhias multinacionais.
+
+<a name="additional_software"></a><h2>Links</h2>
+<p>
+O projeto principal do PostgreSQL &eacute; aperfei&ccedil;oado por
+mais de 100 subprojetos ativos que oferecem solu&ccedil;&otilde;es de
+qualidade de produ&ccedil;&atilde;o para replica&ccedil;&atilde;o,
+migra&ccedil;&atilde;o, compatibilidade, interoperabilidade, projeto
+e ferramentas de administra&ccedil;&atilde;o gr&aacute;ficas.
+</p>
+
+<h3>Projetos Relacionados</h3>
+
+<ul>
+<li><a href="http://projects.postgresql.org">pgFoundry</a></li>
+<li><a href="http://gborg.postgresql.org">GBorg</a></li>
+</ul>
+
+<h3>Drivers</h3>
+
+<ul>
+<li><a href="http://jdbc.postgresql.org/">JDBC</a></li>
+<li><a href="http://pgfoundry.org/projects/psqlodbc/">ODBC</a></li>
+<li><a href="http://gborg.postgresql.org/project/npgsql/projdisplay.php">.Net</a></li>
+<li><a href="http://search.cpan.org/~rudy/DBD-Pg-1.32/Pg.pm">Perl DBI</a></li>
+<li><a href="http://initd.org/projects/psycopg1">Python</a></li>
+</ul>
+
+<h3>Pacotes de Funcionalidades Avan&ccedil;adas</h3>
+
+<ul>
+<li><a href="http://postgis.refractions.net/">Servidor de Informa&ccedil;&otilde;es Geogr&aacute;ficas (PostGIS)</a></li>
+<li><a href="http://openfts.sourceforge.net/">Pesquisa Completa em Textos (OpenFTS)</a></li>
+<li><a href="http://www.bizgres.org">Business Intelligence/Data Warehousing (Bizgres)</a></li>
+</ul>
+
+<h3>Interfaces Gr&aacute;ficas para o Usu&aacute;rio</h3>
+
+<ul>
+<li><a href="http://www.pgadmin.org/">pgAdmin III</a></li>
+<li><a href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a></li>
+<li><a href="http://www.pgaccess.org/">pgAccess</a></li>
+<li><a href="http://techdocs.postgresql.org/guides/GUITools">Lista de outras interfaces</a></li>
+</ul>
+
+<h3>Replica&ccedil;&atilde;o</h3>
+
+<ul>
+<li><a href="http://www.slony.info/">Slony-I</a></li>
+<li><a href="http://pgfoundry.org/projects/pgpool/">pgPool</a></li>
+<li><a href="http://pgfoundry.org/projects/pgcluster/">pgCluster</a></li>
+</ul>

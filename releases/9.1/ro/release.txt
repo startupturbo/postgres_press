@@ -1,0 +1,46 @@
+12 SEPTEMBRIE 2011: PostgreSQL Global Development Group anunţă lansarea PostgreSQL 9.1. Această ultimă versiune oferă tehnologii inovative, extensibilitate fără egal, precum şi facilităţi noi : replicare sincronă, indexare de tip K-Nearest Neighbor şi wrappere pentru surse externe de date. 
+
+"PostgreSQL 9.1 oferă unele dintre cele mai avansate capabilităţi dintre bazele de date open source , avînd în spate o comunitate activă şi inovativă. PostgreSQL este bine poziţionat pentru construirea şi rularea de aplicaţii cloud," a declarat Charles Fan, Sr. VP R&D, VMware. 
+
+Îndeplinirea cerinţelor venite de la utilizatori
+
+Versiunea 9.1 introduce o serie de facilităţi cerute de mult timp de către utilizatori, îndepărtînd astfel unele obstacole care împiedicau pînă acum implementarea anumitor aplicaţii noi sau portate la PostgreSQL. Noile facilităţi sînt:
+
+* Replicare Sincronă: permite obţinerea unui grad înalt de disponibilitate prin utilizarea mai mai multor servere sincronizate
+* Collations la nivel de coloană: permite sortare corectă din punct de veder lingvistic la nivel de bază de date, tabelă sau coloană.
+* Tabele ne-logate: îmbunătăţeşte semnificativ performanţele pentru tabelele care conţin date efemere
+
+"Heroku întreţine cel mai mare serviciu de tip database-as-a-service PostgreSQL din lume," a spus James Lindenbaum, con-fondator al Heroku . "Sincronizarea sincronă a datelor introdusă de versiunea 9.1 le oferă clienţilor noştri noi modalităţi de protejare a datelor cu caracter critic, şi validează PostgreSQL ca fiind unul dintre cele mai importante dintre modalităţile de stocare a datelor existente." 
+
+Inovaţii
+
+Comunitatea noastră a introdus inovaţii de ultimă oră. PostgreSQL 9.1 include o serie de facilităţi noi în domeniul bazelor de date :
+
+* K-Nearest-Neighbor Indexing: indexare după "distanţă" pentru a rapidiza cererile de tip text şi localizare
+* Serializable Snapshot Isolation: menţine consistenţa tranzacţiilor concurente fără a recurge la blocare, folosind "serializabilitatea reală"
+* Writeable Common Table Expressions: execuţia update-urilor complexe multi-stage într-un singur query
+* Security-Enhanced Postgres: permite implementarea securităţii de nivel militar şi Mandatory Access Control
+
+"OpenERP s-a bazat dintotdeauna pe facilităţile de nivel enterprise ale PostgreSQL ca fundaţie rapidă, robustă şi scalabilă a aplicaţiilor business capabile să deservească operaţiunile zilnice ale clienţilor noştri. Integritatea datelor într-un mediu concurent şi tranzacţional este un element critic pentru noi, motiv pentru care sîntem foarte entuziasmaţi de noua facilitate Serializable Snapshot Isolation cu care vine PostgreSQL 9.1!" a spus Olivier Dony, OpenERP Community Manager. 
+
+Extinderea motorului bazei de date
+
+Extensibilitatea PostgreSQL-ului constă în posibilitatea de a adăuga noi funcţionalităţi bazelor de date deja aflate în funcţiune. Versiunea 9.1 aduce noi unelte de extindere, cum sînt:
+
+* Foreign Data Wrappers: posibilitatea de a realiza legături cu alte baze de date, putîndu-le accesa prin cereri SQL din PostgreSQL
+* Extensions: crearea, încărcarea şi gestionarea uşoară a funcţionalităţilor suplimentare ale bazei de date
+
+Toate facilităţile menţionate mai sus, precum şi altele, sînt detaliate în pagina What's New In 9.1 (http://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.1) şi în release notes (http://www.postgresql.org/documentation/current/static/release-9-1).
+
+În cei 25 ani de existenţă a PostgreSQL, fiecare nouă versiune a introdus tehnologii noi. Descărcaţi PostgreSQL 9.1 şi faceţi cunoştinţă cu cel mai avansat sistem de baze de date open source din lume.
+
+
+* Press Kit: http://www.postgresql.org/about/press/presskit91
+* Release Notes: http://www.postgresql.org/documentation/current/static/release-9-1
+* Downloads: http://www.postgresql.org/downloads
+
+For more information please contact:
+Adrian Maier
+ro@postgresql.org
+
+Despre PostgreSQL: PostgreSQL este sistemul de baze de date open source de referinţă, avînd o comunitate formată din mii de utilizatori şi contributori, precum şi numeroase companii şi organizaţii. Proiectul PostgreSQL are în spate o muncă de 25 de ani, originea sa fiind la University of California, Berkeley. În ziua de astăzi nu are egal în ceea ce priveşte ritmul în care se desfăşoară dezvoltarea. Setul matur de fucţionalităţi ale PostgreSQL nu numai că este la acelaşi nivel cu sistemele de baze de date comerciale de top, ci chiar le depăşeşte prin facilităţi, extensibilitate, securitate şi stabilitate. Puteţi afla mai multe despre PostgreSQL accesînd http://www.postgresql.org. 
