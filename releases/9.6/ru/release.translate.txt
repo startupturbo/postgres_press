@@ -1,9 +1,9 @@
-29 SEPTEMBER 2016: PostgreSQL 9.6, the latest version of the world's leading open source SQL database, was released today by the PostgreSQL Global Development Group.  This release will allow users to both scale up and scale out high performance database workloads.  New features include parallel query, synchronous replication improvements, phrase search, and improvements to performance and usability.
+29 сентября 2016: PostgreSQL 9.6, новая версия лидирующей реляционноу системы управления базами данных (СУБД) выпущена сегодня Всемирной группой разработки PostgreSQL. Этот релиз предоставляет пользователям широкие возможности для как для вертикального, так и для горизонтального масштабирования нагрузки на базу данных. Среди новых возможностей: параллелизация запросов, усовершенствование синхронной репликации, фразовый поиск, а также многочисленные улучшения в области производительности и юзабилити.
 
-Scale Up with Parallel Query
+Вертикальное масштабирование и параллелизация выполнения запросов
 ----------------------------
 
-Version 9.6 adds support for parallelizing some query operations, enabling utilization of several or all of the cores on a server to return query results faster.  This release includes parallel sequential (table) scan, aggregation, and joins.  Depending on details and available cores, parallelism can speed up big data queries by as much as 32 times faster.
+В версии 9.6 добавлена поддержка параллелизации некоторых операций, что позволяет утилизировать несколько или все доступные ядра сервера для того, чтобы как можно скорее сформировать ответ на запрос. Данный релиз содержит возможности параллелизации последовательного чтения (таблиц), операция соединения и агрегирования. В зависимости от конкретной ситуации и доступности ядер, паралеллизм позволяет достигать вплоть до 32-кратного ускорения запросов класса Big Data.
 
 "I migrated our entire genomics data platform - all 25 billion legacy MySQL rows of it - to a single Postgres database, leveraging the row compression abilities of the JSONB datatype, and the excellent GIN, BRIN, and B-tree indexing modes. Now with version 9.6, I expect to harness the parallel query functionality to allow even greater scalability for queries against our rather large tables," said Mike Sofen, Chief Database Architect, Synthetic Genomics.
 
