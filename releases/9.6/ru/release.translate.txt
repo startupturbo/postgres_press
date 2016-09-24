@@ -44,6 +44,7 @@
 Николай Самохвалов
 ru@postgresql.org
 +7-905-783-9804
+http://RuPostgres.org
 
 О проекте PostgreSQL
 ----------------
