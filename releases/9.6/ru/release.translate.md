@@ -21,7 +21,7 @@
 
 PostgreSQL's full text search feature now supports "phrase search." This lets users search for exact phrases, or for words within a specified proximity to each other, using fast GIN indexes.  Combined with new features for fine-tuning text search options, PostgreSQL is the superior option for "hybrid search" which puts together relational, JSON, and full text searching.
 
-Smoother, Faster, and Easier to Use
+Ещё более беспроблемный, быстрый и лёгкий в использовании
 -----------------------------------
 
 Система полнотекстового поиска в PostgreSQL теперь поддерживает так называемый «фразовый поиск». Он позволяет пользователям находить точные совпадения по фразам, а также документы, где слова встречаются на заданном удалении друг от друга, применяя при этом GIN-индексы. Получив также новые возможности тонкой настройки полнотекстового поиска, PostgreSQL становится высококачественной системой «гибридного поиска», что подразумевает возможность одновременного использования различных типов данных и операций поиска по ним: реляционного, JSON и полнотекстового. 
