@@ -1,26 +1,22 @@
-29 SEPTEMBER 2016: PostgreSQL 9.6, the latest version of the world's leading open source SQL database, was released today by the PostgreSQL Global Development Group.  This release will allow users to both scale up and scale out high performance database workloads.  New features include parallel query, synchronous replication improvements, phrase search, and improvements to performance and usability.
+29 сентября 2016: PostgreSQL 9.6, новая версия лидирующей реляционной системы управления базами данных (СУБД) выпущена сегодня Всемирной группой разработки PostgreSQL. Этот релиз предоставляет пользователям широкие возможности как для вертикального, так и для горизонтального масштабирования нагрузок на базы данных. Среди новых возможностей: параллелизация запросов, усовершенствование синхронной репликации, фразовый поиск, а также многочисленные улучшения в области производительности и юзабилити.
 
-Scale Up with Parallel Query
+Вертикальное масштабирование и параллелизация выполнения запросов
 ----------------------------
 
-Version 9.6 adds support for parallelizing some query operations, enabling utilization of several or all of the cores on a server to return query results faster.  This release includes parallel sequential (table) scan, aggregation, and joins.  Depending on details and available cores, parallelism can speed up big data queries by as much as 32 times faster.
+В версии 9.6 добавлена поддержка параллелизации некоторых операций, что позволяет одновременно использовать несколько или даже все доступные ядра сервера для ускорения ответа на запрос. Данный релиз содержит возможности параллелизации последовательного чтения (таблиц), операций соединения и агрегирования. В зависимости от конкретной ситуации и доступности ядер, параллелизм позволяет достигать вплоть до 32-кратного ускорения запросов при работе с Big Data.
 
-"I migrated our entire genomics data platform - all 25 billion legacy MySQL rows of it - to a single Postgres database, leveraging the row compression abilities of the JSONB datatype, and the excellent GIN, BRIN, and B-tree indexing modes. Now with version 9.6, I expect to harness the parallel query functionality to allow even greater scalability for queries against our rather large tables," said Mike Sofen, Chief Database Architect, Synthetic Genomics.
+«Я мигрировал всю нашу платформу для изучения геномов — все 25 миллиардов строк из MySQL — в единую базу данных под управлением Postgres, воспользовавшись такими преимуществами, как сжатие строк с типом данных JSONB и отличными режимами индексирования GIN, BRIN и B-tree. С появлением версии 9.6 я планирую хорошую получить отдачу от параллелизации запросов, получив улучшенное масштабирование для запросов на довольно больших таблицах», — говорит Майк Софен (Mike Sofen), главный архитектор компании Synthetic Genomics.
 
-Scale Out with Synchronous Replication and postgres_fdw
+Горизонтальное масштабирование средствами синхронной репликации и модуля postgres_fdw 
 -------------------------------------------------------
 
-Two new options have been added to PostgreSQL's synchronous replication feature which allow it to be used to maintain consistent reads across database clusters.  First, it now allows configuring groups of synchronous replicas.  Second, the "remote_apply" mode creates a more consistent view of data across multiple nodes.  These features support using built-in replication to maintain a set of "identical" nodes for load-balancing read workloads.
+Две новые опции были добавлены в механизм синхронной репликации PostgreSQL, что позволяет обеспечивать согласование операций чтения на масштабе всего кластера баз данных. Во-первых, теперь стало возможным конфигурировать группы реплик, работающих с синхронной репликацией. Во-вторых, режим "remote_apply" позволяет получить согласованное представление данных на масштабе нескольких узлов. Всё это работает на основе встроенного механизма репликации и предназначено для получения массива «идентичных» узлов серверов баз данных для балансироваки нагрузки, содержащей операции чтения.
 
-The PostgreSQL-to-PostgreSQL data federation driver, postgres_fdw, has new capabilities to execute work on remote servers.  By "pushing down" sorts, joins, and batch data updates, users can distribute workload across multiple PostgreSQL servers.  These features should soon be added to other FDW drivers.
+Драйвер интеграции данных «из PostgreSQL в PostgreSQL» — модуль postgres_fdw – получил новые возможности для осуществления операций на удалённых серверах. За счёт «проталкивания» ("pushing down") операций сортировки, соединений и групповых обновлений пользователи теперь имеют возможность распределения нагрузки между несколькими серверами PostgreSQL. В ближайшее время планируется внедрение данных улучшений и в другие FDW-драйверы.
 
-"With the capabilities of remote JOIN, UPDATE and DELETE, Foreign Data
-Wrappers are now a complete solution for sharing data between other
-databases and PostgreSQL.  For example, PostgreSQL can be used to handle
-data input going to two or more different kinds of databases," said
-Julyanto Sutandang, Director of Business Solutions at Equnix.
+«Благодаря возможностям удалённого выполнения операций JOIN, UPDATE и DELETE, адаптеры сторонних данных (Foreign Data Wrappers, FDW) теперь представляют собой полноценное решение для распределения данных между PostgreSQL и другими базами данных. Например, PostgreSQL может быть использовать для обработки данных, поступающих в два или более различных типов СУБД», — сказал Джулианто Сутанданг (Julyanto Sutandang), директор по бизнес-решениям в компании Equnix.
 
-Better Text Search with Phrases
+Улучшенный полнотекстовый поиск по фразам
 -------------------------------
 
 PostgreSQL's full text search feature now supports "phrase search." This lets users search for exact phrases, or for words within a specified proximity to each other, using fast GIN indexes.  Combined with new features for fine-tuning text search options, PostgreSQL is the superior option for "hybrid search" which puts together relational, JSON, and full text searching.
@@ -28,17 +24,17 @@ PostgreSQL's full text search feature now supports "phrase search." This lets us
 Smoother, Faster, and Easier to Use
 -----------------------------------
 
-Thanks to feedback and testing by PostgreSQL users with high-volume production databases, the project has been able to improve many aspects of performance and usability in this release.  Replication, aggregation, indexing, sorting, and stored procedures have all been made more efficient, and PostgreSQL now makes better use of resources with recent Linux kernels.  Administration overhead for large tables and complex workloads was also reduced, especially through improvements to VACUUM.
+Система полнотекстового поиска в PostgreSQL теперь поддерживает так называемый «фразовый поиск». Он позволяет пользователям находить точные совпадения по фразам, а также документы, где слова встречаются на заданном удалении друг от друга, применяя при этом GIN-индексы. Получив также новые возможности тонкой настройки полнотекстового поиска, PostgreSQL становится высококачественной системой «гибридного поиска», что подразумевает возможность одновременного использования различных типов данных и операций поиска по ним: реляционного, JSON и полнотекстового. 
 
-Links
+Ссылки
 -----
 
-* [Downloads](https://www.postgresql.org/downloads)
-* [Press Kit](https://www.postgresql.org/about/press/presskit96)
-* [Release Notes](https://www.postgresql.org/docs/current/static/release-9-6.html)
-* [What's New in 9.6](https://wiki.postgresql.org/wiki/NewIn96)
+* [Страница загрузки](https://www.postgresql.org/downloads)
+* [Материалы для прессы](https://www.postgresql.org/about/press/presskit96)
+* [Информация об изменениях](https://www.postgresql.org/docs/current/static/release-9-6.html)
+* [Обзор новых возможностей версии 9.6](https://wiki.postgresql.org/wiki/NewIn96)
 
-About PostgreSQL
+О проекте PostgreSQL
 ----------------
 
-PostgreSQL is the most advanced open source database system, with a global community of thousands of users and contributors and dozens of companies and organizations.  The PostgreSQL Project builds on over 30 years of engineering, starting at the University of California, Berkeley, and has an unmatched pace of development today. PostgreSQL's mature feature set not only matches top proprietary database systems, but exceeds them in advanced database features, extensibility, security and stability.  Learn more about PostgreSQL and participate in our community [PostgreSQL.org](https://www.postgresql.org).
+PostgreSQL является ведущей СУБД с открытыми исходными текстами с глобальным сообществом из тысяч пользователей и разработчиков, объединяющим множество компаний и организаций. Проект PostgreSQL создаётся на основе более чем 25-летнего опыта проектирования и разработки, начавшейся в Калифорнийском университете Беркли, и в настоящее время разрабатывается беспрецедентными темпами. Продуманный набор возможностей PostgreSQL не только не уступает ведущим коммерческим СУБД, но и зачастую превосходит их развитой функциональностью, расширяемостью, безопасностью и стабильностью. Вы можете получить дополнительную информацию о PostgreSQL и присоединиться к нашему сообществу по адресу http://www.postgresql.org.
