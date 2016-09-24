@@ -1,120 +1,162 @@
 {%extends "base/page.html"%}
-{%block title%}PostgreSQL 9.6 Press Kit{%endblock%}
+{%block title%}PostgreSQL 9.6 — материалы для прессы{%endblock%}
 {%block contents%}
 
-<h1>PostgreSQL 9.6 Press Kit</h1>
+<h1>PostgreSQL 9.6 — материалы для прессы</h1>
 
-<h2>Contents</h2>
+<h2>Содержание</h2>
 
 <p>
- &nbsp; <a href="#original_release">Text of Original Release</a><br />
- &nbsp; <a href="#features">More About The Features</a><br />
- &nbsp; <a href="#download">Where to Download</a><br />
- &nbsp; <a href="#docs">Documentation</a><br />
- &nbsp; <a href="#license">License</a><br />
- &nbsp; <a href="#contact">Contacts</a><br />
- &nbsp; <a href="#graphics">Images and Logos</a><br />
- &nbsp; <a href="#about">About PostgreSQL</a><br />
- &nbsp; <a href="#quoted_companies">Quoted Companies and Full Text of Quotes</a><br />
- &nbsp; <a href="#companies">Corporate Support</a><br />
+ &nbsp; <a href="#original_release">Официальный пресс-релиз</a><br />
+ &nbsp; <a href="#features">Подробнее о новинках</a><br />
+ &nbsp; <a href="#download">Где скачать</a><br />
+ &nbsp; <a href="#docs">Документация</a><br />
+ &nbsp; <a href="#license">Лицензия</a><br />
+ &nbsp; <a href="#contact">Контакты</a><br />
+ &nbsp; <a href="#graphics">Графика и логотипы</a><br />
+ &nbsp; <a href="#about">О проекте PostgreSQL</a><br />
+ &nbsp; <a href="#quoted_companies">Информация о компаниях, упомянутых в цитатах, и полные тексты цитат</a><br />
+ &nbsp; <a href="#companies">Корпоративная поддержка</a><br />
 </p>
 
 <img src="https://www.postgresql.org/media/img/about/press/elephant64.png" />
 
-<a name="original_release"></a><h2>Original Press Release</h2>
+<a name="original_release"></a><h2>Официальный пресс-релиз</h2>
 
-<p>29 SEPTEMBER 2016: PostgreSQL 9.6, the latest version of the world's leading open source SQL database, was released today by the PostgreSQL Global Development Group. This release will allow users to both scale up and scale out high performance database workloads. New features include parallel query, synchronous replication improvements, phrase search, and improvements to performance and usability.</p>
+<p>29 сентября 2016: PostgreSQL 9.6, новая версия лидирующей реляционной системы управления базами данных (СУБД) 
+выпущена сегодня Всемирной группой разработки PostgreSQL. Этот релиз предоставляет пользователям широкие возможности 
+как для вертикального, так и для горизонтального масштабирования нагрузок на базы данных. Среди новых возможностей: 
+параллелизация запросов, усовершенствование синхронной репликации, фразовый поиск, а также многочисленные улучшения 
+в области производительности и юзабилити.</p>
 
-<b>Scale Up with Parallel Query</b>
+<b>Вертикальное масштабирование и параллелизация выполнения запросов</b>
 
-<p>Version 9.6 adds support for parallelizing some query operations, enabling utilization of several or all of the cores on a server to return query results faster. This release includes parallel sequential (table) scan, aggregation, and joins. Depending on details and available cores, parallelism can speed up big data queries by as much as 32 times faster.</p>
+<p>В версии 9.6 добавлена поддержка параллелизации некоторых операций, что позволяет одновременно использовать 
+несколько или даже все доступные ядра сервера для ускорения ответа на запрос. Данный релиз содержит возможности 
+параллелизации последовательного чтения (таблиц), операций соединения и агрегирования. В зависимости от конкретной 
+ситуации и доступности ядер, параллелизм позволяет достигать вплоть до 32-кратного ускорения запросов при работе с 
+Big Data.</p>
 
-<p>&quot;I migrated our entire genomics data platform - all 25 billion legacy MySQL rows of it - to a single Postgres database, leveraging the row compression abilities of the JSONB datatype, and the excellent GIN, BRIN, and B-tree indexing modes. Now with version 9.6, I expect to harness the parallel query functionality to allow even greater scalability for queries against our rather large tables,&quot; said Mike Sofen, Chief Database Architect, Synthetic Genomics.</p>
+<p>«Я мигрировал всю нашу платформу для изучения геномов — все 25 миллиардов строк из MySQL — в единую базу данных 
+под управлением Postgres, воспользовавшись такими преимуществами, как сжатие строк с типом данных JSONB и отличными 
+режимами индексирования GIN, BRIN и B-tree. С появлением версии 9.6 я планирую хорошую получить отдачу от 
+параллелизации запросов, получив улучшенное масштабирование для запросов на довольно больших таблицах», — говорит 
+Майк Софен (Mike Sofen), главный архитектор компании Synthetic Genomics.</p>
 
-<b>Scale Out with Synchronous Replication and postgres_fdw</b>
+<b>Горизонтальное масштабирование средствами синхронной репликации и модуля postgres_fdw</b>
 
-<p>Two new options have been added to PostgreSQL's synchronous replication feature which allow it to be used to maintain consistent reads across database clusters. First, it now allows configuring groups of synchronous replicas. Second, the &quot;remote_apply&quot; mode creates a more consistent view of data across multiple nodes. These features support using built-in replication to maintain a set of &quot;identical&quot; nodes for load-balancing read workloads.</p>
+<p>Две новые опции были добавлены в механизм синхронной репликации PostgreSQL, что позволяет обеспечивать 
+согласование операций чтения на масштабе всего кластера баз данных. Во-первых, теперь стало возможным конфигурировать 
+группы реплик, работающих с синхронной репликацией. Во-вторых, режим "remote_apply" позволяет получить согласованное 
+представление данных на масштабе нескольких узлов. Всё это работает на основе встроенного механизма репликации и 
+предназначено для получения массива «идентичных» узлов серверов баз данных для балансироваки нагрузки, содержащей 
+операции чтения.</p>
 
-<p>The PostgreSQL-to-PostgreSQL data federation driver, postgres_fdw, has new capabilities to execute work on remote servers. By &quot;pushing down&quot; sorts, joins, and batch data updates, users can distribute workload across multiple PostgreSQL servers. These features should soon be added to other FDW drivers.</p>
+<p>Драйвер интеграции данных «из PostgreSQL в PostgreSQL» — модуль postgres_fdw – получил новые возможности для 
+осуществления операций на удалённых серверах. За счёт «проталкивания» ("pushing down") операций сортировки, 
+соединений и групповых обновлений пользователи теперь имеют возможность распределения нагрузки между несколькими 
+серверами PostgreSQL. В ближайшее время планируется внедрение данных улучшений и в другие FDW-драйверы.</p>
 
-<p>&quot;With the capabilities of remote JOIN, UPDATE and DELETE, Foreign Data Wrappers are now a complete solution for sharing data between other databases and PostgreSQL. For example, PostgreSQL can be used to handle data input going to two or more different kinds of databases,&quot; said Julyanto Sutandang, Director of Business Solutions at Equnix.</p>
+<p></p>«Благодаря возможностям удалённого выполнения операций JOIN, UPDATE и DELETE, адаптеры сторонних данных 
+(Foreign Data Wrappers, FDW) теперь представляют собой полноценное решение для распределения данных между 
+PostgreSQL и другими базами данных. Например, PostgreSQL может быть использовать для обработки данных, 
+поступающих в два или более различных типов СУБД», — сказал Джулианто Сутанданг (Julyanto Sutandang), 
+директор по бизнес-решениям в компании Equnix.</p>
 
-<b>Better Text Search with Phrases</b>
+<b>Улучшенный полнотекстовый поиск по фразам</b>
 
-<p>PostgreSQL's full text search feature now supports &quot;phrase search.&quot; This lets users search for exact phrases, or for words within a specified proximity to each other, using fast GIN indexes. Combined with new features for fine-tuning text search options, PostgreSQL is the superior option for &quot;hybrid search&quot; which puts together relational, JSON, and full text searching.</p>
+<p>Система полнотекстового поиска в PostgreSQL теперь поддерживает так называемый «фразовый поиск». 
+Он позволяет пользователям находить точные совпадения по фразам, а также документы, где слова встречаются 
+на заданном удалении друг от друга, применяя при этом GIN-индексы. Получив также новые возможности тонкой 
+настройки полнотекстового поиска, PostgreSQL становится высококачественной системой «гибридного поиска», 
+что подразумевает возможность одновременного использования различных типов данных и операций поиска по ним: 
+реляционного, JSON и полнотекстового.</p>
 
-<b>Smoother, Faster, and Easier to Use</b>
+<b>Ещё более беспроблемный, быстрый и простой в использовании</b>
 
-<p>Thanks to feedback and testing by PostgreSQL users with high-volume production databases, the project has been able to improve many aspects of performance and usability in this release. Replication, aggregation, indexing, sorting, and stored procedures have all been made more efficient, and PostgreSQL now makes better use of resources with recent Linux kernels. Administration overhead for large tables and complex workloads was also reduced, especially through improvements to VACUUM.</p>
+<p>Благодаря обратной связи и тестированию многочисленными PostgreSQL-пользователями на базах данных большого 
+объёма, проекту, с выходом данного релиза, успешно удалось улучшить многие аспекты производительности и юзабилити. 
+Репликация, операции агрегирования, индексирования, сортировки и хранимые процедуры стали более эффективными, 
+а сам PostgreSQL ещё более продуктивно использует ресурсы при работе с новыми версиями ядра Linux. 
+Накладные расходы при администрировании больших таблиц и работе с нагрузками сложного профиля также 
+уменьшились — в частности, за счёт улучшений механизма VACUUM.</p>
 
-<a name="features"></a><h2>More About the Features</h2>
-<p>
-For explanations of the above features and others, please see the following resources:
-</p>
+<a name="features"></a><h2>Подробнее о новинках</h2>
+<p>Более подробную информацию о новых возможностях можно найти по следующим ссылкам 
+(данные материалы предоставлены на английском языке):</p>
 <ul>
-  <li><a href="https://www.postgresql.org/docs/current/static/release-9-6.html">Release Notes</a></li>
-  <li><a href="https://wiki.postgresql.org/wiki/NewIn96">What's New in 9.6</a></li>
-  <li><a href="/about/featurematrix">Feature matrix (English only)</a></li>
-  <li><a href="https://momjian.us/main/writings/pgsql/features.pdf">Major Features slide deck</a></li>
-  <li><a href="https://www.youtube.com/watch?v=HjAeLE9aNhQ">A Look Inside The Elephant's Trunk: 9.6</a></li>
-  <li><a href="https://www.youtube.com/watch?v=RkkUbQP3G0A">PostgreSQL 9.6 Performance Presentation</a></li>
+  <li><a href="https://www.postgresql.org/docs/current/static/release-9-6.html">Информация об изменениях</a></li>
+  <li><a href="https://wiki.postgresql.org/wiki/NewIn96">Что нового в PostgreSQL 9.6</a></li>
+  <li><a href="/about/featurematrix">Матрица возможностей</a></li>
+  <li><a href="https://momjian.us/main/writings/pgsql/features.pdf">Основные возможности (слайды)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=HjAeLE9aNhQ">«Заглянем слону под хобот: 9.6» (видео)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=RkkUbQP3G0A">Производительность PostgreSQL 9.6 (видео)</a></li>
 </ul>
 
-<a name="download"></a><h2>Downloads</h2>
+<a name="download"></a><h2>Где скачать</h2>
 <ul>
-  <li><a href="/download">Downloads page</a> with links to Windows, Linux, OSX, BSD and Solaris installers and tools.</li>
-  <li><a href="/ftp/source/v9.6.0">Source Code</a></li>
-  <li><a href="https://hub.docker.com/_/postgres/">Postgres Docker image</a></li>
-  <li><a href="http://pgxn.org">PostgreSQL Extension Network</a></li>
+  <li><a href="/download">Основная страница загрузки</a> с ссылками на установщики для Windows, Linux, OSX, BSD и Solaris, а также дополнительные инструменты</li>
+  <li><a href="/ftp/source/v9.6.0">Исходный код</a></li>
+  <li><a href="https://hub.docker.com/_/postgres/">Docker-образ для Postgres</a></li>
+  <li><a href="http://pgxn.org">Сеть расширений PostgreSQL (PGXN)</a></li>
 </ul>
 
-<a name="docs"></a><h2>Documentation</h2>
+<a name="docs"></a><h2>Документация</h2>
 
 <p>
-HTML documentation and man pages are installed with PostgreSQL, but feel free to browse, search and comment on our extensive, interactive <a href="/docs/9.6/interactive">online documentation</a>.
+Документация в формате HTML и страницы с руководством устанавливаются вместе с PostgreSQL, но вы можете без 
+каких-либо ограничений просматривать, пользоваться поиском и комментировать нашу подробную, интерактивную 
+<a href="/docs/9.6/interactive">онлайн-документацию</a>.
 </p>
 
-<a name="license"></a><h2>License</h2>
-<p>
-PostgreSQL uses the <a href="/about/licence">PostgreSQL License</a>, a BSD-like "permissive" license. This
-<a href="http://www.opensource.org/licenses/postgresql">OSI-certified license</a> is widely appreciated as flexible and business-friendly, since it does not restrict the use of PostgreSQL with commercial and proprietary applications. Together with multi-company support and public ownership of the code, our license makes PostgreSQL very popular with vendors wanting to embed a database in their own products without fear of fees, vendor lock-in, or changes in licensing terms.
-</p>
+<a name="license"></a><h2>Лицензия</h2>
+<p>PostgreSQL использует <a href="/about/licence">собственную</a>, BSD-подобную лицензию, которая требует только 
+сохранения в лицензируемом исходном коде информации об авторских правах и текста самой лицензии. 
+Эта <a href="http://www.opensource.org/licenses/postgresql">сертифицированная организацией OSI</a> лицензия 
+широко известна своей гибкостью и удобством для бизнеса, поскольку она не запрещает использовать PostgreSQL 
+в составе коммерческих и закрытых приложений. Наряду с поддержкой множеством компаний и совместным владением 
+исходного кода, наша лицензия делает PostgreSQL очень популярной среди производителей, желающих внедрить СУБД 
+в свой продукт без каких-либо отчислений, привязки к производителю или риска изменений в лицензировании.</p>
 
-<a name="contact"></a><h2>Contacts</h2>
+<a name="contact"></a><h2>Контакты</h2>
 
-<p>Web Pages</p>
+<p>Web-страницы</p>
 <ul>
-<li><a href="https://www.postgresql.org">PostgreSQL home page</a></li>
-<li><a href="YOUR LOCALIZED POSTGRES PAGE">NAME OF YOUR LOCALIZED POSTGRES PAGE</a></li>
+<li><a href="https://www.postgresql.org">Домашняя страница PostgreSQL</a></li>
+<li><a href="http://PostgreSQLRussia.org">#PostgreSQLRussia — сообщество русскоязычных пользователей PostgreSQL</a></li>
 </ul>
 
-<p>Press Inquiries</p>
-<p>REGION NAME HERE<br />
-REGIONAL CONTACT NAME HERE<br />
-<a href="mailto:RC@POSTGRESQL.ORG">REGIONAL CONTACT EMAIL HERE</a><br />
-REGIONAL CONTACT PHONE HERE</p>
+<p>Контакты для прессы</p>
+<p>Россия<br />
+Николай Самохвалов<br />
+<a href="mailto:RU@POSTGRESQL.ORG">ru@postgresql.org</a><br />
++7-905-783-9804</p>
 
-<p>For contacts in other regions, see <a href="/about/press/contact">our international contact list.</a></p>
+<p>Контакты в других регионах перечислены на <a href="/about/press/contact">странице контактов.</a></p>
 
-<a name="graphics"><h2>Images and Logos</h2></a>
+<a name="graphics"><h2>Графика и логотипы</h2></a>
 
 <img src="https://www.postgresql.org/media/img/about/press/elephant64.png" >
 
 <ul>
-<li><a href="https://www.postgresql.org/media/img/about/press/elephant.png">PostgreSQL Elephant Logo, PNG format</a></li>
-<li><a href="https://www.postgresql.org/media/img/about/press/elephant64.jpg">PostgreSQL Elephant Icon</a></li>
-<li><a href="https://www.postgresql.org/media/img/about/press/slonik_with_black_text_and_tagline.gif">PostgreSQL Banner with Logo, Elephant and Slogan</a></li>
+<li><a href="https://www.postgresql.org/media/img/about/press/elephant.png">Логотип слона PostgreSQL в формате PNG</a></li>
+<li><a href="https://www.postgresql.org/media/img/about/press/elephant64.jpg">Значок слона PostgreSQL</a></li>
+<li><a href="https://www.postgresql.org/media/img/about/press/slonik_with_black_text_and_tagline.gif">Баннер PostgreSQL с логотипом, слоном и слоганом</a></li>
 </ul>
-<p>
-All logos are available for modification and redistribution under The PostgreSQL License.  The PostgreSQL name and logo are trademarks of The PostgreSQL Community Association of Canada.
-</p>
+<p>Модификация и распространение всех приведенных логотипов разрешена в соответствии с лицензией PostgreSQL. 
+Имя и логотип PostgreSQL являются торговыми марками ассоциации сообщества PostgreSQL Канады 
+(The PostgreSQL Community Association of Canada).</p>
 
-<a name="about"></a><h2>About PostgreSQL</h2>
-<p>
-PostgreSQL is the world's most advanced database system, with a global community of thousands of users and contributors and dozens of companies and organizations.  The PostgreSQL Project builds on over 30 years of engineering, starting at the University of California, Berkeley, and has an unmatched pace of development today. PostgreSQL's mature feature set not only matches top proprietary database systems, but exceeds them in advanced database features, extensibility, security and stability.  Learn more about PostgreSQL and participate in our community at <a href="https://www.postgresql.org">PostgreSQL.org</a>.
-</p>
+<a name="about"></a><h2>О проекте PostgreSQL</h2>
+<p>PostgreSQL является ведущей СУБД с открытыми исходными текстами, с глобальным сообществом из тысяч пользователей 
+и разработчиков, объединяющим множество компаний и организаций. Проект PostgreSQL создаётся на основе более 
+чем 25-летнего опыта проектирования и разработки, начавшейся в Калифорнийском университете Беркли, и в настоящее 
+время разрабатывается беспрецедентными темпами. Продуманный набор возможностей PostgreSQL не только не уступает 
+ведущим коммерческим СУБД, но и превосходит их развитой функциональностью, расширяемостью, безопасностью и 
+стабильностью. Вы можете получить дополнительную информацию о PostgreSQL и присоединиться к нашему сообществу 
+по адресу <a href="https://www.postgresql.org">PostgreSQL.org</a>.</p>
 
-<a name="quoted_companies"></a><h2>Quoted Company Information and Full Text of Quotes</h2>
+<a name="quoted_companies"></a><h2>Информация о компаниях, упомянутых в цитатах, и полные тексты цитат</h2>
 <p>
 &quot;As the chief database architect for Synthetic Genomics, I was utterly amazed at the power, flexibility and richness of programming interfaces for Postgres 9.5x.  I migrated our entire genomics data platform &mdash; all 25 billion legacy mysql rows of it &mdash; to a single Postgres database, leveraging the row compression abilities of the JSONB datatype, the excellent GIN, BRIN, and B-tree indexing modes, and the beautifully extended PL/pgSQL programming language for stored functions.  Now with version 9.6, I expect to harness the parallel query functionality to allow even greater scalability for queries against our rather large tables.  Postgres 9.5 has proven itself to be utterly stable, remarkably performant, and, in my opinion, the best mixed relational-document store data storage engine on the market at this time,&quot; said Mike Sofen, Chief Database Architect, Synthetic Genomics
 </p>
@@ -125,13 +167,16 @@ PostgreSQL is the world's most advanced database system, with a global community
 <p><a href="">Equnix</a> is an IT Solution Provider for Enterprises delivering comprehensive alternate solutions, based on research, development and Open Source. Equnix is a PostgreSQL Company. Contact us in English or Indonesian at: <a href="mailto:info@equnix.co.id">Info@equnix.co.id</a> or call Johan D. at +6221-22866662.
 </p>
 
-<a name="companies"></a><h2>Corporate Support</h2>
+<a name="companies"></a><h2>Корпоративная поддержка</h2>
 
-<p>PostgreSQL enjoys the support of numerous companies, who sponsor developers, provide hosting resources, and give us financial support.  See our <a href="https://www.postgresql.org/about/sponsors/">sponsors page</a> for some of these project supporters.</p>
+<p>Проекту PostgreSQL помогают многочисленные компании, спонсирующие разработчиков, предоставляющие ресурсы для 
+хостинга и финансовую поддержку. Некоторые из них представлены на странице 
+<a href="https://www.postgresql.org/about/sponsors/">компаний-спонсоров</a>.</p>
 
-<p>There is also a large community of <a href="/support/professional_support">companies offering PostgreSQL Support</a>, from individual consultants to multinational companies.</p>
+<p>Помимо этого, множество компаний занимается <a href="/support/professional_support">поддержкой СУБД PostgreSQL</a>, 
+от индивидуальных консультантов до многонациональных корпораций.</p>
 
-<p><a href="/about/donate">Donations</a> gladly accepted.</p>
-<p>Or you can buy some of this fine merchandise from our <li><a href="http://www.zazzle.com/postgresql">Zazzle PostgreSQL Store</a></li>
+<p><a href="/about/donate">Пожертвования</a> также тепло приветствуются.</p>
+<p>А ещё вы можете купить сувенирную продукцию нашего <li><a href="http://www.zazzle.com/postgresql">магазина PostgreSQL на платформе Zazzle </a></li>
 
 {% endblock %}
